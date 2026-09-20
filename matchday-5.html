@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Matchday 5: Cool Cats Stumble | WCCC Media</title>
+
+<style>
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+:root{
+  --black:#070909;
+  --panel:#0d1212;
+  --panel2:#101817;
+  --teal:#123f3c;
+  --bright:#22c7bb;
+  --cream:#f1eee3;
+  --muted:#89918e;
+  --line:#26302f;
+}
+
+body{
+  background:var(--black);
+  color:var(--cream);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.7;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+/* TOP BAR */
+
+.topbar{
+  padding:22px 6%;
+  border-bottom:1px solid var(--line);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+.return{
+  color:var(--bright);
+  text-transform:uppercase;
+  font-size:10px;
+  font-weight:bold;
+  letter-spacing:2px;
+}
+
+.return:hover{
+  text-decoration:underline;
+}
+
+.media-mark{
+  text-align:right;
+  color:var(--muted);
+  font-family:"Courier New",monospace;
+  font-size:9px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+/* HERO */
+
+.hero{
+  max-width:1200px;
+  margin:auto;
+  padding:95px 6% 65px;
+}
+
+.kicker{
+  color:var(--bright);
+  font-family:"Courier New",monospace;
+  font-size:11px;
+  font-weight:bold;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  margin-bottom:25px;
+}
+
+.hero h1{
+  max-width:1050px;
+  font-size:clamp(48px,8vw,105px);
+  line-height:.88;
+  letter-spacing:-5px;
+  text-transform:uppercase;
+}
+
+.deck{
+  max-width:850px;
+  margin-top:35px;
+  color:#bcc4c0;
+  font-family:Georgia,serif;
+  font-size:clamp(18px,2vw,24px);
+  line-height:1.45;
+}
+
+.byline{
+  margin-top:40px;
+  padding-top:20px;
+  border-top:1px solid var(--line);
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  color:var(--muted);
+  font-family:"Courier New",monospace;
+  font-size:9px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+/* MATCHDAY SCOREBOARD */
+
+.matchday-strip{
+  max-width:1050px;
+  margin:0 auto 90px;
+  padding:0 6%;
+}
+
+.scoreboard{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border:1px solid var(--line);
+  background:var(--panel);
+}
+
+.score{
+  padding:28px;
+  border-right:1px solid var(--line);
+}
+
+.score:last-child{
+  border-right:0;
+}
+
+.score span{
+  display:block;
+  color:var(--muted);
+  font-family:"Courier New",monospace;
+  font-size:8px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.score strong{
+  display:block;
+  margin-top:5px;
+  font-size:29px;
+}
+
+.score.highlight strong{
+  color:var(--bright);
+}
+
+/* ARTICLE */
+
+.article{
+  max-width:790px;
+  margin:auto;
+  padding:0 6%;
+}
+
+.article p{
+  margin-bottom:28px;
+  color:#d3d7d5;
+  font-family:Georgia,serif;
+  font-size:18px;
+  line-height:1.85;
+}
+
+.article strong{
+  color:var(--cream);
+}
+
+.article h2{
+  margin:85px 0 28px;
+  padding-top:22px;
+  border-top:1px solid var(--bright);
+  color:var(--cream);
+  font-size:clamp(28px,5vw,47px);
+  line-height:1;
+  letter-spacing:-1px;
+  text-transform:uppercase;
+}
+
+/* PULL QUOTE */
+
+.pullquote{
+  margin:60px 0;
+  padding:35px 0;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
+.pullquote span{
+  display:block;
+  color:var(--bright);
+  font-family:"Courier New",monospace;
+  font-size:9px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+
+.pullquote strong{
+  display:block;
+  font-size:clamp(31px,5vw,54px);
+  line-height:1;
+  text-transform:uppercase;
+}
+
+/* ARTICLE PHOTOS */
+
+.article-photo{
+  width:min(1100px,90%);
+  margin:80px auto;
+}
+
+.article-photo img{
+  width:100%;
+  max-height:720px;
+  object-fit:cover;
+  object-position:center top;
+  display:block;
+  border:1px solid var(--line);
+}
+
+.photo-caption{
+  margin-top:12px;
+  color:var(--muted);
+  font-family:"Courier New",monospace;
+  font-size:9px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+/* PORRO FEATURE */
+
+.porro-break{
+  width:min(1200px,92%);
+  margin:90px auto;
+  position:relative;
+  min-height:650px;
+  overflow:hidden;
+  border:1px solid var(--line);
+}
+
+.porro-break img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+}
+
+.porro-overlay{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      to top,
+      rgba(7,9,9,.98) 0%,
+      rgba(7,9,9,.35) 60%,
+      rgba(7,9,9,.08) 100%
+    );
+}
+
+.porro-copy{
+  position:absolute;
+  left:45px;
+  right:45px;
+  bottom:40px;
+  z-index:2;
+}
+
+.porro-copy span{
+  color:var(--bright);
+  font-family:"Courier New",monospace;
+  font-size:10px;
+  font-weight:bold;
+  letter-spacing:4px;
+  text-transform:uppercase;
+}
+
+.porro-copy strong{
+  display:block;
+  margin-top:8px;
+  font-size:clamp(65px,12vw,155px);
+  line-height:.75;
+  letter-spacing:-7px;
+}
+
+.porro-copy p{
+  margin-top:22px;
+  color:var(--cream);
+  font-family:"Courier New",monospace;
+  font-size:10px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+/* SCHADE FEATURE */
+
+.schade-feature{
+  width:min(1050px,90%);
+  margin:85px auto;
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  background:var(--panel);
+  border:1px solid var(--line);
+}
+
+.schade-image{
+  min-height:600px;
+}
+
+.schade-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+  display:block;
+}
+
+.schade-data{
+  padding:45px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+}
+
+.schade-data span{
+  color:var(--bright);
+  font-family:"Courier New",monospace;
+  font-size:9px;
+  font-weight:bold;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.schade-data h3{
+  margin-top:12px;
+  font-size:48px;
+  line-height:.9;
+  text-transform:uppercase;
+}
+
+.big-number{
+  margin-top:35px;
+  color:var(--cream);
+  font-size:70px;
+  font-weight:900;
+  line-height:.8;
+}
+
+.big-number small{
+  display:block;
+  margin-top:15px;
+  color:var(--muted);
+  font-family:"Courier New",monospace;
+  font-size:9px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.schade-note{
+  margin-top:35px;
+  padding-top:20px;
+  border-top:1px solid var(--line);
+  color:#aeb6b2;
+  font-family:Georgia,serif;
+  font-size:15px;
+}
+
+/* TABLE RACE */
+
+.title-race{
+  margin:55px 0;
+  border:1px solid var(--line);
+  background:var(--panel);
+}
+
+.race-label{
+  padding:13px 20px;
+  background:var(--teal);
+  color:var(--bright);
+  font-family:"Courier New",monospace;
+  font-size:9px;
+  font-weight:bold;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.race-row{
+  display:grid;
+  grid-template-columns:45px 1fr auto;
+  gap:15px;
+  padding:20px;
+  align-items:center;
+  border-bottom:1px solid var(--line);
+}
+
+.race-row:last-child{
+  border-bottom:0;
+}
+
+.race-row .pos{
+  color:var(--muted);
+  font-family:"Courier New",monospace;
+}
+
+.race-row .team{
+  font-weight:bold;
+  text-transform:uppercase;
+}
+
+.race-row .pts{
+  color:var(--bright);
+  font-size:21px;
+  font-weight:900;
+}
+
+/* EDITOR NOTE */
+
+.editor-note{
+  max-width:790px;
+  margin:90px auto 120px;
+  padding:30px;
+  border-left:3px solid var(--bright);
+  background:var(--panel);
+}
+
+.editor-note strong{
+  display:block;
+  color:var(--bright);
+  font-family:"Courier New",monospace;
+  font-size:9px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+
+.editor-note p{
+  color:#aeb6b2;
+  font-family:Georgia,serif;
+  font-size:15px;
+  font-style:italic;
+  line-height:1.7;
+}
+
+/* FOOTER */
+
+footer{
+  padding:60px 6%;
+  border-top:1px solid var(--line);
+  display:flex;
+  justify-content:space-between;
+  gap:25px;
+  color:var(--muted);
+  font-family:"Courier New",monospace;
+  font-size:9px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+footer strong{
+  color:var(--cream);
+}
+
+/* MOBILE */
+
+@media(max-width:750px){
+
+  .hero{
+    padding-top:65px;
+  }
+
+  .hero h1{
+    letter-spacing:-3px;
+  }
+
+  .scoreboard{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .score{
+    border-bottom:1px solid var(--line);
+  }
+
+  .porro-break{
+    min-height:520px;
+  }
+
+  .porro-copy{
+    left:24px;
+    bottom:25px;
+  }
+
+  .porro-copy strong{
+    letter-spacing:-4px;
+  }
+
+  .schade-feature{
+    grid-template-columns:1fr;
+  }
+
+  .schade-image{
+    min-height:470px;
+  }
+
+  .schade-data{
+    padding:30px;
+  }
+
+  footer{
+    flex-direction:column;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+
+  <a href="index.html" class="return">
+    ← Return to WCCC
+  </a>
+
+  <div class="media-mark">
+    WCCC Media<br>
+    Matchday Report // 005
+  </div>
+
+</div>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+  <div class="kicker">
+    Matchday 5 // WCCC Media
+  </div>
+
+  <h1>
+    Cool Cats<br>
+    Stumble.
+  </h1>
+
+  <p class="deck">
+    Wooburt City go 1–2 in a turbulent week as Schade shines,
+    Isak delivers, and Pedro Porro’s conveniently timed afternoon
+    lasts just 18 minutes.
+  </p>
+
+  <div class="byline">
+    <span>Wooburt City — Exclusive</span>
+    <span>September 2026</span>
+  </div>
+
+</header>
+
+
+<!-- MATCHDAY SUMMARY -->
+
+<section class="matchday-strip">
+
+  <div class="scoreboard">
+
+    <div class="score">
+      <span>Matchday Record</span>
+      <strong>1–2</strong>
+    </div>
+
+    <div class="score highlight">
+      <span>Points Scored</span>
+      <strong>184.29</strong>
+    </div>
+
+    <div class="score">
+      <span>League Position</span>
+      <strong>2ND</strong>
+    </div>
+
+    <div class="score">
+      <span>Season Record</span>
+      <strong>8–0–4</strong>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ARTICLE OPEN -->
+
+<article class="article">
+
+  <p>
+    It was not the weekend Wooburt City Cool Cats had envisioned.
+  </p>
+
+  <p>
+    The Cool Cats leave Matchday 5 with a <strong>1–2 record</strong>,
+    scoring <strong>184.29 points</strong> across three fixtures. It was
+    enough to take one victory, but two defeats see WCCC slip to
+    <strong>second in the table at 8–0–4</strong>, level on 24 points
+    with new leaders Mauled By A Tiger.
+  </p>
+
+  <p>
+    There were still plenty of reasons for optimism.
+  </p>
+
+  <p>
+    <strong>Kevin Schade was magnificent</strong>, producing a team-leading
+    <strong>21.79 points</strong> after registering two assists. Captain
+    <strong>Alexander Isak</strong> delivered again with <strong>16.76</strong>,
+    while <strong>Alex Iwobi (14.71)</strong>,
+    <strong>Andy Robertson (14.44)</strong> and returning fan favorite
+    <strong>Keane Lewis-Potter (13.70)</strong> all made important contributions.
+  </p>
+
+  <p>
+    But naturally, nobody around Wooburt City is talking about any of that.
+  </p>
+
+  <div class="pullquote">
+    <span>The Story Everyone Is Talking About</span>
+    <strong>They’re talking about Pedro Porro.</strong>
+  </div>
+
+  <h2>
+    18 Minutes.<br>
+    That’s Interesting.
+  </h2>
+
+  <p>
+    Just days after WCCC Media reported allegations surrounding
+    <strong>Leon Valley’s interest in Pedro Porro</strong>, the defender
+    took the field for Tottenham.
+  </p>
+
+  <p>
+    He lasted <strong>18 minutes</strong>.
+  </p>
+
+</article>
+
+
+<!-- PORRO IMAGE -->
+
+<section class="porro-break">
+
+  <img src="porro-matchweek5.PNG"
+       alt="Pedro Porro during Matchday 5">
+
+  <div class="porro-overlay"></div>
+
+  <div class="porro-copy">
+    <span>WCCC Investigation // Developing</span>
+    <strong>18</strong>
+    <p>Minutes played // 1.56 fantasy points</p>
+  </div>
+
+</section>
+
+
+<article class="article">
+
+  <p>
+    Porro departed the match early with an apparent injury,
+    contributing just <strong>1.56 fantasy points</strong> to the Cool Cats
+    before his afternoon came to an abrupt end.
+  </p>
+
+  <p>
+    An injury?
+  </p>
+
+  <p>
+    Perhaps.
+  </p>
+
+  <p>
+    An unfortunate coincidence occurring immediately after Leon Valley
+    publicly denied any dealings involving the player?
+  </p>
+
+  <p>
+    Also perhaps.
+  </p>
+
+  <p>
+    WCCC Media would never irresponsibly suggest that Pedro Porro
+    intentionally removed himself from a football match after 18 minutes
+    amid rumors of a forbidden romance with a rival club.
+  </p>
+
+  <p>
+    We would simply like to note that
+    <strong>18 minutes is an extremely small number of minutes.</strong>
+  </p>
+
+  <p>
+    Club doctors will presumably investigate.
+  </p>
+
+  <p>
+    WCCC Media will presumably investigate harder.
+  </p>
+
+  <h2>Schadenfreude</h2>
+
+  <p>
+    While Porro's afternoon descended into controversy,
+    <strong>Kevin Schade quietly produced the performance of the week</strong>.
+  </p>
+
+</article>
+
+
+<!-- SCHADE FEATURE -->
+
+<section class="schade-feature">
+
+  <div class="schade-image">
+    <img src="schade-matchweek5.PNG"
+         alt="Kevin Schade">
+  </div>
+
+  <div class="schade-data">
+
+    <span>Matchday 5 // Performance of the Week</span>
+
+    <h3>
+      Kevin<br>
+      Schade
+    </h3>
+
+    <div class="big-number">
+      21.79
+      <small>Fantasy Points</small>
+    </div>
+
+    <div class="schade-note">
+      Two assists. Team-high score. The performance that kept
+      Wooburt City fighting through a difficult Matchday 5.
+    </div>
+
+  </div>
+
+</section>
+
+
+<article class="article">
+
+  <p>
+    The Brentford attacker recorded two assists and finished on
+    <strong>21.79 points</strong>, almost single-handedly compensating for
+    several quieter performances elsewhere in the Cool Cats squad.
+  </p>
+
+  <p>
+    Isak continued his dependable start to life as WCCC captain, while
+    Iwobi provided another strong showing following his chaotic arrival
+    during the Lewis-Potter/Wissa transfer saga.
+  </p>
+
+</article>
+
+
+<!-- ISAK PHOTO -->
+
+<figure class="article-photo">
+
+  <img src="isak-matchweek5.PNG"
+       alt="Alexander Isak during Matchday 5">
+
+  <figcaption class="photo-caption">
+    THE CAPTAIN DELIVERS // ALEXANDER ISAK — 16.76 POINTS
+  </figcaption>
+
+</figure>
+
+
+<article class="article">
+
+  <p>
+    And Lewis-Potter himself?
+  </p>
+
+  <div class="pullquote">
+    <span>Welcome Home</span>
+    <strong>13.70 points.</strong>
+  </div>
+
+  <p>
+    Back home. Back contributing.
+  </p>
+
+  <p>
+    Denver feels a long way away now.
+  </p>
+
+  <h2>
+    No Panic.<br>
+    But No Hiding Either.
+  </h2>
+
+  <p>
+    A 1–2 week is below the standards Wooburt City have established.
+  </p>
+
+  <p>
+    There will be no crisis meetings. No dramatic overhaul. No panic
+    from the manager’s office.
+  </p>
+
+  <p>
+    But there will also be no pretending.
+  </p>
+
+  <p>
+    The Cool Cats have surrendered first place.
+  </p>
+
+  <p>
+    For now.
+  </p>
+
+
+  <!-- TITLE RACE -->
+
+  <div class="title-race">
+
+    <div class="race-label">
+      The Title Race // After Matchday 5
+    </div>
+
+    <div class="race-row">
+      <div class="pos">01</div>
+      <div class="team">Mauled By A Tiger</div>
+      <div class="pts">24 PTS</div>
+    </div>
+
+    <div class="race-row">
+      <div class="pos">02</div>
+      <div class="team">Wooburt City Cool Cats</div>
+      <div class="pts">24 PTS</div>
+    </div>
+
+  </div>
+
+
+  <p>
+    The difference at the top is razor thin, and there is a long season ahead.
+  </p>
+
+  <p>
+    Matchday 5 bruised the Cool Cats.
+  </p>
+
+  <p>
+    <strong>It did not break them.</strong>
+  </p>
+
+  <p>
+    And somewhere inside Wooburt City Training Ground, the medical staff
+    would probably like Pedro Porro to explain exactly what happened during
+    those <strong>18 minutes</strong>.
+  </p>
+
+</article>
+
+
+<!-- EDITOR'S NOTE -->
+
+<section class="editor-note">
+
+  <strong>Editor’s Note // WCCC Media</strong>
+
+  <p>
+    WCCC Media has found no evidence whatsoever that Leon Valley had anything
+    to do with Pedro Porro’s injury. This has unfortunately done very little
+    to stop WCCC Media from finding the timing hilarious.
+  </p>
+
+</section>
+
+
+<footer>
+
+  <div>
+    <strong>WCCC MEDIA</strong><br>
+    Wooburt City Cool Cats
+  </div>
+
+  <div>
+    September 2026 // Matchday Report 005
+  </div>
+
+</footer>
+
+</body>
+</html>
