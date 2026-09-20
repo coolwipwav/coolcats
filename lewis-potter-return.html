@@ -1,1 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Home Again: Lewis-Potter Returns | WCCC</title>
+
+<style>
+
+:root{
+  --black:#070909;
+  --panel:#0d1212;
+  --teal:#006b68;
+  --bright:#19a7a0;
+  --cream:#eee9dc;
+  --grey:#929c98;
+  --line:#26302f;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  background:var(--black);
+  color:var(--cream);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.7;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+/* TOP */
+
+.top-strip{
+  background:var(--teal);
+  padding:7px 5%;
+  display:flex;
+  justify-content:space-between;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:10px;
+  font-weight:bold;
+}
+
+/* HEADER */
+
+header{
+  min-height:90px;
+  padding:0 5%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:#070909;
+  border-bottom:1px solid var(--line);
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.brand img{
+  width:64px;
+  height:64px;
+  object-fit:contain;
+}
+
+.brand strong{
+  display:block;
+  font-size:16px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+
+.brand span{
+  display:block;
+  color:var(--grey);
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:3px;
+}
+
+.back{
+  color:var(--grey);
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+
+.back:hover{
+  color:var(--bright);
+}
+
+/* ARTICLE HEADER */
+
+.article-head{
+  max-width:1100px;
+  margin:auto;
+  padding:90px 6% 45px;
+}
+
+.category{
+  color:var(--bright);
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:10px;
+  font-weight:bold;
+  margin-bottom:18px;
+}
+
+h1{
+  max-width:1000px;
+  font-size:clamp(60px,9vw,115px);
+  line-height:.84;
+  text-transform:uppercase;
+  letter-spacing:-6px;
+}
+
+.subtitle{
+  max-width:760px;
+  color:#abb4b0;
+  font-size:19px;
+  margin-top:30px;
+}
+
+.meta{
+  margin-top:30px;
+  padding-top:18px;
+  border-top:1px solid var(--line);
+  color:#7f8985;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+
+/* HERO */
+
+.hero-image{
+  max-width:1250px;
+  margin:auto;
+  padding:0 4%;
+}
+
+.hero-image img{
+  width:100%;
+  max-height:760px;
+  object-fit:cover;
+  object-position:center top;
+  border:1px solid var(--line);
+}
+
+/* STORY */
+
+.article{
+  max-width:780px;
+  margin:auto;
+  padding:70px 6% 100px;
+}
+
+.article p{
+  color:#c3cac7;
+  font-size:17px;
+  margin-bottom:27px;
+}
+
+.article .lead{
+  color:var(--cream);
+  font-size:23px;
+  line-height:1.55;
+}
+
+.article h2{
+  font-size:35px;
+  line-height:1;
+  text-transform:uppercase;
+  margin:65px 0 25px;
+}
+
+.divider{
+  width:70px;
+  height:3px;
+  background:var(--teal);
+  margin:50px 0;
+}
+
+/* PULL QUOTE */
+
+.pullquote{
+  margin:60px -50px;
+  padding:40px 45px;
+  border-top:1px solid var(--teal);
+  border-bottom:1px solid var(--teal);
+}
+
+.pullquote p{
+  color:var(--cream);
+  font-size:30px;
+  line-height:1.25;
+  font-weight:bold;
+  text-transform:uppercase;
+  margin:0;
+}
+
+/* SECONDARY IMAGE */
+
+.article-photo{
+  margin:60px 0;
+}
+
+.article-photo img{
+  width:100%;
+  max-height:600px;
+  object-fit:cover;
+  object-position:center top;
+  border:1px solid var(--line);
+}
+
+.caption{
+  color:#77817d !important;
+  font-size:11px !important;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  margin-top:10px !important;
+}
+
+/* DEAL */
+
+.deal{
+  background:#0e1817;
+  border-left:4px solid var(--bright);
+  padding:35px;
+  margin:55px 0;
+}
+
+.deal-label{
+  color:var(--bright);
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:9px;
+  font-weight:bold;
+  margin-bottom:20px;
+}
+
+.deal-row{
+  padding:15px 0;
+  border-bottom:1px solid #24302f;
+}
+
+.deal-row:last-child{
+  border-bottom:0;
+}
+
+.deal-row span{
+  display:block;
+  color:#78827e;
+  font-size:9px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.deal-row strong{
+  display:block;
+  color:var(--cream);
+  font-size:20px;
+  margin-top:3px;
+}
+
+/* END */
+
+.end-note{
+  margin-top:70px;
+  padding:35px 0;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
+.end-note strong{
+  color:var(--bright);
+  display:block;
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:10px;
+  margin-bottom:10px;
+}
+
+.end-note p{
+  margin:0;
+  color:#8d9793;
+  font-size:14px;
+}
+
+/* FOOTER */
+
+footer{
+  border-top:1px solid var(--line);
+  padding:50px 6%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  color:var(--grey);
+  font-size:10px;
+}
+
+.footer-brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.footer-brand img{
+  width:55px;
+  height:55px;
+  object-fit:contain;
+}
+
+.footer-brand strong{
+  display:block;
+  color:var(--cream);
+  letter-spacing:2px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+  header{
+    min-height:78px;
+  }
+
+  .brand img{
+    width:50px;
+    height:50px;
+  }
+
+  .brand span{
+    display:none;
+  }
+
+  h1{
+    letter-spacing:-3px;
+  }
+
+  .article-head{
+    padding-top:60px;
+  }
+
+  .pullquote{
+    margin:50px 0;
+    padding:30px 0;
+  }
+
+  .pullquote p{
+    font-size:23px;
+  }
+
+  footer{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:25px;
+  }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="top-strip">
+  <span>WCCC Newsroom</span>
+  <span>Club Feature</span>
+</div>
+
+
+<header>
+
+  <a href="index.html" class="brand">
+
+    <img src="officialcrest.PNG"
+         alt="Wooburt City Cool Cats">
+
+    <div>
+      <strong>Wooburt City</strong>
+      <span>Cool Cats Football Club</span>
+    </div>
+
+  </a>
+
+  <a href="index.html" class="back">
+    ← Back to Club
+  </a>
+
+</header>
+
+
+<main>
+
+<!-- HEADLINE -->
+
+<section class="article-head">
+
+  <div class="category">
+    Transfers // The Return
+  </div>
+
+  <h1>
+    Home<br>
+    Again.
+  </h1>
+
+  <p class="subtitle">
+    He left Wooburt City only days ago. Now Lewis-Potter is back —
+    and one of the strangest pieces of transfer business in Cool Cats
+    history has delivered far more than a homecoming.
+  </p>
+
+  <div class="meta">
+    WCCC Newsroom &nbsp; // &nbsp; September 19, 2026
+  </div>
+
+</section>
+
+
+<!-- LP HERO -->
+
+<div class="hero-image">
+
+  <img src="lewis-potter-return.PNG"
+       alt="Lewis-Potter returns to Wooburt City">
+
+</div>
+
+
+<!-- ARTICLE -->
+
+<article class="article">
+
+  <p class="lead">
+    Lewis-Potter wanted to come home.
+  </p>
+
+  <p>
+    Only days after an emotional departure from Wooburt City,
+    the forward has completed a sensational return to the Cool Cats
+    as part of a deal that has dramatically reshaped the squad.
+  </p>
+
+  <p>
+    His first spell had lasted four consecutive gameweeks. It was
+    short by traditional football standards, but long enough for
+    Lewis-Potter to establish himself as one of the recognizable
+    faces of the young club.
+  </p>
+
+
+  <div class="divider"></div>
+
+
+  <h2>
+    The Original Goodbye
+  </h2>
+
+  <p>
+    Wooburt City made the difficult decision to move Lewis-Potter
+    in a deal for Alex Iwobi.
+  </p>
+
+  <p>
+    At the time, club management acknowledged the emotion surrounding
+    the move while maintaining that football ultimately demanded
+    difficult business decisions.
+  </p>
+
+  <p>
+    There was no bad blood. Lewis-Potter departed with the club's
+    appreciation and best wishes.
+  </p>
+
+
+  <div class="pullquote">
+    <p>
+      Then came the twist: Lewis-Potter wanted to return.
+    </p>
+  </div>
+
+
+  <h2>
+    The Door Reopens
+  </h2>
+
+  <p>
+    What initially appeared to be the end of Lewis-Potter's chapter
+    at Wooburt City quickly became something else entirely.
+  </p>
+
+  <p>
+    With an opportunity emerging to bring him back, Cool Cats
+    management moved aggressively.
+  </p>
+
+  <p>
+    This time, however, Lewis-Potter would not be arriving alone.
+  </p>
+
+  <p>
+    Ryan Gravenberch was available as part of the wider transaction,
+    presenting Wooburt City with an opportunity to reunite with
+    Lewis-Potter while simultaneously adding another major piece
+    to the squad.
+  </p>
+
+
+  <!-- WISSA IMAGE -->
+
+  <div class="article-photo">
+
+    <img src="Wissa.JPG"
+         alt="Yoane Wissa departs Wooburt City">
+
+    <p class="caption">
+      Yoane Wissa departs Wooburt City as part of the deal
+      that brings Lewis-Potter home.
+    </p>
+
+  </div>
+
+
+  <h2>
+    Wissa Makes Way
+  </h2>
+
+  <p>
+    To make the deal happen, Wooburt City parted ways with Yoane
+    Wissa.
+  </p>
+
+  <p>
+    Wissa's departure represents the cost of an ambitious piece of
+    business, but the return immediately transformed the complexion
+    of the Cool Cats squad.
+  </p>
+
+
+  <div class="deal">
+
+    <div class="deal-label">
+      The Business // WCCC
+    </div>
+
+    <div class="deal-row">
+      <span>Departed</span>
+      <strong>Yoane Wissa</strong>
+    </div>
+
+    <div class="deal-row">
+      <span>Returned</span>
+      <strong>Lewis-Potter</strong>
+    </div>
+
+    <div class="deal-row">
+      <span>Arrived</span>
+      <strong>Ryan Gravenberch</strong>
+    </div>
+
+    <div class="deal-row">
+      <span>From the original LP transaction</span>
+      <strong>Alex Iwobi</strong>
+    </div>
+
+  </div>
+
+
+  <h2>
+    The Bigger Picture
+  </h2>
+
+  <p>
+    Viewed as one continuous sequence of transactions, the scale of
+    Wooburt City's business becomes clear.
+  </p>
+
+  <p>
+    Lewis-Potter's original departure delivered Alex Iwobi. His
+    subsequent return came alongside Ryan Gravenberch at the cost
+    of Wissa.
+  </p>
+
+  <p>
+    The net result is extraordinary: Wooburt City effectively turned
+    Wissa into Lewis-Potter, Gravenberch and Iwobi.
+  </p>
+
+
+  <div class="pullquote">
+    <p>
+      Wissa out.<br>
+      Lewis-Potter back.<br>
+      Gravenberch in.<br>
+      Iwobi already here.
+    </p>
+  </div>
+
+
+  <h2>
+    Back Where He Belongs
+  </h2>
+
+  <p>
+    Transfers are usually discussed in terms of value, squad building
+    and long-term planning.
+  </p>
+
+  <p>
+    This one carries something else.
+  </p>
+
+  <p>
+    Lewis-Potter left Wooburt City with the door seemingly closed.
+    Days later, that door reopened.
+  </p>
+
+  <p>
+    The Cool Cats got their player back. Lewis-Potter got his
+    homecoming. And Wooburt City emerged with a squad stronger than
+    the one it had before the entire saga began.
+  </p>
+
+
+  <div class="end-note">
+
+    <strong>
+      Welcome Home, LP.
+    </strong>
+
+    <p>
+      Lewis-Potter has officially rejoined Wooburt City Cool Cats FC.
+    </p>
+
+  </div>
+
+</article>
+
+</main>
+
+
+<footer>
+
+  <div class="footer-brand">
+
+    <img src="officialcrest.PNG"
+         alt="WCCC">
+
+    <div>
+      <strong>WCCC NEWSROOM</strong>
+      WOOBURT CITY COOL CATS FC
+    </div>
+
+  </div>
+
+  <div>
+    © 2026 WCCC
+  </div>
+
+</footer>
+
+
+</body>
+</html>
