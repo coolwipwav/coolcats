@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Wooburt // Founder of WCCC</title>
+
+  <style>
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    :root{
+      --black:#070909;
+      --panel:#0d1212;
+      --teal:#123f3c;
+      --bright:#22c7bb;
+      --cream:#f1eee3;
+      --muted:#89918e;
+      --line:#26302f;
+    }
+
+    body{
+      background:var(--black);
+      color:var(--cream);
+      font-family:"Courier New", monospace;
+      line-height:1.6;
+    }
+
+    a{
+      color:inherit;
+    }
+
+    /* TOP BAR */
+
+    .topbar{
+      padding:24px 6%;
+      border-bottom:1px solid var(--line);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+    }
+
+    .return{
+      color:var(--bright);
+      text-decoration:none;
+      text-transform:uppercase;
+      font-size:11px;
+      font-weight:bold;
+      letter-spacing:2px;
+    }
+
+    .return:hover{
+      text-decoration:underline;
+    }
+
+    .club-mark{
+      text-align:right;
+      font-size:10px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height:72vh;
+      display:flex;
+      align-items:flex-end;
+      padding:80px 6%;
+      position:relative;
+      overflow:hidden;
+      border-bottom:1px solid var(--line);
+      background:
+        linear-gradient(
+          90deg,
+          rgba(7,9,9,.97) 0%,
+          rgba(7,9,9,.84) 45%,
+          rgba(7,9,9,.18) 100%
+        ),
+        url("wooburt1.png") center 35% / cover;
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+      max-width:900px;
+    }
+
+    .eyebrow{
+      color:var(--bright);
+      font-size:11px;
+      font-weight:bold;
+      letter-spacing:4px;
+      text-transform:uppercase;
+      margin-bottom:20px;
+    }
+
+    h1{
+      font-family:Arial, Helvetica, sans-serif;
+      font-size:clamp(70px, 13vw, 180px);
+      line-height:.78;
+      letter-spacing:-8px;
+      text-transform:uppercase;
+    }
+
+    .hero-sub{
+      margin-top:34px;
+      max-width:700px;
+      font-size:17px;
+      color:#c5cac7;
+    }
+
+    /* INTRO */
+
+    .intro{
+      max-width:1000px;
+      margin:auto;
+      padding:100px 6%;
+      text-align:center;
+    }
+
+    .intro-label{
+      color:var(--bright);
+      text-transform:uppercase;
+      letter-spacing:4px;
+      font-size:10px;
+      margin-bottom:25px;
+    }
+
+    .intro h2{
+      font-family:Arial, Helvetica, sans-serif;
+      font-size:clamp(32px, 5vw, 62px);
+      line-height:1.05;
+      text-transform:uppercase;
+      margin-bottom:35px;
+    }
+
+    .intro p{
+      max-width:760px;
+      margin:auto;
+      color:#aeb5b1;
+      font-size:15px;
+    }
+
+    /* GALLERY */
+
+    .gallery{
+      width:90%;
+      max-width:1400px;
+      margin:0 auto 120px;
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:18px;
+    }
+
+    .photo{
+      position:relative;
+      min-height:420px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      background:var(--panel);
+    }
+
+    .photo img{
+      width:100%;
+      height:100%;
+      position:absolute;
+      inset:0;
+      object-fit:cover;
+      transition:transform .5s ease;
+    }
+
+    .photo:hover img{
+      transform:scale(1.025);
+    }
+
+    .photo::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(
+        transparent 45%,
+        rgba(0,0,0,.86)
+      );
+      pointer-events:none;
+    }
+
+    .caption{
+      position:absolute;
+      z-index:2;
+      left:24px;
+      right:24px;
+      bottom:22px;
+    }
+
+    .caption span{
+      display:block;
+      color:var(--bright);
+      font-size:9px;
+      font-weight:bold;
+      letter-spacing:3px;
+      text-transform:uppercase;
+      margin-bottom:5px;
+    }
+
+    .caption strong{
+      font-family:Arial, Helvetica, sans-serif;
+      font-size:23px;
+      text-transform:uppercase;
+    }
+
+    .p2{
+      grid-column:span 7;
+      min-height:600px;
+    }
+
+    .p3{
+      grid-column:span 5;
+      min-height:600px;
+    }
+
+    .p4{
+      grid-column:span 4;
+      min-height:480px;
+    }
+
+    .p5{
+      grid-column:span 8;
+      min-height:480px;
+    }
+
+    .p6{
+      grid-column:span 6;
+      min-height:550px;
+    }
+
+    .p7{
+      grid-column:span 6;
+      min-height:550px;
+    }
+
+    /* QUOTE */
+
+    .quote{
+      width:90%;
+      max-width:1200px;
+      margin:0 auto 120px;
+      border-top:1px solid var(--bright);
+      border-bottom:1px solid var(--bright);
+      padding:70px 0;
+      text-align:center;
+    }
+
+    .quote p{
+      font-family:Arial, Helvetica, sans-serif;
+      font-size:clamp(30px, 5vw, 65px);
+      font-weight:900;
+      line-height:1;
+      text-transform:uppercase;
+    }
+
+    .quote span{
+      display:block;
+      color:var(--bright);
+      margin-top:25px;
+      font-size:10px;
+      letter-spacing:3px;
+      text-transform:uppercase;
+    }
+
+    /* FOUNDER FILE */
+
+    .founder-file{
+      width:90%;
+      max-width:1000px;
+      margin:0 auto 120px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      border:1px solid var(--line);
+    }
+
+    .file-title{
+      background:var(--teal);
+      padding:45px;
+    }
+
+    .file-title span{
+      color:var(--bright);
+      font-size:9px;
+      letter-spacing:3px;
+      text-transform:uppercase;
+    }
+
+    .file-title h3{
+      font-family:Arial, Helvetica, sans-serif;
+      font-size:48px;
+      line-height:1;
+      text-transform:uppercase;
+      margin-top:12px;
+    }
+
+    .file-data{
+      padding:45px;
+      background:var(--panel);
+    }
+
+    .stat{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      padding:14px 0;
+      border-bottom:1px solid var(--line);
+      font-size:11px;
+      text-transform:uppercase;
+    }
+
+    .stat:last-child{
+      border-bottom:0;
+    }
+
+    .stat span{
+      color:var(--muted);
+    }
+
+    .stat strong{
+      color:var(--cream);
+      text-align:right;
+    }
+
+    /* FOOTER */
+
+    footer{
+      border-top:1px solid var(--line);
+      padding:80px 6%;
+      text-align:center;
+    }
+
+    footer h2{
+      font-family:Arial, Helvetica, sans-serif;
+      font-size:clamp(28px,5vw,60px);
+      text-transform:uppercase;
+    }
+
+    footer p{
+      color:var(--bright);
+      font-size:10px;
+      letter-spacing:3px;
+      text-transform:uppercase;
+      margin-top:14px;
+    }
+
+    footer .est{
+      margin-top:45px;
+      color:var(--muted);
+    }
+
+    /* MOBILE */
+
+    @media(max-width:750px){
+
+      .hero{
+        min-height:70vh;
+        padding:55px 6%;
+        background:
+          linear-gradient(
+            0deg,
+            rgba(7,9,9,.98) 0%,
+            rgba(7,9,9,.45) 70%,
+            rgba(7,9,9,.15) 100%
+          ),
+          url("wooburt1.png") center / cover;
+      }
+
+      h1{
+        letter-spacing:-4px;
+      }
+
+      .gallery{
+        display:block;
+      }
+
+      .photo,
+      .p2,
+      .p3,
+      .p4,
+      .p5,
+      .p6,
+      .p7{
+        min-height:470px;
+        margin-bottom:18px;
+      }
+
+      .founder-file{
+        grid-template-columns:1fr;
+      }
+
+      .file-title,
+      .file-data{
+        padding:30px;
+      }
+
+      .file-title h3{
+        font-size:38px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- TOP BAR -->
+
+  <div class="topbar">
+
+    <a class="return" href="index.html">
+      ← Return to WCCC
+    </a>
+
+    <div class="club-mark">
+      Wooburt City Cool Cats<br>
+      Est. 2026
+    </div>
+
+  </div>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        Founder // Namesake // Club Icon
+      </div>
+
+      <h1>
+        Woo<br>
+        Burt.
+      </h1>
+
+      <p class="hero-sub">
+        Before the crest. Before the kits. Before the transfer drama.
+        Before Wooburt City had played a single match — there was Woo.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- INTRO -->
+
+  <section class="intro">
+
+    <div class="intro-label">
+      The Origin Story
+    </div>
+
+    <h2>
+      Every great club<br>
+      begins with a vision.
+    </h2>
+
+    <p>
+      Wooburt City Cool Cats carries the name of its founder, inspiration
+      and spiritual architect. While managers have come and players have
+      gone, Woo remains the permanent presence behind the project.
+      His influence can be found throughout the club — from its name
+      and identity to its unwavering belief that every available surface
+      is technically a suitable place for a nap.
+    </p>
+
+  </section>
+
+
+  <!-- GALLERY -->
+
+  <section class="gallery">
+
+    <div class="photo p2">
+      <img src="wooburt2.png" alt="Wooburt">
+      <div class="caption">
+        <span>01 // Executive Operations</span>
+        <strong>The Founder at Work</strong>
+      </div>
+    </div>
+
+    <div class="photo p3">
+      <img src="wooburt3.png" alt="Wooburt">
+      <div class="caption">
+        <span>02 // Club Leadership</span>
+        <strong>Boardroom Presence</strong>
+      </div>
+    </div>
+
+    <div class="photo p4">
+      <img src="wooburt4.png" alt="Wooburt">
+      <div class="caption">
+        <span>03 // Recruitment</span>
+        <strong>Transfer Committee</strong>
+      </div>
+    </div>
+
+    <div class="photo p5">
+      <img src="wooburt5.png" alt="Wooburt">
+      <div class="caption">
+        <span>04 // Preparation</span>
+        <strong>Matchday Focus</strong>
+      </div>
+    </div>
+
+    <div class="photo p6">
+      <img src="wooburt6.png" alt="Wooburt">
+      <div class="caption">
+        <span>05 // Football Operations</span>
+        <strong>Tactical Review</strong>
+      </div>
+    </div>
+
+    <div class="photo p7">
+      <img src="wooburt7.png" alt="Wooburt">
+      <div class="caption">
+        <span>06 // The Project</span>
+        <strong>Club Oversight</strong>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- QUOTE -->
+
+  <section class="quote">
+
+    <p>
+      “The club is temporary.<br>
+      The cat is permanent.”
+    </p>
+
+    <span>
+      WCCC Institutional Philosophy
+    </span>
+
+  </section>
+
+
+  <!-- FOUNDER FILE -->
+
+  <section class="founder-file">
+
+    <div class="file-title">
+
+      <span>
+        WCCC Personnel File // 001
+      </span>
+
+      <h3>
+        Wooburt
+      </h3>
+
+    </div>
+
+    <div class="file-data">
+
+      <div class="stat">
+        <span>Position</span>
+        <strong>Founder</strong>
+      </div>
+
+      <div class="stat">
+        <span>Department</span>
+        <strong>Everything</strong>
+      </div>
+
+      <div class="stat">
+        <span>Club Status</span>
+        <strong>Untouchable</strong>
+      </div>
+
+      <div class="stat">
+        <span>Transfer Value</span>
+        <strong>Not For Sale</strong>
+      </div>
+
+      <div class="stat">
+        <span>Contract</span>
+        <strong>Lifetime</strong>
+      </div>
+
+      <div class="stat">
+        <span>Authority</span>
+        <strong>Absolute</strong>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <h2>
+      Named for one.<br>
+      Built for eternity.
+    </h2>
+
+    <p>
+      Wooburt City Cool Cats
+    </p>
+
+    <div class="est">
+      EST. 2026 // WCCC
+    </div>
+
+  </footer>
+
+</body>
+</html>
