@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Leon Valley Breaks Silence | WCCC Newsroom</title>
+
+<style>
+
+:root{
+  --black:#070909;
+  --panel:#0d1212;
+  --teal:#006b68;
+  --bright:#19a7a0;
+  --cream:#eee9dc;
+  --grey:#929c98;
+  --line:#26302f;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  background:var(--black);
+  color:var(--cream);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.7;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+/* TOP BAR */
+
+.top-strip{
+  background:var(--teal);
+  padding:7px 5%;
+  display:flex;
+  justify-content:space-between;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:10px;
+  font-weight:bold;
+}
+
+/* HEADER */
+
+header{
+  min-height:90px;
+  padding:0 5%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:#070909;
+  border-bottom:1px solid var(--line);
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.brand img{
+  width:64px;
+  height:64px;
+  object-fit:contain;
+}
+
+.brand strong{
+  display:block;
+  font-size:16px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+
+.brand span{
+  display:block;
+  color:var(--grey);
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:3px;
+}
+
+.back{
+  color:var(--grey);
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+
+.back:hover{
+  color:var(--bright);
+}
+
+/* ARTICLE HEADER */
+
+.article-head{
+  max-width:1100px;
+  margin:auto;
+  padding:90px 6% 45px;
+}
+
+.category{
+  color:var(--bright);
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:10px;
+  font-weight:bold;
+  margin-bottom:18px;
+}
+
+h1{
+  max-width:1000px;
+  font-size:clamp(52px,8vw,100px);
+  line-height:.88;
+  text-transform:uppercase;
+  letter-spacing:-5px;
+}
+
+.subtitle{
+  max-width:760px;
+  color:#abb4b0;
+  font-size:19px;
+  margin-top:30px;
+}
+
+.article-meta{
+  margin-top:30px;
+  padding-top:18px;
+  border-top:1px solid var(--line);
+  color:#7f8985;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+
+/* HERO IMAGE */
+
+.hero-image{
+  max-width:1250px;
+  margin:0 auto;
+  padding:0 4%;
+}
+
+.hero-image img{
+  width:100%;
+  max-height:720px;
+  object-fit:cover;
+  object-position:center;
+  border:1px solid var(--line);
+}
+
+/* ARTICLE */
+
+.article{
+  max-width:780px;
+  margin:auto;
+  padding:70px 6% 100px;
+}
+
+.article p{
+  color:#c3cac7;
+  font-size:17px;
+  margin-bottom:26px;
+}
+
+.article .lead{
+  color:var(--cream);
+  font-size:22px;
+  line-height:1.6;
+}
+
+.article h2{
+  color:var(--cream);
+  text-transform:uppercase;
+  font-size:34px;
+  line-height:1;
+  margin:60px 0 22px;
+}
+
+.article-divider{
+  width:70px;
+  height:3px;
+  background:var(--teal);
+  margin:45px 0;
+}
+
+/* RESPONSE */
+
+.response{
+  margin:55px 0;
+  padding:38px;
+  background:#101817;
+  border-left:4px solid var(--bright);
+}
+
+.response-label{
+  color:var(--bright);
+  font-size:9px;
+  font-weight:bold;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin-bottom:20px;
+}
+
+.response p{
+  color:#e2e0d8;
+  font-size:16px;
+  margin-bottom:18px;
+}
+
+.response p:last-child{
+  margin-bottom:0;
+}
+
+/* DEVELOPING */
+
+.developing{
+  margin-top:70px;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:35px 0;
+}
+
+.developing strong{
+  display:block;
+  color:var(--bright);
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:10px;
+  margin-bottom:12px;
+}
+
+.developing p{
+  font-size:14px;
+  color:#89938f;
+  margin:0;
+}
+
+/* FOOTER */
+
+footer{
+  border-top:1px solid var(--line);
+  padding:50px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:var(--grey);
+  font-size:10px;
+  letter-spacing:1px;
+}
+
+.footer-brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.footer-brand img{
+  width:55px;
+  height:55px;
+  object-fit:contain;
+}
+
+.footer-brand strong{
+  display:block;
+  color:var(--cream);
+  letter-spacing:2px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+  header{
+    min-height:78px;
+  }
+
+  .brand img{
+    width:50px;
+    height:50px;
+  }
+
+  .brand span{
+    display:none;
+  }
+
+  .back{
+    font-size:8px;
+  }
+
+  h1{
+    letter-spacing:-3px;
+  }
+
+  .article-head{
+    padding-top:60px;
+  }
+
+  .article{
+    padding-top:50px;
+  }
+
+  .response{
+    padding:25px;
+  }
+
+  footer{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:25px;
+  }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="top-strip">
+  <span>WCCC Newsroom</span>
+  <span>Exclusive</span>
+</div>
+
+
+<header>
+
+  <a href="index.html" class="brand">
+
+    <img src="officialcrest.PNG"
+         alt="Wooburt City Cool Cats">
+
+    <div>
+      <strong>Wooburt City</strong>
+      <span>Cool Cats Football Club</span>
+    </div>
+
+  </a>
+
+  <a href="index.html" class="back">
+    ← Back to Club
+  </a>
+
+</header>
+
+
+<main>
+
+<!-- ARTICLE HEADER -->
+
+<section class="article-head">
+
+  <div class="category">
+    WCCC Exclusive // League Investigation
+  </div>
+
+  <h1>
+    Leon Valley<br>
+    Breaks Silence
+  </h1>
+
+  <p class="subtitle">
+    Allegations surrounding Pedro Porro, questions over the future
+    of Leon Valley's captain, and an extraordinary war of words
+    have become the league's latest controversy.
+  </p>
+
+  <div class="article-meta">
+    WCCC Newsroom &nbsp; // &nbsp; September 20, 2026
+  </div>
+
+</section>
+
+
+<!-- IMAGE -->
+
+<div class="hero-image">
+
+  <img src="porroscandal.PNG"
+       alt="Pedro Porro controversy">
+
+</div>
+
+
+<!-- STORY -->
+
+<article class="article">
+
+  <p class="lead">
+    Tensions between Wooburt City Cool Cats and Leon Valley Football
+    Club have escalated following allegations surrounding Cool Cats
+    defender Pedro Porro.
+  </p>
+
+  <p>
+    League sources have raised allegations that the owner and manager
+    of Leon Valley Football Club has developed an unusually close
+    relationship with Porro, with speculation suggesting an attempt
+    may be underway to entice the player away from Wooburt City.
+  </p>
+
+  <p>
+    At this stage, there is no confirmed evidence of an agreement
+    between Porro and Leon Valley, and no transfer involving the
+    player has been announced.
+  </p>
+
+
+  <div class="article-divider"></div>
+
+
+  <h2>
+    Questions at Leon Valley
+  </h2>
+
+  <p>
+    The controversy comes amid separate questions surrounding the
+    future of Leon Valley captain Jarrad.
+  </p>
+
+  <p>
+    Jarrad's appearance on the trade block had generated speculation
+    about whether the club could be prepared to move its captain.
+    Increased attention surrounding the situation only added to
+    questions about Leon Valley's plans.
+  </p>
+
+  <p>
+    With rumors spreading throughout the league, WCCC Newsroom
+    approached Leon Valley directly and requested a response regarding
+    both the captain's situation and the allegations involving Porro.
+  </p>
+
+
+  <h2>
+    Leon Valley Responds
+  </h2>
+
+  <p>
+    Leon Valley strongly rejected the narrative surrounding the club
+    and offered an emphatic defense of its captain.
+  </p>
+
+
+  <div class="response">
+
+    <div class="response-label">
+      Statement // Leon Valley Football Club
+    </div>
+
+    <p>
+      “We do not respond to rumors. There is clear evidence that we
+      have stood our ground on any negotiations involving Jarrad as
+      he is our skipper who was voted for by his teammates who highly
+      regard him.”
+    </p>
+
+    <p>
+      “The trade block isn't anything but a tool. It doesn't fully
+      represent our plans and vision.”
+    </p>
+
+    <p>
+      “We at our football club are beyond delighted to have someone
+      like Jarrad leading us on and off the field. He grew up in
+      Leon Valley for Pete's sake. We couldn't have asked for a
+      better captain. He lives and breathes Leon Valley.”
+    </p>
+
+  </div>
+
+
+  <p>
+    The club then addressed the Porro allegations directly — and
+    turned its attention toward Wooburt City.
+  </p>
+
+
+  <div class="response">
+
+    <div class="response-label">
+      Statement Continued
+    </div>
+
+    <p>
+      “To answer this childish rumor about an affair, there is
+      nothing involving Wooburt City and Leon Valley regarding any
+      sorts of trades at the moment.”
+    </p>
+
+    <p>
+      “We believe there is someone amongst their brass spreading all
+      these Pedro Porro rumors, and for that, we will not be dealing
+      with Wooburt City until they deal with the rumors internally.”
+    </p>
+
+  </div>
+
+
+  <h2>
+    A Relationship Fractured
+  </h2>
+
+  <p>
+    Leon Valley's response represents a significant escalation.
+    What began as speculation surrounding one player has now developed
+    into a public dispute between two clubs.
+  </p>
+
+  <p>
+    The assertion that the rumors originated from within Wooburt City
+    places further pressure on Cool Cats leadership and raises a new
+    question: who, if anyone, inside the club has been discussing
+    Porro's relationship with Leon Valley?
+  </p>
+
+  <p>
+    For now, Porro remains a Wooburt City player, Jarrad remains
+    Leon Valley's captain, and no transaction between the two clubs
+    has been announced.
+  </p>
+
+  <p>
+    But after Leon Valley's declaration that it will refuse to conduct
+    business with Wooburt City until the matter is addressed
+    internally, relations between the clubs appear to have reached
+    their lowest point yet.
+  </p>
+
+
+  <div class="developing">
+
+    <strong>
+      Developing Story
+    </strong>
+
+    <p>
+      WCCC Newsroom will update this report as further statements,
+      transactions or developments emerge.
+    </p>
+
+  </div>
+
+</article>
+
+</main>
+
+
+<footer>
+
+  <div class="footer-brand">
+
+    <img src="officialcrest.PNG"
+         alt="WCCC">
+
+    <div>
+      <strong>WCCC NEWSROOM</strong>
+      WOOBURT CITY COOL CATS FC
+    </div>
+
+  </div>
+
+  <div>
+    © 2026 WCCC
+  </div>
+
+</footer>
+
+
+</body>
+</html>
