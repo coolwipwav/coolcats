@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Home Again: Lewis-Potter Returns | WCCC</title>
+<title>48 Hours of Chaos | WCCC Newsroom</title>
 
 <style>
 
@@ -42,7 +42,7 @@ img{
   max-width:100%;
 }
 
-/* TOP */
+/* TOP BAR */
 
 .top-strip{
   background:var(--teal);
@@ -123,18 +123,20 @@ header{
 }
 
 h1{
-  max-width:1000px;
-  font-size:clamp(60px,9vw,115px);
-  line-height:.84;
+  max-width:1050px;
+  font-size:clamp(60px,9vw,118px);
+  line-height:.83;
   text-transform:uppercase;
   letter-spacing:-6px;
 }
 
 .subtitle{
-  max-width:760px;
-  color:#abb4b0;
-  font-size:19px;
+  max-width:850px;
+  color:#c2cac6;
+  font-size:21px;
+  line-height:1.5;
   margin-top:30px;
+  font-weight:bold;
 }
 
 .meta{
@@ -157,16 +159,16 @@ h1{
 
 .hero-image img{
   width:100%;
-  max-height:760px;
+  max-height:780px;
   object-fit:cover;
   object-position:center top;
   border:1px solid var(--line);
 }
 
-/* STORY */
+/* ARTICLE */
 
 .article{
-  max-width:780px;
+  max-width:790px;
   margin:auto;
   padding:70px 6% 100px;
 }
@@ -184,38 +186,26 @@ h1{
 }
 
 .article h2{
-  font-size:35px;
+  color:var(--cream);
+  font-size:36px;
   line-height:1;
   text-transform:uppercase;
-  margin:65px 0 25px;
+  margin:70px 0 27px;
 }
 
-.divider{
-  width:70px;
-  height:3px;
-  background:var(--teal);
-  margin:50px 0;
-}
-
-/* PULL QUOTE */
-
-.pullquote{
-  margin:60px -50px;
-  padding:40px 45px;
+.emphasis{
+  margin:45px 0;
+  padding:28px 0;
   border-top:1px solid var(--teal);
   border-bottom:1px solid var(--teal);
-}
-
-.pullquote p{
   color:var(--cream);
-  font-size:30px;
+  font-size:28px;
   line-height:1.25;
-  font-weight:bold;
+  font-weight:900;
   text-transform:uppercase;
-  margin:0;
 }
 
-/* SECONDARY IMAGE */
+/* ARTICLE PHOTO */
 
 .article-photo{
   margin:60px 0;
@@ -223,84 +213,118 @@ h1{
 
 .article-photo img{
   width:100%;
-  max-height:600px;
+  max-height:620px;
   object-fit:cover;
   object-position:center top;
   border:1px solid var(--line);
 }
 
 .caption{
+  margin-top:10px !important;
   color:#77817d !important;
   font-size:11px !important;
   text-transform:uppercase;
   letter-spacing:1px;
-  margin-top:10px !important;
 }
 
-/* DEAL */
+/* GRAVENBERCH REVEAL */
 
-.deal{
-  background:#0e1817;
-  border-left:4px solid var(--bright);
-  padding:35px;
-  margin:55px 0;
+.reveal{
+  margin:60px -70px;
+  padding:50px;
+  background:linear-gradient(135deg,#0d1817,#12302e);
+  border:1px solid var(--teal);
+  text-align:center;
 }
 
-.deal-label{
-  color:var(--bright);
-  text-transform:uppercase;
-  letter-spacing:3px;
-  font-size:9px;
-  font-weight:bold;
-  margin-bottom:20px;
-}
-
-.deal-row{
-  padding:15px 0;
-  border-bottom:1px solid #24302f;
-}
-
-.deal-row:last-child{
-  border-bottom:0;
-}
-
-.deal-row span{
+.reveal span{
   display:block;
-  color:#78827e;
-  font-size:9px;
-  letter-spacing:2px;
+  color:var(--bright);
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:4px;
+  margin-bottom:15px;
+}
+
+.reveal strong{
+  display:block;
+  font-size:clamp(38px,6vw,68px);
+  line-height:.95;
   text-transform:uppercase;
 }
 
-.deal-row strong{
+/* FINAL OUTCOME */
+
+.outcome{
+  margin:70px -70px 50px;
+  background:#0c1716;
+  border:1px solid var(--teal);
+  padding:45px;
+}
+
+.outcome-label{
+  color:var(--bright);
+  font-size:10px;
+  font-weight:bold;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  padding-bottom:20px;
+  border-bottom:1px solid #29403e;
+}
+
+.outcome-side{
+  padding:28px 0;
+  border-bottom:1px solid #263836;
+}
+
+.outcome-side span{
+  display:block;
+  color:#7f8a86;
+  font-size:9px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin-bottom:7px;
+}
+
+.outcome-side strong{
   display:block;
   color:var(--cream);
-  font-size:20px;
-  margin-top:3px;
+  font-size:24px;
+  line-height:1.35;
+  text-transform:uppercase;
 }
 
-/* END */
+.outcome-ending{
+  padding-top:30px;
+  color:var(--cream);
+  font-size:19px;
+  font-weight:bold;
+  line-height:1.8;
+  text-transform:uppercase;
+}
 
-.end-note{
+.welcome{
   margin-top:70px;
-  padding:35px 0;
+  text-align:center;
+  padding:60px 20px;
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
 }
 
-.end-note strong{
-  color:var(--bright);
+.welcome span{
   display:block;
-  text-transform:uppercase;
-  letter-spacing:3px;
+  color:var(--bright);
   font-size:10px;
-  margin-bottom:10px;
+  letter-spacing:4px;
+  text-transform:uppercase;
 }
 
-.end-note p{
-  margin:0;
-  color:#8d9793;
-  font-size:14px;
+.welcome strong{
+  display:block;
+  margin-top:10px;
+  font-size:clamp(45px,7vw,80px);
+  line-height:.9;
+  text-transform:uppercase;
 }
 
 /* FOOTER */
@@ -358,13 +382,18 @@ footer{
     padding-top:60px;
   }
 
-  .pullquote{
-    margin:50px 0;
-    padding:30px 0;
+  .reveal,
+  .outcome{
+    margin-left:0;
+    margin-right:0;
   }
 
-  .pullquote p{
-    font-size:23px;
+  .reveal{
+    padding:35px 20px;
+  }
+
+  .outcome{
+    padding:30px 22px;
   }
 
   footer{
@@ -382,7 +411,7 @@ footer{
 
 <div class="top-strip">
   <span>WCCC Newsroom</span>
-  <span>Club Feature</span>
+  <span>Exclusive</span>
 </div>
 
 
@@ -414,33 +443,32 @@ footer{
 <section class="article-head">
 
   <div class="category">
-    Transfers // The Return
+    WCCC Exclusive // Transfer Chaos
   </div>
 
   <h1>
-    Home<br>
-    Again.
+    48 Hours<br>
+    of Chaos
   </h1>
 
   <p class="subtitle">
-    He left Wooburt City only days ago. Now Lewis-Potter is back —
-    and one of the strangest pieces of transfer business in Cool Cats
-    history has delivered far more than a homecoming.
+    Lewis-Potter wanted Denver. Wissa wanted Denver.
+    Somehow, Ryan Gravenberch ended up in Wooburt City.
   </p>
 
   <div class="meta">
-    WCCC Newsroom &nbsp; // &nbsp; September 19, 2026
+    WOOBURT CITY — EXCLUSIVE &nbsp; // &nbsp; SEPTEMBER 19, 2026
   </div>
 
 </section>
 
 
-<!-- LP HERO -->
+<!-- LEWIS-POTTER IMAGE -->
 
 <div class="hero-image">
 
   <img src="lewis-potter-return.PNG"
-       alt="Lewis-Potter returns to Wooburt City">
+       alt="Keane Lewis-Potter returns to Wooburt City">
 
 </div>
 
@@ -450,206 +478,349 @@ footer{
 <article class="article">
 
   <p class="lead">
-    Lewis-Potter wanted to come home.
+    For roughly 48 hours, nobody at Wooburt City Cool Cats seemed
+    entirely sure who wanted to leave, who wanted to stay, or who
+    might walk through the doors next.
   </p>
 
   <p>
-    Only days after an emotional departure from Wooburt City,
-    the forward has completed a sensational return to the Cool Cats
-    as part of a deal that has dramatically reshaped the squad.
+    It began with a goodbye.
   </p>
 
   <p>
-    His first spell had lasted four consecutive gameweeks. It was
-    short by traditional football standards, but long enough for
-    Lewis-Potter to establish himself as one of the recognizable
-    faces of the young club.
-  </p>
-
-
-  <div class="divider"></div>
-
-
-  <h2>
-    The Original Goodbye
-  </h2>
-
-  <p>
-    Wooburt City made the difficult decision to move Lewis-Potter
-    in a deal for Alex Iwobi.
+    It ended with one of the most remarkable trades in club history.
   </p>
 
   <p>
-    At the time, club management acknowledged the emotion surrounding
-    the move while maintaining that football ultimately demanded
-    difficult business decisions.
+    And somewhere in Denver, a marijuana sponsorship was apparently
+    caught directly in the middle of it all.
+  </p>
+
+
+  <h2>Lewis-Potter Leaves Home</h2>
+
+  <p>
+    When Keane Lewis-Potter learned he would be leaving Wooburt City
+    for Omar FC in Denver, there was genuine optimism surrounding
+    the move.
   </p>
 
   <p>
-    There was no bad blood. Lewis-Potter departed with the club's
-    appreciation and best wishes.
+    Lewis-Potter had spent four consecutive gameweeks with the Cool
+    Cats. He had become part of the fabric of a young club still
+    establishing its identity, but Denver represented something
+    different.
   </p>
 
+  <p>
+    A fresh start. A new city. A new dressing room.
+  </p>
 
-  <div class="pullquote">
-    <p>
-      Then came the twist: Lewis-Potter wanted to return.
-    </p>
+  <p>
+    The Cool Cats received <strong>Alex Iwobi</strong> in return,
+    wished Lewis-Potter well publicly, and attempted to move forward.
+  </p>
+
+  <p>
+    There was only one problem.
+  </p>
+
+  <div class="emphasis">
+    Lewis-Potter almost immediately wanted to come home.
   </div>
 
-
-  <h2>
-    The Door Reopens
-  </h2>
-
   <p>
-    What initially appeared to be the end of Lewis-Potter's chapter
-    at Wooburt City quickly became something else entirely.
+    Sources around the club describe a player who underestimated just
+    how attached he had become to Wooburt City. The familiar dressing
+    room, the supporters and the feeling of belonging suddenly meant
+    considerably more once they were gone.
   </p>
 
   <p>
-    With an opportunity emerging to bring him back, Cool Cats
-    management moved aggressively.
+    What had initially looked like an exciting new chapter reportedly
+    became something closer to homesickness.
   </p>
 
   <p>
-    This time, however, Lewis-Potter would not be arriving alone.
+    The message eventually made its way back to Wooburt City:
   </p>
+
+  <div class="emphasis">
+    Lewis-Potter missed the Cool Cats.
+  </div>
 
   <p>
-    Ryan Gravenberch was available as part of the wider transaction,
-    presenting Wooburt City with an opportunity to reunite with
-    Lewis-Potter while simultaneously adding another major piece
-    to the squad.
+    But while one player regretted going to Denver, another was
+    furious that he hadn't.
   </p>
 
 
-  <!-- WISSA IMAGE -->
+  <h2>Wissa: “Why Wasn't It Me?”</h2>
+
+
+  <!-- WISSA PHOTO -->
 
   <div class="article-photo">
 
-    <img src="Wissa.JPG"
-         alt="Yoane Wissa departs Wooburt City">
+    <img src="wissa.JPG"
+         alt="Yoane Wissa at Wooburt City">
 
     <p class="caption">
-      Yoane Wissa departs Wooburt City as part of the deal
-      that brings Lewis-Potter home.
+      Yoane Wissa found himself at the center of an increasingly
+      bizarre 48 hours of transfer negotiations.
     </p>
 
   </div>
 
 
-  <h2>
-    Wissa Makes Way
-  </h2>
-
   <p>
-    To make the deal happen, Wooburt City parted ways with Yoane
-    Wissa.
+    Yoane Wissa had watched the original Lewis-Potter–Iwobi trade
+    unfold from inside the Wooburt City dressing room.
   </p>
 
   <p>
-    Wissa's departure represents the cost of an ambitious piece of
-    business, but the return immediately transformed the complexion
-    of the Cool Cats squad.
+    And according to sources close to the situation, he wasn't happy.
+  </p>
+
+  <p>
+    Wissa had reportedly been positioning himself for a potential
+    future in Denver and had even secured a brand agreement with a
+    marijuana company based in the city.
+  </p>
+
+  <p>
+    There was just one fairly significant complication.
+  </p>
+
+  <div class="emphasis">
+    He still played for Wooburt City.
+  </div>
+
+  <p>
+    When Lewis-Potter was sent to Denver instead, Wissa was said to
+    be extremely upset that he had not been included in the deal.
+  </p>
+
+  <p>
+    Suddenly, two players wanted the exact opposite of what had just
+    happened.
+  </p>
+
+  <p>
+    Lewis-Potter was in Denver wanting Wooburt City.
+  </p>
+
+  <p>
+    Wissa was in Wooburt City wanting Denver.
+  </p>
+
+  <p>
+    The phones started ringing again.
   </p>
 
 
-  <div class="deal">
+  <h2>The Negotiations Reopen</h2>
 
-    <div class="deal-label">
-      The Business // WCCC
+  <p>
+    Behind closed doors, Cool Cats management began discussions with
+    Omar FC.
+  </p>
+
+  <p>
+    Initially, the solution appeared relatively straightforward:
+    find a route to bring Lewis-Potter home while allowing Wissa to
+    pursue the move he wanted.
+  </p>
+
+  <p>
+    But the negotiations grew.
+  </p>
+
+  <p>
+    Names were discussed.
+  </p>
+
+  <p>
+    Proposals changed.
+  </p>
+
+  <p>
+    The Alex Iwobi deal from the original trade remained part of the
+    wider picture.
+  </p>
+
+  <p>
+    Then came the name nobody around Wooburt City expected.
+  </p>
+
+
+  <div class="reveal">
+    <span>The Unexpected Name</span>
+    <strong>Ryan<br>Gravenberch.</strong>
+  </div>
+
+
+  <p>
+    Suddenly, this was no longer simply an attempt to reverse a
+    transfer.
+  </p>
+
+  <p>
+    It had become an opportunity.
+  </p>
+
+  <p>
+    After lengthy discussions and deliberation between the two clubs,
+    the framework was finally agreed.
+  </p>
+
+  <div class="emphasis">
+    Yoane Wissa would leave Wooburt City.
+  </div>
+
+  <p>
+    And when all of the movement from the two days was finally
+    accounted for, the Cool Cats had turned Wissa into an
+    extraordinary haul:
+  </p>
+
+  <p>
+    <strong>Alex Iwobi.</strong><br>
+    <strong>Keane Lewis-Potter.</strong><br>
+    <strong>Ryan Gravenberch.</strong>
+  </p>
+
+  <p>
+    Lewis-Potter was coming home.
+  </p>
+
+  <p>
+    Iwobi remained a Cool Cat.
+  </p>
+
+  <p>
+    And Gravenberch was coming with him.
+  </p>
+
+
+  <h2>Two Days Later</h2>
+
+  <p>
+    Football moves quickly.
+  </p>
+
+  <p>
+    Emotion moves even faster.
+  </p>
+
+  <p>
+    Only two days earlier, Lewis-Potter's departure had divided
+    supporters. The club had been forced to publicly defend the
+    decision to trade a player who had spent four straight gameweeks
+    wearing Cool Cats colors.
+  </p>
+
+  <p>
+    Then he wanted back.
+  </p>
+
+  <p>
+    Wissa wanted out.
+  </p>
+
+  <p>
+    Gravenberch appeared seemingly from nowhere.
+  </p>
+
+  <p>
+    And the entire situation flipped.
+  </p>
+
+  <p>
+    Now the noise has finally begun to fade.
+  </p>
+
+  <p>
+    Lewis-Potter is back where he wanted to be.
+  </p>
+
+  <p>
+    Wissa gets his move to Denver—and, presumably, a considerably
+    easier commute to his newest commercial obligations.
+  </p>
+
+  <p>
+    Iwobi remains one of the newest members of the project.
+  </p>
+
+  <p>
+    Gravenberch walks into Wooburt City as the unexpected prize of a
+    negotiation that initially wasn't supposed to involve him at all.
+  </p>
+
+  <p>
+    Most importantly, the dressing room can finally breathe.
+  </p>
+
+  <p>
+    The supporters can stop refreshing their phones.
+  </p>
+
+  <p>
+    The players can get back to football.
+  </p>
+
+  <p>
+    And Cool Cats management can look back at one of the strangest
+    48-hour periods in the club's young history knowing that somehow,
+    through homesickness, frustration, negotiations and one extremely
+    Denver-specific endorsement deal, they emerged with
+    <strong>three players for one.</strong>
+  </p>
+
+  <p>
+    Football is a business.
+  </p>
+
+  <p>
+    Sometimes it's also completely ridiculous.
+  </p>
+
+
+  <!-- FINAL OUTCOME -->
+
+  <div class="outcome">
+
+    <div class="outcome-label">
+      Final Outcome
     </div>
 
-    <div class="deal-row">
-      <span>Departed</span>
+    <div class="outcome-side">
+      <span>To Omar FC</span>
       <strong>Yoane Wissa</strong>
     </div>
 
-    <div class="deal-row">
-      <span>Returned</span>
-      <strong>Lewis-Potter</strong>
+    <div class="outcome-side">
+      <span>To Wooburt City</span>
+      <strong>
+        Alex Iwobi<br>
+        Keane Lewis-Potter<br>
+        Ryan Gravenberch
+      </strong>
     </div>
 
-    <div class="deal-row">
-      <span>Arrived</span>
-      <strong>Ryan Gravenberch</strong>
-    </div>
-
-    <div class="deal-row">
-      <span>From the original LP transaction</span>
-      <strong>Alex Iwobi</strong>
+    <div class="outcome-ending">
+      Two days of chaos.<br>
+      Three Cool Cats.<br>
+      One very happy Lewis-Potter.
     </div>
 
   </div>
 
 
-  <h2>
-    The Bigger Picture
-  </h2>
-
-  <p>
-    Viewed as one continuous sequence of transactions, the scale of
-    Wooburt City's business becomes clear.
-  </p>
-
-  <p>
-    Lewis-Potter's original departure delivered Alex Iwobi. His
-    subsequent return came alongside Ryan Gravenberch at the cost
-    of Wissa.
-  </p>
-
-  <p>
-    The net result is extraordinary: Wooburt City effectively turned
-    Wissa into Lewis-Potter, Gravenberch and Iwobi.
-  </p>
-
-
-  <div class="pullquote">
-    <p>
-      Wissa out.<br>
-      Lewis-Potter back.<br>
-      Gravenberch in.<br>
-      Iwobi already here.
-    </p>
-  </div>
-
-
-  <h2>
-    Back Where He Belongs
-  </h2>
-
-  <p>
-    Transfers are usually discussed in terms of value, squad building
-    and long-term planning.
-  </p>
-
-  <p>
-    This one carries something else.
-  </p>
-
-  <p>
-    Lewis-Potter left Wooburt City with the door seemingly closed.
-    Days later, that door reopened.
-  </p>
-
-  <p>
-    The Cool Cats got their player back. Lewis-Potter got his
-    homecoming. And Wooburt City emerged with a squad stronger than
-    the one it had before the entire saga began.
-  </p>
-
-
-  <div class="end-note">
-
-    <strong>
-      Welcome Home, LP.
-    </strong>
-
-    <p>
-      Lewis-Potter has officially rejoined Wooburt City Cool Cats FC.
-    </p>
-
+  <div class="welcome">
+    <span>Wooburt City Cool Cats FC</span>
+    <strong>Welcome Home, LP.</strong>
   </div>
 
 </article>
@@ -676,7 +847,6 @@ footer{
   </div>
 
 </footer>
-
 
 </body>
 </html>
