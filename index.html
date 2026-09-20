@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Wooburt City Cool Cats | Official Website</title>
+
+  <style>
+    :root {
+      --black: #080b0b;
+      --charcoal: #101515;
+      --panel: #151b1b;
+      --teal: #006f70;
+      --teal-light: #12a3a0;
+      --cream: #f0eadc;
+      --muted: #8e9995;
+      --line: #283130;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--cream);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* HEADER */
+
+    .topbar {
+      background: var(--teal);
+      color: white;
+      padding: 7px 5%;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    header {
+      height: 92px;
+      padding: 0 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+      background: rgba(8, 11, 11, 0.97);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .crest-placeholder {
+      width: 58px;
+      height: 58px;
+      border: 2px solid var(--teal-light);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    .club-name strong {
+      display: block;
+      font-size: 17px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .club-name span {
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    nav a:hover {
+      color: var(--teal-light);
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 650px;
+      padding: 100px 7%;
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.95) 0%, rgba(0,0,0,.62) 55%, rgba(0,0,0,.25) 100%),
+        linear-gradient(135deg, #071313, #103a39);
+    }
+
+    .hero::after {
+      content: "WCCC";
+      position: absolute;
+      right: -20px;
+      bottom: -90px;
+      font-size: 260px;
+      font-weight: 900;
+      color: rgba(255,255,255,.025);
+      letter-spacing: -20px;
+    }
+
+    .hero-content {
+      max-width: 820px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .tag {
+      color: var(--teal-light);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(52px, 8vw, 105px);
+      line-height: .88;
+      letter-spacing: -4px;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      color: #bac3c0;
+      font-size: 17px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 32px;
+      border: 1px solid var(--teal-light);
+      padding: 14px 24px;
+      color: var(--cream);
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      transition: .2s ease;
+    }
+
+    .button:hover {
+      background: var(--teal);
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 80px 6%;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      margin-bottom: 35px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-header h2 {
+      font-size: 32px;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+    }
+
+    .section-header span {
+      color: var(--teal-light);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* NEWS */
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 18px;
+    }
+
+    .news-card {
+      min-height: 330px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+
+    .news-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--teal);
+    }
+
+    .news-card.featured {
+      min-height: 470px;
+      background:
+        linear-gradient(0deg, rgba(0,0,0,.95), rgba(0,0,0,.12)),
+        linear-gradient(135deg, #0b2221, #17615e);
+    }
+
+    .news-type {
+      color: var(--teal-light);
+      text-transform: uppercase;
+      font-size: 10px;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .news-card h3 {
+      font-size: 25px;
+      line-height: 1.05;
+      text-transform: uppercase;
+    }
+
+    .featured h3 {
+      font-size: 42px;
+    }
+
+    .news-card p {
+      color: var(--muted);
+      margin-top: 12px;
+      font-size: 13px;
+    }
+
+    /* MATCH CENTER */
+
+    .match-section {
+      background: var(--cream);
+      color: var(--black);
+    }
+
+    .match-section .section-header {
+      border-color: #c6c0b5;
+    }
+
+    .match-center {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .gameweek {
+      color: var(--teal);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 11px;
+      font-weight: bold;
+    }
+
+    .matchup {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 35px;
+      margin-top: 40px;
+    }
+
+    .team {
+      font-size: 25px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .team-badge {
+      width: 90px;
+      height: 90px;
+      border: 2px solid var(--black);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 15px;
+      font-size: 13px;
+    }
+
+    .versus {
+      font-size: 15px;
+      font-weight: bold;
+      color: #777;
+    }
+
+    /* TABLE */
+
+    .table-wrap {
+      background: #07100f;
+      border: 1px solid var(--teal);
+      padding: 25px;
+      font-family: "Courier New", monospace;
+      box-shadow: 0 0 25px rgba(0, 140, 135, .08);
+    }
+
+    .table-title {
+      color: var(--teal-light);
+      letter-spacing: 4px;
+      margin-bottom: 20px;
+      font-size: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 15px 10px;
+      text-align: left;
+      border-bottom: 1px solid #18302e;
+    }
+
+    th {
+      color: #718b87;
+      font-size: 10px;
+      letter-spacing: 2px;
+    }
+
+    td {
+      font-size: 13px;
+    }
+
+    tr.wccc {
+      color: var(--cream);
+      background: rgba(0, 111, 112, .25);
+      font-weight: bold;
+    }
+
+    .position {
+      color: var(--teal-light);
+      width: 50px;
+    }
+
+    /* PLAYERS */
+
+    .players {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .player-card {
+      height: 420px;
+      background: linear-gradient(145deg, #152322, #090d0d);
+      border: 1px solid var(--line);
+      position: relative;
+      padding: 25px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+
+    .player-number {
+      position: absolute;
+      top: 5px;
+      right: 18px;
+      font-size: 110px;
+      font-weight: 900;
+      color: rgba(255,255,255,.035);
+    }
+
+    .player-card h3 {
+      font-size: 29px;
+      text-transform: uppercase;
+      line-height: .95;
+    }
+
+    .player-card span {
+      color: var(--teal-light);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 10px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 55px 6%;
+      display: flex;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    footer strong {
+      color: var(--cream);
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+      nav {
+        display: none;
+      }
+
+      .topbar {
+        font-size: 8px;
+      }
+
+      .hero {
+        min-height: 560px;
+        padding: 80px 6%;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .news-grid,
+      .players {
+        grid-template-columns: 1fr;
+      }
+
+      .matchup {
+        gap: 10px;
+      }
+
+      .team {
+        font-size: 15px;
+      }
+
+      .team-badge {
+        width: 65px;
+        height: 65px;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <span>Wooburt City Cool Cats Football Club</span>
+    <span>Est. 2026</span>
+  </div>
+
+  <header>
+    <a class="brand" href="#">
+      <div class="crest-placeholder">WCCC</div>
+
+      <div class="club-name">
+        <strong>Wooburt City</strong>
+        <span>Cool Cats Football Club</span>
+      </div>
+    </a>
+
+    <nav>
+      <a href="#news">News</a>
+      <a href="#match">Matches</a>
+      <a href="#table">Table</a>
+      <a href="#squad">Squad</a>
+      <a href="#club">Club</a>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+      <div class="hero-content">
+        <div class="tag">Latest // Wooburt City</div>
+
+        <h1>Home<br>Again.</h1>
+
+        <p>
+          Lewis-Potter returns to Wooburt City as Ryan Gravenberch
+          joins the Cool Cats in a dramatic piece of transfer business.
+        </p>
+
+        <a href="#news" class="button">Read the story</a>
+      </div>
+    </section>
+
+
+    <!-- NEWS -->
+
+    <section id="news">
+      <div class="section-header">
+        <h2>Latest News</h2>
+        <span>WCCC // Newsroom</span>
+      </div>
+
+      <div class="news-grid">
+
+        <article class="news-card featured">
+          <div class="news-type">Transfers</div>
+
+          <h3>Lewis-Potter Returns. Gravenberch Arrives.</h3>
+
+          <p>
+            A remarkable deal brings a familiar face home and adds
+            another major piece to the Wooburt City project.
+          </p>
+        </article>
+
+
+        <article class="news-card">
+          <div class="news-type">Club News</div>
+
+          <h3>Iwobi Joins the Cool Cats</h3>
+
+          <p>
+            Alex Iwobi becomes the newest addition to the Wooburt City squad.
+          </p>
+        </article>
+
+
+        <article class="news-card">
+          <div class="news-type">Exclusive</div>
+
+          <h3>Leon Valley Responds to Porro Allegations</h3>
+
+          <p>
+            The club issues a forceful response amid growing controversy
+            surrounding Pedro Porro.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- MATCH CENTER -->
+
+    <section class="match-section" id="match">
+      <div class="section-header">
+        <h2>Match Centre</h2>
+        <span>Dynasty League</span>
+      </div>
+
+      <div class="match-center">
+
+        <div class="gameweek">Next Fixture</div>
+
+        <div class="matchup">
+
+          <div class="team">
+            <div class="team-badge">WCCC</div>
+            Wooburt City
+          </div>
+
+          <div class="versus">VS</div>
+
+          <div class="team">
+            <div class="team-badge">TBD</div>
+            Next Opponent
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- TABLE -->
+
+    <section id="table">
+      <div class="section-header">
+        <h2>League Table</h2>
+        <span>Live Standings // 2026</span>
+      </div>
+
+      <div class="table-wrap">
+
+        <div class="table-title">
+          WCCC LEAGUE TERMINAL // EST. 2026
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>POS</th>
+              <th>CLUB</th>
+              <th>PL</th>
+              <th>W</th>
+              <th>D</th>
+              <th>L</th>
+              <th>PTS</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr class="wccc">
+              <td class="position">01</td>
+              <td>WOOBURT CITY COOL CATS</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+
+            <tr>
+              <td class="position">02</td>
+              <td>LEON VALLEY FC</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+
+            <tr>
+              <td class="position">03</td>
+              <td>CLUB TBD</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+
+            <tr>
+              <td class="position">04</td>
+              <td>CLUB TBD</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+
+          </tbody>
+        </table>
+
+      </div>
+    </section>
+
+
+    <!-- SQUAD -->
+
+    <section id="squad">
+      <div class="section-header">
+        <h2>Featured Players</h2>
+        <span>The Cool Cats</span>
+      </div>
+
+      <div class="players">
+
+        <div class="player-card">
+          <div class="player-number">01</div>
+          <div>
+            <span>Forward</span>
+            <h3>Alexander<br>Isak</h3>
+          </div>
+        </div>
+
+        <div class="player-card">
+          <div class="player-number">02</div>
+          <div>
+            <span>Forward</span>
+            <h3>Lewis-<br>Potter</h3>
+          </div>
+        </div>
+
+        <div class="player-card">
+          <div class="player-number">03</div>
+          <div>
+            <span>Midfielder</span>
+            <h3>Marcus<br>Tavernier</h3>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CLUB -->
+
+    <section id="club">
+      <div class="section-header">
+        <h2>Wooburt City</h2>
+        <span>Est. 2026</span>
+      </div>
+
+      <div style="max-width:700px;">
+        <div class="tag">Forever Cool Cats</div>
+
+        <h2 style="font-size:45px; text-transform:uppercase; line-height:1;">
+          Built for the long haul.
+        </h2>
+
+        <p style="color:#8e9995; margin-top:20px;">
+          Wooburt City Cool Cats is a dynasty football club built around
+          identity, loyalty and the endless pursuit of silverware.
+          This is more than a season. This is a club.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer>
+    <div>
+      <strong>WOOBURT CITY COOL CATS FC</strong><br>
+      EST. 2026
+    </div>
+
+    <div>
+      © 2026 WCCC
+    </div>
+  </footer>
+
+</body>
+</html>
