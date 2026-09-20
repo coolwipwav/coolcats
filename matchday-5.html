@@ -309,7 +309,343 @@ a{
   letter-spacing:3px;
   text-transform:uppercase;
 }
+/* THE PORRO FILE */
 
+.porro-file{
+  margin:70px 0 85px;
+  border:1px solid var(--bright);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(34,199,187,.08),
+      rgba(13,18,18,.98) 45%
+    );
+  font-family:"Courier New",monospace;
+}
+
+.porro-file-top{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  padding:14px 18px;
+  border-bottom:1px solid var(--line);
+  color:var(--bright);
+  font-size:9px;
+  font-weight:bold;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.porro-file-title{
+  padding:28px 20px 24px;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:clamp(35px,6vw,60px);
+  font-weight:900;
+  line-height:1;
+  letter-spacing:-2px;
+  text-transform:uppercase;
+}
+
+.porro-file-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
+.porro-file-grid div{
+  padding:22px 18px;
+  border-right:1px solid var(--line);
+}
+
+.porro-file-grid div:last-child{
+  border-right:0;
+}
+
+.porro-file-grid span,
+.porro-file-details span{
+  display:block;
+  color:var(--muted);
+  font-size:8px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:6px;
+}
+
+.porro-file-grid strong{
+  color:var(--cream);
+  font-size:18px;
+}
+
+.porro-file-details{
+  padding:12px 20px;
+}
+
+.porro-file-details div{
+  display:flex;
+  justify-content:space-between;
+  gap:25px;
+  padding:13px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.porro-file-details strong{
+  color:var(--cream);
+  font-size:10px;
+  text-align:right;
+  letter-spacing:1px;
+}
+
+.porro-file-link{
+  display:block;
+  padding:18px 20px;
+  background:var(--teal);
+  color:var(--bright);
+  font-size:10px;
+  font-weight:bold;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  transition:.2s ease;
+}
+
+.porro-file-link:hover{
+  background:var(--bright);
+  color:var(--black);
+}
+
+.porro-file small{
+  display:block;
+  padding:13px 20px;
+  color:var(--muted);
+  font-size:8px;
+  letter-spacing:1px;
+}
+
+@media(max-width:650px){
+
+  .porro-file-grid{
+    grid-template-columns:1fr;
+  }
+
+  .porro-file-grid div{
+    border-right:0;
+    border-bottom:1px solid var(--line);
+  }
+
+  .porro-file-details div{
+    display:block;
+  }
+
+  .porro-file-details strong{
+    display:block;
+    margin-top:5px;
+    text-align:left;
+  }
+
+}
+
+ /* ARTICLE ADVERTISEMENT */
+
+.article-ad{
+  width:min(900px,90%);
+  margin:90px auto;
+  border:1px solid var(--line);
+  background:var(--panel);
+}
+
+.article-ad-label{
+  padding:10px 14px;
+  border-bottom:1px solid var(--line);
+  color:var(--muted);
+  font-family:"Courier New",monospace;
+  font-size:8px;
+  font-weight:bold;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.article-ad img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+.article-ad-footer{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  padding:12px 14px;
+  border-top:1px solid var(--line);
+  color:var(--bright);
+  font-family:"Courier New",monospace;
+  font-size:8px;
+  font-weight:bold;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+@media(max-width:650px){
+
+  .article-ad-footer{
+    display:block;
+  }
+
+  .article-ad-footer span{
+    display:block;
+  }
+
+  .article-ad-footer span + span{
+    margin-top:5px;
+    color:var(--muted);
+  }
+
+} 
+/* STORY SO FAR */
+
+.story-so-far{
+  width:min(900px,100%);
+  margin:70px auto;
+  border:1px solid var(--line);
+  background:var(--panel);
+}
+
+.story-so-far-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  padding:14px 18px;
+  border-bottom:1px solid var(--line);
+  font-family:"Courier New",monospace;
+  text-transform:uppercase;
+}
+
+.story-so-far-header span{
+  color:var(--muted);
+  font-size:8px;
+  letter-spacing:2px;
+}
+
+.story-so-far-header strong{
+  color:var(--bright);
+  font-size:10px;
+  letter-spacing:2px;
+}
+
+.story-timeline{
+  position:relative;
+  padding:10px 22px;
+}
+
+.story-event{
+  position:relative;
+  padding:22px 20px 22px 35px;
+  border-bottom:1px solid var(--line);
+}
+
+.story-event:last-child{
+  border-bottom:0;
+}
+
+.story-event::before{
+  content:"";
+  position:absolute;
+  left:5px;
+  top:28px;
+  width:9px;
+  height:9px;
+  border:2px solid var(--bright);
+  background:var(--panel);
+  border-radius:50%;
+}
+
+.story-event::after{
+  content:"";
+  position:absolute;
+  left:10px;
+  top:39px;
+  bottom:-28px;
+  width:1px;
+  background:var(--line);
+}
+
+.story-event:last-child::after{
+  display:none;
+}
+
+.story-event span{
+  display:block;
+  margin-bottom:7px;
+  color:var(--bright);
+  font-family:"Courier New",monospace;
+  font-size:8px;
+  font-weight:bold;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.story-event strong{
+  display:block;
+  color:var(--cream);
+  font-size:17px;
+  line-height:1.2;
+  text-transform:uppercase;
+}
+
+.story-event p{
+  margin:7px 0 0;
+  color:var(--muted);
+  font-family:"Courier New",monospace;
+  font-size:10px;
+  letter-spacing:1px;
+}
+
+.story-event.current::before{
+  background:var(--bright);
+  box-shadow:0 0 14px rgba(34,199,187,.55);
+}
+
+.story-event.current strong{
+  color:var(--bright);
+}
+
+.story-archive-link{
+  display:block;
+  padding:18px 20px;
+  border-top:1px solid var(--line);
+  background:var(--teal);
+  color:var(--bright);
+  font-family:"Courier New",monospace;
+  font-size:10px;
+  font-weight:bold;
+  letter-spacing:2px;
+  text-decoration:none;
+  text-transform:uppercase;
+  transition:.2s ease;
+}
+
+.story-archive-link:hover{
+  background:var(--bright);
+  color:var(--black);
+}
+
+@media(max-width:650px){
+
+  .story-so-far-header{
+    display:block;
+  }
+
+  .story-so-far-header strong{
+    display:block;
+    margin-top:7px;
+  }
+
+  .story-event strong{
+    font-size:14px;
+  }
+
+}
+  
 /* SCHADE FEATURE */
 
 .schade-feature{
@@ -726,7 +1062,66 @@ footer strong{
   <p>
     WCCC Media will presumably investigate harder.
   </p>
+<!-- THE PORRO FILE -->
 
+<div class="porro-file">
+
+  <div class="porro-file-top">
+    <span>WCCC MEDIA // INVESTIGATION FILE 018</span>
+    <strong>● OPEN</strong>
+  </div>
+
+  <div class="porro-file-title">
+    THE PORRO FILE
+  </div>
+
+  <div class="porro-file-grid">
+
+    <div>
+      <span>MINUTES</span>
+      <strong>18</strong>
+    </div>
+
+    <div>
+      <span>FANTASY POINTS</span>
+      <strong>1.56</strong>
+    </div>
+
+    <div>
+      <span>STATUS</span>
+      <strong>UNDER REVIEW</strong>
+    </div>
+
+  </div>
+
+  <div class="porro-file-details">
+
+    <div>
+      <span>OFFICIAL CAUSE</span>
+      <strong>APPARENT INJURY</strong>
+    </div>
+
+    <div>
+      <span>TIMING</span>
+      <strong>EXTREMELY CONVENIENT</strong>
+    </div>
+
+    <div>
+      <span>LEON VALLEY INVOLVEMENT</span>
+      <strong>NO EVIDENCE WHATSOEVER*</strong>
+    </div>
+
+  </div>
+
+  <a href="porro-scandal.html" class="porro-file-link">
+    BACKGROUND // READ THE ORIGINAL PORRO INVESTIGATION →
+  </a>
+
+  <small>
+    *WCCC Media continues to ask unnecessary questions.
+  </small>
+
+</div>
   <h2>Schadenfreude</h2>
 
   <p>
@@ -736,7 +1131,25 @@ footer strong{
 
 </article>
 
+<!-- FANCY FEAST ADVERTISEMENT -->
 
+<div class="article-ad">
+
+  <div class="article-ad-label">
+    ADVERTISEMENT // OFFICIAL WCCC PARTNER
+  </div>
+
+  <img
+    src="fancy-feast-advert.png"
+    alt="Fancy Feast — Official Partner of Wooburt City Cool Cats"
+  >
+
+  <div class="article-ad-footer">
+    <span>FANCY FEAST</span>
+    <span>PROUD PARTNER OF WOOBURT CITY // EST. 2026</span>
+  </div>
+
+</div>
 <!-- SCHADE FEATURE -->
 
 <section class="schade-feature">
@@ -815,7 +1228,48 @@ footer strong{
   <p>
     Back home. Back contributing.
   </p>
+<!-- LEWIS-POTTER TIMELINE -->
 
+<div class="story-so-far">
+
+  <div class="story-so-far-header">
+    <span>WCCC MEDIA // TRANSFER ARCHIVE</span>
+    <strong>THE STORY SO FAR</strong>
+  </div>
+
+  <div class="story-timeline">
+
+    <div class="story-event">
+      <span>SEP 17</span>
+      <strong>LEWIS-POTTER LEAVES WOOBURT CITY</strong>
+      <p>Denver awaits.</p>
+    </div>
+
+    <div class="story-event">
+      <span>48 HOURS LATER</span>
+      <strong>REGRET.</strong>
+      <p>Lewis-Potter wants to come home.</p>
+    </div>
+
+    <div class="story-event">
+      <span>THE RETURN</span>
+      <strong>WISSA OUT. LP + GRAVENBERCH IN.</strong>
+      <p>One of the strangest transfers in club history.</p>
+    </div>
+
+    <div class="story-event current">
+      <span>MATCHWEEK 5</span>
+      <strong>13.70 POINTS.</strong>
+      <p>Back home. Back contributing.</p>
+    </div>
+
+  </div>
+
+  <a href="lewis-potter-return.html" class="story-archive-link">
+    READ THE FULL STORY // 48 HOURS OF CHAOS →
+  </a>
+
+</div>
   <p>
     Denver feels a long way away now.
   </p>
@@ -904,7 +1358,26 @@ footer strong{
   </p>
 
 </section>
+<!-- MATCHWEEK VERDICT -->
 
+<section class="matchweek-verdict">
+
+  <div class="verdict-label">
+    WCCC MEDIA // MATCHWEEK 5 VERDICT
+  </div>
+
+  <div class="verdict-main">
+    <span>01–02</span>
+    <h2>BRUISED.<br>NOT BROKEN.</h2>
+  </div>
+
+  <div class="verdict-footer">
+    <span>TABLE POSITION // 02</span>
+    <span>POINTS // 24</span>
+    <span>NEXT // INTERNATIONAL BREAK</span>
+  </div>
+
+</section>
 
 <footer>
 
