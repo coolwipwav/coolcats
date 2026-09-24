@@ -1,0 +1,1631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A New Era | The Lonestar Times</title>
+
+<style>
+
+:root{
+  --black:#07090a;
+  --dark:#101315;
+  --white:#ffffff;
+  --off:#f4f3ef;
+  --turq:#10b8c5;
+  --pink:#ef3f78;
+  --orange:#ff9e18;
+  --line:#d9d8d3;
+  --gray:#6e7376;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--off);
+  color:#111;
+  overflow-x:hidden;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.fiesta-line{
+  height:7px;
+  background:linear-gradient(
+    90deg,
+    var(--turq) 0 33.33%,
+    var(--pink) 33.33% 66.66%,
+    var(--orange) 66.66%
+  );
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header{
+  background:#fff;
+  border-bottom:1px solid #ddd;
+}
+
+.header-inner{
+  max-width:1220px;
+  min-height:94px;
+  margin:auto;
+  padding:16px 28px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.brand img{
+  width:67px;
+  height:67px;
+  object-fit:contain;
+}
+
+.brand-copy small{
+  display:block;
+  color:var(--turq);
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  margin-bottom:4px;
+}
+
+.brand-copy strong{
+  display:block;
+  font-size:17px;
+  line-height:1.05;
+  text-transform:uppercase;
+}
+
+nav{
+  display:flex;
+  align-items:center;
+  gap:22px;
+  flex-wrap:wrap;
+}
+
+nav a{
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+nav a:hover{
+  color:var(--pink);
+}
+
+.back-link{
+  padding:10px 14px;
+  border:1px solid #111;
+}
+
+.back-link:hover{
+  background:#111;
+  color:#fff;
+}
+
+
+/* =========================================================
+   LONESTAR TIMES
+========================================================= */
+
+.times-bar{
+  background:var(--black);
+  color:#fff;
+}
+
+.times-inner{
+  max-width:1180px;
+  margin:auto;
+  padding:22px 28px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:30px;
+}
+
+.times-name{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:27px;
+  font-weight:bold;
+  letter-spacing:-1px;
+}
+
+.times-name span{
+  color:var(--turq);
+}
+
+.times-tag{
+  color:#888;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   ARTICLE HEADER
+========================================================= */
+
+.article-header{
+  background:#fff;
+}
+
+.article-header-inner{
+  max-width:1080px;
+  margin:auto;
+  padding:80px 28px 60px;
+}
+
+.category{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  color:var(--turq);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin-bottom:25px;
+}
+
+.category::before{
+  content:"";
+  width:40px;
+  height:5px;
+  background:var(--orange);
+}
+
+.article-header h1{
+  max-width:1000px;
+  font-size:clamp(54px,8vw,100px);
+  line-height:.85;
+  letter-spacing:-6px;
+  text-transform:uppercase;
+}
+
+.deck{
+  max-width:780px;
+  margin-top:30px;
+  color:#555;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:22px;
+  line-height:1.55;
+}
+
+.meta{
+  margin-top:32px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+  color:#777;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.meta-dot{
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background:var(--pink);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.identity-hero{
+  max-width:1180px;
+  margin:auto;
+  padding:0 28px;
+}
+
+.identity-stage{
+  min-height:560px;
+  background:#0b0e10;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:55px;
+}
+
+.identity-stage img{
+  width:100%;
+  max-width:850px;
+  max-height:650px;
+  object-fit:contain;
+}
+
+.identity-caption{
+  padding:13px 0;
+  border-bottom:1px solid var(--line);
+
+  color:#777;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   ARTICLE BODY
+========================================================= */
+
+.article-layout{
+  max-width:1060px;
+  margin:auto;
+  padding:65px 28px 85px;
+
+  display:grid;
+  grid-template-columns:150px minmax(0,720px);
+  gap:55px;
+
+  justify-content:center;
+}
+
+.article-side{
+  border-top:5px solid var(--turq);
+  padding-top:16px;
+}
+
+.article-side span{
+  display:block;
+  color:#777;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:2px;
+  line-height:1.6;
+  text-transform:uppercase;
+}
+
+.article-side strong{
+  display:block;
+  margin-top:8px;
+  font-size:13px;
+  line-height:1.3;
+  text-transform:uppercase;
+}
+
+.article-body p{
+  margin-bottom:24px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:18px;
+  line-height:1.85;
+}
+
+.article-body > p:first-child::first-letter{
+  float:left;
+  padding-right:10px;
+  padding-top:11px;
+
+  color:var(--turq);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:78px;
+  font-weight:900;
+  line-height:.72;
+}
+
+.article-body h2{
+  margin:55px 0 20px;
+  padding-top:18px;
+  border-top:5px solid #111;
+
+  font-size:33px;
+  line-height:1;
+  letter-spacing:-1.5px;
+  text-transform:uppercase;
+}
+
+.article-body strong{
+  font-weight:800;
+}
+
+
+/* =========================================================
+   BIG QUOTE
+========================================================= */
+
+.feature-quote{
+  margin:50px -80px;
+  padding:45px 55px;
+
+  background:var(--black);
+  color:#fff;
+
+  border-left:8px solid var(--orange);
+}
+
+.feature-quote p{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:clamp(35px,5.5vw,58px);
+  font-weight:900;
+  line-height:.92;
+  letter-spacing:-3px;
+  text-transform:uppercase;
+}
+
+.feature-quote span{
+  display:block;
+  margin-top:20px;
+
+  color:var(--turq);
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   IDENTITY GALLERY
+========================================================= */
+
+.identity-gallery{
+  max-width:1120px;
+  margin:0 auto 80px;
+  padding:0 28px;
+}
+
+.gallery-heading{
+  padding-bottom:18px;
+  margin-bottom:20px;
+
+  border-bottom:5px solid #111;
+}
+
+.gallery-heading small{
+  color:var(--pink);
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.gallery-heading h2{
+  margin-top:6px;
+  font-size:38px;
+  line-height:.95;
+  letter-spacing:-2px;
+  text-transform:uppercase;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+.gallery-card{
+  min-height:410px;
+  padding:30px;
+
+  background:#fff;
+  border:1px solid #ddd;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.gallery-card img{
+  width:100%;
+  max-height:350px;
+  object-fit:contain;
+}
+
+
+/* =========================================================
+   H-E-B SPONSOR SECTION
+========================================================= */
+
+.sponsor{
+  background:var(--black);
+  color:#fff;
+
+  border-top:7px solid var(--pink);
+  border-bottom:7px solid var(--orange);
+}
+
+.sponsor-inner{
+  max-width:1050px;
+  margin:auto;
+  padding:70px 28px;
+
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:65px;
+  align-items:center;
+}
+
+.sponsor-art{
+  min-height:330px;
+  padding:35px;
+
+  background:#fff;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.sponsor-art img{
+  width:100%;
+  max-height:290px;
+  object-fit:contain;
+}
+
+.sponsor-copy small{
+  color:var(--orange);
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.sponsor-copy h2{
+  margin-top:12px;
+
+  font-size:clamp(38px,5vw,58px);
+  line-height:.9;
+  letter-spacing:-3px;
+  text-transform:uppercase;
+}
+
+.sponsor-copy p{
+  margin-top:22px;
+
+  color:#ccc;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:17px;
+  line-height:1.75;
+}
+
+
+/* =========================================================
+   BUILD YOUR CLUB
+========================================================= */
+
+.build-club{
+  max-width:1000px;
+  margin:80px auto;
+  padding:0 28px;
+}
+
+.build-inner{
+  position:relative;
+  overflow:hidden;
+
+  padding:65px 55px;
+
+  background:#fff;
+  border:1px solid #ddd;
+}
+
+.build-inner::before{
+  content:"";
+
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+
+  width:9px;
+
+  background:linear-gradient(
+    var(--turq),
+    var(--pink),
+    var(--orange)
+  );
+}
+
+.build-inner small{
+  color:var(--pink);
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.build-inner h2{
+  margin-top:12px;
+
+  font-size:clamp(42px,6vw,67px);
+  line-height:.88;
+  letter-spacing:-4px;
+  text-transform:uppercase;
+}
+
+.build-command{
+  margin-top:30px;
+
+  font-size:clamp(23px,3vw,32px);
+  font-weight:900;
+  line-height:1.15;
+  text-transform:uppercase;
+}
+
+.build-copy{
+  max-width:680px;
+  margin-top:22px;
+
+  color:#666;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:17px;
+  line-height:1.75;
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.final{
+  max-width:1000px;
+  margin:0 auto 90px;
+  padding:0 28px;
+}
+
+.final-inner{
+  position:relative;
+
+  background:var(--black);
+  color:#fff;
+
+  padding:65px 50px;
+
+  text-align:center;
+}
+
+.final-inner::before{
+  content:"";
+
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+
+  height:8px;
+
+  background:linear-gradient(
+    90deg,
+    var(--turq) 0 33.33%,
+    var(--pink) 33.33% 66.66%,
+    var(--orange) 66.66%
+  );
+}
+
+.final-inner small{
+  color:var(--turq);
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.final-inner h2{
+  margin-top:18px;
+
+  font-size:clamp(39px,6vw,66px);
+  line-height:.9;
+  letter-spacing:-3px;
+  text-transform:uppercase;
+}
+
+.final-inner p{
+  max-width:650px;
+  margin:25px auto 0;
+
+  color:#aaa;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:16px;
+  line-height:1.7;
+}
+
+
+/* =========================================================
+   MORE NEWS
+========================================================= */
+
+.more-news{
+  background:#fff;
+  border-top:1px solid #ddd;
+}
+
+.more-news-inner{
+  max-width:1180px;
+  margin:auto;
+  padding:60px 28px;
+}
+
+.more-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:20px;
+
+  padding-bottom:15px;
+  margin-bottom:24px;
+
+  border-bottom:4px solid #111;
+}
+
+.more-head h2{
+  font-size:34px;
+  letter-spacing:-2px;
+  text-transform:uppercase;
+}
+
+.more-head a{
+  color:var(--pink);
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.more-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.more-card{
+  padding:25px;
+  border:1px solid #ddd;
+  transition:.2s;
+}
+
+.more-card:hover{
+  transform:translateY(-3px);
+  border-color:#111;
+}
+
+.more-card small{
+  color:var(--turq);
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.more-card h3{
+  margin-top:8px;
+  font-size:25px;
+  line-height:1;
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+  background:#050708;
+  color:#fff;
+}
+
+.footer-inner{
+  max-width:1180px;
+  margin:auto;
+  padding:55px 28px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:30px;
+}
+
+.footer-brand{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.footer-brand img{
+  width:70px;
+  height:70px;
+  object-fit:contain;
+}
+
+.footer-brand strong{
+  display:block;
+  font-size:20px;
+  text-transform:uppercase;
+}
+
+.footer-brand span{
+  display:block;
+  margin-top:6px;
+
+  color:var(--turq);
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.footer-right{
+  color:#888;
+  text-align:right;
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:1.5px;
+  line-height:1.7;
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:850px){
+
+  .article-layout{
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+
+  .article-side{
+    display:none;
+  }
+
+  .feature-quote{
+    margin:40px 0;
+  }
+
+  .sponsor-inner{
+    grid-template-columns:1fr;
+    gap:35px;
+  }
+
+}
+
+
+@media(max-width:650px){
+
+  .header-inner{
+    display:block;
+    padding:14px 20px;
+  }
+
+  .brand img{
+    width:55px;
+    height:55px;
+  }
+
+  nav{
+    justify-content:flex-start;
+    margin-top:18px;
+    gap:10px 15px;
+  }
+
+  .times-inner{
+    padding:17px 20px;
+  }
+
+  .times-name{
+    font-size:21px;
+  }
+
+  .times-tag{
+    display:none;
+  }
+
+  .article-header-inner{
+    padding:50px 20px 38px;
+  }
+
+  .article-header h1{
+    font-size:45px;
+    line-height:.9;
+    letter-spacing:-3px;
+  }
+
+  .deck{
+    font-size:18px;
+  }
+
+  .identity-hero{
+    padding:0;
+  }
+
+  .identity-stage{
+    min-height:0;
+    padding:25px 20px;
+  }
+
+  .identity-stage img{
+    width:100%;
+    height:auto;
+    max-height:none;
+    object-fit:contain;
+  }
+
+  .identity-caption{
+    padding:10px 20px;
+  }
+
+  .article-layout{
+    padding:45px 20px 65px;
+  }
+
+  .article-body p{
+    font-size:17px;
+    line-height:1.75;
+  }
+
+  .article-body h2{
+    font-size:28px;
+  }
+
+  .feature-quote{
+    padding:35px 25px;
+  }
+
+  .feature-quote p{
+    font-size:35px;
+    letter-spacing:-2px;
+  }
+
+  .identity-gallery{
+    padding:0 20px;
+    margin-bottom:60px;
+  }
+
+  .gallery-grid{
+    grid-template-columns:1fr;
+  }
+
+  .gallery-card{
+    min-height:0;
+    padding:20px;
+  }
+
+  .gallery-card img{
+    height:auto;
+    max-height:none;
+    object-fit:contain;
+  }
+
+  .sponsor-inner{
+    padding:55px 20px;
+  }
+
+  .sponsor-art{
+    min-height:0;
+    padding:25px;
+  }
+
+  .sponsor-art img{
+    height:auto;
+    max-height:none;
+    object-fit:contain;
+  }
+
+  .build-club{
+    margin:60px auto;
+    padding:0 20px;
+  }
+
+  .build-inner{
+    padding:50px 28px;
+  }
+
+  .final{
+    padding:0 20px;
+    margin-bottom:60px;
+  }
+
+  .final-inner{
+    padding:50px 25px;
+  }
+
+  .more-news-inner{
+    padding:50px 20px;
+  }
+
+  .more-grid{
+    grid-template-columns:1fr;
+  }
+
+  .footer-inner{
+    display:block;
+    padding:45px 20px;
+  }
+
+  .footer-right{
+    margin-top:25px;
+    text-align:left;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="fiesta-line"></div>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+  <div class="header-inner">
+
+    <a class="brand" href="league.html">
+
+      <img
+        src="league logo.jpeg"
+        alt="Lonestar Premier League">
+
+      <div class="brand-copy">
+
+        <small>Est. 2026</small>
+
+        <strong>
+          Lonestar<br>
+          Premier League
+        </strong>
+
+      </div>
+
+    </a>
+
+
+    <nav>
+
+      <a class="back-link" href="news.html">
+        ← News
+      </a>
+
+      <a href="league.html">
+        League Home
+      </a>
+
+      <a href="news.html">
+        The Lonestar Times
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+<!-- =====================================================
+     TIMES BAR
+===================================================== -->
+
+<div class="times-bar">
+
+  <div class="times-inner">
+
+    <div class="times-name">
+      THE <span>LONESTAR</span> TIMES
+    </div>
+
+    <div class="times-tag">
+      Independent Coverage of the Lonestar Premier League
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     ARTICLE HEADER
+===================================================== -->
+
+<section class="article-header">
+
+  <div class="article-header-inner">
+
+    <div class="category">
+      League Identity // A New Era
+    </div>
+
+    <h1>
+      A New Era: The Lonestar Premier League Finds Its Identity
+    </h1>
+
+    <p class="deck">
+      A league born between friends is beginning to build an
+      identity of its own.
+    </p>
+
+    <div class="meta">
+
+      <span>The Lonestar Times</span>
+
+      <span class="meta-dot"></span>
+
+      <span>September 2026</span>
+
+      <span class="meta-dot"></span>
+
+      <span>League HQ</span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     PRIMARY LEAGUE LOGO
+===================================================== -->
+
+<section class="identity-hero">
+
+  <div class="identity-stage">
+
+    <img
+      src="league logo.jpeg"
+      alt="Lonestar Premier League identity">
+
+  </div>
+
+  <div class="identity-caption">
+    The new identity of the Lonestar Premier League // Est. 2026
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     ARTICLE — OPENING
+===================================================== -->
+
+<main class="article-layout">
+
+  <aside class="article-side">
+
+    <span>
+      The Lonestar Times
+    </span>
+
+    <strong>
+      League Identity
+    </strong>
+
+    <span style="margin-top:22px;">
+      Est.
+    </span>
+
+    <strong>
+      2026
+    </strong>
+
+  </aside>
+
+
+  <article class="article-body">
+
+    <p>
+      The Lonestar Premier League started simply; a group of friends,
+      a love of football, and the belief that competing against each
+      other should probably mean far more than it reasonably should.
+    </p>
+
+    <p>
+      Then something happened.
+    </p>
+
+    <p>
+      Rivalries formed. Trades became headlines. Players became
+      heroes and villains. Clubs started developing personalities
+      and histories of their own.
+    </p>
+
+    <p>
+      What began as a fantasy competition started becoming its own
+      little football world.
+    </p>
+
+    <p>
+      Now, that world finally has a look to call its own.
+    </p>
+
+
+    <h2>
+      A New Identity
+    </h2>
+
+    <p>
+      The Lonestar Premier League is proud to unveil its
+      <strong>new visual identity, official website and partnership
+      with H-E-B.</strong>
+    </p>
+
+    <p>
+      The new league logos give the competition something it
+      previously never truly had:
+      <strong>a badge of its own.</strong>
+    </p>
+
+    <p>
+      The identity embraces our Texas roots while representing what
+      we've become — an American league whose clubs aren't confined
+      by state lines.
+    </p>
+
+  </article>
+
+</main>
+
+
+<!-- =====================================================
+     LEAGUE IDENTITY ARTWORK
+===================================================== -->
+
+<section class="identity-gallery">
+
+  <div class="gallery-heading">
+
+    <small>
+      The New Look
+    </small>
+
+    <h2>
+      One League. One Identity.
+    </h2>
+
+  </div>
+
+
+  <div class="gallery-grid">
+
+    <div class="gallery-card">
+
+      <img
+        src="league-logo-color-pallet.png"
+        alt="Lonestar Premier League visual identity">
+
+    </div>
+
+
+    <div class="gallery-card">
+
+      <img
+        src="league-logo-pallet-2.png"
+        alt="Lonestar Premier League alternate identity">
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     H-E-B PARTNERSHIP
+===================================================== -->
+
+<section class="sponsor">
+
+  <div class="sponsor-inner">
+
+    <div class="sponsor-art">
+
+      <img
+        src="heb-league-sponsor2.png"
+        alt="H-E-B and Lonestar Premier League partnership">
+
+    </div>
+
+
+    <div class="sponsor-copy">
+
+      <small>
+        Official League Partnership
+      </small>
+
+      <h2>
+        Texas Roots.<br>
+        A League Without Borders.
+      </h2>
+
+      <p>
+        H-E-B joining as an official league sponsor feels like a
+        fitting part of that identity: a nod to where much of this
+        started without defining where it can go.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     ARTICLE — HISTORY
+===================================================== -->
+
+<main class="article-layout">
+
+  <aside class="article-side">
+
+    <span>
+      The Website
+    </span>
+
+    <strong>
+      A Home For Our History
+    </strong>
+
+  </aside>
+
+
+  <article class="article-body">
+
+    <h2>
+      A Home For Our History
+    </h2>
+
+    <p>
+      The new Lonestar Premier League website gives the league a
+      permanent home.
+    </p>
+
+    <p>
+      Standings tell us who won. The website will remember everything
+      else — the trades, rivalries, controversies, cup runs,
+      ridiculous rumors and unforgettable performances that make
+      this league ours.
+    </p>
+
+    <p>
+      Over time, those stories become history.
+    </p>
+
+    <p>
+      And now we'll have somewhere to keep it.
+    </p>
+
+
+    <div class="feature-quote">
+
+      <p>
+        The Football Happens Once.<br>
+        The Story Stays.
+      </p>
+
+      <span>
+        The Lonestar Times
+      </span>
+
+    </div>
+
+  </article>
+
+</main>
+
+
+<!-- =====================================================
+     BUILD YOUR CLUB
+===================================================== -->
+
+<section class="build-club">
+
+  <div class="build-inner">
+
+    <small>
+      A Message To Every Manager
+    </small>
+
+    <h2>
+      Managers:<br>
+      Build Your Club.
+    </h2>
+
+    <div class="build-command">
+      Make a crest. Pick your colors. Create something that's yours.
+    </div>
+
+    <div class="build-copy">
+      It doesn't need to be professional or complicated. Reference
+      your city, neighborhood, personality, an inside joke — whatever
+      represents your club.
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     ARTICLE — CLUB IDENTITY
+===================================================== -->
+
+<main class="article-layout">
+
+  <aside class="article-side">
+
+    <span>
+      Club Identity
+    </span>
+
+    <strong>
+      Build The Lore
+    </strong>
+
+  </aside>
+
+
+  <article class="article-body">
+
+    <h2>
+      Managers: Build Your Club
+    </h2>
+
+    <p>
+      With the league establishing its identity, we're encouraging
+      every manager to give their own club one too.
+    </p>
+
+    <p>
+      <strong>
+        Make a crest. Pick your colors. Create something that's yours.
+      </strong>
+    </p>
+
+    <p>
+      It doesn't need to be professional or complicated. Reference
+      your city, neighborhood, personality, an inside joke — whatever
+      represents your club.
+    </p>
+
+    <p>
+      Because eventually that crest becomes attached to moments.
+    </p>
+
+    <p>
+      A huge upset. A blockbuster trade. A cup victory. A bitter rivalry.
+    </p>
+
+    <p>
+      That's how club identity develops, and collectively, those
+      identities help build the
+      <strong>lore of the Lonestar Premier League.</strong>
+    </p>
+
+
+    <div class="feature-quote">
+
+      <p>
+        The League Provides The Stage.<br>
+        The Clubs Give It Character.
+      </p>
+
+      <span>
+        Lonestar Premier League
+      </span>
+
+    </div>
+
+
+    <h2>
+      This Is The Beginning
+    </h2>
+
+    <p>
+      We don't have decades of history yet.
+    </p>
+
+    <p>
+      That's what makes this fun.
+    </p>
+
+    <p>
+      <strong>
+        We're living through the part that someday becomes the history.
+      </strong>
+    </p>
+
+    <p>
+      The new logos, website and H-E-B partnership give that history
+      somewhere to live.
+    </p>
+
+    <p>
+      An American league with Texas roots. A collection of clubs
+      developing identities, rivalries and stories of their own.
+    </p>
+
+    <p>
+      And now, finally, a home for all of it.
+    </p>
+
+    <p>
+      Welcome to the <strong>Lonestar Premier League.</strong>
+    </p>
+
+  </article>
+
+</main>
+
+
+<!-- =====================================================
+     FINAL STATEMENT
+===================================================== -->
+
+<section class="final">
+
+  <div class="final-inner">
+
+    <small>
+      Est. 2026
+    </small>
+
+    <h2>
+      Build Something<br>
+      Worth Remembering.
+    </h2>
+
+    <p>
+      An American league with Texas roots. Clubs with identities of
+      their own. Rivalries, stories and history still waiting to be made.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     MORE FROM THE TIMES
+===================================================== -->
+
+<section class="more-news">
+
+  <div class="more-news-inner">
+
+    <div class="more-head">
+
+      <h2>
+        More From The Lonestar Times
+      </h2>
+
+      <a href="news.html">
+        All News →
+      </a>
+
+    </div>
+
+
+    <div class="more-grid">
+
+      <a
+        class="more-card"
+        href="pathetic.html">
+
+        <small>
+          Children of Emenike
+        </small>
+
+        <h3>
+          “I Stand By It”
+        </h3>
+
+      </a>
+
+
+      <a
+        class="more-card"
+        href="space-cadets.html">
+
+        <small>
+          Space Cadets
+        </small>
+
+        <h3>
+          Space Cadets In Revolt
+        </h3>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+  <div class="footer-inner">
+
+    <a
+      class="footer-brand"
+      href="league.html">
+
+      <img
+        src="league logo.jpeg"
+        alt="Lonestar Premier League">
+
+      <div>
+
+        <strong>
+          Lonestar Premier League
+        </strong>
+
+        <span>
+          Est. 2026 // Texas Roots. American League.
+        </span>
+
+      </div>
+
+    </a>
+
+
+    <div class="footer-right">
+      The Lonestar Times<br>
+      Players // Managers // Rivalries // History
+    </div>
+
+  </div>
+
+</footer>
+
+
+</body>
+</html>
