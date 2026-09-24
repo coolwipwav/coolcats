@@ -2,1368 +2,941 @@
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HEB Lonestar Dynasty Premier League</title>
+
+  <style>
+
+    /* =========================================================
+       LONESTAR DYNASTY PREMIER LEAGUE
+       ========================================================= */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --black: #080808;
+      --white: #ffffff;
+      --offwhite: #f7f7f5;
+
+      --turquoise: #00b9c7;
+      --pink: #f72585;
+      --orange: #ff9f1c;
+
+      --gray: #777;
+      --line: #dedede;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--white);
+      color: var(--black);
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+
+    /* =========================================================
+       FIESTA STRIPE
+       ========================================================= */
+
+    .fiesta-stripe {
+      width: 100%;
+      height: 8px;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--turquoise) 0 33.333%,
+          var(--pink) 33.333% 66.666%,
+          var(--orange) 66.666% 100%
+        );
+    }
+
+
+    /* =========================================================
+       HEADER
+       ========================================================= */
+
+    .league-header {
+      background: var(--white);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner {
+      width: min(1400px, 92%);
+      margin: auto;
+
+      min-height: 90px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 30px;
+    }
+
+    .league-name {
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 15px;
+      line-height: 1.2;
+    }
+
+    .league-name span {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 4px;
+      color: var(--gray);
+      margin-top: 5px;
+    }
+
+    .league-nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .league-nav a {
+      transition: 0.2s ease;
+    }
+
+    .league-nav a:hover {
+      color: var(--turquoise);
+    }
+
+    .back-wccc {
+      padding: 11px 16px;
+      border: 1px solid var(--black);
+    }
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>The H-E-B Lonestar Dynasty Premier League</title>
-
-<style>
-
-/* =========================================================
-   H-E-B LONESTAR DYNASTY PREMIER LEAGUE
-   EST. 2026
-========================================================= */
-
-:root{
-  --black:#090b0c;
-  --white:#ffffff;
-  --paper:#f7f7f4;
-  --ink:#111315;
-  --muted:#73777a;
-  --line:#deded9;
-
-  --turquoise:#08bec8;
-  --pink:#f32675;
-  --orange:#ff9f19;
-}
-
-*{
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  margin:0;
-  background:var(--white);
-  color:var(--ink);
-  font-family:Arial, Helvetica, sans-serif;
-}
-
-img{
-  max-width:100%;
-}
-
-
-/* =========================================================
-   FIESTA STRIPE
-========================================================= */
-
-.fiesta-bar{
-  display:grid;
-  grid-template-columns:1fr 1fr 1fr;
-  height:7px;
-}
-
-.fiesta-bar span:nth-child(1){
-  background:var(--turquoise);
-}
-
-.fiesta-bar span:nth-child(2){
-  background:var(--pink);
-}
-
-.fiesta-bar span:nth-child(3){
-  background:var(--orange);
-}
-
-
-/* =========================================================
-   HEADER
-========================================================= */
-
-.league-header{
-  background:#fff;
-  border-bottom:1px solid var(--line);
-}
-
-.header-inner{
-  width:min(1380px,92%);
-  margin:auto;
-
-  min-height:92px;
-
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:30px;
-}
-
-.league-brand{
-  display:flex;
-  align-items:center;
-  gap:18px;
-}
-
-.brand-stripes{
-  display:flex;
-  gap:5px;
-}
-
-.brand-stripes i{
-  display:block;
-  width:5px;
-  height:32px;
-  transform:skew(-16deg);
-}
-
-.brand-stripes i:nth-child(1){
-  background:var(--turquoise);
-}
-
-.brand-stripes i:nth-child(2){
-  background:var(--pink);
-}
-
-.brand-stripes i:nth-child(3){
-  background:var(--orange);
-}
-
-.brand-copy small{
-  display:block;
-
-  margin-bottom:5px;
-
-  font-size:9px;
-  font-weight:900;
-  letter-spacing:3px;
-  text-transform:uppercase;
-}
-
-.brand-copy strong{
-  font-size:15px;
-  font-weight:900;
-  letter-spacing:1.5px;
-  text-transform:uppercase;
-}
-
-nav{
-  display:flex;
-  align-items:center;
-  gap:28px;
-}
+    .back-wccc:hover {
+      background: var(--black);
+      color: white !important;
+    }
 
-nav a{
-  color:var(--ink);
-  text-decoration:none;
 
-  font-size:10px;
-  font-weight:900;
-  letter-spacing:1.5px;
-  text-transform:uppercase;
+    /* =========================================================
+       HERO
+       ========================================================= */
 
-  transition:.2s ease;
-}
+    .league-hero {
+      position: relative;
 
-nav a:hover{
-  color:var(--turquoise);
-}
+      min-height: 580px;
 
-.return-club{
-  padding-left:28px;
-  border-left:1px solid var(--line);
-}
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
 
+      width: min(1400px, 92%);
+      margin: auto;
+
+      overflow: hidden;
+    }
+
+    .hero-copy {
+      padding: 95px 60px 90px 0;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-kicker {
+      display: flex;
+      align-items: center;
+      gap: 12px;
 
-/* =========================================================
-   HERO
-========================================================= */
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+
+      margin-bottom: 28px;
+    }
+
+    .hero-kicker::before {
+      content: "";
+      width: 45px;
+      height: 4px;
+      background: var(--turquoise);
+      box-shadow:
+        0 8px 0 var(--pink),
+        0 16px 0 var(--orange);
+      margin-right: 8px;
+    }
+
+    .hero-copy h1 {
+      font-size: clamp(55px, 7vw, 105px);
+      line-height: 0.86;
+      letter-spacing: -5px;
+      text-transform: uppercase;
+      font-weight: 950;
 
-.hero{
-  width:min(1380px,92%);
-  margin:auto;
+      max-width: 900px;
+    }
 
-  min-height:600px;
+    .hero-copy h1 span {
+      display: block;
+      color: var(--turquoise);
+    }
 
-  display:grid;
-  grid-template-columns:1.25fr .75fr;
-  align-items:center;
-  gap:80px;
+    .hero-description {
+      margin-top: 35px;
 
-  padding:80px 0;
-}
+      max-width: 650px;
+
+      font-size: 16px;
+      line-height: 1.7;
 
-.hero-kicker{
-  display:flex;
-  align-items:center;
-  gap:20px;
+      color: #444;
+    }
 
-  margin-bottom:28px;
 
-  font-size:10px;
-  font-weight:900;
-  letter-spacing:3px;
-  text-transform:uppercase;
-}
+    /* =========================================================
+       SPONSOR SIDE
+       ========================================================= */
 
-.kicker-lines{
-  display:flex;
-  flex-direction:column;
-  gap:4px;
-}
+    .hero-sponsor {
+      position: relative;
 
-.kicker-lines i{
-  display:block;
-  width:48px;
-  height:4px;
-}
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-.kicker-lines i:nth-child(1){
-  background:var(--turquoise);
-}
+      background: var(--offwhite);
 
-.kicker-lines i:nth-child(2){
-  background:var(--pink);
-}
+      min-height: 500px;
+    }
 
-.kicker-lines i:nth-child(3){
-  background:var(--orange);
-}
+    .hero-sponsor::before {
+      content: "";
 
-.hero h1{
-  margin:0;
+      position: absolute;
+      left: 0;
+      top: 0;
 
-  max-width:850px;
+      width: 10px;
+      height: 100%;
 
-  font-size:clamp(54px,7.3vw,110px);
-  line-height:.86;
-  letter-spacing:-6px;
+      background:
+        linear-gradient(
+          180deg,
+          var(--turquoise) 0 33%,
+          var(--pink) 33% 66%,
+          var(--orange) 66% 100%
+        );
+    }
 
-  text-transform:uppercase;
-  font-weight:950;
-}
+    .sponsor-box {
+      text-align: center;
+      width: 75%;
+    }
 
-.hero h1 .accent{
-  color:var(--turquoise);
-}
+    .sponsor-box span {
+      display: block;
 
-.hero-description{
-  margin-top:35px;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 4px;
+      text-transform: uppercase;
 
-  max-width:650px;
+      color: #777;
 
-  color:var(--muted);
+      margin-bottom: 25px;
+    }
+
+    .sponsor-box img {
+      width: min(280px, 90%);
+      margin: auto;
+      object-fit: contain;
+    }
 
-  font-size:16px;
-  line-height:1.7;
-}
+    .sponsor-box p {
+      margin-top: 24px;
 
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
 
-/* HERO RIGHT */
 
-.hero-side{
-  padding-left:45px;
-  border-left:1px solid var(--line);
-}
+    /* =========================================================
+       LEAGUE IDENTITY BAND
+       ========================================================= */
 
-.hero-side-label{
-  margin-bottom:12px;
+    .identity-band {
+      background: var(--black);
+      color: white;
+    }
 
-  color:var(--muted);
+    .identity-inner {
+      width: min(1400px, 92%);
+      margin: auto;
+
+      min-height: 145px;
+
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      align-items: center;
+    }
 
-  font-size:9px;
-  font-weight:900;
-  letter-spacing:3px;
-  text-transform:uppercase;
-}
+    .identity-item {
+      padding: 25px 35px;
+      border-right: 1px solid #333;
+    }
 
-.hero-side h2{
-  margin:0 0 25px;
+    .identity-item:first-child {
+      padding-left: 0;
+    }
 
-  font-size:30px;
-  line-height:1.05;
-  text-transform:uppercase;
-}
+    .identity-item:last-child {
+      border-right: 0;
+    }
 
-.hero-side p{
-  margin:0 0 35px;
+    .identity-item span {
+      display: block;
 
-  color:var(--muted);
-  line-height:1.7;
-}
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
 
+      color: #888;
 
-/* HEB SPONSOR */
+      margin-bottom: 9px;
+    }
 
-.sponsor-block{
-  padding-top:25px;
-  border-top:1px solid var(--line);
-}
+    .identity-item strong {
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
 
-.sponsor-block span{
-  display:block;
+    .turquoise {
+      color: var(--turquoise);
+    }
 
-  margin-bottom:15px;
+    .pink {
+      color: var(--pink);
+    }
 
-  color:var(--muted);
+    .orange {
+      color: var(--orange);
+    }
 
-  font-size:9px;
-  font-weight:900;
-  letter-spacing:3px;
-  text-transform:uppercase;
-}
 
-.sponsor-block img{
-  display:block;
+    /* =========================================================
+       STANDINGS
+       ========================================================= */
 
-  width:150px;
-  height:auto;
-}
+    .standings {
+      background: var(--white);
+      padding: 100px 0 120px;
+    }
 
+    .standings-inner {
+      width: min(1250px, 92%);
+      margin: auto;
+    }
 
-/* =========================================================
-   TABLE INTRO
-========================================================= */
+    .section-heading {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: end;
+      gap: 40px;
 
-.table-section{
-  padding:80px 0 110px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--line);
 
-  background:var(--paper);
+      margin-bottom: 50px;
+    }
 
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-}
+    .section-label {
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 4px;
+      text-transform: uppercase;
 
-.table-heading{
-  width:min(1380px,92%);
-  margin:0 auto 45px;
+      color: var(--turquoise);
 
-  display:flex;
-  align-items:flex-end;
-  justify-content:space-between;
-  gap:40px;
-}
+      margin-bottom: 10px;
+    }
 
-.table-heading-copy span{
-  display:block;
+    .section-heading h2 {
+      font-size: clamp(42px, 6vw, 76px);
+      line-height: 0.9;
+      letter-spacing: -3px;
+      text-transform: uppercase;
+    }
 
-  margin-bottom:10px;
+    .section-heading p {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #777;
 
-  color:var(--muted);
+      text-align: right;
+    }
 
-  font-size:10px;
-  font-weight:900;
-  letter-spacing:3px;
-  text-transform:uppercase;
-}
 
-.table-heading-copy h2{
-  margin:0;
+    /* =========================================================
+       TABLE FEATURE
+       ========================================================= */
 
-  font-size:clamp(42px,5vw,72px);
-  line-height:.9;
-  letter-spacing:-3px;
-  text-transform:uppercase;
-}
+    .table-feature {
+      position: relative;
 
-.table-meta{
-  text-align:right;
-}
+      background: var(--black);
 
-.table-meta strong{
-  display:block;
+      padding: 18px;
 
-  font-size:30px;
-  line-height:1;
-}
+      box-shadow:
+        0 25px 70px rgba(0,0,0,.16);
+    }
 
-.table-meta span{
-  display:block;
+    .table-feature::before {
+      content: "";
 
-  margin-top:7px;
+      position: absolute;
 
-  color:var(--muted);
+      top: -7px;
+      left: 0;
 
-  font-size:9px;
-  font-weight:900;
-  letter-spacing:2px;
-  text-transform:uppercase;
-}
+      width: 100%;
+      height: 7px;
 
+      background:
+        linear-gradient(
+          90deg,
+          var(--turquoise) 0 33.333%,
+          var(--pink) 33.333% 66.666%,
+          var(--orange) 66.666% 100%
+        );
+    }
 
-/* =========================================================
-   LEAGUE TABLE IMAGE
-========================================================= */
+    .table-feature img {
+      width: 100%;
+      height: auto;
 
-.table-frame{
-  width:min(1180px,92%);
-  margin:auto;
+      margin: auto;
+    }
 
-  position:relative;
-}
+    .table-caption {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-.table-frame::before{
-  content:"";
+      gap: 20px;
 
-  position:absolute;
-  left:-14px;
-  top:-14px;
+      padding: 18px 5px 2px;
 
-  width:150px;
-  height:6px;
+      color: white;
 
-  background:var(--turquoise);
-}
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
 
-.table-frame::after{
-  content:"";
+    .table-caption span:last-child {
+      color: var(--turquoise);
+    }
 
-  position:absolute;
-  right:-14px;
-  bottom:-14px;
 
-  width:150px;
-  height:6px;
+    /* =========================================================
+       MORE THAN A GAME
+       ========================================================= */
 
-  background:linear-gradient(
-    90deg,
-    var(--pink) 0 50%,
-    var(--orange) 50% 100%
-  );
-}
+    .league-statement {
+      padding: 120px 0;
+      background: var(--offwhite);
+    }
 
-.table-frame img{
-  display:block;
+    .statement-inner {
+      width: min(1200px, 90%);
+      margin: auto;
 
-  width:100%;
-  height:auto;
+      display: grid;
+      grid-template-columns: 0.65fr 1.35fr;
+      gap: 80px;
+    }
 
-  background:#050808;
+    .statement-number {
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      text-transform: uppercase;
 
-  box-shadow:
-    0 30px 80px rgba(0,0,0,.16);
-}
+      color: var(--pink);
+    }
 
+    .statement-copy h2 {
+      font-size: clamp(45px, 6vw, 80px);
+      line-height: 0.92;
+      letter-spacing: -3px;
+      text-transform: uppercase;
 
-/* =========================================================
-   TABLE FOOTNOTE
-========================================================= */
+      margin-bottom: 30px;
+    }
 
-.table-note{
-  width:min(1180px,92%);
-  margin:30px auto 0;
+    .statement-copy p {
+      max-width: 700px;
 
-  display:flex;
-  justify-content:space-between;
-  gap:30px;
+      font-size: 17px;
+      line-height: 1.75;
+      color: #444;
+    }
 
-  color:var(--muted);
+    .statement-lines {
+      margin-top: 40px;
+      display: flex;
+      gap: 7px;
+    }
 
-  font-size:9px;
-  font-weight:900;
-  letter-spacing:2px;
-  text-transform:uppercase;
-}
+    .statement-lines span {
+      height: 6px;
+      width: 80px;
+    }
 
+    .statement-lines span:nth-child(1) {
+      background: var(--turquoise);
+    }
 
-/* =========================================================
-   AROUND THE LEAGUE
-========================================================= */
+    .statement-lines span:nth-child(2) {
+      background: var(--pink);
+    }
 
-.league-news{
-  width:min(1380px,92%);
-  margin:auto;
+    .statement-lines span:nth-child(3) {
+      background: var(--orange);
+    }
 
-  padding:110px 0;
-}
 
-.section-heading{
-  padding-bottom:20px;
-  margin-bottom:45px;
+    /* =========================================================
+       FOOTER
+       ========================================================= */
 
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-end;
-  gap:30px;
+    .league-footer {
+      background: var(--black);
+      color: white;
+      padding: 60px 0;
+    }
 
-  border-bottom:1px solid var(--line);
-}
+    .footer-inner {
+      width: min(1400px, 92%);
+      margin: auto;
 
-.section-heading span{
-  color:var(--muted);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
 
-  font-size:9px;
-  font-weight:900;
-  letter-spacing:3px;
-  text-transform:uppercase;
-}
+      gap: 40px;
+    }
 
-.section-heading h2{
-  margin:8px 0 0;
+    .footer-title {
+      font-size: 18px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
 
-  font-size:clamp(38px,4vw,58px);
-  letter-spacing:-2px;
-  text-transform:uppercase;
-}
+    .footer-title span {
+      display: block;
 
+      color: var(--turquoise);
 
-/* NEWS LAYOUT */
+      font-size: 10px;
+      letter-spacing: 4px;
 
-.news-layout{
-  display:grid;
-  grid-template-columns:1.4fr .6fr;
-  gap:1px;
+      margin-top: 8px;
+    }
 
-  background:var(--line);
-  border:1px solid var(--line);
-}
+    .footer-right {
+      text-align: right;
 
-.lead-story,
-.small-story{
-  position:relative;
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
 
-  background:#fff;
-}
+      color: #888;
+    }
 
-.lead-story{
-  min-height:440px;
-  padding:45px;
-}
+    .footer-colors {
+      display: flex;
+      justify-content: flex-end;
+      gap: 5px;
 
-.story-number{
-  color:var(--muted);
+      margin-bottom: 12px;
+    }
 
-  font-size:9px;
-  font-weight:900;
-  letter-spacing:2px;
-  text-transform:uppercase;
-}
+    .footer-colors span {
+      width: 45px;
+      height: 5px;
+    }
 
-.lead-story h3{
-  max-width:650px;
+    .footer-colors span:nth-child(1) {
+      background: var(--turquoise);
+    }
 
-  margin:100px 0 20px;
+    .footer-colors span:nth-child(2) {
+      background: var(--pink);
+    }
 
-  font-size:clamp(38px,4vw,60px);
-  line-height:.95;
-  letter-spacing:-2px;
-  text-transform:uppercase;
-}
+    .footer-colors span:nth-child(3) {
+      background: var(--orange);
+    }
 
-.lead-story p{
-  max-width:650px;
 
-  margin:0;
+    /* =========================================================
+       MOBILE
+       ========================================================= */
 
-  color:var(--muted);
+    @media (max-width: 850px) {
 
-  font-size:15px;
-  line-height:1.7;
-}
+      .header-inner {
+        min-height: 75px;
+      }
 
-.story-stack{
-  display:grid;
-  grid-template-rows:1fr 1fr;
-  gap:1px;
+      .league-nav a:not(.back-wccc) {
+        display: none;
+      }
 
-  background:var(--line);
-}
+      .league-hero {
+        grid-template-columns: 1fr;
+      }
 
-.small-story{
-  padding:35px;
-}
+      .hero-copy {
+        padding: 75px 0 65px;
+      }
 
-.small-story h3{
-  margin:55px 0 12px;
+      .hero-copy h1 {
+        letter-spacing: -3px;
+      }
 
-  font-size:25px;
-  line-height:1;
-  text-transform:uppercase;
-}
+      .hero-sponsor {
+        min-height: 280px;
+      }
 
-.small-story p{
-  margin:0;
+      .identity-inner {
+        grid-template-columns: 1fr 1fr;
+      }
 
-  color:var(--muted);
-  line-height:1.6;
-}
+      .identity-item {
+        border-bottom: 1px solid #333;
+      }
 
+      .section-heading {
+        grid-template-columns: 1fr;
+      }
 
-/* STORY COLOR LINES */
+      .section-heading p {
+        text-align: left;
+      }
 
-.story-accent{
-  position:absolute;
+      .standings {
+        padding: 70px 0 90px;
+      }
 
-  top:0;
-  left:0;
+      .table-feature {
+        padding: 7px;
+      }
 
-  width:100%;
-  height:5px;
-}
+      .table-caption {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-.turquoise{
-  background:var(--turquoise);
-}
+      .statement-inner {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
 
-.pink{
-  background:var(--pink);
-}
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-.orange{
-  background:var(--orange);
-}
+      .footer-right {
+        text-align: left;
+      }
 
+      .footer-colors {
+        justify-content: flex-start;
+      }
 
-/* =========================================================
-   CLUBS / LEAGUE IDENTITY
-========================================================= */
+    }
 
-.identity{
-  background:var(--black);
-  color:#fff;
-
-  padding:115px 0;
-}
-
-.identity-inner{
-  width:min(1380px,92%);
-  margin:auto;
-
-  display:grid;
-  grid-template-columns:1.2fr .8fr;
-  gap:100px;
-  align-items:end;
-}
-
-.identity-lines{
-  display:flex;
-  gap:8px;
-
-  margin-bottom:35px;
-}
-
-.identity-lines i{
-  display:block;
-
-  width:70px;
-  height:6px;
-}
-
-.identity-lines i:nth-child(1){
-  background:var(--turquoise);
-}
-
-.identity-lines i:nth-child(2){
-  background:var(--pink);
-}
-
-.identity-lines i:nth-child(3){
-  background:var(--orange);
-}
-
-.identity h2{
-  margin:0;
-
-  font-size:clamp(60px,8vw,120px);
-  line-height:.83;
-  letter-spacing:-6px;
-  text-transform:uppercase;
-}
-
-.identity-side{
-  padding-left:35px;
-
-  border-left:1px solid #333;
-}
-
-.identity-side span{
-  display:block;
-
-  margin-bottom:18px;
-
-  color:#8d9395;
-
-  font-size:9px;
-  font-weight:900;
-  letter-spacing:3px;
-  text-transform:uppercase;
-}
-
-.identity-side p{
-  margin:0;
-
-  max-width:420px;
-
-  color:#c2c5c6;
-
-  font-size:17px;
-  line-height:1.7;
-}
-
-.identity-list{
-  margin-top:35px;
-
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px 25px;
-
-  font-size:10px;
-  font-weight:900;
-  letter-spacing:2px;
-  text-transform:uppercase;
-}
-
-.identity-list div:nth-child(1){
-  color:var(--turquoise);
-}
-
-.identity-list div:nth-child(2){
-  color:var(--pink);
-}
-
-.identity-list div:nth-child(3){
-  color:var(--orange);
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-footer{
-  background:#fff;
-
-  padding:45px 0;
-}
-
-.footer-inner{
-  width:min(1380px,92%);
-  margin:auto;
-
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:30px;
-}
-
-.footer-brand strong{
-  display:block;
-
-  font-size:11px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-}
-
-.footer-brand span{
-  display:block;
-
-  margin-top:5px;
-
-  color:var(--muted);
-
-  font-size:8px;
-  font-weight:900;
-  letter-spacing:2px;
-  text-transform:uppercase;
-}
-
-.footer-right{
-  color:var(--muted);
-
-  font-size:9px;
-  font-weight:900;
-  letter-spacing:2px;
-  text-transform:uppercase;
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media(max-width:850px){
-
-  .header-inner{
-    min-height:76px;
-  }
-
-  .brand-copy strong{
-    font-size:11px;
-  }
-
-  nav a:not(.return-club){
-    display:none;
-  }
-
-  .return-club{
-    padding-left:0;
-    border-left:0;
-  }
-
-
-  /* HERO */
-
-  .hero{
-    min-height:auto;
-
-    grid-template-columns:1fr;
-    gap:50px;
-
-    padding:65px 0;
-  }
-
-  .hero h1{
-    letter-spacing:-3px;
-  }
-
-  .hero-side{
-    padding:30px 0 0;
-
-    border-left:0;
-    border-top:1px solid var(--line);
-  }
-
-
-  /* TABLE */
-
-  .table-section{
-    padding:60px 0 75px;
-  }
-
-  .table-heading{
-    align-items:flex-start;
-  }
-
-  .table-meta strong{
-    font-size:22px;
-  }
-
-  .table-frame{
-    width:96%;
-  }
-
-  .table-frame::before{
-    left:0;
-  }
-
-  .table-frame::after{
-    right:0;
-  }
-
-  .table-note{
-    width:92%;
-  }
-
-
-  /* NEWS */
-
-  .league-news{
-    padding:75px 0;
-  }
-
-  .news-layout{
-    grid-template-columns:1fr;
-  }
-
-  .lead-story{
-    min-height:350px;
-  }
-
-  .lead-story h3{
-    margin-top:70px;
-  }
-
-
-  /* IDENTITY */
-
-  .identity{
-    padding:80px 0;
-  }
-
-  .identity-inner{
-    grid-template-columns:1fr;
-    gap:55px;
-  }
-
-  .identity h2{
-    letter-spacing:-3px;
-  }
-
-  .identity-side{
-    padding:30px 0 0;
-
-    border-left:0;
-    border-top:1px solid #333;
-  }
-
-
-  /* FOOTER */
-
-  .footer-inner{
-    display:block;
-  }
-
-  .footer-right{
-    margin-top:15px;
-  }
-
-}
-
-
-@media(max-width:520px){
-
-  .league-brand{
-    gap:10px;
-  }
-
-  .brand-stripes i{
-    height:26px;
-    width:4px;
-  }
-
-  .brand-copy small{
-    display:none;
-  }
-
-  .brand-copy strong{
-    font-size:9px;
-  }
-
-  .hero h1{
-    font-size:50px;
-  }
-
-  .table-heading{
-    display:block;
-  }
-
-  .table-meta{
-    margin-top:20px;
-    text-align:left;
-  }
-
-  .table-note{
-    display:block;
-  }
-
-  .table-note span + span{
-    display:block;
-    margin-top:8px;
-  }
-
-  .section-heading{
-    display:block;
-  }
-
-  .section-heading > span{
-    display:block;
-    margin-top:15px;
-  }
-
-  .lead-story{
-    padding:30px;
-  }
-
-  .lead-story h3{
-    font-size:34px;
-  }
-
-  .identity-list{
-    grid-template-columns:1fr;
-  }
-
-}
-
-</style>
-
+  </style>
 </head>
 
 
 <body>
 
+  <!-- FIESTA STRIPE -->
 
-<!-- =====================================================
-     FIESTA TOP STRIPE
-===================================================== -->
-
-<div class="fiesta-bar">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
+  <div class="fiesta-stripe"></div>
 
 
+  <!-- HEADER -->
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
+  <header class="league-header">
 
-<header class="league-header">
+    <div class="header-inner">
 
-  <div class="header-inner">
-
-    <div class="league-brand">
-
-      <div class="brand-stripes">
-        <i></i>
-        <i></i>
-        <i></i>
+      <div class="league-name">
+        Lonestar Dynasty
+        <span>Premier League</span>
       </div>
 
-      <div class="brand-copy">
-        <small>Est. 2026</small>
-        <strong>Lonestar Dynasty Premier League</strong>
-      </div>
+      <nav class="league-nav">
+
+        <a href="#standings">Standings</a>
+
+        <a href="#league">The League</a>
+
+        <a href="index.html" class="back-wccc">
+          ← Wooburt City
+        </a>
+
+      </nav>
 
     </div>
 
+  </header>
 
-    <nav>
 
-      <a href="#standings">Standings</a>
+  <!-- HERO -->
 
-      <a href="#news">League News</a>
+  <main>
 
-      <a href="#league">The League</a>
+    <section class="league-hero">
 
-      <a href="index.html" class="return-club">
-        ← Wooburt City
-      </a>
+      <div class="hero-copy">
 
-    </nav>
-
-  </div>
-
-</header>
-
-
-
-<main>
-
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
-<section class="hero">
-
-  <div class="hero-main">
-
-    <div class="hero-kicker">
-
-      <div class="kicker-lines">
-        <i></i>
-        <i></i>
-        <i></i>
-      </div>
-
-      The H-E-B Lonestar Dynasty Premier League
-
-    </div>
-
-
-    <h1>
-      More Than<br>
-      <span class="accent">A Game.</span>
-    </h1>
-
-
-    <p class="hero-description">
-      Ten clubs. One table. Players, managers, rivalries and
-      legacies. Welcome to the inaugural season of the Lonestar
-      Dynasty Premier League.
-    </p>
-
-  </div>
-
-
-  <aside class="hero-side">
-
-    <div class="hero-side-label">
-      Season 01 // 2026
-    </div>
-
-    <h2>
-      Dynasty Football.<br>
-      Texas Identity.
-    </h2>
-
-    <p>
-      Built for the long term. Every result matters.
-      Every transfer matters. Every club is building
-      something that lasts.
-    </p>
-
-
-    <div class="sponsor-block">
-
-      <span>Presented By</span>
-
-      <img
-        src="heb-league-sponsor2.png"
-        alt="H-E-B">
-
-    </div>
-
-  </aside>
-
-</section>
-
-
-
-<!-- =====================================================
-     LEAGUE TABLE
-===================================================== -->
-
-<section class="table-section" id="standings">
-
-  <div class="table-heading">
-
-    <div class="table-heading-copy">
-
-      <span>
-        2026 Season // Official Standings
-      </span>
-
-      <h2>
-        The Table
-      </h2>
-
-    </div>
-
-
-    <div class="table-meta">
-
-      <strong>GW 5</strong>
-
-      <span>
-        Current Standings
-      </span>
-
-    </div>
-
-  </div>
-
-
-  <div class="table-frame">
-
-    <img
-      src="lonestar-league-table1(1).png"
-      alt="H-E-B Lonestar Dynasty Premier League standings">
-
-  </div>
-
-
-  <div class="table-note">
-
-    <span>
-      10 Clubs // Dynasty Format
-    </span>
-
-    <span>
-      Updated After Gameweek 5
-    </span>
-
-  </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     AROUND THE LEAGUE
-===================================================== -->
-
-<section class="league-news" id="news">
-
-  <div class="section-heading">
-
-    <div>
-
-      <span>
-        League Headquarters
-      </span>
-
-      <h2>
-        Around The League
-      </h2>
-
-    </div>
-
-    <span>
-      Season 01 // September 2026
-    </span>
-
-  </div>
-
-
-  <div class="news-layout">
-
-
-    <!-- LEAD STORY -->
-
-    <article class="lead-story">
-
-      <div class="story-accent turquoise"></div>
-
-      <div class="story-number">
-        01 // TITLE RACE
-      </div>
-
-      <h3>
-        Nothing Separates The Leaders.
-      </h3>
-
-      <p>
-        Mauled By A Tiger and Wooburt City Cool Cats
-        sit level on 24 points as the inaugural Lonestar
-        title race begins to take shape.
-      </p>
-
-    </article>
-
-
-
-    <!-- SMALL STORIES -->
-
-    <div class="story-stack">
-
-
-      <article class="small-story">
-
-        <div class="story-accent pink"></div>
-
-        <div class="story-number">
-          02 // CHASING PACK
+        <div class="hero-kicker">
+          Est. 2026
         </div>
 
-        <h3>
-          Pressure From Behind.
-        </h3>
+        <h1>
+          Lonestar
+          <span>Dynasty.</span>
+        </h1>
 
-        <p>
-          NolanCook98 and Tzolid remain within striking
-          distance with 21 points.
+        <p class="hero-description">
+          The HEB Lonestar Dynasty Premier League.
+          Ten clubs. One table. Built for the long haul.
+          Players, managers, rivalries and legacies.
         </p>
 
-      </article>
+      </div>
 
 
+      <div class="hero-sponsor">
 
-      <article class="small-story">
+        <div class="sponsor-box">
 
-        <div class="story-accent orange"></div>
+          <span>Presented By</span>
 
-        <div class="story-number">
-          03 // SEASON ONE
+          <img
+            src="heb-league-sponsor2.png"
+            alt="H-E-B"
+          >
+
+          <p>
+            Official League Partner
+          </p>
+
         </div>
 
-        <h3>
-          The Rivalries Begin.
-        </h3>
-
-        <p>
-          The first season is already producing the stories
-          that will define the league for years to come.
-        </p>
-
-      </article>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     LEAGUE IDENTITY
-===================================================== -->
-
-<section class="identity" id="league">
-
-  <div class="identity-inner">
-
-
-    <div>
-
-      <div class="identity-lines">
-        <i></i>
-        <i></i>
-        <i></i>
       </div>
 
-      <h2>
-        Players.<br>
-        Managers.<br>
-        Legacies.
-      </h2>
-
-    </div>
+    </section>
 
 
-    <div class="identity-side">
+    <!-- IDENTITY BAND -->
 
-      <span>
-        The Lonestar Identity
-      </span>
+    <section class="identity-band">
 
-      <p>
-        Built on competition, longevity and the belief
-        that dynasty football should tell a story bigger
-        than a single season.
-      </p>
+      <div class="identity-inner">
 
+        <div class="identity-item">
+          <span>Competition</span>
+          <strong>Dynasty Football</strong>
+        </div>
 
-      <div class="identity-list">
+        <div class="identity-item">
+          <span>Founded</span>
+          <strong class="turquoise">2026</strong>
+        </div>
 
-        <div>10 Clubs</div>
+        <div class="identity-item">
+          <span>Clubs</span>
+          <strong class="pink">10 Teams</strong>
+        </div>
 
-        <div>1 Champion</div>
-
-        <div>Est. 2026</div>
-
-        <div>Texas</div>
+        <div class="identity-item">
+          <span>Identity</span>
+          <strong class="orange">More Than A Game</strong>
+        </div>
 
       </div>
 
+    </section>
+
+
+    <!-- STANDINGS -->
+
+    <section class="standings" id="standings">
+
+      <div class="standings-inner">
+
+        <div class="section-heading">
+
+          <div>
+
+            <div class="section-label">
+              League Table
+            </div>
+
+            <h2>
+              The Race.
+            </h2>
+
+          </div>
+
+          <p>
+            Current Standings<br>
+            Lonestar Dynasty Premier League
+          </p>
+
+        </div>
+
+
+        <div class="table-feature">
+
+          <img
+            src="lonestar-league-table1.png"
+            alt="Lonestar Dynasty Premier League standings"
+          >
+
+          <div class="table-caption">
+
+            <span>
+              Lonestar Dynasty Premier League // Official Table
+            </span>
+
+            <span>
+              Presented by H-E-B
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- LEAGUE STATEMENT -->
+
+    <section class="league-statement" id="league">
+
+      <div class="statement-inner">
+
+        <div class="statement-number">
+          LDPL // 2026
+        </div>
+
+        <div class="statement-copy">
+
+          <h2>
+            More Than<br>
+            A Game.
+          </h2>
+
+          <p>
+            The Lonestar Dynasty Premier League is built around
+            competition that lasts. Clubs aren't assembled for a
+            weekend. They're built season after season. Every signing,
+            every trade, every rivalry and every result becomes part
+            of a larger history.
+          </p>
+
+          <div class="statement-lines">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer class="league-footer">
+
+    <div class="footer-inner">
+
+      <div class="footer-title">
+        Lonestar Dynasty
+        <span>Premier League</span>
+      </div>
+
+      <div class="footer-right">
+
+        <div class="footer-colors">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        Established 2026<br>
+        Presented by H-E-B
+
+      </div>
+
     </div>
 
-
-  </div>
-
-</section>
-
-
-</main>
-
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer>
-
-  <div class="footer-inner">
-
-    <div class="footer-brand">
-
-      <strong>
-        Lonestar Dynasty Premier League
-      </strong>
-
-      <span>
-        Established 2026
-      </span>
-
-    </div>
-
-
-    <div class="footer-right">
-      Presented by H-E-B
-    </div>
-
-  </div>
-
-</footer>
+  </footer>
 
 
 </body>
-
 </html>
