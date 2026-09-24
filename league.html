@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>H-E-B Lonestar Dynasty Premier League</title>
+<title>The H-E-B Lonestar Dynasty Premier League</title>
 
 <style>
 
-/* =========================
-   LEAGUE IDENTITY
-========================= */
+/* =========================================================
+   H-E-B LONESTAR DYNASTY PREMIER LEAGUE
+   EST. 2026
+========================================================= */
 
 :root{
   --black:#090b0c;
   --white:#ffffff;
   --paper:#f7f7f4;
   --ink:#111315;
-  --muted:#6c7073;
+  --muted:#73777a;
+  --line:#deded9;
 
   --turquoise:#08bec8;
   --pink:#f32675;
   --orange:#ff9f19;
-
-  --line:#deded9;
 }
 
 *{
@@ -41,10 +43,14 @@ body{
   font-family:Arial, Helvetica, sans-serif;
 }
 
+img{
+  max-width:100%;
+}
 
-/* =========================
-   FIESTA BAR
-========================= */
+
+/* =========================================================
+   FIESTA STRIPE
+========================================================= */
 
 .fiesta-bar{
   display:grid;
@@ -65,9 +71,9 @@ body{
 }
 
 
-/* =========================
+/* =========================================================
    HEADER
-========================= */
+========================================================= */
 
 .league-header{
   background:#fff;
@@ -77,6 +83,7 @@ body{
 .header-inner{
   width:min(1380px,92%);
   margin:auto;
+
   min-height:92px;
 
   display:flex;
@@ -85,47 +92,51 @@ body{
   gap:30px;
 }
 
-.league-wordmark{
+.league-brand{
   display:flex;
   align-items:center;
   gap:18px;
 }
 
-.league-mark{
+.brand-stripes{
   display:flex;
   gap:5px;
 }
 
-.league-mark i{
+.brand-stripes i{
+  display:block;
   width:5px;
   height:32px;
-  display:block;
   transform:skew(-16deg);
 }
 
-.league-mark i:nth-child(1){
+.brand-stripes i:nth-child(1){
   background:var(--turquoise);
 }
 
-.league-mark i:nth-child(2){
+.brand-stripes i:nth-child(2){
   background:var(--pink);
 }
 
-.league-mark i:nth-child(3){
+.brand-stripes i:nth-child(3){
   background:var(--orange);
 }
 
-.league-name small{
+.brand-copy small{
   display:block;
-  font-size:9px;
-  font-weight:800;
-  letter-spacing:3px;
+
   margin-bottom:5px;
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:3px;
+  text-transform:uppercase;
 }
 
-.league-name strong{
-  font-size:16px;
-  letter-spacing:1px;
+.brand-copy strong{
+  font-size:15px;
+  font-weight:900;
+  letter-spacing:1.5px;
   text-transform:uppercase;
 }
 
@@ -138,159 +149,244 @@ nav{
 nav a{
   color:var(--ink);
   text-decoration:none;
-  font-size:11px;
-  font-weight:800;
+
+  font-size:10px;
+  font-weight:900;
   letter-spacing:1.5px;
   text-transform:uppercase;
+
+  transition:.2s ease;
 }
 
 nav a:hover{
   color:var(--turquoise);
 }
 
-.club-return{
-  border-left:1px solid var(--line);
+.return-club{
   padding-left:28px;
+  border-left:1px solid var(--line);
 }
 
 
-/* =========================
-   LEAGUE INTRO
-========================= */
+/* =========================================================
+   HERO
+========================================================= */
 
-.league-intro{
+.hero{
   width:min(1380px,92%);
-  margin:0 auto;
-  padding:90px 0 70px;
+  margin:auto;
+
+  min-height:600px;
 
   display:grid;
-  grid-template-columns:1.35fr .65fr;
+  grid-template-columns:1.25fr .75fr;
+  align-items:center;
   gap:80px;
-  align-items:end;
+
+  padding:80px 0;
 }
 
-.intro-kicker{
+.hero-kicker{
   display:flex;
   align-items:center;
-  gap:15px;
+  gap:20px;
 
-  font-size:11px;
-  font-weight:900;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  margin-bottom:25px;
-}
+  margin-bottom:28px;
 
-.intro-kicker::before{
-  content:"";
-  width:55px;
-  height:4px;
-  background:var(--turquoise);
-  box-shadow:
-    0 7px 0 var(--pink),
-    0 14px 0 var(--orange);
-}
-
-.league-intro h1{
-  margin:0;
-
-  font-size:clamp(52px,7vw,112px);
-  line-height:.87;
-  letter-spacing:-5px;
-  text-transform:uppercase;
-  font-weight:950;
-}
-
-.league-intro h1 span{
-  display:block;
-  color:var(--turquoise);
-}
-
-.intro-side{
-  border-left:1px solid var(--line);
-  padding-left:35px;
-}
-
-.intro-side p{
-  margin:0 0 25px;
-  color:var(--muted);
-  font-size:16px;
-  line-height:1.7;
-}
-
-.sponsor{
-  display:flex;
-  align-items:center;
-  gap:16px;
-
-  font-size:9px;
-  font-weight:900;
-  letter-spacing:2px;
-  text-transform:uppercase;
-}
-
-.sponsor img{
-  width:105px;
-  height:auto;
-  display:block;
-}
-
-
-/* =========================
-   TABLE FEATURE
-========================= */
-
-.standings{
-  background:var(--paper);
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  padding:70px 0 85px;
-}
-
-.section-top{
-  width:min(1380px,92%);
-  margin:0 auto 35px;
-
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-end;
-  gap:30px;
-}
-
-.section-label{
   font-size:10px;
   font-weight:900;
   letter-spacing:3px;
   text-transform:uppercase;
-  color:var(--muted);
 }
 
-.section-top h2{
-  margin:8px 0 0;
-  font-size:clamp(32px,4vw,58px);
+.kicker-lines{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+
+.kicker-lines i{
+  display:block;
+  width:48px;
+  height:4px;
+}
+
+.kicker-lines i:nth-child(1){
+  background:var(--turquoise);
+}
+
+.kicker-lines i:nth-child(2){
+  background:var(--pink);
+}
+
+.kicker-lines i:nth-child(3){
+  background:var(--orange);
+}
+
+.hero h1{
+  margin:0;
+
+  max-width:850px;
+
+  font-size:clamp(54px,7.3vw,110px);
+  line-height:.86;
+  letter-spacing:-6px;
+
   text-transform:uppercase;
-  letter-spacing:-2px;
+  font-weight:950;
 }
 
-.matchweek{
+.hero h1 .accent{
+  color:var(--turquoise);
+}
+
+.hero-description{
+  margin-top:35px;
+
+  max-width:650px;
+
+  color:var(--muted);
+
+  font-size:16px;
+  line-height:1.7;
+}
+
+
+/* HERO RIGHT */
+
+.hero-side{
+  padding-left:45px;
+  border-left:1px solid var(--line);
+}
+
+.hero-side-label{
+  margin-bottom:12px;
+
+  color:var(--muted);
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.hero-side h2{
+  margin:0 0 25px;
+
+  font-size:30px;
+  line-height:1.05;
+  text-transform:uppercase;
+}
+
+.hero-side p{
+  margin:0 0 35px;
+
+  color:var(--muted);
+  line-height:1.7;
+}
+
+
+/* HEB SPONSOR */
+
+.sponsor-block{
+  padding-top:25px;
+  border-top:1px solid var(--line);
+}
+
+.sponsor-block span{
+  display:block;
+
+  margin-bottom:15px;
+
+  color:var(--muted);
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.sponsor-block img{
+  display:block;
+
+  width:150px;
+  height:auto;
+}
+
+
+/* =========================================================
+   TABLE INTRO
+========================================================= */
+
+.table-section{
+  padding:80px 0 110px;
+
+  background:var(--paper);
+
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
+.table-heading{
+  width:min(1380px,92%);
+  margin:0 auto 45px;
+
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:40px;
+}
+
+.table-heading-copy span{
+  display:block;
+
+  margin-bottom:10px;
+
+  color:var(--muted);
+
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.table-heading-copy h2{
+  margin:0;
+
+  font-size:clamp(42px,5vw,72px);
+  line-height:.9;
+  letter-spacing:-3px;
+  text-transform:uppercase;
+}
+
+.table-meta{
   text-align:right;
 }
 
-.matchweek strong{
+.table-meta strong{
   display:block;
-  font-size:28px;
+
+  font-size:30px;
+  line-height:1;
 }
 
-.matchweek span{
+.table-meta span{
+  display:block;
+
+  margin-top:7px;
+
+  color:var(--muted);
+
   font-size:9px;
-  font-weight:bold;
+  font-weight:900;
   letter-spacing:2px;
   text-transform:uppercase;
-  color:var(--muted);
 }
 
 
-/* TABLE IMAGE */
+/* =========================================================
+   LEAGUE TABLE IMAGE
+========================================================= */
 
 .table-frame{
   width:min(1180px,92%);
@@ -301,200 +397,336 @@ nav a:hover{
 
 .table-frame::before{
   content:"";
+
   position:absolute;
-  top:-12px;
-  left:-12px;
-  width:110px;
-  height:5px;
+  left:-14px;
+  top:-14px;
+
+  width:150px;
+  height:6px;
+
   background:var(--turquoise);
 }
 
 .table-frame::after{
   content:"";
+
   position:absolute;
-  bottom:-12px;
-  right:-12px;
-  width:110px;
-  height:5px;
-  background:var(--orange);
+  right:-14px;
+  bottom:-14px;
+
+  width:150px;
+  height:6px;
+
+  background:linear-gradient(
+    90deg,
+    var(--pink) 0 50%,
+    var(--orange) 50% 100%
+  );
 }
 
 .table-frame img{
   display:block;
+
   width:100%;
   height:auto;
 
-  border:1px solid #1e2425;
-  box-shadow:0 28px 70px rgba(0,0,0,.13);
+  background:#050808;
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.16);
 }
 
 
-/* =========================
-   LEAGUE DASHBOARD
-========================= */
+/* =========================================================
+   TABLE FOOTNOTE
+========================================================= */
 
-.dashboard{
+.table-note{
+  width:min(1180px,92%);
+  margin:30px auto 0;
+
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+
+  color:var(--muted);
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   AROUND THE LEAGUE
+========================================================= */
+
+.league-news{
   width:min(1380px,92%);
   margin:auto;
-  padding:100px 0;
+
+  padding:110px 0;
 }
 
-.dashboard-header{
-  display:flex;
-  align-items:end;
-  justify-content:space-between;
-  margin-bottom:40px;
-  border-bottom:1px solid var(--line);
+.section-heading{
   padding-bottom:20px;
+  margin-bottom:45px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:30px;
+
+  border-bottom:1px solid var(--line);
 }
 
-.dashboard-header h2{
-  margin:0;
-  font-size:42px;
-  text-transform:uppercase;
-  letter-spacing:-2px;
-}
-
-.dashboard-header span{
-  font-size:10px;
-  font-weight:bold;
-  letter-spacing:2px;
+.section-heading span{
   color:var(--muted);
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:3px;
   text-transform:uppercase;
 }
 
-.dashboard-grid{
+.section-heading h2{
+  margin:8px 0 0;
+
+  font-size:clamp(38px,4vw,58px);
+  letter-spacing:-2px;
+  text-transform:uppercase;
+}
+
+
+/* NEWS LAYOUT */
+
+.news-layout{
   display:grid;
-  grid-template-columns:1.3fr .7fr .7fr;
+  grid-template-columns:1.4fr .6fr;
   gap:1px;
+
   background:var(--line);
   border:1px solid var(--line);
 }
 
-.dashboard-card{
-  background:#fff;
-  min-height:260px;
-  padding:35px;
+.lead-story,
+.small-story{
   position:relative;
+
+  background:#fff;
 }
 
-.dashboard-card:first-child{
-  min-height:360px;
+.lead-story{
+  min-height:440px;
+  padding:45px;
 }
 
-.card-number{
-  font-size:10px;
+.story-number{
+  color:var(--muted);
+
+  font-size:9px;
   font-weight:900;
   letter-spacing:2px;
-  color:var(--muted);
+  text-transform:uppercase;
 }
 
-.dashboard-card h3{
-  margin:55px 0 15px;
-  font-size:27px;
+.lead-story h3{
+  max-width:650px;
+
+  margin:100px 0 20px;
+
+  font-size:clamp(38px,4vw,60px);
+  line-height:.95;
+  letter-spacing:-2px;
+  text-transform:uppercase;
+}
+
+.lead-story p{
+  max-width:650px;
+
+  margin:0;
+
+  color:var(--muted);
+
+  font-size:15px;
+  line-height:1.7;
+}
+
+.story-stack{
+  display:grid;
+  grid-template-rows:1fr 1fr;
+  gap:1px;
+
+  background:var(--line);
+}
+
+.small-story{
+  padding:35px;
+}
+
+.small-story h3{
+  margin:55px 0 12px;
+
+  font-size:25px;
   line-height:1;
   text-transform:uppercase;
 }
 
-.dashboard-card:first-child h3{
-  font-size:45px;
-  max-width:500px;
-}
+.small-story p{
+  margin:0;
 
-.dashboard-card p{
   color:var(--muted);
   line-height:1.6;
-  margin:0;
 }
 
-.card-accent{
+
+/* STORY COLOR LINES */
+
+.story-accent{
   position:absolute;
+
   top:0;
   left:0;
+
   width:100%;
   height:5px;
 }
 
-.accent-turquoise{
+.turquoise{
   background:var(--turquoise);
 }
 
-.accent-pink{
+.pink{
   background:var(--pink);
 }
 
-.accent-orange{
+.orange{
   background:var(--orange);
 }
 
 
-/* =========================
-   LEAGUE STATEMENT
-========================= */
+/* =========================================================
+   CLUBS / LEAGUE IDENTITY
+========================================================= */
 
-.league-statement{
+.identity{
   background:var(--black);
   color:#fff;
-  padding:110px 0;
-  overflow:hidden;
-  position:relative;
+
+  padding:115px 0;
 }
 
-.statement-inner{
+.identity-inner{
   width:min(1380px,92%);
   margin:auto;
-  position:relative;
-  z-index:2;
+
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:100px;
+  align-items:end;
 }
 
-.statement-stripes{
+.identity-lines{
   display:flex;
   gap:8px;
+
   margin-bottom:35px;
 }
 
-.statement-stripes span{
-  width:65px;
+.identity-lines i{
+  display:block;
+
+  width:70px;
   height:6px;
 }
 
-.statement-stripes span:nth-child(1){
+.identity-lines i:nth-child(1){
   background:var(--turquoise);
 }
 
-.statement-stripes span:nth-child(2){
+.identity-lines i:nth-child(2){
   background:var(--pink);
 }
 
-.statement-stripes span:nth-child(3){
+.identity-lines i:nth-child(3){
   background:var(--orange);
 }
 
-.league-statement h2{
+.identity h2{
   margin:0;
-  max-width:950px;
-  font-size:clamp(50px,8vw,120px);
-  line-height:.85;
-  letter-spacing:-5px;
+
+  font-size:clamp(60px,8vw,120px);
+  line-height:.83;
+  letter-spacing:-6px;
   text-transform:uppercase;
 }
 
-.league-statement p{
-  margin:35px 0 0;
-  color:#a9aeaf;
-  text-transform:uppercase;
-  font-size:11px;
+.identity-side{
+  padding-left:35px;
+
+  border-left:1px solid #333;
+}
+
+.identity-side span{
+  display:block;
+
+  margin-bottom:18px;
+
+  color:#8d9395;
+
+  font-size:9px;
+  font-weight:900;
   letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.identity-side p{
+  margin:0;
+
+  max-width:420px;
+
+  color:#c2c5c6;
+
+  font-size:17px;
+  line-height:1.7;
+}
+
+.identity-list{
+  margin-top:35px;
+
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px 25px;
+
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.identity-list div:nth-child(1){
+  color:var(--turquoise);
+}
+
+.identity-list div:nth-child(2){
+  color:var(--pink);
+}
+
+.identity-list div:nth-child(3){
+  color:var(--orange);
 }
 
 
-/* =========================
+/* =========================================================
    FOOTER
-========================= */
+========================================================= */
 
 footer{
-  padding:45px 0;
   background:#fff;
+
+  padding:45px 0;
 }
 
 .footer-inner{
@@ -502,114 +734,251 @@ footer{
   margin:auto;
 
   display:flex;
-  align-items:center;
   justify-content:space-between;
+  align-items:center;
   gap:30px;
 }
 
-.footer-name{
+.footer-brand strong{
+  display:block;
+
   font-size:11px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.footer-brand span{
+  display:block;
+
+  margin-top:5px;
+
+  color:var(--muted);
+
+  font-size:8px;
   font-weight:900;
   letter-spacing:2px;
   text-transform:uppercase;
 }
 
-.footer-meta{
+.footer-right{
   color:var(--muted);
+
   font-size:9px;
-  font-weight:bold;
+  font-weight:900;
   letter-spacing:2px;
   text-transform:uppercase;
 }
 
 
-/* =========================
+/* =========================================================
    MOBILE
-========================= */
+========================================================= */
 
-@media(max-width:800px){
+@media(max-width:850px){
 
   .header-inner{
-    min-height:75px;
+    min-height:76px;
   }
 
-  nav a:not(.club-return){
+  .brand-copy strong{
+    font-size:11px;
+  }
+
+  nav a:not(.return-club){
     display:none;
   }
 
-  .club-return{
-    border:0;
-    padding:0;
+  .return-club{
+    padding-left:0;
+    border-left:0;
   }
 
-  .league-intro{
+
+  /* HERO */
+
+  .hero{
+    min-height:auto;
+
     grid-template-columns:1fr;
-    gap:45px;
-    padding:65px 0 50px;
+    gap:50px;
+
+    padding:65px 0;
   }
 
-  .league-intro h1{
+  .hero h1{
     letter-spacing:-3px;
   }
 
-  .intro-side{
+  .hero-side{
+    padding:30px 0 0;
+
     border-left:0;
     border-top:1px solid var(--line);
-    padding:25px 0 0;
   }
 
-  .section-top{
-    align-items:start;
+
+  /* TABLE */
+
+  .table-section{
+    padding:60px 0 75px;
   }
 
-  .matchweek strong{
-    font-size:20px;
+  .table-heading{
+    align-items:flex-start;
   }
 
-  .standings{
-    padding:50px 0 65px;
+  .table-meta strong{
+    font-size:22px;
   }
 
   .table-frame{
     width:96%;
   }
 
-  .dashboard{
-    padding:70px 0;
+  .table-frame::before{
+    left:0;
   }
 
-  .dashboard-grid{
+  .table-frame::after{
+    right:0;
+  }
+
+  .table-note{
+    width:92%;
+  }
+
+
+  /* NEWS */
+
+  .league-news{
+    padding:75px 0;
+  }
+
+  .news-layout{
     grid-template-columns:1fr;
   }
 
-  .dashboard-card:first-child h3{
-    font-size:32px;
+  .lead-story{
+    min-height:350px;
   }
 
-  .league-statement{
+  .lead-story h3{
+    margin-top:70px;
+  }
+
+
+  /* IDENTITY */
+
+  .identity{
     padding:80px 0;
   }
 
-  .league-statement h2{
+  .identity-inner{
+    grid-template-columns:1fr;
+    gap:55px;
+  }
+
+  .identity h2{
     letter-spacing:-3px;
   }
+
+  .identity-side{
+    padding:30px 0 0;
+
+    border-left:0;
+    border-top:1px solid #333;
+  }
+
+
+  /* FOOTER */
 
   .footer-inner{
     display:block;
   }
 
-  .footer-meta{
-    margin-top:12px;
+  .footer-right{
+    margin-top:15px;
   }
+
+}
+
+
+@media(max-width:520px){
+
+  .league-brand{
+    gap:10px;
+  }
+
+  .brand-stripes i{
+    height:26px;
+    width:4px;
+  }
+
+  .brand-copy small{
+    display:none;
+  }
+
+  .brand-copy strong{
+    font-size:9px;
+  }
+
+  .hero h1{
+    font-size:50px;
+  }
+
+  .table-heading{
+    display:block;
+  }
+
+  .table-meta{
+    margin-top:20px;
+    text-align:left;
+  }
+
+  .table-note{
+    display:block;
+  }
+
+  .table-note span + span{
+    display:block;
+    margin-top:8px;
+  }
+
+  .section-heading{
+    display:block;
+  }
+
+  .section-heading > span{
+    display:block;
+    margin-top:15px;
+  }
+
+  .lead-story{
+    padding:30px;
+  }
+
+  .lead-story h3{
+    font-size:34px;
+  }
+
+  .identity-list{
+    grid-template-columns:1fr;
+  }
+
 }
 
 </style>
+
 </head>
 
 
 <body>
 
-<!-- FIESTA IDENTITY -->
+
+<!-- =====================================================
+     FIESTA TOP STRIPE
+===================================================== -->
+
 <div class="fiesta-bar">
   <span></span>
   <span></span>
@@ -617,31 +986,43 @@ footer{
 </div>
 
 
-<!-- HEADER -->
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
 <header class="league-header">
 
   <div class="header-inner">
 
-    <div class="league-wordmark">
+    <div class="league-brand">
 
-      <div class="league-mark">
+      <div class="brand-stripes">
         <i></i>
         <i></i>
         <i></i>
       </div>
 
-      <div class="league-name">
-        <small>EST. 2026</small>
+      <div class="brand-copy">
+        <small>Est. 2026</small>
         <strong>Lonestar Dynasty Premier League</strong>
       </div>
 
     </div>
 
+
     <nav>
+
       <a href="#standings">Standings</a>
-      <a href="#league">League</a>
-      <a href="#clubs">Clubs</a>
-      <a href="index.html" class="club-return">← Wooburt City</a>
+
+      <a href="#news">League News</a>
+
+      <a href="#league">The League</a>
+
+      <a href="index.html" class="return-club">
+        ← Wooburt City
+      </a>
+
     </nav>
 
   </div>
@@ -649,68 +1030,109 @@ footer{
 </header>
 
 
+
 <main>
 
 
-<!-- LEAGUE INTRO -->
-<section class="league-intro">
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-  <div>
+<section class="hero">
 
-    <div class="intro-kicker">
-      Texas Dynasty Football
+  <div class="hero-main">
+
+    <div class="hero-kicker">
+
+      <div class="kicker-lines">
+        <i></i>
+        <i></i>
+        <i></i>
+      </div>
+
+      The H-E-B Lonestar Dynasty Premier League
+
     </div>
 
+
     <h1>
-      Lonestar
-      <span>Dynasty.</span>
+      More Than<br>
+      <span class="accent">A Game.</span>
     </h1>
+
+
+    <p class="hero-description">
+      Ten clubs. One table. Players, managers, rivalries and
+      legacies. Welcome to the inaugural season of the Lonestar
+      Dynasty Premier League.
+    </p>
 
   </div>
 
 
-  <div class="intro-side">
+  <aside class="hero-side">
+
+    <div class="hero-side-label">
+      Season 01 // 2026
+    </div>
+
+    <h2>
+      Dynasty Football.<br>
+      Texas Identity.
+    </h2>
 
     <p>
-      Ten clubs. One table. A dynasty built to last.
-      Welcome to the Lonestar Dynasty Premier League.
+      Built for the long term. Every result matters.
+      Every transfer matters. Every club is building
+      something that lasts.
     </p>
 
-    <div class="sponsor">
+
+    <div class="sponsor-block">
 
       <span>Presented By</span>
 
       <img
-        src="heb-league-sponsor.png"
+        src="heb-league-sponsor2.png"
         alt="H-E-B">
 
     </div>
 
-  </div>
+  </aside>
 
 </section>
 
 
 
-<!-- STANDINGS -->
-<section class="standings" id="standings">
+<!-- =====================================================
+     LEAGUE TABLE
+===================================================== -->
 
-  <div class="section-top">
+<section class="table-section" id="standings">
 
-    <div>
+  <div class="table-heading">
 
-      <div class="section-label">
-        2026 Season // Official Table
-      </div>
+    <div class="table-heading-copy">
 
-      <h2>League Standings</h2>
+      <span>
+        2026 Season // Official Standings
+      </span>
+
+      <h2>
+        The Table
+      </h2>
 
     </div>
 
 
-    <div class="matchweek">
+    <div class="table-meta">
+
       <strong>GW 5</strong>
-      <span>Current Standings</span>
+
+      <span>
+        Current Standings
+      </span>
+
     </div>
 
   </div>
@@ -719,8 +1141,21 @@ footer{
   <div class="table-frame">
 
     <img
-      src="lonestar-league-table1.png"
-      alt="Lonestar Dynasty Premier League standings">
+      src="lonestar-league-table1(1).png"
+      alt="H-E-B Lonestar Dynasty Premier League standings">
+
+  </div>
+
+
+  <div class="table-note">
+
+    <span>
+      10 Clubs // Dynasty Format
+    </span>
+
+    <span>
+      Updated After Gameweek 5
+    </span>
 
   </div>
 
@@ -728,26 +1163,43 @@ footer{
 
 
 
-<!-- LEAGUE DASHBOARD -->
-<section class="dashboard" id="league">
+<!-- =====================================================
+     AROUND THE LEAGUE
+===================================================== -->
 
-  <div class="dashboard-header">
+<section class="league-news" id="news">
 
-    <h2>Around The League</h2>
+  <div class="section-heading">
 
-    <span>Season 01 // 2026</span>
+    <div>
+
+      <span>
+        League Headquarters
+      </span>
+
+      <h2>
+        Around The League
+      </h2>
+
+    </div>
+
+    <span>
+      Season 01 // September 2026
+    </span>
 
   </div>
 
 
-  <div class="dashboard-grid">
+  <div class="news-layout">
 
 
-    <article class="dashboard-card">
+    <!-- LEAD STORY -->
 
-      <div class="card-accent accent-turquoise"></div>
+    <article class="lead-story">
 
-      <div class="card-number">
+      <div class="story-accent turquoise"></div>
+
+      <div class="story-number">
         01 // TITLE RACE
       </div>
 
@@ -756,54 +1208,62 @@ footer{
       </h3>
 
       <p>
-        Mauled By A Tiger and Wooburt City sit level on
-        24 points as the first Lonestar title race begins
-        to take shape.
+        Mauled By A Tiger and Wooburt City Cool Cats
+        sit level on 24 points as the inaugural Lonestar
+        title race begins to take shape.
       </p>
 
     </article>
 
 
-    <article class="dashboard-card">
 
-      <div class="card-accent accent-pink"></div>
+    <!-- SMALL STORIES -->
 
-      <div class="card-number">
-        02 // CHASING PACK
-      </div>
-
-      <h3>
-        Pressure Building.
-      </h3>
-
-      <p>
-        NolanCook98 and Tzolid remain within striking
-        distance at 21 points.
-      </p>
-
-    </article>
+    <div class="story-stack">
 
 
-    <article class="dashboard-card">
+      <article class="small-story">
 
-      <div class="card-accent accent-orange"></div>
+        <div class="story-accent pink"></div>
 
-      <div class="card-number">
-        03 // THE SEASON
-      </div>
+        <div class="story-number">
+          02 // CHASING PACK
+        </div>
 
-      <h3>
-        Everything Still To Play For.
-      </h3>
+        <h3>
+          Pressure From Behind.
+        </h3>
 
-      <p>
-        Rivalries are forming. Clubs are evolving.
-        The first chapter of the Lonestar Dynasty
-        Premier League is only beginning.
-      </p>
+        <p>
+          NolanCook98 and Tzolid remain within striking
+          distance with 21 points.
+        </p>
 
-    </article>
+      </article>
 
+
+
+      <article class="small-story">
+
+        <div class="story-accent orange"></div>
+
+        <div class="story-number">
+          03 // SEASON ONE
+        </div>
+
+        <h3>
+          The Rivalries Begin.
+        </h3>
+
+        <p>
+          The first season is already producing the stories
+          that will define the league for years to come.
+        </p>
+
+      </article>
+
+
+    </div>
 
   </div>
 
@@ -811,25 +1271,59 @@ footer{
 
 
 
-<!-- LEAGUE IDENTITY -->
-<section class="league-statement" id="clubs">
+<!-- =====================================================
+     LEAGUE IDENTITY
+===================================================== -->
 
-  <div class="statement-inner">
+<section class="identity" id="league">
 
-    <div class="statement-stripes">
-      <span></span>
-      <span></span>
-      <span></span>
+  <div class="identity-inner">
+
+
+    <div>
+
+      <div class="identity-lines">
+        <i></i>
+        <i></i>
+        <i></i>
+      </div>
+
+      <h2>
+        Players.<br>
+        Managers.<br>
+        Legacies.
+      </h2>
+
     </div>
 
-    <h2>
-      More Than<br>
-      A Game.
-    </h2>
 
-    <p>
-      Players // Managers // Rivalries // Legacies
-    </p>
+    <div class="identity-side">
+
+      <span>
+        The Lonestar Identity
+      </span>
+
+      <p>
+        Built on competition, longevity and the belief
+        that dynasty football should tell a story bigger
+        than a single season.
+      </p>
+
+
+      <div class="identity-list">
+
+        <div>10 Clubs</div>
+
+        <div>1 Champion</div>
+
+        <div>Est. 2026</div>
+
+        <div>Texas</div>
+
+      </div>
+
+    </div>
+
 
   </div>
 
@@ -840,16 +1334,29 @@ footer{
 
 
 
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
 <footer>
 
   <div class="footer-inner">
 
-    <div class="footer-name">
-      Lonestar Dynasty Premier League
+    <div class="footer-brand">
+
+      <strong>
+        Lonestar Dynasty Premier League
+      </strong>
+
+      <span>
+        Established 2026
+      </span>
+
     </div>
 
-    <div class="footer-meta">
-      Presented by H-E-B // Established 2026
+
+    <div class="footer-right">
+      Presented by H-E-B
     </div>
 
   </div>
@@ -858,4 +1365,5 @@ footer{
 
 
 </body>
+
 </html>
