@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>I Stand By It | The Lonestar Times</title>
+
+<style>
+
+:root{
+  --black:#080b0d;
+  --dark:#101417;
+  --white:#ffffff;
+  --off:#f5f5f2;
+  --turq:#11b8c5;
+  --pink:#ef3f78;
+  --orange:#ff9e18;
+  --line:#d8d8d4;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{scroll-behavior:smooth}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--off);
+  color:#111;
+  overflow-x:hidden;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.fiesta-line{
+  height:7px;
+  background:linear-gradient(
+    90deg,
+    var(--turq) 0 33.33%,
+    var(--pink) 33.33% 66.66%,
+    var(--orange) 66.66%
+  );
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header{
+  background:#fff;
+  border-bottom:1px solid #ddd;
+}
+
+.header-inner{
+  max-width:1220px;
+  margin:auto;
+  min-height:94px;
+  padding:16px 28px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.brand img{
+  width:67px;
+  height:67px;
+  object-fit:contain;
+}
+
+.brand-copy small{
+  display:block;
+  color:var(--turq);
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  margin-bottom:4px;
+}
+
+.brand-copy strong{
+  display:block;
+  font-size:17px;
+  line-height:1.05;
+  text-transform:uppercase;
+}
+
+nav{
+  display:flex;
+  align-items:center;
+  gap:24px;
+  flex-wrap:wrap;
+}
+
+nav a{
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+nav a:hover{
+  color:var(--pink);
+}
+
+.back-link{
+  padding:10px 14px;
+  border:1px solid #111;
+}
+
+.back-link:hover{
+  background:#111;
+  color:#fff;
+}
+
+
+/* =========================================================
+   TIMES MASTHEAD
+========================================================= */
+
+.times-bar{
+  background:var(--black);
+  color:#fff;
+}
+
+.times-inner{
+  max-width:1180px;
+  margin:auto;
+  padding:22px 28px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:30px;
+}
+
+.times-name{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:27px;
+  font-weight:bold;
+  letter-spacing:-1px;
+}
+
+.times-name span{
+  color:var(--pink);
+}
+
+.times-tag{
+  color:#999;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   ARTICLE HEADER
+========================================================= */
+
+.article-header{
+  background:#fff;
+}
+
+.article-header-inner{
+  max-width:1060px;
+  margin:auto;
+  padding:75px 28px 55px;
+}
+
+.category{
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  color:var(--pink);
+
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:3px;
+  text-transform:uppercase;
+
+  margin-bottom:23px;
+}
+
+.category::before{
+  content:"";
+  width:38px;
+  height:5px;
+  background:var(--pink);
+}
+
+.article-header h1{
+  max-width:1000px;
+
+  font-size:clamp(50px,7.5vw,94px);
+  line-height:.88;
+  letter-spacing:-5px;
+  text-transform:uppercase;
+}
+
+.deck{
+  max-width:800px;
+  margin-top:28px;
+
+  color:#555;
+
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:21px;
+  line-height:1.55;
+}
+
+.meta{
+  margin-top:30px;
+
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+
+  color:#777;
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.meta-dot{
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background:var(--orange);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero-wrap{
+  max-width:1180px;
+  margin:auto;
+  padding:0 28px;
+}
+
+.hero-stage{
+  background:#101214;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  min-height:400px;
+}
+
+.hero-stage img{
+  width:100%;
+  max-height:720px;
+
+  object-fit:contain;
+  object-position:center;
+}
+
+.hero-caption{
+  padding:12px 0;
+
+  color:#777;
+
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+
+  border-bottom:1px solid var(--line);
+}
+
+
+/* =========================================================
+   ARTICLE
+========================================================= */
+
+.article-layout{
+  max-width:1060px;
+  margin:auto;
+  padding:60px 28px 90px;
+
+  display:grid;
+  grid-template-columns:150px minmax(0,720px);
+  gap:55px;
+
+  justify-content:center;
+}
+
+.article-side{
+  border-top:5px solid var(--pink);
+  padding-top:16px;
+}
+
+.article-side span{
+  display:block;
+
+  color:#777;
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:2px;
+  line-height:1.6;
+  text-transform:uppercase;
+}
+
+.article-side strong{
+  display:block;
+
+  margin-top:8px;
+
+  font-size:13px;
+  line-height:1.3;
+  text-transform:uppercase;
+}
+
+.article-body p{
+  margin-bottom:24px;
+
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:18px;
+  line-height:1.85;
+}
+
+.article-body > p:first-child::first-letter{
+  float:left;
+
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:78px;
+  font-weight:900;
+  line-height:.72;
+
+  color:var(--pink);
+
+  padding-right:10px;
+  padding-top:11px;
+}
+
+.article-body h2{
+  margin:52px 0 20px;
+  padding-top:18px;
+
+  border-top:5px solid #111;
+
+  font-size:32px;
+  line-height:1;
+  letter-spacing:-1.5px;
+  text-transform:uppercase;
+}
+
+.article-body strong{
+  font-weight:800;
+}
+
+
+/* =========================================================
+   QUOTES
+========================================================= */
+
+blockquote{
+  margin:35px 0;
+  padding:8px 0 8px 25px;
+
+  border-left:6px solid var(--pink);
+
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:21px;
+  line-height:1.65;
+  font-weight:bold;
+}
+
+.big-quote{
+  margin:50px -80px;
+  padding:42px 55px;
+
+  background:var(--black);
+  color:#fff;
+
+  border-left:8px solid var(--pink);
+}
+
+.big-quote p{
+  margin:0;
+
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:clamp(34px,6vw,58px);
+  font-weight:900;
+  line-height:.93;
+  letter-spacing:-3px;
+  text-transform:uppercase;
+}
+
+.big-quote span{
+  display:block;
+
+  margin-top:20px;
+
+  color:var(--turq);
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   SCREENSHOT / EVIDENCE
+========================================================= */
+
+.evidence{
+  max-width:900px;
+  margin:0 auto 75px;
+  padding:0 28px;
+}
+
+.evidence-inner{
+  background:#111;
+  padding:32px;
+}
+
+.evidence-label{
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  margin-bottom:22px;
+
+  color:#fff;
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+.evidence-label::before{
+  content:"";
+  width:35px;
+  height:5px;
+  background:var(--orange);
+}
+
+/*
+  IMPORTANT:
+  This is a screenshot, so DON'T crop it.
+  We want all relevant text/content visible.
+*/
+
+.evidence-image{
+  width:100%;
+  height:auto;
+  max-height:850px;
+
+  object-fit:contain;
+  object-position:center;
+
+  margin:auto;
+}
+
+.evidence-caption{
+  color:#aaa;
+
+  font-size:9px;
+  line-height:1.6;
+  font-weight:800;
+  letter-spacing:1.3px;
+  text-transform:uppercase;
+
+  margin-top:15px;
+}
+
+
+/* =========================================================
+   BROBBEY FEATURE
+========================================================= */
+
+.brobbey-feature{
+  max-width:980px;
+  margin:0 auto 80px;
+  padding:0 28px;
+}
+
+.brobbey-inner{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+
+  background:#fff;
+  border:1px solid #ddd;
+}
+
+.brobbey-photo{
+  min-height:500px;
+  background:#111;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  overflow:hidden;
+}
+
+/*
+  PLAYER PHOTO:
+  On desktop we allow a very gentle crop,
+  but keep the face/head high in frame.
+*/
+
+.brobbey-photo img{
+  width:100%;
+  height:500px;
+
+  object-fit:cover;
+  object-position:center 18%;
+}
+
+.brobbey-copy{
+  padding:50px 40px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.brobbey-copy small{
+  color:var(--orange);
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.brobbey-copy h3{
+  margin-top:12px;
+
+  font-size:44px;
+  line-height:.9;
+  letter-spacing:-2px;
+  text-transform:uppercase;
+}
+
+.stat{
+  margin-top:30px;
+
+  border-top:5px solid var(--pink);
+  padding-top:20px;
+}
+
+.stat strong{
+  display:block;
+
+  font-size:66px;
+  line-height:.85;
+}
+
+.stat span{
+  display:block;
+
+  margin-top:8px;
+
+  color:#777;
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.final-word{
+  max-width:900px;
+  margin:0 auto 90px;
+  padding:0 28px;
+}
+
+.final-word-inner{
+  position:relative;
+
+  padding:55px;
+
+  background:var(--black);
+  color:#fff;
+
+  text-align:center;
+}
+
+.final-word-inner::before{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+
+  height:7px;
+
+  background:linear-gradient(
+    90deg,
+    var(--turq) 0 33.33%,
+    var(--pink) 33.33% 66.66%,
+    var(--orange) 66.66%
+  );
+}
+
+.final-word small{
+  color:var(--pink);
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.final-word h3{
+  margin-top:18px;
+
+  font-size:clamp(38px,6vw,64px);
+  line-height:.9;
+  letter-spacing:-3px;
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   MORE NEWS
+========================================================= */
+
+.more-news{
+  background:#fff;
+  border-top:1px solid #ddd;
+}
+
+.more-news-inner{
+  max-width:1180px;
+  margin:auto;
+  padding:65px 28px;
+}
+
+.more-title{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+
+  border-bottom:3px solid #111;
+
+  padding-bottom:18px;
+  margin-bottom:25px;
+}
+
+.more-title h2{
+  font-size:36px;
+  letter-spacing:-2px;
+  text-transform:uppercase;
+}
+
+.more-title a{
+  color:var(--pink);
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.more-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.more-card{
+  display:grid;
+  grid-template-columns:150px 1fr;
+  gap:20px;
+  align-items:center;
+
+  padding:15px;
+
+  border:1px solid #ddd;
+
+  transition:.2s;
+}
+
+.more-card:hover{
+  transform:translateY(-3px);
+  border-color:#111;
+}
+
+.more-card img{
+  width:150px;
+  height:110px;
+
+  object-fit:cover;
+}
+
+.more-card.trophy img{
+  object-fit:contain;
+  background:#eee;
+}
+
+.more-card.dowman img{
+  object-position:center 15%;
+}
+
+.more-card small{
+  color:var(--turq);
+
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.more-card h3{
+  margin-top:7px;
+
+  font-size:20px;
+  line-height:1;
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+  background:#050708;
+  color:#fff;
+}
+
+.footer-inner{
+  max-width:1180px;
+  margin:auto;
+  padding:55px 28px;
+
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:30px;
+}
+
+.footer-brand{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.footer-brand img{
+  width:70px;
+  height:70px;
+  object-fit:contain;
+}
+
+.footer-brand strong{
+  display:block;
+
+  font-size:20px;
+  text-transform:uppercase;
+}
+
+.footer-brand span{
+  display:block;
+
+  color:var(--turq);
+
+  margin-top:6px;
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.footer-right{
+  color:#888;
+
+  text-align:right;
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:1.5px;
+  line-height:1.7;
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:800px){
+
+  .article-layout{
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+
+  .article-side{
+    display:none;
+  }
+
+  .big-quote{
+    margin:40px 0;
+  }
+
+  .brobbey-inner{
+    grid-template-columns:1fr;
+  }
+
+  .more-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+
+@media(max-width:600px){
+
+  .header-inner{
+    display:block;
+    padding:14px 20px;
+  }
+
+  .brand img{
+    width:55px;
+    height:55px;
+  }
+
+  nav{
+    justify-content:flex-start;
+    margin-top:18px;
+    gap:10px 15px;
+  }
+
+  .times-inner{
+    padding:17px 20px;
+  }
+
+  .times-name{
+    font-size:21px;
+  }
+
+  .times-tag{
+    display:none;
+  }
+
+  .article-header-inner{
+    padding:50px 20px 35px;
+  }
+
+  .article-header h1{
+    font-size:44px;
+    letter-spacing:-3px;
+  }
+
+  .deck{
+    font-size:18px;
+  }
+
+  .hero-wrap{
+    padding:0;
+  }
+
+  .hero-stage{
+    min-height:0;
+    padding:0;
+  }
+
+  /*
+    MOBILE HERO:
+    Show the COMPLETE Children of Emenike artwork.
+  */
+
+  .hero-stage img{
+    width:100%;
+    height:auto;
+    max-height:none;
+
+    object-fit:contain;
+    object-position:center;
+  }
+
+  .hero-caption{
+    padding:10px 20px;
+  }
+
+  .article-layout{
+    padding:45px 20px 65px;
+  }
+
+  .article-body p{
+    font-size:17px;
+    line-height:1.75;
+  }
+
+  .article-body h2{
+    font-size:27px;
+  }
+
+  blockquote{
+    font-size:19px;
+    padding-left:18px;
+  }
+
+  .big-quote{
+    padding:32px 24px;
+  }
+
+  .big-quote p{
+    font-size:36px;
+    letter-spacing:-2px;
+  }
+
+  /*
+    MOBILE SCREENSHOT:
+    Absolutely no cropping.
+  */
+
+  .evidence{
+    padding:0 20px;
+    margin-bottom:55px;
+  }
+
+  .evidence-inner{
+    padding:18px;
+  }
+
+  .evidence-image{
+    width:100%;
+    height:auto;
+    max-height:none;
+    object-fit:contain;
+  }
+
+  .brobbey-feature{
+    padding:0 20px;
+    margin-bottom:60px;
+  }
+
+  /*
+    MOBILE BROBBEY:
+    Don't force the desktop crop.
+    Let the entire supplied image determine its height.
+  */
+
+  .brobbey-photo{
+    min-height:0;
+    display:block;
+  }
+
+  .brobbey-photo img{
+    width:100%;
+    height:auto;
+    max-height:none;
+
+    object-fit:contain;
+    object-position:center;
+  }
+
+  .brobbey-copy{
+    padding:35px 25px;
+  }
+
+  .brobbey-copy h3{
+    font-size:38px;
+  }
+
+  .final-word{
+    padding:0 20px;
+    margin-bottom:60px;
+  }
+
+  .final-word-inner{
+    padding:45px 25px;
+  }
+
+  .more-news-inner{
+    padding:50px 20px;
+  }
+
+  .more-card{
+    grid-template-columns:105px 1fr;
+    gap:14px;
+    padding:10px;
+  }
+
+  .more-card img{
+    width:105px;
+    height:95px;
+  }
+
+  .more-card h3{
+    font-size:17px;
+  }
+
+  .footer-inner{
+    display:block;
+    padding:45px 20px;
+  }
+
+  .footer-right{
+    text-align:left;
+    margin-top:25px;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="fiesta-line"></div>
+
+
+<!-- HEADER -->
+
+<header>
+
+  <div class="header-inner">
+
+    <a class="brand" href="league.html">
+
+      <img src="league logo.jpeg" alt="Lonestar League">
+
+      <div class="brand-copy">
+
+        <small>Est. 2026</small>
+
+        <strong>
+          Lonestar Dynasty<br>
+          Premier League
+        </strong>
+
+      </div>
+
+    </a>
+
+
+    <nav>
+
+      <a class="back-link" href="league.html">
+        ← League Home
+      </a>
+
+      <a href="league.html#news">News</a>
+
+      <a href="league.html#table">Table</a>
+
+      <a href="league.html#clubs">Clubs</a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+<!-- LONESTAR TIMES -->
+
+<div class="times-bar">
+
+  <div class="times-inner">
+
+    <div class="times-name">
+      THE <span>LONESTAR</span> TIMES
+    </div>
+
+    <div class="times-tag">
+      Independent Coverage of the H-E-B Lonestar League
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- ARTICLE HEADER -->
+
+<section class="article-header">
+
+  <div class="article-header-inner">
+
+    <div class="category">
+      Matchweek 5 // Controversy
+    </div>
+
+    <h1>
+      “I Stand By It”:
+      Children of Emenike Refuse to Back Down After Calling
+      Opponents “Pathetic”
+    </h1>
+
+    <p class="deck">
+      A perfect 3–0 Matchweek 5 was followed by controversy —
+      and when given the opportunity to clarify his remarks,
+      Isaiah only doubled down.
+    </p>
+
+    <div class="meta">
+
+      <span>The Lonestar Times</span>
+
+      <span class="meta-dot"></span>
+
+      <span>Matchweek 5</span>
+
+      <span class="meta-dot"></span>
+
+      <span>Children of Emenike</span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- HERO -->
+
+<div class="hero-wrap">
+
+  <div class="hero-stage">
+
+    <img
+      src="children.PNG"
+      alt="Children of Emenike">
+
+  </div>
+
+  <div class="hero-caption">
+    Children of Emenike // Matchweek 5
+  </div>
+
+</div>
+
+
+<!-- ARTICLE PART ONE -->
+
+<main class="article-layout">
+
+  <aside class="article-side">
+
+    <span>Club</span>
+
+    <strong>
+      Children of Emenike
+    </strong>
+
+    <span style="margin-top:22px;">
+      Record
+    </span>
+
+    <strong>
+      3–0 Matchweek
+    </strong>
+
+  </aside>
+
+
+  <article class="article-body">
+
+    <p>
+      Children of Emenike entered Matchweek 5 looking for victories.
+    </p>
+
+    <p>
+      They left with three of them — and perhaps a few new enemies
+      along the way.
+    </p>
+
+    <p>
+      Following a perfect <strong>3–0 weekend</strong>, Children of
+      Emenike owner Isaiah caused a stir around the H-E-B Lonestar
+      League after describing the opposition his club had faced as
+      <strong>“pathetic.”</strong>
+    </p>
+
+    <p>
+      With criticism beginning to circulate around the league,
+      Isaiah was given an opportunity to clarify his comments.
+    </p>
+
+    <p>
+      He did.
+    </p>
+
+    <p>
+      Just not in the way his critics might have hoped.
+    </p>
+
+
+    <h2>
+      “I Stand By It.”
+    </h2>
+
+    <p>
+      In a statement provided following the controversy, Isaiah
+      first praised his own squad for completing the undefeated weekend.
+    </p>
+
+    <blockquote>
+      “First and foremost, credit to the boys. Going 3–0 in a
+      single weekend isn’t easy, and they handled their business
+      exactly the way I expected them to.”
+    </blockquote>
+
+    <p>
+      Then he addressed the word that had gotten everyone talking.
+    </p>
+
+
+    <div class="big-quote">
+
+      <p>
+        “I Stand<br>
+        By It.”
+      </p>
+
+      <span>
+        Isaiah // Children of Emenike
+      </span>
+
+    </div>
+
+
+    <blockquote>
+      “As for my comments after the matches, I’ve heard there’s
+      been some concern over my use of the word ‘pathetic.’
+      I’d like to clear that up. I stand by it.”
+    </blockquote>
+
+    <p>
+      There would be no apology.
+    </p>
+
+    <p>
+      No clarification that the comment had been taken out of context.
+    </p>
+
+    <p>
+      No attempt to cool tensions with the clubs Children of Emenike
+      had just beaten.
+    </p>
+
+    <p>
+      Instead, Isaiah doubled down.
+    </p>
+
+    <blockquote>
+      “We came into Matchweek 5 prepared, disciplined, and hungry.
+      Our opponents had the same opportunity to do so.
+      What happened on the pitch speaks for itself.”
+    </blockquote>
+
+    <p>
+      And, unfortunately for his critics,
+      <strong>Brian Brobbey made that argument considerably easier
+      to make.</strong>
+    </p>
+
+  </article>
+
+</main>
+
+
+<!-- ORIGINAL "PATHETIC" SCREENSHOT -->
+
+<section class="evidence">
+
+  <div class="evidence-inner">
+
+    <div class="evidence-label">
+      The Comment That Started It
+    </div>
+
+    <img
+      class="evidence-image"
+      src="pathetic.jpg"
+      alt="Original Pathetic comment">
+
+    <div class="evidence-caption">
+      Original league communication surrounding the Matchweek 5 controversy.
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- BROBBEY -->
+
+<section class="brobbey-feature">
+
+  <div class="brobbey-inner">
+
+    <div class="brobbey-photo">
+
+      <img
+        src="brobbey.PNG"
+        alt="Brian Brobbey">
+
+    </div>
+
+
+    <div class="brobbey-copy">
+
+      <small>
+        Matchweek 5 // Player Spotlight
+      </small>
+
+      <h3>
+        Brobbey<br>
+        Runs Riot
+      </h3>
+
+      <div class="stat">
+
+        <strong>3</strong>
+
+        <span>
+          Goals // Hat-Trick
+        </span>
+
+      </div>
+
+      <div class="stat">
+
+        <strong>42+</strong>
+
+        <span>
+          Fantasy Points
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ARTICLE PART TWO -->
+
+<main class="article-layout">
+
+  <aside class="article-side">
+
+    <span>
+      Player
+    </span>
+
+    <strong>
+      Brian Brobbey
+    </strong>
+
+    <span style="margin-top:22px;">
+      Matchweek
+    </span>
+
+    <strong>
+      Hat-Trick // 42+ Points
+    </strong>
+
+  </aside>
+
+
+  <article class="article-body">
+
+    <h2>
+      Brobbey Runs Riot
+    </h2>
+
+    <p>
+      At the center of Children of Emenike’s dominant weekend was
+      a staggering performance from <strong>Brian Brobbey</strong>,
+      who erupted for a <strong>hat-trick and more than 42 fantasy
+      points</strong>.
+    </p>
+
+    <p>
+      It was the kind of individual performance capable of swinging
+      an entire matchup — and it provided the exclamation point on
+      Children of Emenike’s perfect weekend.
+    </p>
+
+    <p>
+      While Isaiah’s comments have understandably dominated the
+      headlines, Brobbey’s performance cannot be overlooked.
+      When his owner began talking afterward, he did so having just
+      watched one of his players deliver one of the league’s most
+      explosive individual performances.
+    </p>
+
+    <p>
+      <strong>Three goals. More than 42 points.</strong>
+    </p>
+
+    <p>
+      Brobbey gave Children of Emenike plenty of ammunition.
+    </p>
+
+    <p>
+      Isaiah was more than happy to use it.
+    </p>
+
+
+    <h2>
+      A Message Directly To Wooburt City
+    </h2>
+
+    <p>
+      Isaiah then singled out Wooburt City, acknowledging that the
+      Cool Cats had apparently taken particular offense to his remarks.
+    </p>
+
+    <p>
+      His response was hardly conciliatory.
+    </p>
+
+    <blockquote>
+      “I understand Wooburt City may have taken particular offense.
+      They’re entitled to their feelings. We’ll concern ourselves
+      with results.”
+    </blockquote>
+
+    <p>
+      That sentence may ultimately prove more inflammatory than
+      the original insult.
+    </p>
+
+    <p>
+      Rather than engage with Wooburt City's criticism, Children
+      of Emenike effectively dismissed it as hurt feelings from a
+      defeated opponent.
+    </p>
+
+    <p>
+      Then came the closing line:
+    </p>
+
+
+    <div class="big-quote">
+
+      <p>
+        “Three Matches.<br>
+        Three Wins.<br>
+        We Move.”
+      </p>
+
+      <span>
+        Children of Emenike
+      </span>
+
+    </div>
+
+
+    <h2>
+      A Target Has Been Placed
+    </h2>
+
+    <p>
+      There is, admittedly, one problem with criticizing Isaiah
+      at the moment:
+    </p>
+
+    <p>
+      <strong>He won.</strong>
+    </p>
+
+    <p>
+      Three matches.
+    </p>
+
+    <p>
+      Three victories.
+    </p>
+
+    <p>
+      A <strong>42-plus-point hat-trick from Brian Brobbey.</strong>
+    </p>
+
+    <p>
+      And when challenged publicly afterward, he showed absolutely
+      no interest in retreating from what he said.
+    </p>
+
+    <p>
+      That makes Children of Emenike one of the league’s most
+      fascinating clubs going forward.
+    </p>
+
+    <p>
+      Confidence is easy when you're winning.
+    </p>
+
+    <p>
+      Maintaining it when the league begins circling your name on
+      the calendar is considerably harder.
+    </p>
+
+    <p>
+      Because Isaiah has now ensured that future meetings with
+      Children of Emenike will carry something extra.
+    </p>
+
+    <p>
+      For Wooburt City especially, the next matchup won't simply
+      be another fixture.
+    </p>
+
+    <p>
+      They have been beaten.
+    </p>
+
+    <p>
+      They have been called pathetic.
+    </p>
+
+    <p>
+      And when they objected, they were told they were
+      <strong>“entitled to their feelings.”</strong>
+    </p>
+
+    <p>
+      Those are the kinds of words that tend to survive long
+      after a Matchweek ends.
+    </p>
+
+    <p>
+      For now, though, Children of Emenike hold the only response
+      that really matters.
+    </p>
+
+  </article>
+
+</main>
+
+
+<!-- FINAL -->
+
+<section class="final-word">
+
+  <div class="final-word-inner">
+
+    <small>
+      The Lonestar Times
+    </small>
+
+    <h3>
+      Three Matches.<br>
+      Three Wins.<br>
+      And Absolutely No Apology.
+    </h3>
+
+  </div>
+
+</section>
+
+
+<!-- MORE NEWS -->
+
+<section class="more-news">
+
+  <div class="more-news-inner">
+
+    <div class="more-title">
+
+      <h2>
+        More From The Lonestar Times
+      </h2>
+
+      <a href="league.html#news">
+        All News →
+      </a>
+
+    </div>
+
+
+    <div class="more-grid">
+
+      <a
+        class="more-card trophy"
+        href="trophy.html">
+
+        <img
+          src="shootout.jpg"
+          alt="Five Star Shootout trophy">
+
+        <div>
+
+          <small>
+            Five Star Shootout
+          </small>
+
+          <h3>
+            The First Trophy Is Almost Here
+          </h3>
+
+        </div>
+
+      </a>
+
+
+      <a
+        class="more-card dowman"
+        href="space-cadets.html">
+
+        <img
+          src="dowman.JPG"
+          alt="Max Dowman">
+
+        <div>
+
+          <small>
+            League Controversy
+          </small>
+
+          <h3>
+            Space Cadets In Revolt
+          </h3>
+
+        </div>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="footer-inner">
+
+    <a
+      class="footer-brand"
+      href="league.html">
+
+      <img
+        src="league logo.jpeg"
+        alt="Lonestar League">
+
+      <div>
+
+        <strong>
+          H-E-B Lonestar League
+        </strong>
+
+        <span>
+          Est. 2026 // More Than A Game
+        </span>
+
+      </div>
+
+    </a>
+
+
+    <div class="footer-right">
+
+      The Lonestar Times<br>
+      Independent Coverage of the H-E-B Lonestar League
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+</body>
+</html>
