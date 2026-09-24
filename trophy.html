@@ -1,0 +1,1645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A New Era For The Lonestar League | The Lonestar Times</title>
+
+<style>
+
+/* =========================================================
+   BASE
+========================================================= */
+
+:root{
+  --black:#080b0d;
+  --dark:#101417;
+  --white:#ffffff;
+  --off:#f5f5f2;
+  --turq:#11b8c5;
+  --pink:#ef3f78;
+  --orange:#ff9e18;
+  --muted:#737a7e;
+  --line:#d8d8d4;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--off);
+  color:#111;
+  overflow-x:hidden;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.fiesta-line{
+  height:7px;
+  background:
+    linear-gradient(
+      90deg,
+      var(--turq) 0 33.33%,
+      var(--pink) 33.33% 66.66%,
+      var(--orange) 66.66% 100%
+    );
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header{
+  background:#fff;
+  border-bottom:1px solid #ddd;
+}
+
+.header-inner{
+  max-width:1220px;
+  margin:auto;
+  min-height:94px;
+  padding:16px 28px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.brand img{
+  width:67px;
+  height:67px;
+  object-fit:contain;
+}
+
+.brand-copy small{
+  display:block;
+  color:var(--turq);
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+
+  margin-bottom:4px;
+}
+
+.brand-copy strong{
+  display:block;
+
+  font-size:17px;
+  line-height:1.05;
+  text-transform:uppercase;
+}
+
+nav{
+  display:flex;
+  align-items:center;
+  gap:24px;
+  flex-wrap:wrap;
+}
+
+nav a{
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+
+  transition:.2s;
+}
+
+nav a:hover{
+  color:var(--pink);
+}
+
+.back-link{
+  padding:10px 14px;
+  border:1px solid #111;
+}
+
+.back-link:hover{
+  background:#111;
+  color:#fff;
+}
+
+
+/* =========================================================
+   LONESTAR TIMES MASTHEAD
+========================================================= */
+
+.times-bar{
+  background:var(--black);
+  color:#fff;
+}
+
+.times-inner{
+  max-width:1180px;
+  margin:auto;
+  padding:22px 28px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+}
+
+.times-name{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:27px;
+  font-weight:bold;
+  letter-spacing:-1px;
+}
+
+.times-name span{
+  color:var(--turq);
+}
+
+.times-tag{
+  color:#999;
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   ARTICLE HEADER
+========================================================= */
+
+.article-header{
+  background:#fff;
+}
+
+.article-header-inner{
+  max-width:1060px;
+  margin:auto;
+  padding:75px 28px 55px;
+}
+
+.category{
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  color:var(--pink);
+
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:3px;
+  text-transform:uppercase;
+
+  margin-bottom:23px;
+}
+
+.category::before{
+  content:"";
+  width:38px;
+  height:5px;
+  background:var(--pink);
+}
+
+.article-header h1{
+  max-width:1000px;
+
+  font-size:clamp(48px,7vw,88px);
+  line-height:.91;
+  letter-spacing:-5px;
+  text-transform:uppercase;
+}
+
+.deck{
+  max-width:800px;
+
+  margin-top:28px;
+
+  color:#555;
+
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:21px;
+  line-height:1.55;
+}
+
+.meta{
+  margin-top:30px;
+
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+
+  color:#777;
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.meta-dot{
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background:var(--orange);
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.hero-wrap{
+  max-width:1180px;
+  margin:auto;
+  padding:0 28px;
+}
+
+.hero-image{
+  width:100%;
+  max-height:720px;
+  object-fit:contain;
+  background:#e8e8e5;
+}
+
+.hero-caption{
+  padding:12px 0;
+
+  color:#777;
+
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+
+  border-bottom:1px solid var(--line);
+}
+
+
+/* =========================================================
+   ARTICLE
+========================================================= */
+
+.article-layout{
+  max-width:1060px;
+  margin:auto;
+  padding:60px 28px 90px;
+
+  display:grid;
+  grid-template-columns:150px minmax(0,720px);
+  gap:55px;
+  justify-content:center;
+}
+
+.article-side{
+  border-top:5px solid var(--turq);
+  padding-top:16px;
+}
+
+.article-side span{
+  display:block;
+
+  color:#777;
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:2px;
+  line-height:1.6;
+  text-transform:uppercase;
+}
+
+.article-side strong{
+  display:block;
+
+  margin-top:8px;
+
+  font-size:13px;
+  line-height:1.3;
+  text-transform:uppercase;
+}
+
+.article-body p{
+  margin-bottom:24px;
+
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:18px;
+  line-height:1.85;
+}
+
+.article-body > p:first-child::first-letter{
+  float:left;
+
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:78px;
+  font-weight:900;
+  line-height:.72;
+
+  color:var(--pink);
+
+  padding-right:10px;
+  padding-top:11px;
+}
+
+.article-body h2{
+  margin:52px 0 20px;
+  padding-top:18px;
+
+  border-top:5px solid #111;
+
+  font-size:32px;
+  line-height:1;
+  letter-spacing:-1.5px;
+  text-transform:uppercase;
+}
+
+.article-body strong{
+  font-weight:800;
+}
+
+
+/* =========================================================
+   PULL QUOTE
+========================================================= */
+
+.pullquote{
+  margin:48px -80px;
+  padding:40px 55px;
+
+  background:var(--black);
+  color:#fff;
+
+  border-left:8px solid var(--pink);
+}
+
+.pullquote p{
+  margin:0;
+
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:clamp(30px,5vw,49px);
+  font-weight:900;
+  line-height:.98;
+  letter-spacing:-2px;
+  text-transform:uppercase;
+}
+
+.pullquote span{
+  display:block;
+
+  margin-top:18px;
+
+  color:var(--turq);
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   BRAND BREAK
+========================================================= */
+
+.brand-break{
+  max-width:950px;
+  margin:15px auto 75px;
+  padding:0 28px;
+}
+
+.brand-break-inner{
+  position:relative;
+  min-height:330px;
+
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+
+  background:#fff;
+  border:1px solid #ddd;
+
+  overflow:hidden;
+}
+
+.brand-break-image{
+  height:100%;
+  min-height:330px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:#f0f0ed;
+
+  padding:35px;
+}
+
+.brand-break-image img{
+  max-height:260px;
+  object-fit:contain;
+}
+
+.brand-break-copy{
+  padding:45px;
+}
+
+.brand-break-copy small{
+  display:block;
+
+  color:var(--orange);
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:3px;
+  text-transform:uppercase;
+
+  margin-bottom:12px;
+}
+
+.brand-break-copy h3{
+  font-size:37px;
+  line-height:.95;
+  letter-spacing:-2px;
+  text-transform:uppercase;
+
+  margin-bottom:16px;
+}
+
+.brand-break-copy p{
+  color:#666;
+
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:15px;
+  line-height:1.7;
+}
+
+
+/* =========================================================
+   SHOOTOUT BOX
+========================================================= */
+
+.shootout-box{
+  margin:45px 0;
+
+  border-top:7px solid var(--orange);
+  border-bottom:1px solid #ccc;
+
+  padding:28px 0 30px;
+}
+
+.shootout-box small{
+  display:block;
+
+  color:var(--pink);
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+
+  margin-bottom:8px;
+}
+
+.shootout-box h3{
+  font-size:28px;
+  line-height:1;
+  text-transform:uppercase;
+
+  margin-bottom:22px;
+}
+
+.points{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:8px;
+}
+
+.point{
+  background:#fff;
+  border:1px solid #ddd;
+
+  padding:14px 8px;
+
+  text-align:center;
+}
+
+.point strong{
+  display:block;
+
+  font-size:24px;
+}
+
+.point span{
+  display:block;
+
+  margin-top:4px;
+
+  color:#777;
+
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   FINAL WORD
+========================================================= */
+
+.final-word{
+  max-width:900px;
+  margin:0 auto 90px;
+  padding:0 28px;
+}
+
+.final-word-inner{
+  padding:55px;
+
+  background:var(--black);
+  color:#fff;
+
+  text-align:center;
+
+  position:relative;
+}
+
+.final-word-inner::before{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+
+  height:7px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--turq) 0 33.33%,
+      var(--pink) 33.33% 66.66%,
+      var(--orange) 66.66% 100%
+    );
+}
+
+.final-word small{
+  color:var(--turq);
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.final-word h3{
+  margin-top:18px;
+
+  font-size:clamp(34px,6vw,58px);
+  line-height:.95;
+  letter-spacing:-3px;
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   MORE NEWS
+========================================================= */
+
+.more-news{
+  background:#fff;
+  border-top:1px solid #ddd;
+}
+
+.more-news-inner{
+  max-width:1180px;
+  margin:auto;
+  padding:65px 28px;
+}
+
+.more-news-title{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+
+  padding-bottom:18px;
+  margin-bottom:25px;
+
+  border-bottom:3px solid #111;
+}
+
+.more-news-title h2{
+  font-size:36px;
+  text-transform:uppercase;
+  letter-spacing:-2px;
+}
+
+.more-news-title a{
+  color:var(--pink);
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.more-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.more-card{
+  display:grid;
+  grid-template-columns:150px 1fr;
+  gap:20px;
+  align-items:center;
+
+  padding:15px;
+
+  border:1px solid #ddd;
+
+  transition:.2s;
+}
+
+.more-card:hover{
+  transform:translateY(-3px);
+  border-color:#111;
+}
+
+.more-card img{
+  width:150px;
+  height:110px;
+  object-fit:cover;
+}
+
+.more-card.brobbey img{
+  object-position:center 18%;
+}
+
+.more-card.dowman img{
+  object-position:center 15%;
+}
+
+.more-card small{
+  color:var(--turq);
+
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.more-card h3{
+  margin-top:7px;
+
+  font-size:20px;
+  line-height:1;
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+  background:#050708;
+  color:#fff;
+}
+
+.footer-inner{
+  max-width:1180px;
+  margin:auto;
+  padding:55px 28px;
+
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:30px;
+}
+
+.footer-brand{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.footer-brand img{
+  width:70px;
+  height:70px;
+  object-fit:contain;
+}
+
+.footer-brand strong{
+  display:block;
+
+  font-size:20px;
+  text-transform:uppercase;
+}
+
+.footer-brand span{
+  display:block;
+
+  color:var(--turq);
+
+  margin-top:6px;
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.footer-right{
+  color:#888;
+
+  text-align:right;
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:800px){
+
+  .header-inner{
+    align-items:flex-start;
+  }
+
+  nav{
+    justify-content:flex-end;
+  }
+
+  .article-layout{
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+
+  .article-side{
+    display:none;
+  }
+
+  .pullquote{
+    margin:40px 0;
+  }
+
+  .brand-break-inner{
+    grid-template-columns:1fr;
+  }
+
+  .more-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+
+@media(max-width:600px){
+
+  .header-inner{
+    display:block;
+    padding:14px 20px;
+  }
+
+  .brand img{
+    width:55px;
+    height:55px;
+  }
+
+  nav{
+    justify-content:flex-start;
+    margin-top:18px;
+    gap:10px 15px;
+  }
+
+  .times-inner{
+    padding:17px 20px;
+  }
+
+  .times-name{
+    font-size:21px;
+  }
+
+  .times-tag{
+    display:none;
+  }
+
+  .article-header-inner{
+    padding:50px 20px 35px;
+  }
+
+  .article-header h1{
+    font-size:45px;
+    letter-spacing:-3px;
+  }
+
+  .deck{
+    font-size:18px;
+  }
+
+  .hero-wrap{
+    padding:0;
+  }
+
+  .hero-image{
+    width:100%;
+    max-height:none;
+    object-fit:contain;
+  }
+
+  .hero-caption{
+    padding:10px 20px;
+  }
+
+  .article-layout{
+    padding:45px 20px 65px;
+  }
+
+  .article-body p{
+    font-size:17px;
+    line-height:1.75;
+  }
+
+  .article-body h2{
+    font-size:27px;
+  }
+
+  .pullquote{
+    padding:32px 24px;
+  }
+
+  .pullquote p{
+    font-size:32px;
+    letter-spacing:-1.5px;
+  }
+
+  .brand-break{
+    padding:0 20px;
+    margin-bottom:55px;
+  }
+
+  .brand-break-image{
+    min-height:250px;
+  }
+
+  .brand-break-copy{
+    padding:30px 25px;
+  }
+
+  .points{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .final-word{
+    padding:0 20px;
+    margin-bottom:60px;
+  }
+
+  .final-word-inner{
+    padding:45px 25px;
+  }
+
+  .more-news-inner{
+    padding:50px 20px;
+  }
+
+  .more-card{
+    grid-template-columns:105px 1fr;
+    gap:14px;
+    padding:10px;
+  }
+
+  .more-card img{
+    width:105px;
+    height:95px;
+  }
+
+  .more-card h3{
+    font-size:17px;
+  }
+
+  .footer-inner{
+    display:block;
+    padding:45px 20px;
+  }
+
+  .footer-right{
+    text-align:left;
+    margin-top:25px;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="fiesta-line"></div>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+  <div class="header-inner">
+
+    <a class="brand" href="league.html">
+
+      <img
+        src="league logo.jpeg"
+        alt="Lonestar League">
+
+      <div class="brand-copy">
+        <small>Est. 2026</small>
+        <strong>
+          Lonestar Dynasty<br>
+          Premier League
+        </strong>
+      </div>
+
+    </a>
+
+
+    <nav>
+
+      <a class="back-link" href="league.html">
+        ← League Home
+      </a>
+
+      <a href="league.html#news">
+        News
+      </a>
+
+      <a href="league.html#table">
+        Table
+      </a>
+
+      <a href="league.html#clubs">
+        Clubs
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+<!-- =====================================================
+     THE LONESTAR TIMES
+===================================================== -->
+
+<div class="times-bar">
+
+  <div class="times-inner">
+
+    <div class="times-name">
+      THE <span>LONESTAR</span> TIMES
+    </div>
+
+    <div class="times-tag">
+      Independent Coverage of the H-E-B Lonestar League
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     ARTICLE HEADER
+===================================================== -->
+
+<section class="article-header">
+
+  <div class="article-header-inner">
+
+    <div class="category">
+      League News
+    </div>
+
+    <h1>
+      A New Era For The Lonestar League:
+      New Look, New Home — And The First Trophy Is Almost Here
+    </h1>
+
+    <p class="deck">
+      The H-E-B Lonestar League unveils its new identity and
+      official website as the Five Star Shootout prepares for
+      a dramatic Gameweek 6 finale.
+    </p>
+
+    <div class="meta">
+
+      <span>The Lonestar Times</span>
+
+      <span class="meta-dot"></span>
+
+      <span>2026 Season</span>
+
+      <span class="meta-dot"></span>
+
+      <span>Five Star Shootout</span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     TROPHY HERO
+===================================================== -->
+
+<div class="hero-wrap">
+
+  <img
+    class="hero-image"
+    src="shootout.jpg"
+    alt="Five Star Shootout trophy">
+
+  <div class="hero-caption">
+    Five Star Shootout // The first trophy in H-E-B Lonestar League history
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     ARTICLE — PART ONE
+===================================================== -->
+
+<main class="article-layout">
+
+  <aside class="article-side">
+
+    <span>Published By</span>
+
+    <strong>
+      The Lonestar Times
+    </strong>
+
+    <span style="margin-top:22px;">
+      Competition
+    </span>
+
+    <strong>
+      H-E-B Lonestar Dynasty Premier League
+    </strong>
+
+  </aside>
+
+
+  <article class="article-body">
+
+    <p>
+      The Lonestar League has a new look.
+    </p>
+
+    <p>
+      And now, it has a new home.
+    </p>
+
+    <p>
+      League officials have officially unveiled the
+      <strong>new H-E-B Lonestar League identity</strong>,
+      marking the beginning of a more ambitious era for the
+      competition. Alongside the refreshed league branding
+      comes the launch of the league’s
+      <strong>new official website</strong>, designed to become
+      the central home for tables, club information, league news,
+      controversies and everything else surrounding the competition.
+    </p>
+
+    <p>
+      The change represents more than a fresh coat of paint.
+    </p>
+
+    <p>
+      What began as a fantasy competition between friends is
+      increasingly developing its own history, rivalries and culture —
+      and the league now has an identity built to match it.
+    </p>
+
+    <p>
+      From Wooburt City and Leon Valley to Children of Emenike,
+      Space Cadets and the rest of the league, every club now
+      competes beneath one banner:
+    </p>
+
+
+    <div class="pullquote">
+
+      <p>
+        The H-E-B<br>
+        Lonestar League.
+      </p>
+
+      <span>
+        One league // Ten clubs
+      </span>
+
+    </div>
+
+
+    <p>
+      And the timing couldn't be better.
+    </p>
+
+    <p>
+      Because the first piece of silverware in league history
+      is about to be awarded.
+    </p>
+
+
+    <h2>
+      The Five Star Shootout Reaches Its Final Week
+    </h2>
+
+    <p>
+      While the new website and league identity mark the future,
+      there is still unfinished business on the pitch.
+    </p>
+
+    <p>
+      The inaugural <strong>Five Star Shootout</strong>, sponsored
+      by <strong>Best Buy</strong>, reaches its conclusion
+      <strong>next week in Gameweek 6</strong>.
+    </p>
+
+    <p>
+      The five-week competition has transformed every point scored
+      into part of a larger race for the league's first trophy.
+    </p>
+
+    <p>
+      Each week, clubs are ranked by their total fantasy score.
+      First place earns <strong>25 Shootout points</strong>, with
+      the remaining positions receiving
+      <strong>18, 15, 12, 10, 8, 6, 4 and 2 points</strong>.
+    </p>
+
+
+    <div class="shootout-box">
+
+      <small>
+        Five Star Shootout
+      </small>
+
+      <h3>
+        Weekly Points
+      </h3>
+
+      <div class="points">
+
+        <div class="point">
+          <strong>25</strong>
+          <span>1st</span>
+        </div>
+
+        <div class="point">
+          <strong>18</strong>
+          <span>2nd</span>
+        </div>
+
+        <div class="point">
+          <strong>15</strong>
+          <span>3rd</span>
+        </div>
+
+        <div class="point">
+          <strong>12</strong>
+          <span>4th</span>
+        </div>
+
+        <div class="point">
+          <strong>10</strong>
+          <span>5th</span>
+        </div>
+
+        <div class="point">
+          <strong>8</strong>
+          <span>6th</span>
+        </div>
+
+        <div class="point">
+          <strong>6</strong>
+          <span>7th</span>
+        </div>
+
+        <div class="point">
+          <strong>4</strong>
+          <span>8th</span>
+        </div>
+
+        <div class="point">
+          <strong>2</strong>
+          <span>9th</span>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <p>
+      There is also one potentially decisive wrinkle:
+    </p>
+
+    <p>
+      <strong>
+        The highest individual single-week fantasy score across
+        the entire competition earns a five-point bonus.
+      </strong>
+    </p>
+
+    <p>
+      After Gameweek 6, the points from all five rounds will be
+      added together.
+    </p>
+
+    <p>
+      The club sitting at the top wins the
+      <strong>Five Star Shootout Cup</strong>.
+    </p>
+
+    <p>
+      One trophy.
+    </p>
+
+    <p>
+      One winner.
+    </p>
+
+    <p>
+      And with the finish line now in sight, there is nowhere
+      left to hide.
+    </p>
+
+  </article>
+
+</main>
+
+
+<!-- =====================================================
+     BRANDING BREAK
+===================================================== -->
+
+<section class="brand-break">
+
+  <div class="brand-break-inner">
+
+    <div class="brand-break-image">
+
+      <img
+        src="league-logo-pallet-2.png"
+        alt="H-E-B Lonestar League identity">
+
+    </div>
+
+
+    <div class="brand-break-copy">
+
+      <small>
+        A New Identity
+      </small>
+
+      <h3>
+        One Banner.<br>
+        Ten Clubs.
+      </h3>
+
+      <p>
+        The league's new visual identity brings the competition
+        together beneath the turquoise, pink and orange colors
+        of the H-E-B Lonestar League.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     ARTICLE — PART TWO
+===================================================== -->
+
+<main class="article-layout">
+
+  <aside class="article-side">
+
+    <span>
+      The Prize
+    </span>
+
+    <strong>
+      Five Star Shootout Cup
+    </strong>
+
+    <span style="margin-top:22px;">
+      Sponsored By
+    </span>
+
+    <strong>
+      Best Buy
+    </strong>
+
+  </aside>
+
+
+  <article class="article-body">
+
+    <h2>
+      More Than A Trophy
+    </h2>
+
+    <p>
+      The winner won't leave with bragging rights alone.
+    </p>
+
+    <p>
+      Thanks to <strong>Best Buy's sponsorship of the Five Star
+      Shootout</strong>, the inaugural champion will also receive
+      a <strong>$25 Best Buy digital gift card</strong>.
+    </p>
+
+    <p>
+      But years from now, the prize money probably won't be what
+      anyone remembers.
+    </p>
+
+    <p>
+      Someone is about to become the
+      <strong>first trophy winner in H-E-B Lonestar League history.</strong>
+    </p>
+
+    <p>
+      Every champion that follows will have somebody to compare
+      themselves against.
+    </p>
+
+    <p>
+      Every club that falls short will know exactly who got there first.
+    </p>
+
+    <p>
+      And after four weeks of positioning,
+      <strong>Gameweek 6 is the final chance to change the story.</strong>
+    </p>
+
+
+    <h2>
+      A League Finding Its Identity
+    </h2>
+
+    <p>
+      The timing of the Shootout finale makes the league's wider
+      transformation particularly fitting.
+    </p>
+
+    <p>
+      A new league identity.
+    </p>
+
+    <p>
+      A new sponsor.
+    </p>
+
+    <p>
+      A new website.
+    </p>
+
+    <p>
+      A dedicated home for the table, clubs, results and the
+      increasingly ridiculous collection of stories emerging every week.
+    </p>
+
+    <p>
+      And somehow, we're only getting started.
+    </p>
+
+    <p>
+      The new H-E-B Lonestar League website will preserve all of it.
+    </p>
+
+    <p>
+      The football.
+    </p>
+
+    <p>
+      The transfers.
+    </p>
+
+    <p>
+      The rivalries.
+    </p>
+
+    <p>
+      The statements.
+    </p>
+
+    <p>
+      The scandals.
+    </p>
+
+    <p>
+      And, beginning next week,
+      <strong>the champions.</strong>
+    </p>
+
+    <p>
+      The new era has officially arrived.
+    </p>
+
+    <p>
+      But before the league looks too far toward the future,
+      there is one final matter to settle.
+    </p>
+
+  </article>
+
+</main>
+
+
+<!-- =====================================================
+     FINAL WORD
+===================================================== -->
+
+<section class="final-word">
+
+  <div class="final-word-inner">
+
+    <small>
+      The Lonestar Times
+    </small>
+
+    <h3>
+      Gameweek 6.<br>
+      The Five Star Shootout.<br>
+      The First Trophy Is On The Line.
+    </h3>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     MORE NEWS
+===================================================== -->
+
+<section class="more-news">
+
+  <div class="more-news-inner">
+
+    <div class="more-news-title">
+
+      <h2>
+        More From The Lonestar Times
+      </h2>
+
+      <a href="league.html#news">
+        All News →
+      </a>
+
+    </div>
+
+
+    <div class="more-grid">
+
+
+      <a
+        class="more-card brobbey"
+        href="pathetic.html">
+
+        <img
+          src="brobbey.PNG"
+          alt="Brian Brobbey">
+
+        <div>
+
+          <small>
+            Matchweek 5
+          </small>
+
+          <h3>
+            “I Stand By It”
+          </h3>
+
+        </div>
+
+      </a>
+
+
+      <a
+        class="more-card dowman"
+        href="space-cadets.html">
+
+        <img
+          src="dowman.JPG"
+          alt="Max Dowman">
+
+        <div>
+
+          <small>
+            League Controversy
+          </small>
+
+          <h3>
+            Space Cadets In Revolt
+          </h3>
+
+        </div>
+
+      </a>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+  <div class="footer-inner">
+
+    <a
+      class="footer-brand"
+      href="league.html">
+
+      <img
+        src="league logo.jpeg"
+        alt="Lonestar League">
+
+      <div>
+
+        <strong>
+          H-E-B Lonestar League
+        </strong>
+
+        <span>
+          Est. 2026 // More Than A Game
+        </span>
+
+      </div>
+
+    </a>
+
+
+    <div class="footer-right">
+
+      The Lonestar Times<br>
+      Players // Managers // Rivalries // Legacies
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+</body>
+</html>
