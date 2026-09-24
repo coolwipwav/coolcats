@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Colwill Out, Kayode In | WCCC Media</title>
+
+<style>
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+:root{
+  --black:#070909;
+  --panel:#0d1212;
+  --teal:#123f3c;
+  --bright:#22c7bb;
+  --cream:#f1eee3;
+  --muted:#89918e;
+  --line:#26302f;
+}
+
+body{
+  background:var(--black);
+  color:var(--cream);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.7;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+/* TOP BAR */
+
+.topbar{
+  padding:22px 6%;
+  border-bottom:1px solid var(--line);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+.return{
+  color:var(--bright);
+  font-family:"Courier New",monospace;
+  font-size:10px;
+  font-weight:bold;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.return:hover{
+  text-decoration:underline;
+}
+
+.media-mark{
+  color:var(--muted);
+  text-align:right;
+  font-family:"Courier New",monospace;
+  font-size:9px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+/* BREAKING BAR */
+
+.breaking{
+  padding:10px 6%;
+  background:var(--teal);
+  color:var(--bright);
+  font-family:"Courier New",monospace;
+  font-size:9px;
+  font-weight:bold;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+/* HERO */
+
+.hero{
+  max-width:1200px;
+  margin:auto;
+  padding:90px 6% 65px;
+}
+
+.kicker{
+  color:var(--bright);
+  font-family:"Courier New",monospace;
+  font-size:10px;
+  font-weight:bold;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  margin-bottom:25px;
+}
+
+.hero h1{
+  max-width:1100px;
+  font-size:clamp(50px,8vw,105px);
+  line-height:.86;
+  letter-spacing:-5px;
+  text-transform:uppercase;
+}
+
+.hero h1 .out{
+  color:var(--muted);
+  text-decoration:line-through;
+  text-decoration-thickness:3px;
+}
+
+.hero h1 .in{
+  color:var(--bright);
+}
+
+.deck{
+  max-width:820px;
+  margin-top:35px;
+  color:#bcc4c0;
+  font-family:Georgia,serif;
+  font-size:clamp(18px,2vw,24px);
+  line-height:1.45;
+}
+
+.byline{
+  margin-top:40px;
+  padding-top:20px;
+  border-top:1px solid var(--line);
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  color:var(--muted);
+  font-family:"Courier New",monospace;
+  font-size:9px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+/* LOCKER ROOM HERO IMAGE */
+
+.lead-image{
+  width:min(1200px,92%);
+  margin:0 auto 90px;
+  position:relative;
+  min-height:620px;
+  overflow:hidden;
+  border:1px solid var(--line);
+}
+
+.lead-image img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+
+.lead-image::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    transparent 45%,
+    rgba(7,9,9,.95)
+  );
+}
+
+.lead-caption{
+  position:absolute;
+  z-index:2;
+  left:35px;
+  right:35px;
+  bottom:30px;
+}
+
+.lead-caption span{
+  color:var(--bright);
+  font-family:"Courier New",monospace;
+  font-size:9px;
+  font-weight:bold;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.lead-caption strong{
+  display:block;
+  margin-top:5px;
+  font-size:clamp(26px,4vw,48px);
+  line-height:1;
+  text-transform:uppercase;
+}
+
+/* ARTICLE */
+
+.article{
+  max-width:790px;
+  margin:auto;
+  padding:0 6%;
+}
+
+.article p{
+  margin-bottom:28px;
+  color:#d3d7d5;
+  font-family:Georgia,serif;
+  font-size:18px;
+  line-height:1.85;
+}
+
+.article strong{
+  color:var(--cream);
+}
+
+.article h2{
+  margin:85px 0 28px;
+  padding-top:22px;
+  border-top:1px solid var(--bright);
+  font-size:clamp(31px,5vw,50px);
+  line-height:1;
+  text-transform:uppercase;
+}
+
+/* CLUB QUOTE */
+
+.club-quote{
+  margin:55px 0;
+  padding:32px;
+  border-left:3px solid var(--bright);
+  background:var(--panel);
+}
+
+.club-quote .label{
+  display:block;
+  margin-bottom:15px;
+  color:var(--bright);
+  font-family:"Courier New",monospace;
+  font-size:9px;
+  font-weight:bold;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.club-quote p{
+  margin:0;
+  color:var(--cream);
+  font-family:Georgia,serif;
+  font-size:21px;
+  font-style:italic;
+  line-height:1.6;
+}
+
+/* COLWILL */
+
+.colwill-feature{
+  width:min(1000px,90%);
+  margin:85px auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  border:1px solid var(--line);
+  background:var(--panel);
+}
+
+.colwill-feature img{
+  width:100%;
+  height:100%;
+  min-height:540px;
+  object-fit:cover;
+  object-position:center top;
+}
+
+.colwill-copy{
+  padding:45px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+}
+
+.colwill-copy span{
+  color:var(--muted);
+  font-family:"Courier New",monospace;
+  font-size:9px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.colwill-copy h2{
+  margin:12px 0 0;
+  font-size:clamp(45px,7vw,80px);
+  line-height:.82;
+  letter-spacing:-4px;
+  text-transform:uppercase;
+}
+
+.colwill-copy strong{
+  margin-top:30px;
+  padding-top:20px;
+  border-top:1px solid var(--line);
+  color:var(--bright);
+  font-family:"Courier New",monospace;
+  font-size:11px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+/* KAYODE REVEAL */
+
+.kayode-reveal{
+  width:min(1200px,92%);
+  min-height:720px;
+  margin:90px auto;
+  position:relative;
+  overflow:hidden;
+  border:1px solid var(--line);
+}
+
+.kayode-reveal img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+}
+
+.kayode-reveal::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to top,
+    rgba(7,9,9,.98) 0%,
+    rgba(7,9,9,.45) 50%,
+    rgba(7,9,9,.05) 100%
+  );
+}
+
+.kayode-copy{
+  position:absolute;
+  z-index:2;
+  left:45px;
+  right:45px;
+  bottom:40px;
+}
+
+.kayode-copy span{
+  color:var(--bright);
+  font-family:"Courier New",monospace;
+  font-size:10px;
+  font-weight:bold;
+  letter-spacing:4px;
+  text-transform:uppercase;
+}
+
+.kayode-copy h2{
+  margin-top:8px;
+  font-size:clamp(52px,9vw,120px);
+  line-height:.8;
+  letter-spacing:-6px;
+  text-transform:uppercase;
+}
+
+/* TRANSACTION FILE */
+
+.transaction{
+  width:min(950px,90%);
+  margin:90px auto;
+  border:1px solid var(--bright);
+  background:var(--panel);
+}
+
+.transaction-top{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  padding:14px 20px;
+  border-bottom:1px solid var(--line);
+  color:var(--bright);
+  font-family:"Courier New",monospace;
+  font-size:9px;
+  font-weight:bold;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.transaction-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+}
+
+.transaction-player{
+  padding:35px;
+}
+
+.transaction-player:first-child{
+  border-right:1px solid var(--line);
+}
+
+.transaction-player span{
+  color:var(--muted);
+  font-family:"Courier New",monospace;
+  font-size:9px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.transaction-player h3{
+  margin-top:10px;
+  font-size:clamp(32px,5vw,55px);
+  line-height:.9;
+  text-transform:uppercase;
+}
+
+.transaction-player.out h3{
+  color:var(--muted);
+  text-decoration:line-through;
+}
+
+.transaction-player.in h3{
+  color:var(--bright);
+}
+
+.transaction-status{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-top:1px solid var(--line);
+}
+
+.transaction-status div{
+  padding:20px;
+  border-right:1px solid var(--line);
+}
+
+.transaction-status div:last-child{
+  border-right:0;
+}
+
+.transaction-status span{
+  display:block;
+  color:var(--muted);
+  font-family:"Courier New",monospace;
+  font-size:8px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.transaction-status strong{
+  display:block;
+  margin-top:4px;
+  color:var(--cream);
+  font-family:"Courier New",monospace;
+  font-size:11px;
+  text-transform:uppercase;
+}
+
+/* FINAL LINE */
+
+.final-line{
+  max-width:1000px;
+  margin:110px auto;
+  padding:70px 6%;
+  border-top:1px solid var(--bright);
+  border-bottom:1px solid var(--bright);
+  text-align:center;
+}
+
+.final-line span{
+  color:var(--bright);
+  font-family:"Courier New",monospace;
+  font-size:9px;
+  font-weight:bold;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.final-line h2{
+  margin-top:20px;
+  font-size:clamp(42px,7vw,90px);
+  line-height:.9;
+  letter-spacing:-4px;
+  text-transform:uppercase;
+}
+
+/* FOOTER */
+
+footer{
+  padding:60px 6%;
+  border-top:1px solid var(--line);
+  display:flex;
+  justify-content:space-between;
+  gap:25px;
+  color:var(--muted);
+  font-family:"Courier New",monospace;
+  font-size:9px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+footer strong{
+  color:var(--cream);
+}
+
+/* MOBILE */
+
+@media(max-width:750px){
+
+  .hero h1{
+    letter-spacing:-3px;
+  }
+
+  .lead-image{
+    min-height:500px;
+  }
+
+  .colwill-feature{
+    grid-template-columns:1fr;
+  }
+
+  .colwill-feature img{
+    min-height:450px;
+  }
+
+  .colwill-copy{
+    padding:30px;
+  }
+
+  .kayode-reveal{
+    min-height:570px;
+  }
+
+  .kayode-copy{
+    left:25px;
+    right:25px;
+    bottom:25px;
+  }
+
+  .kayode-copy h2{
+    letter-spacing:-3px;
+  }
+
+  .transaction-grid,
+  .transaction-status{
+    grid-template-columns:1fr;
+  }
+
+  .transaction-player:first-child,
+  .transaction-status div{
+    border-right:0;
+    border-bottom:1px solid var(--line);
+  }
+
+  footer{
+    flex-direction:column;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+
+  <a href="index.html" class="return">
+    ← Return to WCCC
+  </a>
+
+  <div class="media-mark">
+    WCCC Media<br>
+    Transfer Desk // Breaking
+  </div>
+
+</div>
+
+<div class="breaking">
+  Breaking // Wooburt City Complete Defensive Change
+</div>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+  <div class="kicker">
+    WCCC Transfer Desk // September 2026
+  </div>
+
+  <h1>
+    <span class="out">Colwill Out.</span><br>
+    <span class="in">Kayode In.</span>
+  </h1>
+
+  <p class="deck">
+    Cool Cats act swiftly after locker-room fallout as Levi Colwill
+    departs and Michael Kayode arrives at Wooburt City.
+  </p>
+
+  <div class="byline">
+    <span>Wooburt City — Exclusive</span>
+    <span>WCCC Media</span>
+  </div>
+
+</header>
+
+
+<!-- LOCKER ROOM -->
+
+<section class="lead-image">
+
+  <img src="wooburt-locker.PNG"
+       alt="Wooburt City dressing room">
+
+  <div class="lead-caption">
+    <span>Inside Wooburt City // After Matchday 5</span>
+    <strong>A difficult week spills into the dressing room.</strong>
+  </div>
+
+</section>
+
+
+<!-- ARTICLE -->
+
+<article class="article">
+
+  <p>
+    A difficult Gameweek 5 has already produced its first casualty.
+  </p>
+
+  <p>
+    Wooburt City Cool Cats have officially parted ways with defender
+    <strong>Levi Colwill</strong>, bringing an abrupt end to his time at
+    the club following what sources describe as a tense post-match
+    dressing-room exchange.
+  </p>
+
+  <p>
+    The Cool Cats stumbled to a <strong>1–2 record in Gameweek 5</strong>,
+    and frustrations reportedly boiled over behind closed doors afterward.
+    Sources close to the club say words were exchanged inside the dressing
+    room that left management convinced a change needed to be made.
+  </p>
+
+  <p>
+    Exactly what was said will remain inside the room.
+    What happened next will not.
+  </p>
+
+  <h2>
+    Colwill Has Been Cut.
+  </h2>
+
+  <p>
+    Club officials moved quickly, viewing the situation as something
+    that needed to be dealt with before it could develop into a larger
+    distraction.
+  </p>
+
+  <div class="club-quote">
+
+    <span class="label">
+      WCCC Management // On The Record
+    </span>
+
+    <p>
+      “Every dressing room has disagreements, especially after a difficult
+      week type shi. But there are standards here. Once those standards are
+      compromised, we’re not going to allow something small to become
+      something bigger.”
+    </p>
+
+  </div>
+
+</article>
+
+
+<!-- COLWILL FEATURE -->
+
+<section class="colwill-feature">
+
+  <img src="colwill-cut.png"
+       alt="Levi Colwill">
+
+  <div class="colwill-copy">
+
+    <span>WCCC Personnel // Departure</span>
+
+    <h2>
+      Levi<br>
+      Colwill
+    </h2>
+
+    <strong>
+      Status // Released
+    </strong>
+
+  </div>
+
+</section>
+
+
+<article class="article">
+
+  <p>
+    And Wooburt City did not simply remove a player.
+  </p>
+
+  <p>
+    <strong>They upgraded.</strong>
+  </p>
+
+  <h2>
+    Michael Kayode<br>
+    Is A Cool Cat.
+  </h2>
+
+  <p>
+    Wooburt City Cool Cats are delighted to announce the signing of
+    <strong>Michael Kayode</strong>, who joins the club immediately as
+    Colwill’s replacement.
+  </p>
+
+  <p>
+    The feeling around the front office is simple:
+  </p>
+
+</article>
+
+
+<!-- KAYODE REVEAL -->
+
+<section class="kayode-reveal">
+
+  <img src="kayode-new.png"
+       alt="Michael Kayode joins Wooburt City">
+
+  <div class="kayode-copy">
+
+    <span>Official // New Signing</span>
+
+    <h2>
+      Michael<br>
+      Kayode.
+    </h2>
+
+  </div>
+
+</section>
+
+
+<article class="article">
+
+  <div class="club-quote">
+
+    <span class="label">
+      WCCC Recruitment Department
+    </span>
+
+    <p>
+      <strong>Better player. Better price. Better business.</strong>
+    </p>
+
+  </div>
+
+  <p>
+    Kayode gives the Cool Cats another young, aggressive option in defense
+    and represents exactly the type of move the club wants to make as it
+    continues building for both the present and the future.
+  </p>
+
+  <p>
+    There is also a familiar connection.
+  </p>
+
+  <p>
+    Once again, Wooburt City finds itself doing business with the fine
+    people at <strong>Brentford United</strong>.
+  </p>
+
+  <p>
+    After the success of the club’s relationship with Brentford talent —
+    including Cool Cats favorites <strong>Keane Lewis-Potter and Kevin
+    Schade</strong> — management had little hesitation returning to a club
+    that has quickly become one of Wooburt City’s most trusted sources
+    of talent.
+  </p>
+
+  <p>
+    One difficult gameweek was never going to cause panic inside
+    Wooburt City.
+  </p>
+
+  <p>
+    But it was going to cause action.
+  </p>
+
+</article>
+
+
+<!-- TRANSACTION FILE -->
+
+<section class="transaction">
+
+  <div class="transaction-top">
+    <span>WCCC // Transaction File</span>
+    <span>● COMPLETE</span>
+  </div>
+
+  <div class="transaction-grid">
+
+    <div class="transaction-player out">
+      <span>OUT</span>
+      <h3>Levi<br>Colwill</h3>
+    </div>
+
+    <div class="transaction-player in">
+      <span>IN</span>
+      <h3>Michael<br>Kayode</h3>
+    </div>
+
+  </div>
+
+  <div class="transaction-status">
+
+    <div>
+      <span>Position</span>
+      <strong>Defender</strong>
+    </div>
+
+    <div>
+      <span>Kayode Status</span>
+      <strong>Cool Cat</strong>
+    </div>
+
+    <div>
+      <span>Business</span>
+      <strong>Complete</strong>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ENDING -->
+
+<article class="article">
+
+  <p>
+    <strong>Levi Colwill is out. Michael Kayode is in.</strong>
+  </p>
+
+  <p>
+    And just like that, the Cool Cats move forward.
+  </p>
+
+</article>
+
+
+<section class="final-line">
+
+  <span>WCCC Recruitment // The Verdict</span>
+
+  <h2>
+    Better Player.<br>
+    Better Price.<br>
+    Better Business.
+  </h2>
+
+</section>
+
+
+<footer>
+
+  <div>
+    <strong>WCCC MEDIA</strong><br>
+    Wooburt City Cool Cats
+  </div>
+
+  <div>
+    Transfer Desk // September 2026
+  </div>
+
+</footer>
+
+</body>
+</html>
