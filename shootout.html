@@ -1,1 +1,1834 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Five Star Shootout | The Lonestar Times</title>
+
+<style>
+
+:root{
+  --black:#080a0b;
+  --dark:#111416;
+  --panel:#171b1e;
+  --white:#f5f2e9;
+  --paper:#f3f1eb;
+  --text:#151515;
+  --muted:#747474;
+
+  --teal:#08b9c4;
+  --pink:#f6247d;
+  --orange:#ff9418;
+  --gold:#d6ad59;
+
+  --line:#d7d4cc;
+  --max:1180px;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--paper);
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+
+/* =========================================================
+   FIESTA STRIPE
+========================================================= */
+
+.fiesta-line{
+  height:7px;
+
+  background:linear-gradient(
+    90deg,
+    var(--teal) 0 33.33%,
+    var(--pink) 33.33% 66.66%,
+    var(--orange) 66.66%
+  );
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header{
+  background:#fff;
+  border-bottom:1px solid #ddd;
+}
+
+.header-inner{
+  max-width:1220px;
+  min-height:92px;
+  margin:auto;
+  padding:15px 28px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:30px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.brand img{
+  width:65px;
+  height:65px;
+  object-fit:contain;
+}
+
+.brand-copy small{
+  display:block;
+
+  color:var(--teal);
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+
+  margin-bottom:4px;
+}
+
+.brand-copy strong{
+  display:block;
+
+  font-size:16px;
+  line-height:1.05;
+  text-transform:uppercase;
+}
+
+nav{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+nav a{
+  padding:9px 12px;
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:1.3px;
+  text-transform:uppercase;
+}
+
+nav a:hover{
+  color:var(--pink);
+}
+
+.cup-nav{
+  border:1px solid #111;
+}
+
+.cup-nav:hover{
+  background:#111;
+  color:#fff;
+}
+
+
+/* =========================================================
+   TIMES BAR
+========================================================= */
+
+.times-bar{
+  background:var(--black);
+  color:#fff;
+}
+
+.times-inner{
+  max-width:1180px;
+  margin:auto;
+  padding:21px 28px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:30px;
+}
+
+.times-name{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:27px;
+  font-weight:bold;
+  letter-spacing:-1px;
+}
+
+.times-name span{
+  color:var(--teal);
+}
+
+.times-tag{
+  color:#888;
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   ARTICLE HEADER
+========================================================= */
+
+.article-header{
+  background:#fff;
+}
+
+.article-header-inner{
+  max-width:1080px;
+  margin:auto;
+  padding:75px 28px 55px;
+}
+
+.category{
+  display:flex;
+  align-items:center;
+  gap:11px;
+
+  color:var(--orange);
+
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:3px;
+  text-transform:uppercase;
+
+  margin-bottom:24px;
+}
+
+.category::before{
+  content:"";
+
+  width:40px;
+  height:5px;
+
+  background:var(--teal);
+}
+
+.article-header h1{
+  max-width:1020px;
+
+  font-size:clamp(52px,8vw,94px);
+  line-height:.86;
+  letter-spacing:-6px;
+  text-transform:uppercase;
+}
+
+.star{
+  color:var(--gold);
+}
+
+.deck{
+  max-width:780px;
+
+  margin-top:30px;
+
+  color:#555;
+
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:22px;
+  line-height:1.55;
+}
+
+.meta{
+  margin-top:30px;
+
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:11px;
+
+  color:#777;
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.meta-dot{
+  width:5px;
+  height:5px;
+
+  border-radius:50%;
+
+  background:var(--pink);
+}
+
+
+/* =========================================================
+   CUP HUB LIVE BANNER
+========================================================= */
+
+.cup-hub-banner{
+  background:var(--black);
+  color:#fff;
+
+  border-top:1px solid #222;
+  border-bottom:1px solid #222;
+}
+
+.cup-hub-inner{
+  max-width:1080px;
+  margin:auto;
+  padding:25px 28px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.live{
+  display:flex;
+  align-items:center;
+  gap:11px;
+}
+
+.live-dot{
+  width:10px;
+  height:10px;
+
+  border-radius:50%;
+
+  background:#ff3d3d;
+
+  box-shadow:0 0 14px rgba(255,61,61,.8);
+}
+
+.live-copy small{
+  display:block;
+
+  color:#999;
+
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+
+  margin-bottom:3px;
+}
+
+.live-copy strong{
+  display:block;
+
+  font-size:15px;
+  text-transform:uppercase;
+}
+
+.cup-button{
+  display:inline-block;
+
+  padding:13px 18px;
+
+  border:1px solid var(--gold);
+
+  color:var(--gold);
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+
+  transition:.2s;
+}
+
+.cup-button:hover{
+  background:var(--gold);
+  color:#111;
+}
+
+
+/* =========================================================
+   TROPHY HERO
+========================================================= */
+
+.trophy-hero{
+  max-width:1180px;
+  margin:auto;
+  padding:0 28px;
+}
+
+.trophy-frame{
+  background:#080909;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  overflow:hidden;
+}
+
+.trophy-frame img{
+  width:100%;
+  height:auto;
+
+  object-fit:contain;
+  object-position:center;
+}
+
+.trophy-caption{
+  padding:13px 0;
+
+  border-bottom:1px solid var(--line);
+
+  color:#777;
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   ARTICLE
+========================================================= */
+
+.article-layout{
+  max-width:1060px;
+  margin:auto;
+
+  padding:65px 28px;
+
+  display:grid;
+  grid-template-columns:150px minmax(0,720px);
+  gap:55px;
+
+  justify-content:center;
+}
+
+.article-side{
+  border-top:5px solid var(--gold);
+  padding-top:16px;
+}
+
+.article-side span{
+  display:block;
+
+  color:#777;
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:2px;
+  line-height:1.6;
+  text-transform:uppercase;
+}
+
+.article-side strong{
+  display:block;
+
+  margin-top:8px;
+
+  font-size:13px;
+  line-height:1.3;
+  text-transform:uppercase;
+}
+
+.article-body p{
+  margin-bottom:24px;
+
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:18px;
+  line-height:1.85;
+}
+
+.article-body > p:first-child::first-letter{
+  float:left;
+
+  padding-right:10px;
+  padding-top:11px;
+
+  color:var(--gold);
+
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:78px;
+  font-weight:900;
+  line-height:.72;
+}
+
+.article-body h2{
+  margin:55px 0 20px;
+  padding-top:18px;
+
+  border-top:5px solid #111;
+
+  font-size:33px;
+  line-height:1;
+  letter-spacing:-1.5px;
+  text-transform:uppercase;
+}
+
+.article-body strong{
+  font-weight:800;
+}
+
+
+/* =========================================================
+   FORMAT
+========================================================= */
+
+.format-feature{
+  margin:48px -80px;
+
+  padding:40px;
+
+  background:var(--black);
+  color:#fff;
+}
+
+.format-feature small{
+  color:var(--teal);
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.format-feature h3{
+  margin-top:8px;
+
+  font-size:35px;
+  line-height:1;
+  text-transform:uppercase;
+}
+
+.points{
+  display:grid;
+  grid-template-columns:repeat(9,1fr);
+  gap:6px;
+
+  margin-top:25px;
+}
+
+.point{
+  padding:13px 4px;
+
+  text-align:center;
+
+  border:1px solid #303437;
+  background:#121517;
+}
+
+.point strong{
+  display:block;
+
+  color:#fff;
+
+  font-size:18px;
+}
+
+.point span{
+  display:block;
+
+  margin-top:3px;
+
+  color:#777;
+
+  font-size:8px;
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+.bonus{
+  margin-top:15px;
+
+  padding:15px;
+
+  border-left:5px solid var(--orange);
+
+  background:#171513;
+
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.7px;
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   RULES FLYER
+========================================================= */
+
+.rules{
+  background:#111416;
+  color:#fff;
+
+  padding:75px 0;
+}
+
+.rules-inner{
+  max-width:1050px;
+  margin:auto;
+  padding:0 28px;
+
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:55px;
+  align-items:center;
+}
+
+.rules-image{
+  background:#080909;
+
+  border:1px solid #303437;
+
+  padding:10px;
+}
+
+.rules-image img{
+  width:100%;
+  height:auto;
+
+  object-fit:contain;
+}
+
+.rules-copy small{
+  color:var(--orange);
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.rules-copy h2{
+  margin-top:10px;
+
+  font-size:clamp(40px,5vw,60px);
+  line-height:.9;
+  letter-spacing:-3px;
+  text-transform:uppercase;
+}
+
+.rules-copy p{
+  margin-top:20px;
+
+  color:#bbb;
+
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:17px;
+  line-height:1.75;
+}
+
+
+/* =========================================================
+   FIRST TROPHY
+========================================================= */
+
+.first-trophy{
+  max-width:980px;
+  margin:75px auto;
+  padding:0 28px;
+}
+
+.first-inner{
+  position:relative;
+
+  padding:65px 50px;
+
+  background:#fff;
+
+  border:1px solid #ddd;
+  border-top:8px solid var(--gold);
+
+  text-align:center;
+}
+
+.first-inner small{
+  color:var(--pink);
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.first-inner h2{
+  margin-top:15px;
+
+  font-size:clamp(45px,7vw,75px);
+  line-height:.88;
+  letter-spacing:-4px;
+  text-transform:uppercase;
+}
+
+.first-inner p{
+  max-width:650px;
+
+  margin:25px auto 0;
+
+  color:#666;
+
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:17px;
+  line-height:1.75;
+}
+
+
+/* =========================================================
+   BEST BUY
+========================================================= */
+
+.sponsor{
+  max-width:980px;
+  margin:0 auto 75px;
+  padding:0 28px;
+}
+
+.sponsor-inner{
+  padding:35px 40px;
+
+  background:var(--black);
+  color:#fff;
+
+  border-left:7px solid var(--teal);
+
+  display:grid;
+  grid-template-columns:160px 1fr;
+  gap:30px;
+  align-items:center;
+}
+
+.sponsor-mark{
+  font-size:20px;
+  font-weight:900;
+  line-height:1;
+  text-transform:uppercase;
+
+  color:var(--gold);
+}
+
+.sponsor-copy small{
+  display:block;
+
+  color:var(--teal);
+
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+
+  margin-bottom:7px;
+}
+
+.sponsor-copy strong{
+  display:block;
+
+  font-size:20px;
+  line-height:1.2;
+  text-transform:uppercase;
+}
+
+.sponsor-copy p{
+  margin-top:9px;
+
+  color:#aaa;
+
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:14px;
+  line-height:1.6;
+}
+
+
+/* =========================================================
+   GAMEWEEK 6
+========================================================= */
+
+.finale{
+  background:#0d1011;
+  color:#fff;
+
+  padding:80px 0;
+}
+
+.finale-inner{
+  max-width:1120px;
+  margin:auto;
+  padding:0 28px;
+}
+
+.finale-head{
+  margin-bottom:35px;
+}
+
+.finale-head small{
+  color:var(--orange);
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.finale-head h2{
+  margin-top:10px;
+
+  font-size:clamp(43px,7vw,72px);
+  line-height:.88;
+  letter-spacing:-4px;
+  text-transform:uppercase;
+}
+
+.finale-head p{
+  max-width:650px;
+
+  margin-top:20px;
+
+  color:#aaa;
+
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:16px;
+  line-height:1.7;
+}
+
+.finale-image{
+  padding:10px;
+
+  background:#050606;
+
+  border:1px solid #292d2f;
+}
+
+.finale-image img{
+  width:100%;
+  height:auto;
+
+  object-fit:contain;
+  object-position:center;
+}
+
+
+/* =========================================================
+   FINAL ARTICLE SECTION
+========================================================= */
+
+.article-final{
+  padding-bottom:80px;
+}
+
+
+/* =========================================================
+   CUP HUB CTA
+========================================================= */
+
+.hub-cta{
+  max-width:1000px;
+  margin:0 auto 85px;
+  padding:0 28px;
+}
+
+.hub-cta-inner{
+  position:relative;
+
+  padding:55px 45px;
+
+  background:var(--black);
+  color:#fff;
+
+  text-align:center;
+
+  overflow:hidden;
+}
+
+.hub-cta-inner::before{
+  content:"";
+
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+
+  height:7px;
+
+  background:linear-gradient(
+    90deg,
+    var(--teal),
+    var(--pink),
+    var(--orange)
+  );
+}
+
+.hub-cta small{
+  color:var(--gold);
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.hub-cta h2{
+  margin-top:12px;
+
+  font-size:clamp(37px,6vw,60px);
+  line-height:.9;
+  letter-spacing:-3px;
+  text-transform:uppercase;
+}
+
+.hub-cta p{
+  max-width:600px;
+
+  margin:20px auto 28px;
+
+  color:#aaa;
+
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:16px;
+  line-height:1.7;
+}
+
+.hub-button{
+  display:inline-block;
+
+  padding:15px 22px;
+
+  border:1px solid var(--gold);
+
+  color:var(--gold);
+
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+
+  transition:.2s;
+}
+
+.hub-button:hover{
+  background:var(--gold);
+  color:#111;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+  background:#050708;
+  color:#fff;
+}
+
+.footer-inner{
+  max-width:1180px;
+  margin:auto;
+  padding:50px 28px;
+
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:30px;
+}
+
+.footer-brand{
+  display:flex;
+  align-items:center;
+  gap:17px;
+}
+
+.footer-brand img{
+  width:65px;
+  height:65px;
+
+  object-fit:contain;
+}
+
+.footer-brand strong{
+  display:block;
+
+  font-size:18px;
+  text-transform:uppercase;
+}
+
+.footer-brand span{
+  display:block;
+
+  margin-top:5px;
+
+  color:var(--teal);
+
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.footer-right{
+  color:#777;
+
+  text-align:right;
+
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:1.5px;
+  line-height:1.7;
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:850px){
+
+  .article-layout{
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+
+  .article-side{
+    display:none;
+  }
+
+  .format-feature{
+    margin:40px 0;
+  }
+
+  .rules-inner{
+    grid-template-columns:1fr;
+  }
+
+  .points{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+}
+
+
+@media(max-width:650px){
+
+  .header-inner{
+    display:block;
+
+    padding:14px 20px;
+  }
+
+  .brand img{
+    width:54px;
+    height:54px;
+  }
+
+  nav{
+    margin-top:17px;
+    justify-content:flex-start;
+  }
+
+  .times-inner{
+    padding:17px 20px;
+  }
+
+  .times-name{
+    font-size:21px;
+  }
+
+  .times-tag{
+    display:none;
+  }
+
+  .article-header-inner{
+    padding:50px 20px 38px;
+  }
+
+  .article-header h1{
+    font-size:43px;
+    line-height:.9;
+    letter-spacing:-3px;
+  }
+
+  .deck{
+    font-size:18px;
+  }
+
+  .cup-hub-inner{
+    padding:20px;
+
+    display:block;
+  }
+
+  .cup-button{
+    margin-top:17px;
+  }
+
+  .trophy-hero{
+    padding:0;
+  }
+
+  .trophy-caption{
+    padding:10px 20px;
+  }
+
+  .article-layout{
+    padding:45px 20px;
+  }
+
+  .article-body p{
+    font-size:17px;
+    line-height:1.75;
+  }
+
+  .article-body h2{
+    font-size:28px;
+  }
+
+  .format-feature{
+    padding:30px 20px;
+  }
+
+  .rules{
+    padding:55px 0;
+  }
+
+  .rules-inner{
+    padding:0 20px;
+  }
+
+  .first-trophy{
+    margin:55px auto;
+    padding:0 20px;
+  }
+
+  .first-inner{
+    padding:50px 25px;
+  }
+
+  .sponsor{
+    padding:0 20px;
+    margin-bottom:55px;
+  }
+
+  .sponsor-inner{
+    grid-template-columns:1fr;
+
+    padding:30px 25px;
+  }
+
+  .finale{
+    padding:60px 0;
+  }
+
+  .finale-inner{
+    padding:0 20px;
+  }
+
+  .hub-cta{
+    padding:0 20px;
+    margin-bottom:60px;
+  }
+
+  .hub-cta-inner{
+    padding:50px 25px;
+  }
+
+  .footer-inner{
+    display:block;
+
+    padding:45px 20px;
+  }
+
+  .footer-right{
+    margin-top:25px;
+
+    text-align:left;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="fiesta-line"></div>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+  <div class="header-inner">
+
+    <a class="brand" href="league.html">
+
+      <img
+        src="league logo.jpeg"
+        alt="Lonestar Premier League">
+
+      <div class="brand-copy">
+
+        <small>Est. 2026</small>
+
+        <strong>
+          Lonestar<br>
+          Premier League
+        </strong>
+
+      </div>
+
+    </a>
+
+
+    <nav>
+
+      <a href="news.html">
+        ← News
+      </a>
+
+      <a href="league.html">
+        League Home
+      </a>
+
+      <a
+        class="cup-nav"
+        href="cup-hub.html">
+        🏆 Cup Hub
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+<!-- =====================================================
+     THE LONESTAR TIMES
+===================================================== -->
+
+<div class="times-bar">
+
+  <div class="times-inner">
+
+    <div class="times-name">
+      THE <span>LONESTAR</span> TIMES
+    </div>
+
+    <div class="times-tag">
+      Independent Coverage of the Lonestar Premier League
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     ARTICLE HEADER
+===================================================== -->
+
+<section class="article-header">
+
+  <div class="article-header-inner">
+
+    <div class="category">
+      Cup Football // League History
+    </div>
+
+    <h1>
+      <span class="star">★</span>
+      The Five Star Shootout:
+      The First Cup In Lonestar Premier League History
+    </h1>
+
+    <p class="deck">
+      Five weeks. One winner. And the first piece of
+      silverware the league has ever awarded.
+    </p>
+
+
+    <div class="meta">
+
+      <span>The Lonestar Times</span>
+
+      <span class="meta-dot"></span>
+
+      <span>September 2026</span>
+
+      <span class="meta-dot"></span>
+
+      <span>Five Star Shootout Cup</span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     LIVE CUP / CUP HUB LINK
+===================================================== -->
+
+<section class="cup-hub-banner">
+
+  <div class="cup-hub-inner">
+
+    <div class="live">
+
+      <div class="live-dot"></div>
+
+      <div class="live-copy">
+
+        <small>
+          Live Competition
+        </small>
+
+        <strong>
+          Five Star Shootout Cup · Gameweek 6
+        </strong>
+
+      </div>
+
+    </div>
+
+
+    <a
+      class="cup-button"
+      href="cup-hub.html">
+      🏆 Visit Cup Hub →
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     TROPHY
+===================================================== -->
+
+<section class="trophy-hero">
+
+  <div class="trophy-frame">
+
+    <img
+      src="shoout-cup-trophy.PNG"
+      alt="Five Star Shootout Cup trophy">
+
+  </div>
+
+  <div class="trophy-caption">
+    The Five Star Shootout Cup // The first cup competition in Lonestar Premier League history
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     ARTICLE — OPENING
+===================================================== -->
+
+<main class="article-layout">
+
+  <aside class="article-side">
+
+    <span>
+      The Lonestar Times
+    </span>
+
+    <strong>
+      Five Star Shootout Cup
+    </strong>
+
+    <span style="margin-top:22px;">
+      Competition
+    </span>
+
+    <strong>
+      Gameweeks 2–6
+    </strong>
+
+  </aside>
+
+
+  <article class="article-body">
+
+    <p>
+      The Lonestar Premier League is proud to officially introduce
+      the <strong>Five Star Shootout Cup</strong> — the first cup
+      competition in league history.
+    </p>
+
+    <p>
+      And with the competition concluding in
+      <strong>Gameweek 6</strong>, somebody is about to become the
+      league's first-ever cup champion.
+    </p>
+
+
+    <h2>
+      A New Piece Of League History
+    </h2>
+
+    <p>
+      The Five Star Shootout was created with one simple idea:
+      reward the team that can consistently put up points when
+      it matters.
+    </p>
+
+    <p>
+      Across <strong>Gameweeks 2–6</strong>, every club accumulates
+      Shootout points based on its weekly finish. First place earns
+      25 points, with points awarded down the table — plus a
+      five-point bonus for producing the highest single-gameweek
+      score during the competition.
+    </p>
+
+
+    <div class="format-feature">
+
+      <small>
+        Official Scoring
+      </small>
+
+      <h3>
+        Weekly Shootout Points
+      </h3>
+
+
+      <div class="points">
+
+        <div class="point">
+          <strong>25</strong>
+          <span>1st</span>
+        </div>
+
+        <div class="point">
+          <strong>18</strong>
+          <span>2nd</span>
+        </div>
+
+        <div class="point">
+          <strong>15</strong>
+          <span>3rd</span>
+        </div>
+
+        <div class="point">
+          <strong>12</strong>
+          <span>4th</span>
+        </div>
+
+        <div class="point">
+          <strong>10</strong>
+          <span>5th</span>
+        </div>
+
+        <div class="point">
+          <strong>8</strong>
+          <span>6th</span>
+        </div>
+
+        <div class="point">
+          <strong>6</strong>
+          <span>7th</span>
+        </div>
+
+        <div class="point">
+          <strong>4</strong>
+          <span>8th</span>
+        </div>
+
+        <div class="point">
+          <strong>2</strong>
+          <span>9th</span>
+        </div>
+
+      </div>
+
+
+      <div class="bonus">
+        ★ +5 Bonus — Highest single-gameweek score during the competition
+      </div>
+
+    </div>
+
+
+    <p>
+      After five weeks of competition, every point is added together.
+    </p>
+
+    <p>
+      <strong>Highest total takes the cup.</strong>
+    </p>
+
+    <p>
+      No playoffs. No second chances.
+    </p>
+
+    <p>
+      Five gameweeks decide who gets their name written into
+      Lonestar Premier League history.
+    </p>
+
+  </article>
+
+</main>
+
+
+<!-- =====================================================
+     OFFICIAL RULES FLYER
+===================================================== -->
+
+<section class="rules">
+
+  <div class="rules-inner">
+
+    <div class="rules-image">
+
+      <img
+        src="shootout.jpg"
+        alt="Five Star Shootout Cup official rules">
+
+    </div>
+
+
+    <div class="rules-copy">
+
+      <small>
+        Official Competition
+      </small>
+
+      <h2>
+        Five Weeks.<br>
+        One Winner.
+      </h2>
+
+      <p>
+        The inaugural Shootout rewards consistency across five
+        gameweeks while leaving room for one massive performance
+        to change the race.
+      </p>
+
+      <p>
+        When Gameweek 6 ends, the Shootout points from every round
+        are combined and the club at the top becomes the first
+        cup champion in league history.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     FIRST TROPHY
+===================================================== -->
+
+<section class="first-trophy">
+
+  <div class="first-inner">
+
+    <small>
+      League History
+    </small>
+
+    <h2>
+      The First Trophy
+    </h2>
+
+    <p>
+      Years from now there may be league titles, cup winners,
+      dynasties and trophy cabinets filled with silverware.
+    </p>
+
+    <p>
+      But there can only ever be <strong>one first trophy.</strong>
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     ARTICLE — FIRST TROPHY
+===================================================== -->
+
+<main class="article-layout">
+
+  <aside class="article-side">
+
+    <span>
+      Silverware
+    </span>
+
+    <strong>
+      The First Champion
+    </strong>
+
+  </aside>
+
+
+  <article class="article-body">
+
+    <h2>
+      The First Trophy
+    </h2>
+
+    <p>
+      This one is different.
+    </p>
+
+    <p>
+      Years from now there may be league titles, cup winners,
+      dynasties and trophy cabinets filled with silverware.
+    </p>
+
+    <p>
+      But there can only ever be <strong>one first trophy.</strong>
+    </p>
+
+    <p>
+      The winner of the Five Star Shootout won't simply win another
+      competition. They'll become the
+      <strong>first cup champion in Lonestar Premier League history</strong>
+      — a piece of league lore that can never be taken away.
+    </p>
+
+  </article>
+
+</main>
+
+
+<!-- =====================================================
+     BEST BUY SPONSORSHIP
+===================================================== -->
+
+<section class="sponsor">
+
+  <div class="sponsor-inner">
+
+    <div class="sponsor-mark">
+      Best Buy
+    </div>
+
+
+    <div class="sponsor-copy">
+
+      <small>
+        Five Star Shootout Cup Sponsor
+      </small>
+
+      <strong>
+        $25 Digital Gift Card For The Inaugural Champion
+      </strong>
+
+      <p>
+        Thanks to Best Buy, the first Five Star Shootout Cup
+        champion will receive a $25 digital gift card alongside
+        their place in league history.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     GAMEWEEK 6
+===================================================== -->
+
+<section class="finale">
+
+  <div class="finale-inner">
+
+    <div class="finale-head">
+
+      <small>
+        Final Round // Gameweek 6
+      </small>
+
+      <h2>
+        Everything Comes<br>
+        Down To This.
+      </h2>
+
+      <p>
+        The final round of the inaugural Five Star Shootout Cup.
+        When these matchups are complete, the league will have
+        its first cup champion.
+      </p>
+
+    </div>
+
+
+    <div class="finale-image">
+
+      <img
+        src="cup-matchweek6.jpg"
+        alt="Five Star Shootout Cup Gameweek 6 matchups">
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     FINAL ARTICLE SECTION
+===================================================== -->
+
+<main class="article-layout article-final">
+
+  <aside class="article-side">
+
+    <span>
+      Final Round
+    </span>
+
+    <strong>
+      Gameweek 6
+    </strong>
+
+  </aside>
+
+
+  <article class="article-body">
+
+    <h2>
+      The Shootout Ends In Gameweek 6
+    </h2>
+
+    <p>
+      Everything comes down to <strong>Gameweek 6.</strong>
+    </p>
+
+    <p>
+      When the final scores are counted, somebody gets the trophy.
+    </p>
+
+    <p>
+      Somebody gets the prize.
+    </p>
+
+    <p>
+      And somebody gets to say they did it first.
+    </p>
+
+    <p>
+      <strong>The Five Star Shootout Cup.</strong>
+    </p>
+
+  </article>
+
+</main>
+
+
+<!-- =====================================================
+     CUP HUB CTA
+===================================================== -->
+
+<section class="hub-cta">
+
+  <div class="hub-cta-inner">
+
+    <small>
+      Follow The Competition
+    </small>
+
+    <h2>
+      The Silverware<br>
+      Lives In Cup Hub.
+    </h2>
+
+    <p>
+      Follow the current Five Star Shootout Cup, competition
+      information, Gameweek 6 finale and the future Roll of Honour.
+    </p>
+
+    <a
+      class="hub-button"
+      href="cup-hub.html">
+      🏆 Enter Cup Hub →
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+  <div class="footer-inner">
+
+    <a
+      class="footer-brand"
+      href="league.html">
+
+      <img
+        src="league logo.jpeg"
+        alt="Lonestar Premier League">
+
+      <div>
+
+        <strong>
+          Lonestar Premier League
+        </strong>
+
+        <span>
+          Est. 2026
+        </span>
+
+      </div>
+
+    </a>
+
+
+    <div class="footer-right">
+
+      The Lonestar Times<br>
+      Cups // Clubs // Rivalries // History
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+</body>
+</html>
