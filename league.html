@@ -3,13 +3,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#080b0d">
-<meta name="description" content="The official home of the Lonestar Premier League. Clubs, rivalries, league news, standings and cup competitions.">
+<meta name="description" content="The official home of the Lonestar Premier League. News, clubs, standings, and cup competitions.">
 <title>Lonestar Premier League | Official Home</title>
 
 <style>
-:root{
+:root {
   --black:#080b0d;
   --dark:#111719;
   --panel:#171e21;
@@ -23,60 +23,55 @@
   --line:#303639;
   --max:1180px;
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {
   margin:0;
   background:var(--black);
   color:var(--white);
   font-family:Arial,Helvetica,sans-serif;
   overflow-x:hidden;
 }
-img{display:block;max-width:100%}
-a{color:inherit;text-decoration:none}
-button{font:inherit}
-.fiesta-line{
+img {display:block;max-width:100%}
+a {color:inherit;text-decoration:none}
+.container {max-width:var(--max);margin:auto;padding:0 25px}
+.fiesta-line {
   height:7px;
   background:linear-gradient(90deg,
     var(--teal) 0 33.33%,
     var(--pink) 33.33% 66.66%,
     var(--orange) 66.66%);
 }
-.container{
-  max-width:var(--max);
-  margin:auto;
-  padding:0 25px;
-}
-.eyebrow{
+.eyebrow {
+  color:var(--teal);
   font-size:10px;
   font-weight:900;
   letter-spacing:2.5px;
   text-transform:uppercase;
-  color:var(--teal);
 }
-.section-heading{
+.section-heading {
   display:flex;
   align-items:end;
   justify-content:space-between;
   gap:20px;
   margin-bottom:30px;
 }
-.section-heading h2{
+.section-heading h2 {
   margin:10px 0 0;
   font-size:clamp(35px,5vw,60px);
   line-height:.95;
   letter-spacing:-2px;
   text-transform:uppercase;
 }
-.section-link{
+.section-link {
   font-size:10px;
   font-weight:900;
   letter-spacing:1.5px;
   text-transform:uppercase;
   white-space:nowrap;
 }
-.section-link:hover{color:var(--teal)}
-.btn{
+.section-link:hover {color:var(--teal)}
+.btn {
   display:inline-flex;
   align-items:center;
   justify-content:center;
@@ -88,32 +83,26 @@ button{font:inherit}
   text-transform:uppercase;
   transition:.2s;
 }
-.btn:hover{
+.btn:hover {
   background:var(--teal);
   border-color:var(--teal);
   color:#080b0d;
 }
-.btn-primary{
+.btn-primary {
   background:var(--teal);
   border-color:var(--teal);
   color:#061012;
 }
-.btn-primary:hover{
-  background:#fff;
-  border-color:#fff;
-}
-.btn-gold{
-  border-color:var(--gold);
-  color:var(--gold);
-}
+.btn-primary:hover {background:#fff;border-color:#fff}
+.btn-gold {border-color:var(--gold);color:var(--gold)}
 
 /* HEADER */
-header{
+header {
   background:#fff;
   color:#111;
   border-bottom:1px solid #ddd;
 }
-.header-inner{
+.header-inner {
   max-width:1230px;
   margin:auto;
   min-height:92px;
@@ -123,17 +112,9 @@ header{
   justify-content:space-between;
   gap:25px;
 }
-.brand{
-  display:flex;
-  align-items:center;
-  gap:13px;
-}
-.brand img{
-  width:62px;
-  height:62px;
-  object-fit:contain;
-}
-.brand small{
+.brand {display:flex;align-items:center;gap:13px}
+.brand img {width:62px;height:62px;object-fit:contain}
+.brand small {
   display:block;
   margin-bottom:4px;
   color:#008e99;
@@ -141,41 +122,30 @@ header{
   font-weight:900;
   letter-spacing:2px;
 }
-.brand strong{
+.brand strong {
   display:block;
   font-size:17px;
   line-height:1.05;
   text-transform:uppercase;
 }
-nav{
-  display:flex;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:5px;
-}
-nav a{
+nav {display:flex;align-items:center;flex-wrap:wrap;gap:5px}
+nav a {
   padding:12px;
   font-size:10px;
   font-weight:900;
   letter-spacing:1px;
   text-transform:uppercase;
 }
-nav a:hover{color:#008e99}
-nav .nav-cup{
-  background:#111;
-  color:#fff;
-}
-nav .nav-cup:hover{
-  background:#008e99;
-  color:#fff;
-}
+nav a:hover {color:#008e99}
+nav .nav-cup {background:#111;color:#fff}
+nav .nav-cup:hover {background:#008e99;color:#fff}
 
-/* EDITORIAL MASTHEAD */
-.masthead{
+/* MASTHEAD */
+.masthead {
   border-bottom:1px solid var(--line);
   background:#0c1012;
 }
-.masthead-inner{
+.masthead-inner {
   max-width:var(--max);
   margin:auto;
   padding:22px 25px;
@@ -184,14 +154,14 @@ nav .nav-cup:hover{
   align-items:center;
   gap:20px;
 }
-.masthead-title{
+.masthead-title {
   font-family:Georgia,"Times New Roman",serif;
   font-size:clamp(25px,4vw,43px);
   font-weight:900;
   letter-spacing:-1.5px;
 }
-.masthead-title span{color:var(--teal)}
-.masthead-right{
+.masthead-title span {color:var(--teal)}
+.masthead-right {
   color:#91989a;
   font-size:9px;
   font-weight:900;
@@ -200,14 +170,14 @@ nav .nav-cup:hover{
   text-align:right;
 }
 
-/* BREAKING NEWS */
-.breaking{
+/* JACK BLACK FEATURE */
+.breaking {
   padding:24px 0 85px;
   background:
     radial-gradient(circle at 85% 25%,rgba(8,185,196,.10),transparent 38%),
     #080b0d;
 }
-.breaking-banner{
+.breaking-banner {
   display:flex;
   align-items:center;
   gap:15px;
@@ -215,7 +185,7 @@ nav .nav-cup:hover{
   padding-bottom:16px;
   border-bottom:1px solid var(--line);
 }
-.breaking-tag{
+.breaking-tag {
   background:var(--pink);
   padding:9px 13px;
   color:#fff;
@@ -224,7 +194,7 @@ nav .nav-cup:hover{
   letter-spacing:1.5px;
   text-transform:uppercase;
 }
-.breaking-banner p{
+.breaking-banner p {
   margin:0;
   color:#b7bcbe;
   font-size:11px;
@@ -232,42 +202,42 @@ nav .nav-cup:hover{
   letter-spacing:1px;
   text-transform:uppercase;
 }
-.breaking-layout{
+.breaking-layout {
   display:grid;
   grid-template-columns:1.15fr .85fr;
   gap:38px;
   align-items:center;
 }
-.breaking-image{
+.breaking-image {
   display:block;
   background:#101416;
   border:1px solid var(--line);
   overflow:hidden;
 }
-.breaking-image img{
+.breaking-image img {
   width:100%;
-  height:auto;
   max-height:680px;
+  height:auto;
   object-fit:contain;
   transition:transform .3s;
 }
-.breaking-image:hover img{transform:scale(1.02)}
-.breaking-copy .eyebrow{color:var(--orange)}
-.breaking-copy h1{
+.breaking-image:hover img {transform:scale(1.02)}
+.breaking-copy .eyebrow {color:var(--orange)}
+.breaking-copy h1 {
   margin:15px 0 23px;
   font-size:clamp(45px,5.8vw,83px);
   line-height:.89;
   letter-spacing:-3.5px;
   text-transform:uppercase;
 }
-.breaking-copy h1 span{color:var(--teal)}
-.breaking-copy .summary{
+.breaking-copy h1 span {color:var(--teal)}
+.breaking-copy .summary {
   color:#c0c5c6;
   font-family:Georgia,"Times New Roman",serif;
   font-size:19px;
   line-height:1.65;
 }
-.breaking-copy .quote{
+.breaking-copy .quote {
   margin:25px 0;
   padding-left:18px;
   border-left:3px solid var(--orange);
@@ -277,7 +247,7 @@ nav .nav-cup:hover{
   font-style:italic;
   line-height:1.5;
 }
-.breaking-actions{
+.breaking-actions {
   display:flex;
   flex-wrap:wrap;
   gap:12px;
@@ -285,30 +255,30 @@ nav .nav-cup:hover{
 }
 
 /* NEWS */
-.news-section{
+.news-section {
   padding:90px 0 100px;
   background:var(--paper);
   color:#101314;
 }
-.news-section .eyebrow{color:#008e99}
-.news-section .section-link{color:#666}
-.news-section .section-link:hover{color:#008e99}
-.news-grid{
+.news-section .eyebrow {color:#008e99}
+.news-section .section-link {color:#666}
+.news-section .section-link:hover {color:#008e99}
+.news-grid {
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
   gap:20px;
 }
-.news-card{
+.news-card {
   min-width:0;
   background:#fff;
   border:1px solid #d8d6d0;
   transition:transform .2s,box-shadow .2s;
 }
-.news-card:hover{
+.news-card:hover {
   transform:translateY(-4px);
   box-shadow:0 12px 25px rgba(0,0,0,.08);
 }
-.news-image{
+.news-image {
   height:245px;
   background:#101416;
   display:flex;
@@ -316,33 +286,33 @@ nav .nav-cup:hover{
   justify-content:center;
   overflow:hidden;
 }
-.news-image img{
+.news-image img {
   width:100%;
   height:100%;
   object-fit:contain;
 }
-.news-copy{padding:25px}
-.news-category{
+.news-copy {padding:25px}
+.news-category {
   color:#008e99;
   font-size:9px;
   font-weight:900;
   letter-spacing:1.8px;
   text-transform:uppercase;
 }
-.news-copy h3{
+.news-copy h3 {
   margin:12px 0;
   font-size:clamp(22px,2.5vw,31px);
   line-height:1.04;
   letter-spacing:-1px;
   text-transform:uppercase;
 }
-.news-copy p{
+.news-copy p {
   color:#666;
   font-family:Georgia,"Times New Roman",serif;
   font-size:15px;
   line-height:1.65;
 }
-.read-more{
+.read-more {
   display:inline-block;
   margin-top:15px;
   color:#008e99;
@@ -352,64 +322,50 @@ nav .nav-cup:hover{
   text-transform:uppercase;
 }
 
-/* LEAGUE TABLE */
-.standings{
-  padding:95px 0;
-  background:#0b1012;
-}
-.standings-layout{
+/* STANDINGS */
+.standings {padding:95px 0;background:#0b1012}
+.standings-layout {
   display:grid;
   grid-template-columns:.72fr 1.28fr;
   gap:50px;
   align-items:center;
 }
-.standings-copy h2{
+.standings-copy h2 {
   margin:12px 0 22px;
   font-size:clamp(43px,5.5vw,75px);
   line-height:.9;
   letter-spacing:-3px;
   text-transform:uppercase;
 }
-.standings-copy p{
+.standings-copy p {
   color:#a4aaac;
   font-family:Georgia,"Times New Roman",serif;
   font-size:17px;
   line-height:1.75;
 }
-.standings-copy .btn{margin-top:25px}
-.standings-image{
+.standings-copy .btn {margin-top:25px}
+.standings-image {
   background:#080b0d;
   padding:12px;
   border:1px solid var(--line);
 }
-.standings-image img{
-  width:100%;
-  height:auto;
-  object-fit:contain;
-}
+.standings-image img {width:100%;height:auto;object-fit:contain}
 
 /* CUP HUB */
-.cup-section{
-  padding:95px 0;
-  background:#111719;
-}
-.cup-layout{
+.cup-section {padding:95px 0;background:#111719}
+.cup-layout {
   display:grid;
   grid-template-columns:1.08fr .92fr;
   gap:45px;
   align-items:center;
 }
-.cup-image{
+.cup-image {
   display:block;
   border:1px solid var(--line);
   background:#050708;
 }
-.cup-image img{
-  width:100%;
-  height:auto;
-  object-fit:contain;
-}
-.live-indicator{
+.cup-image img {width:100%;height:auto;object-fit:contain}
+.live-indicator {
   display:inline-flex;
   align-items:center;
   gap:9px;
@@ -419,7 +375,7 @@ nav .nav-cup:hover{
   letter-spacing:2px;
   text-transform:uppercase;
 }
-.live-indicator::before{
+.live-indicator::before {
   content:"";
   width:9px;
   height:9px;
@@ -427,26 +383,21 @@ nav .nav-cup:hover{
   border-radius:50%;
   box-shadow:0 0 12px #ff454d;
 }
-.cup-copy h2{
+.cup-copy h2 {
   margin:16px 0 20px;
   font-size:clamp(43px,5.5vw,72px);
   line-height:.9;
   letter-spacing:-3px;
   text-transform:uppercase;
 }
-.cup-copy p{
+.cup-copy p {
   color:#aeb4b5;
   font-family:Georgia,"Times New Roman",serif;
   font-size:17px;
   line-height:1.7;
 }
-.cup-actions{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-top:27px;
-}
-.cup-teaser{
+.cup-actions {display:flex;flex-wrap:wrap;gap:12px;margin-top:27px}
+.cup-teaser {
   position:relative;
   display:block;
   margin-top:38px;
@@ -455,70 +406,63 @@ nav .nav-cup:hover{
   background:#050708;
   border:1px solid var(--line);
 }
-.cup-teaser img{
+.cup-teaser img {
   position:absolute;
   inset:0;
   width:100%;
   height:100%;
   object-fit:cover;
-  object-position:center;
 }
-.cup-teaser::after{
+.cup-teaser::after {
   content:"";
   position:absolute;
   inset:0;
   background:linear-gradient(90deg,rgba(0,0,0,.93),rgba(0,0,0,.15));
 }
-.cup-teaser-copy{
+.cup-teaser-copy {
   position:relative;
   z-index:1;
   max-width:460px;
   padding:50px 35px;
 }
-.cup-teaser-copy h3{
+.cup-teaser-copy h3 {
   margin:10px 0;
   font-size:clamp(33px,5vw,54px);
   line-height:.95;
   text-transform:uppercase;
 }
-.cup-teaser-copy p{
+.cup-teaser-copy p {
   color:#d0d3d4;
   font-family:Georgia,"Times New Roman",serif;
   line-height:1.6;
 }
 
 /* CLUBS */
-.clubs{
-  padding:95px 0;
-  background:#0b0e10;
-}
-.clubs-intro{
-  max-width:730px;
-  margin-bottom:40px;
-}
-.clubs-intro p{
+.clubs {padding:95px 0;background:#0b0e10}
+.clubs-intro {max-width:730px;margin-bottom:40px}
+.clubs-intro p {
   color:#a0a5a7;
   font-family:Georgia,"Times New Roman",serif;
   font-size:17px;
   line-height:1.7;
 }
-.club-grid{
+.club-grid {
   display:grid;
   grid-template-columns:repeat(5,minmax(0,1fr));
   gap:14px;
 }
-.club-card{
+.club-card {
   min-width:0;
   background:#050708;
   border:1px solid #303639;
   overflow:hidden;
   transition:transform .2s,border-color .2s;
 }
-a.club-card:hover{
+a.club-card:hover {
   transform:translateY(-5px);
   border-color:var(--teal);
 }
-.club-crest{
+.club-crest {
   height:230px;
   padding:18px;
   display:flex;
@@ -526,17 +470,17 @@ a.club-card:hover{
   justify-content:center;
   background:radial-gradient(circle,rgba(255,255,255,.065),transparent 65%);
 }
-.club-crest img{
+.club-crest img {
   width:100%;
   height:100%;
   object-fit:contain;
 }
-.club-info{
+.club-info {
   min-height:110px;
   padding:17px;
   border-top:1px solid var(--line);
 }
-.club-info small{
+.club-info small {
   display:block;
   color:#82898b;
   font-size:8px;
@@ -544,14 +488,14 @@ a.club-card:hover{
   letter-spacing:1px;
   text-transform:uppercase;
 }
-.club-info strong{
+.club-info strong {
   display:block;
   margin-top:8px;
   font-size:16px;
   line-height:1.15;
   text-transform:uppercase;
 }
-.club-link{
+.club-link {
   display:block;
   margin-top:10px;
   color:var(--teal);
@@ -560,30 +504,26 @@ a.club-card:hover{
   letter-spacing:1px;
   text-transform:uppercase;
 }
-.club-message{
+.club-message {
   margin-top:30px;
   padding:30px;
   border:1px dashed #444a4d;
 }
-.club-message h3{
+.club-message h3 {
   margin:0 0 12px;
   font-size:26px;
   text-transform:uppercase;
 }
-.club-message p{
+.club-message p {
   max-width:750px;
   color:#a0a5a7;
   font-family:Georgia,"Times New Roman",serif;
   line-height:1.7;
 }
-.club-message .btn{margin-top:12px}
 
 /* SPONSOR */
-.sponsor{
-  background:#fff;
-  color:#111;
-}
-.sponsor-inner{
+.sponsor {background:#fff;color:#111}
+.sponsor-inner {
   max-width:1030px;
   margin:auto;
   padding:75px 25px;
@@ -592,19 +532,19 @@ a.club-card:hover{
   gap:65px;
   align-items:center;
 }
-.sponsor-logo img{
+.sponsor-logo img {
   width:100%;
   max-height:260px;
   object-fit:contain;
 }
-.sponsor-copy h2{
+.sponsor-copy h2 {
   margin:12px 0;
   font-size:clamp(36px,5vw,60px);
   line-height:.95;
   letter-spacing:-2px;
   text-transform:uppercase;
 }
-.sponsor-copy p{
+.sponsor-copy p {
   color:#666;
   font-family:Georgia,"Times New Roman",serif;
   font-size:16px;
@@ -612,11 +552,8 @@ a.club-card:hover{
 }
 
 /* FOOTER */
-footer{
-  background:#030506;
-  border-top:1px solid var(--line);
-}
-.footer-inner{
+footer {background:#030506;border-top:1px solid var(--line)}
+.footer-inner {
   max-width:var(--max);
   margin:auto;
   padding:42px 25px;
@@ -625,21 +562,10 @@ footer{
   justify-content:space-between;
   gap:25px;
 }
-.footer-brand{
-  display:flex;
-  align-items:center;
-  gap:15px;
-}
-.footer-brand img{
-  width:60px;
-  height:60px;
-  object-fit:contain;
-}
-.footer-brand strong{
-  font-size:17px;
-  text-transform:uppercase;
-}
-.footer-right{
+.footer-brand {display:flex;align-items:center;gap:15px}
+.footer-brand img {width:60px;height:60px;object-fit:contain}
+.footer-brand strong {font-size:17px;text-transform:uppercase}
+.footer-right {
   color:#858b8d;
   font-size:10px;
   line-height:1.8;
@@ -649,90 +575,78 @@ footer{
 }
 
 /* TABLET */
-@media(max-width:1000px){
+@media(max-width:1000px) {
   .breaking-layout,
   .standings-layout,
   .cup-layout,
-  .sponsor-inner{
-    grid-template-columns:1fr;
-  }
-  .breaking-image img{max-height:620px}
-  .news-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .club-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .sponsor-logo img{max-width:280px}
+  .sponsor-inner {grid-template-columns:1fr}
+  .news-grid {grid-template-columns:repeat(2,minmax(0,1fr))}
+  .club-grid {grid-template-columns:repeat(3,minmax(0,1fr))}
+  .sponsor-logo img {max-width:280px}
 }
 
 /* MOBILE */
-@media(max-width:700px){
-  .container{padding:0 19px}
-  .header-inner{
+@media(max-width:700px) {
+  .container {padding:0 19px}
+  .header-inner {
     flex-direction:column;
     align-items:flex-start;
     padding:15px 19px;
   }
-  .brand img{width:52px;height:52px}
-  nav{gap:2px}
-  nav a{padding:9px;font-size:9px}
-  .masthead-inner{
+  .brand img {width:52px;height:52px}
+  nav {gap:2px}
+  nav a {padding:9px;font-size:9px}
+  .masthead-inner {
     padding:18px 19px;
     align-items:flex-start;
     flex-direction:column;
     gap:8px;
   }
-  .masthead-right{text-align:left}
-  .breaking{padding:18px 0 65px}
-  .breaking-layout{gap:28px}
-  .breaking-banner{align-items:flex-start}
-  .breaking-banner p{line-height:1.5}
-  .breaking-copy h1{
+  .masthead-right {text-align:left}
+  .breaking {padding:18px 0 65px}
+  .breaking-layout {gap:28px}
+  .breaking-banner {align-items:flex-start}
+  .breaking-banner p {line-height:1.5}
+  .breaking-copy h1 {
     font-size:clamp(43px,10vw,68px);
     letter-spacing:-2px;
   }
-  .breaking-copy .summary{font-size:17px}
-  .breaking-image img{max-height:none}
-  .news-section,.standings,.cup-section,.clubs{
-    padding:65px 0;
-  }
-  .section-heading{align-items:flex-start;flex-direction:column}
-  .news-grid{grid-template-columns:1fr}
-  .news-image{height:auto;min-height:200px}
-  .news-image img{
-    height:auto;
-    max-height:420px;
-    object-fit:contain;
-  }
-  .standings-layout,.cup-layout{gap:30px}
-  .standings-copy h2,.cup-copy h2{
+  .breaking-copy .summary {font-size:17px}
+  .breaking-image img {max-height:none}
+  .news-section,.standings,.cup-section,.clubs {padding:65px 0}
+  .section-heading {align-items:flex-start;flex-direction:column}
+  .news-grid {grid-template-columns:1fr}
+  .news-image {height:auto;min-height:200px}
+  .news-image img {height:auto;max-height:420px;object-fit:contain}
+  .standings-layout,.cup-layout {gap:30px}
+  .standings-copy h2,.cup-copy h2 {
     font-size:49px;
     letter-spacing:-2px;
   }
-  .cup-teaser{min-height:330px}
-  .cup-teaser-copy{padding:40px 25px}
-  .club-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .club-crest{height:210px;padding:12px}
-  .club-info{min-height:110px;padding:13px}
-  .club-info strong{font-size:14px}
-  .sponsor-inner{
-    padding:60px 20px;
-    gap:30px;
-    text-align:center;
-  }
-  .sponsor-logo{display:flex;justify-content:center}
-  .footer-inner{
+  .cup-teaser {min-height:330px}
+  .cup-teaser-copy {padding:40px 25px}
+  .club-grid {grid-template-columns:repeat(2,minmax(0,1fr))}
+  .club-crest {height:210px;padding:12px}
+  .club-info {min-height:110px;padding:13px}
+  .club-info strong {font-size:14px}
+  .sponsor-inner {padding:60px 20px;gap:30px;text-align:center}
+  .sponsor-logo {display:flex;justify-content:center}
+  .footer-inner {
     align-items:flex-start;
     flex-direction:column;
     padding:35px 20px;
   }
-  .footer-right{text-align:left}
+  .footer-right {text-align:left}
 }
-@media(max-width:420px){
-  .club-grid{grid-template-columns:1fr}
-  .club-crest{height:270px}
+@media(max-width:420px) {
+  .club-grid {grid-template-columns:1fr}
+  .club-crest {height:270px}
 }
 </style>
 </head>
 
 <body>
+
 <div class="fiesta-line"></div>
 
 <!-- HEADER -->
@@ -755,10 +669,12 @@ footer{
   </div>
 </header>
 
-<!-- EDITORIAL MASTHEAD -->
+<!-- MASTHEAD -->
 <div class="masthead">
   <div class="masthead-inner">
-    <div class="masthead-title">THE LONESTAR <span>TIMES.</span></div>
+    <div class="masthead-title">
+      THE LONESTAR <span>TIMES.</span>
+    </div>
     <div class="masthead-right">
       League Newsroom<br>
       Clubs • Cups • Rivalries • History
@@ -768,7 +684,7 @@ footer{
 
 <main>
 
-<!-- BREAKING: JACK BLACK -->
+<!-- JACK BLACK BREAKING NEWS -->
 <section class="breaking">
   <div class="container">
 
@@ -779,11 +695,9 @@ footer{
 
     <div class="breaking-layout">
 
-      <a class="breaking-image" href="jack-black.html"
-         aria-label="Read Jack Black commissioner announcement">
-        <img
-          src="jack-black-1.png"
-          alt="Jack Black named Lonestar Premier League Commissioner">
+      <a class="breaking-image" href="jack-black.html">
+        <img src="jack-black-1.png"
+             alt="Jack Black named Lonestar Premier League Commissioner">
       </a>
 
       <div class="breaking-copy">
@@ -795,19 +709,18 @@ footer{
         </h1>
 
         <p class="summary">
-          The Leon Valley chief leaves the Commissioner's office
-          to focus on his club as Jack Black is named the new
-          independent Commissioner of the Lonestar Premier League.
+          The Leon Valley chief leaves the Commissioner's
+          office to focus on his club as Jack Black is named
+          the new independent Commissioner of the
+          Lonestar Premier League.
         </p>
 
-        <p class="quote">
-          “This was always the plan.”
-        </p>
+        <p class="quote">“This was always the plan.”</p>
 
         <p class="summary">
-          Amid scrutiny from Space Cadets, Diego insists the
-          transition was planned and that the league is in
-          the best of hands.
+          Amid scrutiny from Space Cadets, Diego insists
+          the transition was planned and that the league
+          is in the best of hands.
         </p>
 
         <div class="breaking-actions">
@@ -824,7 +737,7 @@ footer{
   </div>
 </section>
 
-<!-- LATEST NEWS: NEWEST TO OLDEST -->
+<!-- LATEST NEWS -->
 <section class="news-section" id="news">
   <div class="container">
 
@@ -833,14 +746,11 @@ footer{
         <div class="eyebrow">The Lonestar Times</div>
         <h2>Latest League News</h2>
       </div>
-      <a class="section-link" href="news.html">
-        All Stories →
-      </a>
+      <a class="section-link" href="news.html">All Stories →</a>
     </div>
 
     <div class="news-grid">
 
-      <!-- SPACE CADETS -->
       <a class="news-card" href="space-cadets.html">
         <div class="news-image">
           <img src="dowman.JPG"
@@ -858,7 +768,6 @@ footer{
         </div>
       </a>
 
-      <!-- CHILDREN OF EMENIKE -->
       <a class="news-card" href="pathetic.html">
         <div class="news-image">
           <img src="brobbey.PNG"
@@ -869,26 +778,26 @@ footer{
           <div class="news-category">Matchweek 5</div>
           <h3>“I Stand By It”</h3>
           <p>
-            Three matches. Three wins. Brian Brobbey delivers
-            a hat trick as Children of Emenike doubles down.
+            Three matches. Three wins. Brian Brobbey
+            delivers a hat trick as Children of Emenike
+            doubles down.
           </p>
           <span class="read-more">Read Story →</span>
         </div>
       </a>
 
-      <!-- FIRST CUP -->
       <a class="news-card" href="shootout.html">
         <div class="news-image">
           <img src="shootout.jpg"
-               alt="Five Star Shootout Cup rules"
+               alt="Five Star Shootout Cup"
                loading="lazy">
         </div>
         <div class="news-copy">
           <div class="news-category">League Cup</div>
           <h3>The Five Star Shootout Cup</h3>
           <p>
-            Five gameweeks. One winner. The first piece of
-            silverware in Lonestar Premier League history.
+            Five gameweeks. One winner. The first piece
+            of silverware in Lonestar Premier League history.
           </p>
           <span class="read-more">Read Story →</span>
         </div>
@@ -908,7 +817,8 @@ footer{
         <h2>The Race Is On.</h2>
         <p>
           Ten clubs. One table. Every gameweek adds another
-          chapter to the first season of the Lonestar Premier League.
+          chapter to the first season of the
+          Lonestar Premier League.
         </p>
         <p>
           From emerging rivalries to the battle at the top,
@@ -974,7 +884,7 @@ footer{
 
     </div>
 
-    <!-- VISUAL TEASER ONLY: NO TROPHY NAME -->
+    <!-- VISUAL TROPHY TEASER -->
     <a class="cup-teaser" href="cup-hub.html">
       <img src="ghost-cup.png"
            alt="League trophy teaser"
@@ -994,7 +904,7 @@ footer{
   </div>
 </section>
 
-<!-- CLUBS -->
+<!-- OUR CLUBS -->
 <section class="clubs" id="clubs">
   <div class="container">
 
@@ -1010,17 +920,18 @@ footer{
     <div class="clubs-intro">
       <p>
         Every crest represents a story. Rivalries, transfers,
-        victories and controversies give these clubs their identities.
-        The league provides the stage. The clubs give it character.
+        victories and controversies give these clubs their
+        identities. The league provides the stage.
+        The clubs give it character.
       </p>
     </div>
 
     <div class="club-grid">
 
-      <!-- WOOBURT CITY -->
+      <!-- WOOBURT CITY: NEW CREST -->
       <a class="club-card" href="index.html">
         <div class="club-crest">
-          <img src="cool-cats-black-crest.png"
+          <img src="coolcats-nobackground.PNG"
                alt="Wooburt City Cool Cats crest"
                loading="lazy">
         </div>
@@ -1031,15 +942,15 @@ footer{
         </div>
       </a>
 
-      <!-- LEON VALLEY -->
+      <!-- LEON VALLEY: NEW CREST -->
       <div class="club-card">
         <div class="club-crest">
-          <img src="leon-valley-crest.jpeg"
+          <img src="leon-valley-nobackground.PNG"
                alt="Leon Valley crest"
                loading="lazy">
         </div>
         <div class="club-info">
-          <small>Lonestar Premier League</small>
+          <small>Est. 2026</small>
           <strong>Leon Valley</strong>
         </div>
       </div>
@@ -1057,10 +968,10 @@ footer{
         </div>
       </div>
 
-      <!-- SPACE CADETS -->
+      <!-- SPACE CADETS: NEW CREST -->
       <div class="club-card">
         <div class="club-crest">
-          <img src="space-cadet-crest.JPEG"
+          <img src="spacecadet-crest-nobackground.PNG"
                alt="Space Cadets crest"
                loading="lazy">
         </div>
@@ -1092,9 +1003,10 @@ footer{
     <div class="club-message">
       <h3>Build Your Club's Identity.</h3>
       <p>
-        Make a crest. Pick your colors. Create something that's
-        yours. Every club deserves an identity that grows alongside
-        its history in the Lonestar Premier League.
+        Make a crest. Pick your colors. Create something
+        that's yours. Every club deserves an identity
+        that grows alongside its history in the
+        Lonestar Premier League.
       </p>
     </div>
 
@@ -1107,7 +1019,7 @@ footer{
 
     <div class="sponsor-logo">
       <img src="heb-league-sponsor2.png"
-           alt="H-E-B official league sponsor"
+           alt="H-E-B league sponsor"
            loading="lazy">
     </div>
 
@@ -1115,9 +1027,10 @@ footer{
       <div class="eyebrow">Official League Partner</div>
       <h2>Lonestar Premier League × H-E-B</h2>
       <p>
-        H-E-B joins the Lonestar Premier League as an official
-        league sponsor, celebrating the competition's Texas roots
-        while supporting its growing American identity.
+        H-E-B joins the Lonestar Premier League as an
+        official league sponsor, celebrating the
+        competition's Texas roots while supporting
+        its growing American identity.
       </p>
     </div>
 
