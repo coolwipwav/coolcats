@@ -251,210 +251,11 @@ nav .nav-cup:hover {
   text-align:right;
 }
 
-/* JACK BLACK BREAKING NEWS */
-
-.breaking {
-  padding:24px 0 85px;
-  background:
-    radial-gradient(
-      circle at 85% 25%,
-      rgba(8,185,196,.10),
-      transparent 38%
-    ),
-    #080b0d;
-}
-
-.breaking-banner {
-  display:flex;
-  align-items:center;
-  gap:15px;
-  margin-bottom:25px;
-  padding-bottom:16px;
-  border-bottom:1px solid var(--line);
-}
-
-.breaking-tag {
-  background:var(--pink);
-  padding:9px 13px;
-  color:#fff;
-  font-size:10px;
-  font-weight:900;
-  letter-spacing:1.5px;
-  text-transform:uppercase;
-}
-
-.breaking-banner p {
-  margin:0;
-  color:#b7bcbe;
-  font-size:11px;
-  font-weight:800;
-  letter-spacing:1px;
-  text-transform:uppercase;
-}
-
-.breaking-layout {
-  display:grid;
-  grid-template-columns:1.15fr .85fr;
-  gap:38px;
-  align-items:center;
-}
-
-.breaking-image {
-  display:block;
-  background:#101416;
-  border:1px solid var(--line);
-  overflow:hidden;
-}
-
-.breaking-image img {
-  width:100%;
-  max-height:680px;
-  height:auto;
-  object-fit:contain;
-  transition:transform .3s;
-}
-
-.breaking-image:hover img {
-  transform:scale(1.02);
-}
-
-.breaking-copy .eyebrow {
-  color:var(--orange);
-}
-
-.breaking-copy h1 {
-  margin:15px 0 23px;
-  font-size:clamp(45px,5.8vw,83px);
-  line-height:.89;
-  letter-spacing:-3.5px;
-  text-transform:uppercase;
-}
-
-.breaking-copy h1 span {
-  color:var(--teal);
-}
-
-.breaking-copy .summary {
-  color:#c0c5c6;
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:19px;
-  line-height:1.65;
-}
-
-.breaking-copy .quote {
-  margin:25px 0;
-  padding-left:18px;
-  border-left:3px solid var(--orange);
-  color:#fff;
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:19px;
-  font-style:italic;
-  line-height:1.5;
-}
-
-.breaking-actions {
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-top:30px;
-}
-
-/* LATEST NEWS */
-
-.news-section {
-  padding:90px 0 100px;
-  background:var(--paper);
-  color:#101314;
-}
-
-.news-section .eyebrow {
-  color:#008e99;
-}
-
-.news-section .section-link {
-  color:#666;
-}
-
-.news-section .section-link:hover {
-  color:#008e99;
-}
-
-.news-grid {
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:20px;
-}
-
-.news-card {
-  min-width:0;
-  background:#fff;
-  border:1px solid #d8d6d0;
-  transition:transform .2s,box-shadow .2s;
-}
-
-.news-card:hover {
-  transform:translateY(-4px);
-  box-shadow:0 12px 25px rgba(0,0,0,.08);
-}
-
-.news-image {
-  height:245px;
-  background:#101416;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-}
-
-.news-image img {
-  width:100%;
-  height:100%;
-  object-fit:contain;
-}
-
-.news-copy {
-  padding:25px;
-}
-
-.news-category {
-  color:#008e99;
-  font-size:9px;
-  font-weight:900;
-  letter-spacing:1.8px;
-  text-transform:uppercase;
-}
-
-.news-copy h3 {
-  margin:12px 0;
-  font-size:clamp(22px,2.5vw,31px);
-  line-height:1.04;
-  letter-spacing:-1px;
-  text-transform:uppercase;
-}
-
-.news-copy p {
-  color:#666;
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:15px;
-  line-height:1.65;
-}
-
-.read-more {
-  display:inline-block;
-  margin-top:15px;
-  color:#008e99;
-  font-size:10px;
-  font-weight:900;
-  letter-spacing:1.3px;
-  text-transform:uppercase;
-}
-
-/* TOP SCORERS */
+/* TOP SCORERS — FIRST SECTION */
 
 .scorers-section {
-  padding:70px 0 75px;
+  padding:52px 0 58px;
   background:#0e1618;
-  border-top:5px solid var(--teal);
   border-bottom:1px solid var(--line);
 }
 
@@ -667,6 +468,204 @@ nav .nav-cup:hover {
   color:#77878a;
   font-size:10px;
   letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+/* JACK BLACK BREAKING NEWS */
+
+.breaking {
+  padding:70px 0 85px;
+  background:
+    radial-gradient(
+      circle at 85% 25%,
+      rgba(8,185,196,.10),
+      transparent 38%
+    ),
+    #080b0d;
+}
+
+.breaking-banner {
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin-bottom:25px;
+  padding-bottom:16px;
+  border-bottom:1px solid var(--line);
+}
+
+.breaking-tag {
+  background:var(--pink);
+  padding:9px 13px;
+  color:#fff;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+.breaking-banner p {
+  margin:0;
+  color:#b7bcbe;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.breaking-layout {
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:38px;
+  align-items:center;
+}
+
+.breaking-image {
+  display:block;
+  background:#101416;
+  border:1px solid var(--line);
+  overflow:hidden;
+}
+
+.breaking-image img {
+  width:100%;
+  max-height:680px;
+  height:auto;
+  object-fit:contain;
+  transition:transform .3s;
+}
+
+.breaking-image:hover img {
+  transform:scale(1.02);
+}
+
+.breaking-copy .eyebrow {
+  color:var(--orange);
+}
+
+.breaking-copy h1 {
+  margin:15px 0 23px;
+  font-size:clamp(45px,5.8vw,83px);
+  line-height:.89;
+  letter-spacing:-3.5px;
+  text-transform:uppercase;
+}
+
+.breaking-copy h1 span {
+  color:var(--teal);
+}
+
+.breaking-copy .summary {
+  color:#c0c5c6;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:19px;
+  line-height:1.65;
+}
+
+.breaking-copy .quote {
+  margin:25px 0;
+  padding-left:18px;
+  border-left:3px solid var(--orange);
+  color:#fff;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:19px;
+  font-style:italic;
+  line-height:1.5;
+}
+
+.breaking-actions {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:30px;
+}
+
+/* LATEST NEWS */
+
+.news-section {
+  padding:90px 0 100px;
+  background:var(--paper);
+  color:#101314;
+}
+
+.news-section .eyebrow {
+  color:#008e99;
+}
+
+.news-section .section-link {
+  color:#666;
+}
+
+.news-section .section-link:hover {
+  color:#008e99;
+}
+
+.news-grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:20px;
+}
+
+.news-card {
+  min-width:0;
+  background:#fff;
+  border:1px solid #d8d6d0;
+  transition:transform .2s,box-shadow .2s;
+}
+
+.news-card:hover {
+  transform:translateY(-4px);
+  box-shadow:0 12px 25px rgba(0,0,0,.08);
+}
+
+.news-image {
+  height:245px;
+  background:#101416;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.news-image img {
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+
+.news-copy {
+  padding:25px;
+}
+
+.news-category {
+  color:#008e99;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+}
+
+.news-copy h3 {
+  margin:12px 0;
+  font-size:clamp(22px,2.5vw,31px);
+  line-height:1.04;
+  letter-spacing:-1px;
+  text-transform:uppercase;
+}
+
+.news-copy p {
+  color:#666;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:15px;
+  line-height:1.65;
+}
+
+.read-more {
+  display:inline-block;
+  margin-top:15px;
+  color:#008e99;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:1.3px;
   text-transform:uppercase;
 }
 
@@ -1083,8 +1082,38 @@ footer {
     text-align:left;
   }
 
+  .scorers-section {
+    padding:42px 0 45px;
+  }
+
+  .scorers-heading {
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .scorers-heading p {
+    text-align:left;
+  }
+
+  .scorer {
+    width:235px;
+    min-height:310px;
+  }
+
+  .scorer-photo {
+    height:180px;
+  }
+
+  .scorer-details {
+    padding:13px;
+  }
+
+  .scorer-name {
+    font-size:19px;
+  }
+
   .breaking {
-    padding:18px 0 65px;
+    padding:55px 0 65px;
   }
 
   .breaking-layout {
@@ -1137,36 +1166,6 @@ footer {
     height:auto;
     max-height:420px;
     object-fit:contain;
-  }
-
-  .scorers-section {
-    padding:55px 0;
-  }
-
-  .scorers-heading {
-    align-items:flex-start;
-    flex-direction:column;
-  }
-
-  .scorers-heading p {
-    text-align:left;
-  }
-
-  .scorer {
-    width:235px;
-    min-height:310px;
-  }
-
-  .scorer-photo {
-    height:180px;
-  }
-
-  .scorer-details {
-    padding:13px;
-  }
-
-  .scorer-name {
-    font-size:19px;
   }
 
   .standings-layout,
@@ -1303,6 +1302,45 @@ footer {
 </div>
 
 <main>
+
+<!-- TOP SCORERS — NOW AT THE TOP -->
+
+<section class="scorers-section" id="top-scorers">
+
+  <div class="container">
+    <div class="scorers-heading">
+
+      <div>
+        <div class="eyebrow">
+          2026 Season • Fantrax Fantasy Points
+        </div>
+
+        <h2>League Top Scorers</h2>
+      </div>
+
+      <p>
+        The ten highest-scoring players in the league,
+        ranked by total fantasy points.
+      </p>
+
+    </div>
+  </div>
+
+  <div class="scorers-track-window"
+       aria-label="Top ten league scorers">
+
+    <div class="scorers-track" id="scorersTrack">
+    </div>
+
+  </div>
+
+  <div class="container">
+    <div class="scorers-note">
+      Source: Fantrax standings snapshot • Hover to pause
+    </div>
+  </div>
+
+</section>
 
 <!-- JACK BLACK FEATURE -->
 
@@ -1464,45 +1502,6 @@ footer {
 
     </div>
   </div>
-</section>
-
-<!-- TOP SCORERS WITH PLAYER PHOTOS -->
-
-<section class="scorers-section" id="top-scorers">
-
-  <div class="container">
-    <div class="scorers-heading">
-
-      <div>
-        <div class="eyebrow">
-          2026 Season • Fantrax Fantasy Points
-        </div>
-
-        <h2>League Top Scorers</h2>
-      </div>
-
-      <p>
-        The ten highest-scoring players in the league,
-        ranked by total fantasy points.
-      </p>
-
-    </div>
-  </div>
-
-  <div class="scorers-track-window"
-       aria-label="Top ten league scorers">
-
-    <div class="scorers-track" id="scorersTrack">
-    </div>
-
-  </div>
-
-  <div class="container">
-    <div class="scorers-note">
-      Source: Fantrax standings snapshot • Hover to pause
-    </div>
-  </div>
-
 </section>
 
 <!-- LEAGUE STANDINGS -->
