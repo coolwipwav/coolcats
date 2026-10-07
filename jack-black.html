@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080b0d">
+<meta name="description" content="Diego steps down as Jack Black is named Commissioner of the Lonestar Premier League.">
+<title>Jack Black Named Commissioner | Lonestar Premier League</title>
+
+<style>
+:root {
+  --black:#080b0d;
+  --panel:#12171a;
+  --white:#f7f7f4;
+  --muted:#a5aaad;
+  --teal:#08b9c4;
+  --pink:#f6247d;
+  --orange:#ff9418;
+  --line:#303639;
+}
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {
+  margin:0;
+  background:var(--black);
+  color:var(--white);
+  font-family:Arial,Helvetica,sans-serif;
+}
+a {color:inherit;text-decoration:none}
+img {display:block;max-width:100%}
+.fiesta-line {
+  height:6px;
+  background:linear-gradient(90deg,
+    var(--teal) 0 33.33%,
+    var(--pink) 33.33% 66.66%,
+    var(--orange) 66.66%);
+}
+
+/* HEADER */
+header {
+  background:#fff;
+  color:#111;
+  border-bottom:1px solid #ddd;
+}
+.header-inner {
+  max-width:1160px;
+  margin:auto;
+  padding:17px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.brand {
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.brand img {
+  width:54px;
+  height:54px;
+  object-fit:contain;
+}
+.brand strong {
+  font-size:15px;
+  line-height:1.05;
+  text-transform:uppercase;
+}
+nav {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+nav a {
+  padding:10px;
+  font-size:11px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+nav a:hover {color:var(--pink)}
+
+/* ARTICLE HEADER */
+.article-header {
+  max-width:1000px;
+  margin:auto;
+  padding:75px 24px 40px;
+}
+.category {
+  color:var(--orange);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+.article-header h1 {
+  max-width:980px;
+  margin:18px 0 25px;
+  font-size:clamp(42px,7.5vw,91px);
+  line-height:.96;
+  letter-spacing:-3px;
+  text-transform:uppercase;
+}
+.subtitle {
+  max-width:800px;
+  color:#c1c4c5;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(18px,2.4vw,23px);
+  line-height:1.55;
+}
+.article-meta {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:30px;
+  padding-top:20px;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+/* COVER */
+.cover {
+  max-width:1150px;
+  margin:0 auto 65px;
+  padding:0 24px;
+}
+.cover img {
+  width:100%;
+  max-height:900px;
+  object-fit:contain;
+  background:#101417;
+}
+figcaption {
+  margin-top:12px;
+  color:#8f9699;
+  font-size:11px;
+  line-height:1.6;
+  text-align:center;
+}
+
+/* STORY */
+.article-body {
+  max-width:760px;
+  margin:0 auto;
+  padding:0 24px 90px;
+}
+.article-body p {
+  margin:0 0 25px;
+  color:#d3d6d7;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:19px;
+  line-height:1.85;
+}
+.article-body .lead {
+  font-size:23px;
+  color:#fff;
+}
+.article-body h2 {
+  margin:70px 0 25px;
+  padding-top:18px;
+  border-top:1px solid var(--line);
+  font-size:clamp(29px,5vw,43px);
+  line-height:1.05;
+  letter-spacing:-1px;
+  text-transform:uppercase;
+}
+.article-body strong {color:#fff}
+.article-body em {color:#fff}
+.article-body blockquote {
+  margin:40px 0;
+  padding:15px 0 15px 27px;
+  border-left:4px solid var(--teal);
+  color:#fff;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(22px,3vw,30px);
+  line-height:1.5;
+}
+.article-photo {
+  margin:45px -70px;
+}
+.article-photo img {
+  width:100%;
+  max-height:680px;
+  object-fit:contain;
+  background:#101417;
+}
+.final-line {
+  margin-top:40px!important;
+  color:var(--teal)!important;
+  font-size:26px!important;
+  font-weight:bold;
+}
+.article-end {
+  margin-top:65px;
+  padding-top:30px;
+  border-top:1px solid var(--line);
+}
+.back-button {
+  display:inline-block;
+  padding:15px 22px;
+  border:1px solid var(--teal);
+  color:var(--teal);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+.back-button:hover {
+  background:var(--teal);
+  color:#000;
+}
+
+/* FOOTER */
+footer {
+  padding:35px 24px;
+  border-top:1px solid var(--line);
+  color:#777;
+  text-align:center;
+  font-size:11px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+@media(max-width:700px) {
+  .header-inner {
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .brand img {width:45px;height:45px}
+  .article-header {padding:45px 20px 30px}
+  .article-header h1 {
+    font-size:clamp(38px,10vw,62px);
+    letter-spacing:-1.5px;
+  }
+  .cover {padding:0 12px;margin-bottom:40px}
+  .article-body {padding:0 20px 65px}
+  .article-body p {font-size:17px;line-height:1.8}
+  .article-body .lead {font-size:20px}
+  .article-body h2 {margin-top:50px}
+  .article-photo {margin:35px -8px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="fiesta-line"></div>
+
+<header>
+  <div class="header-inner">
+    <a class="brand" href="league.html">
+      <img src="league logo.jpeg" alt="Lonestar Premier League crest">
+      <strong>Lonestar<br>Premier League</strong>
+    </a>
+
+    <nav>
+      <a href="league.html">Home</a>
+      <a href="news.html">The Lonestar Times</a>
+      <a href="cup-hub.html">Cup Hub</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="article-header">
+    <div class="category">Breaking News / League Leadership</div>
+
+    <h1>
+      Diego Steps Down as Jack Black Is Named
+      Lonestar Premier League Commissioner
+    </h1>
+
+    <p class="subtitle">
+      Leon Valley chief leaves the Commissioner's office,
+      insisting the move was always planned as Hollywood
+      icon Jack Black prepares to lead the league into its
+      next chapter.
+    </p>
+
+    <div class="article-meta">
+      <span>Lonestar Premier League</span>
+      <span>•</span>
+      <span>WCCC Media Exclusive</span>
+      <span>•</span>
+      <span>2026</span>
+    </div>
+  </section>
+
+  <figure class="cover">
+    <img
+      src="jack-black-1.png"
+      alt="Official announcement of Jack Black as Lonestar Premier League Commissioner">
+    <figcaption>
+      The Lonestar Premier League announces its new Commissioner.
+    </figcaption>
+  </figure>
+
+  <article class="article-body">
+
+    <p class="lead">
+      A new era of leadership has begun in the Lonestar
+      Premier League.
+    </p>
+
+    <p>
+      Diego has officially stepped down as Commissioner,
+      ending his tenure at the head of the league to focus
+      entirely on his role as owner and President of Football
+      Operations at Leon Valley.
+    </p>
+
+    <p>His replacement has already been chosen.</p>
+
+    <p>
+      <strong>
+        Jack Black is the new Commissioner of the Lonestar
+        Premier League.
+      </strong>
+    </p>
+
+    <p>
+      The announcement arrives at an interesting moment.
+      Recent weeks have brought increased scrutiny toward
+      the Commissioner's office, most notably from Space
+      Cadets, whose leadership publicly criticized the
+      league and its Commissioner.
+    </p>
+
+    <p>Naturally, that raised one question.</p>
+
+    <p><strong>Did Space Cadets open a can of worms?</strong></p>
+
+    <p>
+      According to the outgoing Commissioner, absolutely not.
+    </p>
+
+    <h2>“This Was Always The Plan.”</h2>
+
+    <p>
+      WCCC Media learned of the potential change during a
+      private conversation with the Commissioner.
+    </p>
+
+    <p>
+      Asked whether managers deserved to know what prompted
+      the move, and whether the recent Space Cadets criticism
+      played any role, Diego gave a simple answer.
+    </p>
+
+    <blockquote>
+      “This was always the plan. We believe Mr. Black is the
+      perfect person to lead us into the next chapter of
+      this league.”
+    </blockquote>
+
+    <p>
+      WCCC Media pressed further, asking whether any difficult
+      conversations had taken place between the outgoing
+      Commissioner and his successor.
+    </p>
+
+    <p>
+      Again, there appeared to be no drama behind the scenes.
+    </p>
+
+    <blockquote>
+      “Only supportive words were exchanged. Mr. Black was
+      hand picked by our ex commissioner. We are in the
+      best of hands.”
+    </blockquote>
+
+    <p>
+      But in his final remarks as Commissioner, Diego revealed
+      a larger reason behind the decision.
+    </p>
+
+    <h2>Leon Valley Comes First</h2>
+
+    <p>
+      As Leon Valley grew into a larger part of Diego's
+      responsibilities, so did an uncomfortable reality.
+    </p>
+
+    <p>
+      Could one person fairly run a club and the league
+      governing that club?
+    </p>
+
+    <p>
+      Even without evidence of wrongdoing, Diego acknowledged
+      that the appearance of a conflict was becoming impossible
+      to ignore.
+    </p>
+
+    <blockquote>
+      “The integrity of this league has always been bigger
+      than any one club or any one individual.”
+    </blockquote>
+
+    <p>
+      He explained that stepping aside was necessary to ensure
+      future decisions from the Commissioner's office could not
+      be questioned because of his position at Leon Valley.
+    </p>
+
+    <p>
+      That responsibility now falls to Mr. Black, a man Diego
+      personally selected because he believes the new Commissioner
+      enters the position without allegiance to any individual club.
+    </p>
+
+    <h2>From Hollywood To The Commissioner's Office</h2>
+
+    <p>
+      For decades, Jack Black entertained audiences around the
+      world, becoming one of Hollywood's most recognizable
+      personalities.
+    </p>
+
+    <p>
+      But following his recent retirement from the film industry,
+      Mr. Black found himself searching for a new challenge.
+    </p>
+
+    <p>That search ultimately led him to football.</p>
+
+    <p>
+      Long fascinated by the sport, Mr. Black had reportedly
+      developed a growing interest in the Lonestar Premier League,
+      particularly its ambitious vision, passionate club ownership,
+      and rapidly emerging rivalries.
+    </p>
+
+    <p>
+      When Diego began considering his departure from the
+      Commissioner's office, Mr. Black emerged as an intriguing
+      candidate.
+    </p>
+
+    <p>
+      For the former Hollywood star, the opportunity represented
+      something entirely different from his previous career.
+    </p>
+
+    <p>
+      A chance to step away from the cameras and help shape
+      a growing football competition.
+    </p>
+
+    <p>
+      For Diego, the appeal was equally clear. Mr. Black offered
+      a recognizable public presence, a fresh perspective, and
+      most importantly, independence from the league's
+      competing clubs.
+    </p>
+
+    <p>
+      What began as an unlikely conversation eventually
+      developed into a serious opportunity.
+    </p>
+
+    <p>
+      And when the position became available, Mr. Black was
+      ready to answer the call.
+    </p>
+
+    <p>Hollywood had already witnessed his rise.</p>
+
+    <p>
+      <strong>
+        Now, the Lonestar Premier League would become
+        his next stage.
+      </strong>
+    </p>
+
+    <figure class="article-photo">
+      <img
+        src="jack-black-3.JPG"
+        loading="lazy"
+        alt="Portrait of Jack Black">
+      <figcaption>
+        Jack Black begins a new chapter in Lonestar Premier League lore.
+      </figcaption>
+    </figure>
+
+    <h2>Enter Jack Black</h2>
+
+    <p>
+      The Lonestar Premier League now belongs to a new
+      administration.
+    </p>
+
+    <p>
+      Mr. Black inherits a league that is rapidly developing
+      an identity of its own, complete with clubs, rivalries,
+      controversy, a new website, and the first pieces of
+      league history already being written.
+    </p>
+
+    <p>
+      His appointment also marks a significant change in
+      how the competition will be governed.
+    </p>
+
+    <p>
+      For the first time, the Commissioner's office will
+      operate independently of any club ownership.
+    </p>
+
+    <p>
+      While Mr. Black's entertainment background may be
+      unconventional for a football executive, league leadership
+      believes his personality, enthusiasm, and fresh perspective
+      could help bring greater attention to the growing competition.
+    </p>
+
+    <p>But celebrity alone will not define his tenure.</p>
+
+    <p>His job is simple in theory.</p>
+
+    <p><strong>Protect the interests of the league.</strong></p>
+
+    <p>
+      With the competition continuing to expand its identity
+      and rivalries growing increasingly intense, Mr. Black
+      will be expected to maintain order while ensuring
+      every club competes on equal terms.
+    </p>
+
+    <p>
+      And if recent controversies are any indication, the
+      new Commissioner may find that managing football
+      personalities is every bit as unpredictable as Hollywood.
+    </p>
+
+    <p>
+      Diego's job, meanwhile, is about to become very different.
+    </p>
+
+    <figure class="article-photo">
+      <img
+        src="jack-black-2.png"
+        loading="lazy"
+        alt="Jack Black at the Lonestar Premier League press conference">
+      <figcaption>
+        The new Commissioner faces the media.
+      </figcaption>
+    </figure>
+
+    <h2>One Final Message From Diego</h2>
+
+    <p>
+      Before departing, WCCC Media thanked the former
+      Commissioner for his service and assured him that
+      <strong>
+        the entire Lonestar Premier League would miss
+        his leadership.
+      </strong>
+    </p>
+
+    <p>
+      His final message made clear that while his time
+      governing the league is over, he is not going anywhere.
+    </p>
+
+    <blockquote>
+      “I'm proud of what we built during my time as Commissioner,
+      and I have tremendous confidence in the leadership that follows.
+      <br><br>
+      Now, I get to experience this league from a different seat.”
+    </blockquote>
+
+    <p>
+      And then came perhaps the most important line of all.
+    </p>
+
+    <blockquote>
+      “The Commissioner's office will protect the interests
+      of the league. I'll be trying to win it.”
+    </blockquote>
+
+    <p>The Diego administration is over.</p>
+
+    <p>
+      The Leon Valley era of his career begins in full.
+    </p>
+
+    <p>
+      And for the first time, the Lonestar Premier League
+      has an independent Commissioner.
+    </p>
+
+    <p>
+      From Hollywood's bright lights to the unpredictable
+      world of football, Mr. Black has found himself an
+      entirely new stage.
+    </p>
+
+    <p>
+      Only time will tell what his leadership brings
+      to the competition.
+    </p>
+
+    <p>But one thing is certain.</p>
+
+    <p>
+      <strong>
+        The Lonestar Premier League has entered a new era.
+      </strong>
+    </p>
+
+    <p class="final-line">
+      Welcome to the Jack Black era.
+    </p>
+
+    <div class="article-end">
+      <a class="back-button" href="league.html">
+        ← Back To The League
+      </a>
+    </div>
+
+  </article>
+
+</main>
+
+<footer>
+  Lonestar Premier League · Established 2026
+</footer>
+
+</body>
+</html>
