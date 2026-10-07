@@ -1,41 +1,30 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Lonestar Premier League</title>
+<meta name="theme-color" content="#080b0d">
+<meta name="description" content="The official home of the Lonestar Premier League. Clubs, rivalries, league news, standings and cup competitions.">
+<title>Lonestar Premier League | Official Home</title>
 
 <style>
-
 :root{
-  --black:#030506;
-  --black2:#080b0d;
-  --panel:#0d1113;
-  --white:#f7f7f3;
+  --black:#080b0d;
+  --dark:#111719;
+  --panel:#171e21;
+  --white:#f8f7f2;
   --paper:#f2f0e9;
-  --gray:#979b9d;
-  --line:#292e31;
-
+  --muted:#a0a5a7;
   --teal:#08b9c4;
   --pink:#f6247d;
   --orange:#ff9418;
   --gold:#d8ae55;
-
+  --line:#303639;
   --max:1180px;
 }
-
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
   margin:0;
   background:var(--black);
@@ -43,2144 +32,1117 @@ body{
   font-family:Arial,Helvetica,sans-serif;
   overflow-x:hidden;
 }
-
-img{
-  display:block;
-  max-width:100%;
-}
-
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-
-/* =========================================================
-   TOP STRIPE
-========================================================= */
-
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
 .fiesta-line{
   height:7px;
-
-  background:linear-gradient(
-    90deg,
+  background:linear-gradient(90deg,
     var(--teal) 0 33.33%,
     var(--pink) 33.33% 66.66%,
-    var(--orange) 66.66%
-  );
+    var(--orange) 66.66%);
 }
-
-
-/* =========================================================
-   HEADER
-========================================================= */
-
-header{
-  position:relative;
-  z-index:50;
-
-  background:#fff;
-  color:#111;
-
-  border-bottom:1px solid #ddd;
-}
-
-.header-inner{
-  max-width:1220px;
-  min-height:90px;
-
+.container{
+  max-width:var(--max);
   margin:auto;
-  padding:14px 28px;
-
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:30px;
+  padding:0 25px;
 }
-
-.brand{
-  display:flex;
-  align-items:center;
-  gap:14px;
-}
-
-.brand img{
-  width:64px;
-  height:64px;
-  object-fit:contain;
-}
-
-.brand-copy small{
-  display:block;
-
-  margin-bottom:4px;
-
-  color:var(--teal);
-
-  font-size:9px;
+.eyebrow{
+  font-size:10px;
   font-weight:900;
   letter-spacing:2.5px;
   text-transform:uppercase;
-}
-
-.brand-copy strong{
-  display:block;
-
-  font-size:16px;
-  line-height:1.05;
-  text-transform:uppercase;
-}
-
-nav{
-  display:flex;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:7px;
-}
-
-nav a{
-  padding:10px 12px;
-
-  font-size:9px;
-  font-weight:900;
-  letter-spacing:1.4px;
-  text-transform:uppercase;
-
-  transition:.2s;
-}
-
-nav a:hover{
-  color:var(--pink);
-}
-
-.nav-cup{
-  background:#111;
-  color:#fff;
-}
-
-.nav-cup:hover{
-  background:var(--teal);
-  color:#fff;
-}
-
-
-/* =========================================================
-   HERO
-========================================================= */
-
-.hero{
-  position:relative;
-
-  overflow:hidden;
-
-  background:
-    radial-gradient(
-      circle at 82% 30%,
-      rgba(8,185,196,.11),
-      transparent 28%
-    ),
-    radial-gradient(
-      circle at 85% 75%,
-      rgba(246,36,125,.08),
-      transparent 30%
-    ),
-    #030506;
-}
-
-.hero::after{
-  content:"";
-
-  position:absolute;
-  right:-300px;
-  bottom:-350px;
-
-  width:900px;
-  height:900px;
-
-  border:1px solid rgba(255,255,255,.035);
-  border-radius:50%;
-
-  pointer-events:none;
-}
-
-.hero-inner{
-  position:relative;
-  z-index:2;
-
-  max-width:1220px;
-
-  margin:auto;
-  padding:65px 28px 85px;
-
-  display:grid;
-  grid-template-columns:.95fr 1.05fr;
-  gap:70px;
-
-  align-items:center;
-}
-
-
-/* HERO ART */
-
-.hero-art{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.hero-art img{
-  width:100%;
-  max-width:590px;
-  max-height:720px;
-
-  object-fit:contain;
-
-  box-shadow:0 25px 80px rgba(0,0,0,.25);
-}
-
-
-/* HERO COPY */
-
-.eyebrow{
-  color:var(--orange);
-
-  font-size:9px;
-  font-weight:900;
-  letter-spacing:4px;
-  text-transform:uppercase;
-}
-
-.hero-copy h1{
-  margin-top:20px;
-
-  font-size:clamp(70px,9vw,118px);
-  line-height:.75;
-  letter-spacing:-7px;
-
-  text-transform:uppercase;
-}
-
-.hero-copy h1 span{
-  display:block;
   color:var(--teal);
 }
-
-.hero-copy p{
-  max-width:620px;
-
-  margin-top:32px;
-
-  color:#a1a5a6;
-
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:18px;
-  line-height:1.75;
-}
-
-.actions{
+.section-heading{
   display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-
-  margin-top:31px;
+  align-items:end;
+  justify-content:space-between;
+  gap:20px;
+  margin-bottom:30px;
 }
-
-.button{
-  display:inline-block;
-
-  padding:15px 19px;
-
-  border:1px solid #3c4245;
-
-  font-size:9px;
-  font-weight:900;
-  letter-spacing:1.6px;
+.section-heading h2{
+  margin:10px 0 0;
+  font-size:clamp(35px,5vw,60px);
+  line-height:.95;
+  letter-spacing:-2px;
   text-transform:uppercase;
-
+}
+.section-link{
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.section-link:hover{color:var(--teal)}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:15px 22px;
+  border:1px solid var(--line);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
   transition:.2s;
 }
-
-.button.primary{
+.btn:hover{
+  background:var(--teal);
+  border-color:var(--teal);
+  color:#080b0d;
+}
+.btn-primary{
+  background:var(--teal);
+  border-color:var(--teal);
+  color:#061012;
+}
+.btn-primary:hover{
   background:#fff;
   border-color:#fff;
-  color:#111;
 }
-
-.button.gold{
+.btn-gold{
   border-color:var(--gold);
   color:var(--gold);
 }
 
-.button:hover{
-  background:var(--teal);
-  border-color:var(--teal);
-  color:#fff;
-}
-
-
-/* =========================================================
-   SECTION COMMON
-========================================================= */
-
-.section-label{
-  color:var(--teal);
-
-  font-size:9px;
-  font-weight:900;
-  letter-spacing:3px;
-  text-transform:uppercase;
-}
-
-.section-title{
-  margin-top:10px;
-
-  font-size:clamp(50px,7vw,80px);
-  line-height:.84;
-  letter-spacing:-4px;
-
-  text-transform:uppercase;
-}
-
-
-/* =========================================================
-   LIVE CUP
-========================================================= */
-
-.live-cup{
-  padding:100px 0;
-
-  background:#090c0e;
-}
-
-.live-cup-inner{
-  max-width:1180px;
-
-  margin:auto;
-  padding:0 28px;
-}
-
-.live-cup-header{
-  display:flex;
-  align-items:flex-end;
-  justify-content:space-between;
-  gap:30px;
-
-  margin-bottom:35px;
-}
-
-.live-label{
-  display:inline-flex;
-  align-items:center;
-  gap:9px;
-
-  margin-bottom:12px;
-
-  color:#fff;
-
-  font-size:8px;
-  font-weight:900;
-  letter-spacing:2.2px;
-  text-transform:uppercase;
-}
-
-.live-dot{
-  width:8px;
-  height:8px;
-
-  border-radius:50%;
-
-  background:#ff3e47;
-
-  box-shadow:0 0 13px rgba(255,62,71,.75);
-}
-
-.live-cup-layout{
-  display:grid;
-  grid-template-columns:1.15fr .85fr;
-  gap:45px;
-
-  align-items:center;
-}
-
-.shootout-art{
-  overflow:hidden;
-
-  background:#020303;
-  border:1px solid #303538;
-}
-
-.shootout-art img{
-  width:100%;
-  height:auto;
-
-  object-fit:contain;
-}
-
-.live-copy h3{
-  font-size:clamp(46px,6vw,72px);
-  line-height:.86;
-  letter-spacing:-4px;
-
-  text-transform:uppercase;
-}
-
-.live-copy p{
-  margin-top:22px;
-
-  color:#989c9e;
-
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:17px;
-  line-height:1.7;
-}
-
-.live-copy strong{
-  color:#fff;
-}
-
-
-/* =========================================================
-   NEWS
-========================================================= */
-
-.news{
-  padding:100px 0;
-
-  background:var(--paper);
+/* HEADER */
+header{
+  background:#fff;
   color:#111;
+  border-bottom:1px solid #ddd;
 }
-
-.news-inner{
-  max-width:1180px;
-
+.header-inner{
+  max-width:1230px;
   margin:auto;
-  padding:0 28px;
-}
-
-.news-heading{
+  min-height:92px;
+  padding:14px 25px;
   display:flex;
-  align-items:flex-end;
+  align-items:center;
   justify-content:space-between;
   gap:25px;
-
-  margin-bottom:30px;
-  padding-bottom:18px;
-
-  border-bottom:5px solid #111;
 }
-
-.news-heading small{
-  color:var(--pink);
-
+.brand{
+  display:flex;
+  align-items:center;
+  gap:13px;
+}
+.brand img{
+  width:62px;
+  height:62px;
+  object-fit:contain;
+}
+.brand small{
+  display:block;
+  margin-bottom:4px;
+  color:#008e99;
   font-size:9px;
   font-weight:900;
-  letter-spacing:3px;
-  text-transform:uppercase;
-}
-
-.news-heading h2{
-  margin-top:6px;
-
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:clamp(44px,6vw,68px);
-  line-height:.9;
-  letter-spacing:-3px;
-}
-
-.view-all{
-  color:#777;
-
-  font-size:8px;
-  font-weight:900;
   letter-spacing:2px;
-  text-transform:uppercase;
 }
-
-
-/* LEAD STORY */
-
-.lead-story{
-  display:grid;
-  grid-template-columns:1.08fr .92fr;
-
-  background:#fff;
-  border:1px solid #d8d6cf;
-
-  overflow:hidden;
-}
-
-.lead-story-image{
-  min-height:500px;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  background:#080a0b;
-}
-
-.lead-story-image img{
-  width:100%;
-  height:100%;
-
-  object-fit:contain;
-}
-
-.lead-story-copy{
-  padding:46px;
-
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
-
-.story-category{
-  color:var(--teal);
-
-  font-size:8px;
-  font-weight:900;
-  letter-spacing:2.2px;
-  text-transform:uppercase;
-}
-
-.lead-story-copy h3{
-  margin-top:10px;
-
-  font-size:clamp(38px,5vw,56px);
-  line-height:.9;
-  letter-spacing:-2.8px;
-
-  text-transform:uppercase;
-}
-
-.lead-story-copy p{
-  margin-top:18px;
-
-  color:#686868;
-
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:16px;
-  line-height:1.65;
-}
-
-.read-more{
+.brand strong{
   display:block;
-
-  margin-top:22px;
-
-  color:var(--pink);
-
-  font-size:8px;
-  font-weight:900;
-  letter-spacing:1.8px;
-  text-transform:uppercase;
-}
-
-
-/* NEWS CARDS */
-
-.story-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
-
-  margin-top:20px;
-}
-
-.story-card{
-  background:#fff;
-
-  border:1px solid #d8d6cf;
-
-  overflow:hidden;
-
-  transition:.2s;
-}
-
-.story-card:hover,
-.lead-story:hover{
-  transform:translateY(-3px);
-}
-
-.story-photo{
-  height:360px;
-
-  overflow:hidden;
-
-  background:#111;
-}
-
-.story-photo img{
-  width:100%;
-  height:100%;
-
-  object-fit:cover;
-  object-position:center top;
-}
-
-.story-card-copy{
-  padding:27px;
-}
-
-.story-card-copy h3{
-  margin-top:8px;
-
-  font-size:29px;
-  line-height:.95;
-  letter-spacing:-1.2px;
-
-  text-transform:uppercase;
-}
-
-.story-card-copy p{
-  margin-top:13px;
-
-  color:#696969;
-
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:14px;
-  line-height:1.55;
-}
-
-
-/* =========================================================
-   LEAGUE TABLE FEATURE
-========================================================= */
-
-.table-feature{
-  padding:100px 0;
-
-  background:#050708;
-}
-
-.table-inner{
-  max-width:1180px;
-
-  margin:auto;
-  padding:0 28px;
-
-  display:grid;
-  grid-template-columns:.72fr 1.28fr;
-  gap:55px;
-
-  align-items:center;
-}
-
-.table-copy p{
-  margin-top:22px;
-
-  color:#929698;
-
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:17px;
-  line-height:1.7;
-}
-
-.table-image{
-  padding:10px;
-
-  background:#0b0e10;
-  border:1px solid #292e31;
-}
-
-.table-image img{
-  width:100%;
-  height:auto;
-
-  object-fit:contain;
-}
-
-
-/* =========================================================
-   CLUBS
-========================================================= */
-
-.clubs{
-  padding:100px 0;
-
-  background:#0b0e10;
-}
-
-.clubs-inner{
-  max-width:1180px;
-
-  margin:auto;
-  padding:0 28px;
-}
-
-.clubs-intro{
-  max-width:750px;
-}
-
-.clubs-intro .section-label{
-  color:var(--orange);
-}
-
-.clubs-intro p{
-  max-width:670px;
-
-  margin-top:22px;
-
-  color:#939799;
-
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:17px;
-  line-height:1.7;
-}
-
-.club-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:15px;
-
-  margin-top:45px;
-}
-
-.club-card{
-  min-width:0;
-
-  background:#050708;
-  border:1px solid #292e31;
-
-  overflow:hidden;
-
-  transition:.2s;
-}
-
-.club-card:hover{
-  transform:translateY(-5px);
-  border-color:#555;
-}
-
-.club-crest{
-  height:310px;
-
-  padding:28px;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(255,255,255,.06),
-      transparent 62%
-    );
-}
-
-.club-crest img{
-  width:100%;
-  height:100%;
-
-  object-fit:contain;
-}
-
-.club-info{
-  min-height:100px;
-
-  padding:19px;
-
-  border-top:1px solid #292e31;
-}
-
-.club-info small{
-  color:#666;
-
-  font-size:7px;
-  font-weight:900;
-  letter-spacing:1.6px;
-  text-transform:uppercase;
-}
-
-.club-info strong{
-  display:block;
-
-  margin-top:6px;
-
   font-size:17px;
   line-height:1.05;
   text-transform:uppercase;
 }
-
-.club-link{
-  display:block;
-
-  margin-top:8px;
-
-  color:var(--teal);
-
-  font-size:7px;
+nav{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:5px;
+}
+nav a{
+  padding:12px;
+  font-size:10px;
   font-weight:900;
-  letter-spacing:1.4px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+nav a:hover{color:#008e99}
+nav .nav-cup{
+  background:#111;
+  color:#fff;
+}
+nav .nav-cup:hover{
+  background:#008e99;
+  color:#fff;
+}
+
+/* EDITORIAL MASTHEAD */
+.masthead{
+  border-bottom:1px solid var(--line);
+  background:#0c1012;
+}
+.masthead-inner{
+  max-width:var(--max);
+  margin:auto;
+  padding:22px 25px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+.masthead-title{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(25px,4vw,43px);
+  font-weight:900;
+  letter-spacing:-1.5px;
+}
+.masthead-title span{color:var(--teal)}
+.masthead-right{
+  color:#91989a;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  text-align:right;
+}
+
+/* BREAKING NEWS */
+.breaking{
+  padding:24px 0 85px;
+  background:
+    radial-gradient(circle at 85% 25%,rgba(8,185,196,.10),transparent 38%),
+    #080b0d;
+}
+.breaking-banner{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin-bottom:25px;
+  padding-bottom:16px;
+  border-bottom:1px solid var(--line);
+}
+.breaking-tag{
+  background:var(--pink);
+  padding:9px 13px;
+  color:#fff;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+.breaking-banner p{
+  margin:0;
+  color:#b7bcbe;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+.breaking-layout{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:38px;
+  align-items:center;
+}
+.breaking-image{
+  display:block;
+  background:#101416;
+  border:1px solid var(--line);
+  overflow:hidden;
+}
+.breaking-image img{
+  width:100%;
+  height:auto;
+  max-height:680px;
+  object-fit:contain;
+  transition:transform .3s;
+}
+.breaking-image:hover img{transform:scale(1.02)}
+.breaking-copy .eyebrow{color:var(--orange)}
+.breaking-copy h1{
+  margin:15px 0 23px;
+  font-size:clamp(45px,5.8vw,83px);
+  line-height:.89;
+  letter-spacing:-3.5px;
+  text-transform:uppercase;
+}
+.breaking-copy h1 span{color:var(--teal)}
+.breaking-copy .summary{
+  color:#c0c5c6;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:19px;
+  line-height:1.65;
+}
+.breaking-copy .quote{
+  margin:25px 0;
+  padding-left:18px;
+  border-left:3px solid var(--orange);
+  color:#fff;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:19px;
+  font-style:italic;
+  line-height:1.5;
+}
+.breaking-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:30px;
+}
+
+/* NEWS */
+.news-section{
+  padding:90px 0 100px;
+  background:var(--paper);
+  color:#101314;
+}
+.news-section .eyebrow{color:#008e99}
+.news-section .section-link{color:#666}
+.news-section .section-link:hover{color:#008e99}
+.news-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:20px;
+}
+.news-card{
+  min-width:0;
+  background:#fff;
+  border:1px solid #d8d6d0;
+  transition:transform .2s,box-shadow .2s;
+}
+.news-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 12px 25px rgba(0,0,0,.08);
+}
+.news-image{
+  height:245px;
+  background:#101416;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+.news-image img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+.news-copy{padding:25px}
+.news-category{
+  color:#008e99;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+}
+.news-copy h3{
+  margin:12px 0;
+  font-size:clamp(22px,2.5vw,31px);
+  line-height:1.04;
+  letter-spacing:-1px;
+  text-transform:uppercase;
+}
+.news-copy p{
+  color:#666;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:15px;
+  line-height:1.65;
+}
+.read-more{
+  display:inline-block;
+  margin-top:15px;
+  color:#008e99;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:1.3px;
   text-transform:uppercase;
 }
 
-
-/* BUILD CLUB */
-
-.build-club{
-  margin-top:22px;
-  padding:37px;
-
+/* LEAGUE TABLE */
+.standings{
+  padding:95px 0;
+  background:#0b1012;
+}
+.standings-layout{
   display:grid;
-  grid-template-columns:1fr auto;
-  gap:30px;
-
+  grid-template-columns:.72fr 1.28fr;
+  gap:50px;
   align-items:center;
-
-  border:1px dashed #353a3d;
+}
+.standings-copy h2{
+  margin:12px 0 22px;
+  font-size:clamp(43px,5.5vw,75px);
+  line-height:.9;
+  letter-spacing:-3px;
+  text-transform:uppercase;
+}
+.standings-copy p{
+  color:#a4aaac;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:17px;
+  line-height:1.75;
+}
+.standings-copy .btn{margin-top:25px}
+.standings-image{
+  background:#080b0d;
+  padding:12px;
+  border:1px solid var(--line);
+}
+.standings-image img{
+  width:100%;
+  height:auto;
+  object-fit:contain;
 }
 
-.build-club small{
-  color:var(--pink);
-
-  font-size:8px;
+/* CUP HUB */
+.cup-section{
+  padding:95px 0;
+  background:#111719;
+}
+.cup-layout{
+  display:grid;
+  grid-template-columns:1.08fr .92fr;
+  gap:45px;
+  align-items:center;
+}
+.cup-image{
+  display:block;
+  border:1px solid var(--line);
+  background:#050708;
+}
+.cup-image img{
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
+.live-indicator{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  color:#fff;
+  font-size:10px;
   font-weight:900;
   letter-spacing:2px;
   text-transform:uppercase;
 }
-
-.build-club h3{
-  margin-top:8px;
-
-  font-size:29px;
+.live-indicator::before{
+  content:"";
+  width:9px;
+  height:9px;
+  background:#ff454d;
+  border-radius:50%;
+  box-shadow:0 0 12px #ff454d;
+}
+.cup-copy h2{
+  margin:16px 0 20px;
+  font-size:clamp(43px,5.5vw,72px);
+  line-height:.9;
+  letter-spacing:-3px;
   text-transform:uppercase;
 }
-
-.build-club p{
-  max-width:670px;
-
-  margin-top:10px;
-
-  color:#7f8385;
-
+.cup-copy p{
+  color:#aeb4b5;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:17px;
+  line-height:1.7;
+}
+.cup-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:27px;
+}
+.cup-teaser{
+  position:relative;
+  display:block;
+  margin-top:38px;
+  min-height:270px;
+  overflow:hidden;
+  background:#050708;
+  border:1px solid var(--line);
+}
+.cup-teaser img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+.cup-teaser::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(0,0,0,.93),rgba(0,0,0,.15));
+}
+.cup-teaser-copy{
+  position:relative;
+  z-index:1;
+  max-width:460px;
+  padding:50px 35px;
+}
+.cup-teaser-copy h3{
+  margin:10px 0;
+  font-size:clamp(33px,5vw,54px);
+  line-height:.95;
+  text-transform:uppercase;
+}
+.cup-teaser-copy p{
+  color:#d0d3d4;
   font-family:Georgia,"Times New Roman",serif;
   line-height:1.6;
 }
 
+/* CLUBS */
+.clubs{
+  padding:95px 0;
+  background:#0b0e10;
+}
+.clubs-intro{
+  max-width:730px;
+  margin-bottom:40px;
+}
+.clubs-intro p{
+  color:#a0a5a7;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:17px;
+  line-height:1.7;
+}
+.club-grid{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:14px;
+}
+.club-card{
+  min-width:0;
+  background:#050708;
+  border:1px solid #303639;
+  overflow:hidden;
+  transition:transform .2s,border-color .2s;
+}
+a.club-card:hover{
+  transform:translateY(-5px);
+  border-color:var(--teal);
+}
+.club-crest{
+  height:230px;
+  padding:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:radial-gradient(circle,rgba(255,255,255,.065),transparent 65%);
+}
+.club-crest img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+.club-info{
+  min-height:110px;
+  padding:17px;
+  border-top:1px solid var(--line);
+}
+.club-info small{
+  display:block;
+  color:#82898b;
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+.club-info strong{
+  display:block;
+  margin-top:8px;
+  font-size:16px;
+  line-height:1.15;
+  text-transform:uppercase;
+}
+.club-link{
+  display:block;
+  margin-top:10px;
+  color:var(--teal);
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+.club-message{
+  margin-top:30px;
+  padding:30px;
+  border:1px dashed #444a4d;
+}
+.club-message h3{
+  margin:0 0 12px;
+  font-size:26px;
+  text-transform:uppercase;
+}
+.club-message p{
+  max-width:750px;
+  color:#a0a5a7;
+  font-family:Georgia,"Times New Roman",serif;
+  line-height:1.7;
+}
+.club-message .btn{margin-top:12px}
 
-/* =========================================================
-   HEB
-========================================================= */
-
+/* SPONSOR */
 .sponsor{
   background:#fff;
   color:#111;
 }
-
 .sponsor-inner{
-  max-width:1050px;
-
+  max-width:1030px;
   margin:auto;
-  padding:80px 28px;
-
+  padding:75px 25px;
   display:grid;
-  grid-template-columns:340px 1fr;
+  grid-template-columns:300px 1fr;
   gap:65px;
-
   align-items:center;
 }
-
-.sponsor-logo{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
 .sponsor-logo img{
   width:100%;
-  max-width:320px;
-  max-height:240px;
-
+  max-height:260px;
   object-fit:contain;
 }
-
-.sponsor-copy .section-label{
-  color:var(--teal);
-}
-
 .sponsor-copy h2{
-  margin-top:9px;
-
-  font-size:clamp(42px,6vw,65px);
-  line-height:.87;
-  letter-spacing:-3px;
-
+  margin:12px 0;
+  font-size:clamp(36px,5vw,60px);
+  line-height:.95;
+  letter-spacing:-2px;
   text-transform:uppercase;
 }
-
 .sponsor-copy p{
-  margin-top:19px;
-
   color:#666;
-
   font-family:Georgia,"Times New Roman",serif;
   font-size:16px;
   line-height:1.7;
 }
 
-
-/* =========================================================
-   CUP TEASER
-========================================================= */
-
-.future-cup{
-  position:relative;
-
-  min-height:610px;
-
-  display:flex;
-  align-items:flex-end;
-
-  overflow:hidden;
-
-  background:#020303;
-}
-
-.future-cup-bg{
-  position:absolute;
-  inset:0;
-}
-
-.future-cup-bg img{
-  width:100%;
-  height:100%;
-
-  object-fit:cover;
-  object-position:center;
-}
-
-.future-cup-bg::after{
-  content:"";
-
-  position:absolute;
-  inset:0;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0,0,0,.94) 0%,
-      rgba(0,0,0,.68) 45%,
-      rgba(0,0,0,.18) 100%
-    ),
-    linear-gradient(
-      0deg,
-      rgba(0,0,0,.85),
-      transparent 55%
-    );
-}
-
-.future-cup-copy{
-  position:relative;
-  z-index:2;
-
-  width:100%;
-  max-width:1180px;
-
-  margin:auto;
-  padding:80px 28px;
-}
-
-.future-cup-copy .section-label{
-  color:var(--gold);
-}
-
-.future-cup-copy h2{
-  max-width:650px;
-
-  margin-top:10px;
-
-  font-size:clamp(50px,8vw,86px);
-  line-height:.83;
-  letter-spacing:-5px;
-
-  text-transform:uppercase;
-}
-
-.future-cup-copy p{
-  max-width:520px;
-
-  margin-top:20px;
-
-  color:#bbb;
-
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:17px;
-  line-height:1.65;
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
+/* FOOTER */
 footer{
-  background:#020303;
-
-  border-top:1px solid #1d2022;
+  background:#030506;
+  border-top:1px solid var(--line);
 }
-
 .footer-inner{
-  max-width:1180px;
-
+  max-width:var(--max);
   margin:auto;
-  padding:45px 28px;
-
+  padding:42px 25px;
   display:flex;
-  align-items:flex-end;
+  align-items:center;
   justify-content:space-between;
-  gap:30px;
+  gap:25px;
 }
-
 .footer-brand{
   display:flex;
   align-items:center;
   gap:15px;
 }
-
 .footer-brand img{
-  width:58px;
-  height:58px;
-
+  width:60px;
+  height:60px;
   object-fit:contain;
 }
-
 .footer-brand strong{
-  display:block;
-
-  font-size:16px;
+  font-size:17px;
   text-transform:uppercase;
 }
-
-.footer-brand span{
-  display:block;
-
-  margin-top:5px;
-
-  color:var(--teal);
-
-  font-size:8px;
-  font-weight:900;
-  letter-spacing:2px;
-  text-transform:uppercase;
-}
-
 .footer-right{
-  color:#666;
-
+  color:#858b8d;
+  font-size:10px;
+  line-height:1.8;
+  letter-spacing:1px;
   text-align:right;
-
-  font-size:8px;
-  font-weight:900;
-  letter-spacing:1.5px;
-  line-height:1.7;
   text-transform:uppercase;
 }
 
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media(max-width:950px){
-
-  .hero-inner,
-  .live-cup-layout,
-  .table-inner,
+/* TABLET */
+@media(max-width:1000px){
+  .breaking-layout,
+  .standings-layout,
+  .cup-layout,
   .sponsor-inner{
     grid-template-columns:1fr;
   }
-
-  .hero-art{
-    order:-1;
-  }
-
-  .hero-art img{
-    max-width:650px;
-  }
-
-  .club-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
+  .breaking-image img{max-height:620px}
+  .news-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .club-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .sponsor-logo img{max-width:280px}
 }
 
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
+/* MOBILE */
 @media(max-width:700px){
-
+  .container{padding:0 19px}
   .header-inner{
-    display:block;
-    padding:14px 20px;
+    flex-direction:column;
+    align-items:flex-start;
+    padding:15px 19px;
   }
-
-  .brand img{
-    width:54px;
-    height:54px;
+  .brand img{width:52px;height:52px}
+  nav{gap:2px}
+  nav a{padding:9px;font-size:9px}
+  .masthead-inner{
+    padding:18px 19px;
+    align-items:flex-start;
+    flex-direction:column;
+    gap:8px;
   }
-
-  nav{
-    margin-top:16px;
+  .masthead-right{text-align:left}
+  .breaking{padding:18px 0 65px}
+  .breaking-layout{gap:28px}
+  .breaking-banner{align-items:flex-start}
+  .breaking-banner p{line-height:1.5}
+  .breaking-copy h1{
+    font-size:clamp(43px,10vw,68px);
+    letter-spacing:-2px;
   }
-
-
-  /* HERO */
-
-  .hero-inner{
-    display:block;
-
-    padding:0 0 65px;
-  }
-
-  .hero-art{
-    width:100%;
-
-    padding:0;
-
-    display:block;
-  }
-
-  .hero-art img{
-    width:100%;
-    max-width:none;
-    max-height:none;
-
-    margin:0;
-
-    object-fit:contain;
-
-    box-shadow:none;
-  }
-
-  .hero-copy{
-    padding:48px 20px 0;
-  }
-
-  .hero-copy h1{
-    margin-top:18px;
-
-    font-size:clamp(61px,17vw,84px);
-    line-height:.77;
-    letter-spacing:-5px;
-  }
-
-  .hero-copy p{
-    margin-top:28px;
-
-    font-size:16px;
-    line-height:1.75;
-  }
-
-  .actions{
-    align-items:stretch;
-  }
-
-  .button{
-    text-align:center;
-  }
-
-
-  /* LIVE CUP */
-
-  .live-cup{
+  .breaking-copy .summary{font-size:17px}
+  .breaking-image img{max-height:none}
+  .news-section,.standings,.cup-section,.clubs{
     padding:65px 0;
   }
-
-  .live-cup-inner{
-    padding:0 20px;
-  }
-
-  .live-cup-header{
-    display:block;
-  }
-
-  .live-cup-layout{
-    gap:34px;
-  }
-
-  .live-copy h3{
-    font-size:48px;
-    letter-spacing:-3px;
-  }
-
-
-  /* NEWS */
-
-  .news{
-    padding:65px 0;
-  }
-
-  .news-inner{
-    padding:0 20px;
-  }
-
-  .news-heading{
-    display:block;
-  }
-
-  .view-all{
-    display:block;
-    margin-top:14px;
-  }
-
-  .lead-story{
-    grid-template-columns:1fr;
-  }
-
-  .lead-story-image{
-    min-height:0;
-  }
-
-  .lead-story-image img{
-    width:100%;
+  .section-heading{align-items:flex-start;flex-direction:column}
+  .news-grid{grid-template-columns:1fr}
+  .news-image{height:auto;min-height:200px}
+  .news-image img{
     height:auto;
-
+    max-height:420px;
     object-fit:contain;
   }
-
-  .lead-story-copy{
-    padding:28px 23px;
+  .standings-layout,.cup-layout{gap:30px}
+  .standings-copy h2,.cup-copy h2{
+    font-size:49px;
+    letter-spacing:-2px;
   }
-
-  .story-grid{
-    grid-template-columns:1fr;
-  }
-
-  .story-photo{
-    height:auto;
-  }
-
-  .story-photo img{
-    width:100%;
-    height:auto;
-
-    object-fit:contain;
-    object-position:center;
-  }
-
-
-  /* TABLE */
-
-  .table-feature{
-    padding:70px 0;
-  }
-
-  .table-inner{
-    padding:0 20px;
-    gap:35px;
-  }
-
-  .table-image{
-    padding:5px;
-  }
-
-
-  /* CLUBS */
-
-  .clubs{
-    padding:70px 0;
-  }
-
-  .clubs-inner{
-    padding:0 20px;
-  }
-
-  .section-title{
-    font-size:52px;
-    letter-spacing:-3px;
-  }
-
-  .club-grid{
-    grid-template-columns:1fr 1fr;
-    gap:10px;
-  }
-
-  .club-crest{
-    height:220px;
-    padding:17px;
-  }
-
-  .club-info{
-    min-height:110px;
-    padding:15px;
-  }
-
-  .club-info strong{
-    font-size:15px;
-  }
-
-  .build-club{
-    grid-template-columns:1fr;
-
-    padding:27px 22px;
-  }
-
-
-  /* SPONSOR */
-
+  .cup-teaser{min-height:330px}
+  .cup-teaser-copy{padding:40px 25px}
+  .club-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .club-crest{height:210px;padding:12px}
+  .club-info{min-height:110px;padding:13px}
+  .club-info strong{font-size:14px}
   .sponsor-inner{
     padding:60px 20px;
-    gap:32px;
-
+    gap:30px;
     text-align:center;
   }
-
-  .sponsor-logo img{
-    max-width:260px;
-  }
-
-
-  /* FUTURE CUP */
-
-  .future-cup{
-    min-height:590px;
-  }
-
-  .future-cup-bg img{
-    object-position:center;
-  }
-
-  .future-cup-bg::after{
-    background:
-      linear-gradient(
-        0deg,
-        rgba(0,0,0,.97) 0%,
-        rgba(0,0,0,.75) 42%,
-        rgba(0,0,0,.15) 100%
-      );
-  }
-
-  .future-cup-copy{
-    padding:55px 20px;
-  }
-
-  .future-cup-copy h2{
-    font-size:54px;
-    letter-spacing:-3px;
-  }
-
-
-  /* FOOTER */
-
+  .sponsor-logo{display:flex;justify-content:center}
   .footer-inner{
-    display:block;
-
-    padding:40px 20px;
+    align-items:flex-start;
+    flex-direction:column;
+    padding:35px 20px;
   }
-
-  .footer-right{
-    margin-top:24px;
-
-    text-align:left;
-  }
-
+  .footer-right{text-align:left}
 }
-
-
-@media(max-width:430px){
-
-  .club-grid{
-    grid-template-columns:1fr;
-  }
-
-  .club-crest{
-    height:290px;
-  }
-
+@media(max-width:420px){
+  .club-grid{grid-template-columns:1fr}
+  .club-crest{height:270px}
 }
-
 </style>
 </head>
 
-
 <body>
-
-
 <div class="fiesta-line"></div>
 
-
-<!-- =====================================================
-     HEADER
-===================================================== -->
-
+<!-- HEADER -->
 <header>
-
   <div class="header-inner">
-
-    <a
-      class="brand"
-      href="league.html">
-
-      <img
-        src="league logo.jpeg"
-        alt="Lonestar Premier League logo">
-
-      <div class="brand-copy">
-
-        <small>
-          Est. 2026
-        </small>
-
-        <strong>
-          Lonestar<br>
-          Premier League
-        </strong>
-
+    <a class="brand" href="league.html">
+      <img src="league logo.jpeg" alt="Lonestar Premier League logo">
+      <div>
+        <small>EST. 2026</small>
+        <strong>Lonestar<br>Premier League</strong>
       </div>
-
     </a>
 
-
-    <nav>
-
-      <a href="league.html">
-        Home
-      </a>
-
-      <a href="#clubs">
-        Clubs
-      </a>
-
-      <a href="news.html">
-        News
-      </a>
-
-      <a
-        class="nav-cup"
-        href="cup-hub.html">
-        🏆 Cup Hub
-      </a>
-
+    <nav aria-label="Main navigation">
+      <a href="league.html">Home</a>
+      <a href="#clubs">Clubs</a>
+      <a href="news.html">News</a>
+      <a class="nav-cup" href="cup-hub.html">🏆 Cup Hub</a>
     </nav>
-
   </div>
-
 </header>
 
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
-<section class="hero">
-
-  <div class="hero-inner">
-
-
-    <div class="hero-art">
-
-      <img
-        src="league-logo-pallet-2.png"
-        alt="Lonestar Premier League">
-
+<!-- EDITORIAL MASTHEAD -->
+<div class="masthead">
+  <div class="masthead-inner">
+    <div class="masthead-title">THE LONESTAR <span>TIMES.</span></div>
+    <div class="masthead-right">
+      League Newsroom<br>
+      Clubs • Cups • Rivalries • History
     </div>
-
-
-    <div class="hero-copy">
-
-      <div class="eyebrow">
-        Welcome To The League
-      </div>
-
-      <h1>
-        Lonestar
-        <span>Premier League</span>
-      </h1>
-
-      <p>
-        An American fantasy football league with Texas roots —
-        built on competition, rivalries, club identity and the
-        belief that this should probably matter far more than
-        it reasonably should.
-      </p>
-
-
-      <div class="actions">
-
-        <a
-          class="button primary"
-          href="news.html">
-          Read The Lonestar Times →
-        </a>
-
-        <a
-          class="button gold"
-          href="cup-hub.html">
-          🏆 Enter Cup Hub
-        </a>
-
-      </div>
-
-    </div>
-
   </div>
+</div>
 
+<main>
+
+<!-- BREAKING: JACK BLACK -->
+<section class="breaking">
+  <div class="container">
+
+    <div class="breaking-banner">
+      <span class="breaking-tag">Breaking</span>
+      <p>League leadership / A new commissioner takes charge</p>
+    </div>
+
+    <div class="breaking-layout">
+
+      <a class="breaking-image" href="jack-black.html"
+         aria-label="Read Jack Black commissioner announcement">
+        <img
+          src="jack-black-1.png"
+          alt="Jack Black named Lonestar Premier League Commissioner">
+      </a>
+
+      <div class="breaking-copy">
+        <div class="eyebrow">Commissioner's Office • 2026</div>
+
+        <h1>
+          Diego Steps Down.
+          <span>Jack Black Takes Charge.</span>
+        </h1>
+
+        <p class="summary">
+          The Leon Valley chief leaves the Commissioner's office
+          to focus on his club as Jack Black is named the new
+          independent Commissioner of the Lonestar Premier League.
+        </p>
+
+        <p class="quote">
+          “This was always the plan.”
+        </p>
+
+        <p class="summary">
+          Amid scrutiny from Space Cadets, Diego insists the
+          transition was planned and that the league is in
+          the best of hands.
+        </p>
+
+        <div class="breaking-actions">
+          <a class="btn btn-primary" href="jack-black.html">
+            Read Full Story →
+          </a>
+          <a class="btn" href="news.html">
+            More League News
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
 
+<!-- LATEST NEWS: NEWEST TO OLDEST -->
+<section class="news-section" id="news">
+  <div class="container">
 
-<!-- =====================================================
-     LIVE CUP
-===================================================== -->
-
-<section class="live-cup">
-
-  <div class="live-cup-inner">
-
-
-    <div class="live-cup-header">
-
+    <div class="section-heading">
       <div>
-
-        <div class="live-label">
-          <span class="live-dot"></span>
-          Live Cup
-        </div>
-
-        <h2 class="section-title">
-          Five Star Shootout
-        </h2>
-
+        <div class="eyebrow">The Lonestar Times</div>
+        <h2>Latest League News</h2>
       </div>
-
+      <a class="section-link" href="news.html">
+        All Stories →
+      </a>
     </div>
 
-
-    <div class="live-cup-layout">
-
-
-      <a
-        class="shootout-art"
-        href="cup-hub.html">
-
-        <img
-          src="shootout-banner.png"
-          alt="Five Star Shootout Cup">
-
-      </a>
-
-
-      <div class="live-copy">
-
-        <div
-          class="section-label"
-          style="color:var(--gold);">
-          Current Competition
-        </div>
-
-        <h3>
-          The First Cup Is On The Line.
-        </h3>
-
-        <p>
-          <strong>Five weeks. Ten clubs. One cup.</strong>
-          The Five Star Shootout will crown the first cup
-          champion in Lonestar Premier League history.
-        </p>
-
-        <p>
-          Follow the competition, see the trophy, review the
-          rules and keep up with the final stretch inside the
-          league's Cup Hub.
-        </p>
-
-
-        <div class="actions">
-
-          <a
-            class="button gold"
-            href="cup-hub.html">
-            Enter Cup Hub →
-          </a>
-
-          <a
-            class="button"
-            href="shootout.html">
-            Read Official Story
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     LONESTAR TIMES
-===================================================== -->
-
-<section class="news">
-
-  <div class="news-inner">
-
-
-    <div class="news-heading">
-
-      <div>
-
-        <small>
-          League Newsroom
-        </small>
-
-        <h2>
-          The Lonestar Times
-        </h2>
-
-      </div>
-
-
-      <a
-        class="view-all"
-        href="news.html">
-        View All Stories →
-      </a>
-
-    </div>
-
-
-    <!-- NEW ERA -->
-
-    <a
-      class="lead-story"
-      href="new-era.html">
-
-
-      <div class="lead-story-image">
-
-        <img
-          src="league-logo-color-pallet.png"
-          alt="Lonestar Premier League identity">
-
-      </div>
-
-
-      <div class="lead-story-copy">
-
-        <div class="story-category">
-          League Identity
-        </div>
-
-        <h3>
-          A New Era:
-          The Lonestar Premier League
-          Finds Its Identity
-        </h3>
-
-        <p>
-          A league born between friends is beginning to build
-          an identity of its own — with new league branding,
-          a permanent home and an official partnership with H-E-B.
-        </p>
-
-        <span class="read-more">
-          Read The Story →
-        </span>
-
-      </div>
-
-    </a>
-
-
-    <div class="story-grid">
-
-
-      <!-- CHILDREN OF EMENIKE -->
-
-      <a
-        class="story-card"
-        href="pathetic.html">
-
-        <div class="story-photo">
-
-          <img
-            src="brobbey.PNG"
-            alt="Children of Emenike story">
-
-        </div>
-
-
-        <div class="story-card-copy">
-
-          <div class="story-category">
-            Children of Emenike
-          </div>
-
-          <h3>
-            “I Stand By It”
-          </h3>
-
-          <p>
-            A perfect Matchweek 5 was followed by controversy —
-            and Isaiah only doubled down.
-          </p>
-
-          <span class="read-more">
-            Read Story →
-          </span>
-
-        </div>
-
-      </a>
-
+    <div class="news-grid">
 
       <!-- SPACE CADETS -->
-
-      <a
-        class="story-card"
-        href="space-cadets.html">
-
-        <div class="story-photo">
-
-          <img
-            src="dowman.JPG"
-            alt="Space Cadets story">
-
+      <a class="news-card" href="space-cadets.html">
+        <div class="news-image">
+          <img src="dowman.JPG"
+               alt="Space Cadets Max Dowman controversy"
+               loading="lazy">
         </div>
-
-
-        <div class="story-card-copy">
-
-          <div class="story-category">
-            Space Cadets
-          </div>
-
-          <h3>
-            Space Cadets In Revolt
-          </h3>
-
+        <div class="news-copy">
+          <div class="news-category">League Controversy</div>
+          <h3>Space Cadets In Revolt</h3>
           <p>
-            The Dowman release sparks an extraordinary attack
-            on league leadership.
+            The Max Dowman release sparks an extraordinary
+            attack on league leadership.
           </p>
-
-          <span class="read-more">
-            Read Story →
-          </span>
-
+          <span class="read-more">Read Story →</span>
         </div>
-
       </a>
 
+      <!-- CHILDREN OF EMENIKE -->
+      <a class="news-card" href="pathetic.html">
+        <div class="news-image">
+          <img src="brobbey.PNG"
+               alt="Brian Brobbey and Children of Emenike"
+               loading="lazy">
+        </div>
+        <div class="news-copy">
+          <div class="news-category">Matchweek 5</div>
+          <h3>“I Stand By It”</h3>
+          <p>
+            Three matches. Three wins. Brian Brobbey delivers
+            a hat trick as Children of Emenike doubles down.
+          </p>
+          <span class="read-more">Read Story →</span>
+        </div>
+      </a>
+
+      <!-- FIRST CUP -->
+      <a class="news-card" href="shootout.html">
+        <div class="news-image">
+          <img src="shootout.jpg"
+               alt="Five Star Shootout Cup rules"
+               loading="lazy">
+        </div>
+        <div class="news-copy">
+          <div class="news-category">League Cup</div>
+          <h3>The Five Star Shootout Cup</h3>
+          <p>
+            Five gameweeks. One winner. The first piece of
+            silverware in Lonestar Premier League history.
+          </p>
+          <span class="read-more">Read Story →</span>
+        </div>
+      </a>
 
     </div>
-
   </div>
-
 </section>
 
+<!-- LEAGUE STANDINGS -->
+<section class="standings" id="standings">
+  <div class="container">
+    <div class="standings-layout">
 
-<!-- =====================================================
-     LEAGUE TABLE
-===================================================== -->
-
-<section class="table-feature">
-
-  <div class="table-inner">
-
-
-    <div class="table-copy">
-
-      <div class="section-label">
-        League Competition
+      <div class="standings-copy">
+        <div class="eyebrow">The Competition</div>
+        <h2>The Race Is On.</h2>
+        <p>
+          Ten clubs. One table. Every gameweek adds another
+          chapter to the first season of the Lonestar Premier League.
+        </p>
+        <p>
+          From emerging rivalries to the battle at the top,
+          every point matters.
+        </p>
+        <a class="btn" href="news.html">League News →</a>
       </div>
 
-      <h2 class="section-title">
-        The Race Is On.
-      </h2>
-
-      <p>
-        Ten clubs. One table. Every gameweek adds another chapter
-        to the first season of the Lonestar Premier League.
-      </p>
-
-      <div class="actions">
-
-        <a
-          class="button"
-          href="news.html">
-          League News →
-        </a>
-
+      <div class="standings-image">
+        <img src="lonestar-league-table1.png"
+             alt="Lonestar Premier League standings"
+             loading="lazy">
       </div>
 
     </div>
-
-
-    <div class="table-image">
-
-      <img
-        src="lonestar-league-table1.png"
-        alt="Lonestar Premier League table">
-
-    </div>
-
-
   </div>
-
 </section>
 
+<!-- CUP HUB -->
+<section class="cup-section" id="cups">
+  <div class="container">
 
-<!-- =====================================================
-     CLUBS
-===================================================== -->
+    <div class="section-heading">
+      <div>
+        <div class="eyebrow" style="color:var(--gold)">Silverware</div>
+        <h2>The Cup Hub</h2>
+      </div>
+      <a class="section-link" href="cup-hub.html">Enter Hub →</a>
+    </div>
 
-<section
-  class="clubs"
-  id="clubs">
+    <div class="cup-layout">
 
-  <div class="clubs-inner">
+      <a class="cup-image" href="cup-hub.html">
+        <img src="shootout.jpg"
+             alt="Five Star Shootout Cup competition flyer"
+             loading="lazy">
+      </a>
 
+      <div class="cup-copy">
+        <div class="live-indicator">Live Cup</div>
+        <h2>Five Star Shootout Cup</h2>
+
+        <p>
+          The league's inaugural cup competition spans
+          Gameweeks 2–6, rewarding consistent weekly
+          performances with points toward the trophy.
+        </p>
+
+        <p>
+          The winner earns the first cup title in league
+          history, alongside a $25 digital Best Buy gift card.
+        </p>
+
+        <div class="cup-actions">
+          <a class="btn btn-gold" href="cup-hub.html">
+            Explore Cup Hub →
+          </a>
+          <a class="btn" href="shootout.html">
+            Official Article
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- VISUAL TEASER ONLY: NO TROPHY NAME -->
+    <a class="cup-teaser" href="cup-hub.html">
+      <img src="ghost-cup.png"
+           alt="League trophy teaser"
+           loading="lazy">
+      <div class="cup-teaser-copy">
+        <div class="eyebrow" style="color:var(--gold)">
+          The Next Chapter
+        </div>
+        <h3>More Silverware Awaits.</h3>
+        <p>
+          Every trophy has a story. Follow the competitions,
+          announcements and champions inside the Cup Hub.
+        </p>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- CLUBS -->
+<section class="clubs" id="clubs">
+  <div class="container">
+
+    <div class="section-heading">
+      <div>
+        <div class="eyebrow" style="color:var(--orange)">
+          Our Clubs
+        </div>
+        <h2>The Clubs Make The League.</h2>
+      </div>
+    </div>
 
     <div class="clubs-intro">
-
-      <div class="section-label">
-        Our Clubs
-      </div>
-
-      <h2 class="section-title">
-        Give The Club A Name.
-        Give It A Crest.
-      </h2>
-
       <p>
+        Every crest represents a story. Rivalries, transfers,
+        victories and controversies give these clubs their identities.
         The league provides the stage. The clubs give it character.
-        As managers build their identities, their crests become part
-        of the history of the Lonestar Premier League.
       </p>
-
     </div>
-
 
     <div class="club-grid">
 
-
       <!-- WOOBURT CITY -->
-
-      <a
-        class="club-card"
-        href="index.html">
-
+      <a class="club-card" href="index.html">
         <div class="club-crest">
-
-          <img
-            src="cool-cats-black-crest.png"
-            alt="Wooburt City Cool Cats crest">
-
+          <img src="cool-cats-black-crest.png"
+               alt="Wooburt City Cool Cats crest"
+               loading="lazy">
         </div>
-
         <div class="club-info">
-
-          <small>
-            Est. 2026
-          </small>
-
-          <strong>
-            Wooburt City Cool Cats
-          </strong>
-
-          <span class="club-link">
-            Visit Club →
-          </span>
-
+          <small>Est. 2026</small>
+          <strong>Wooburt City Cool Cats</strong>
+          <span class="club-link">Enter Club →</span>
         </div>
-
       </a>
-
 
       <!-- LEON VALLEY -->
-
       <div class="club-card">
-
         <div class="club-crest">
-
-          <img
-            src="leon-valley-crest.jpeg"
-            alt="Leon Valley crest">
-
+          <img src="leon-valley-crest.jpeg"
+               alt="Leon Valley crest"
+               loading="lazy">
         </div>
-
         <div class="club-info">
-
-          <small>
-            Lonestar Premier League
-          </small>
-
-          <strong>
-            Leon Valley
-          </strong>
-
+          <small>Lonestar Premier League</small>
+          <strong>Leon Valley</strong>
         </div>
-
       </div>
-
 
       <!-- CHILDREN OF EMENIKE -->
-
       <div class="club-card">
-
         <div class="club-crest">
-
-          <img
-            src="children.PNG"
-            alt="Children of Emenike crest">
-
+          <img src="children.PNG"
+               alt="Children of Emenike crest"
+               loading="lazy">
         </div>
-
         <div class="club-info">
-
-          <small>
-            Lonestar Premier League
-          </small>
-
-          <strong>
-            Children of Emenike
-          </strong>
-
+          <small>Lonestar Premier League</small>
+          <strong>Children of Emenike</strong>
         </div>
-
       </div>
-
 
       <!-- SPACE CADETS -->
-
       <div class="club-card">
-
         <div class="club-crest">
-
-          <img
-            src="space-cadet-crest.JPEG"
-            alt="Space Cadet Muniacs crest">
-
+          <img src="space-cadet-crest.JPEG"
+               alt="Space Cadets crest"
+               loading="lazy">
         </div>
-
         <div class="club-info">
-
-          <small>
-            Est. 2026
-          </small>
-
-          <strong>
-            Space Cadets
-          </strong>
-
+          <small>Est. 2026</small>
+          <strong>Space Cadets</strong>
         </div>
-
       </div>
-
 
       <!-- RAVENSGATE FC -->
-
-      <a
-        class="club-card"
-        href="https://www.youtube.com/watch?v=ZyhrYis509A&amp;list=RDZyhrYis509A&amp;start_radio=1"
-        target="_blank"
-        rel="noopener noreferrer">
-
+      <a class="club-card"
+         href="https://www.youtube.com/watch?v=ZyhrYis509A&amp;list=RDZyhrYis509A&amp;start_radio=1"
+         target="_blank"
+         rel="noopener noreferrer">
         <div class="club-crest">
-
-          <img
-            src="ravensgate-official.PNG"
-            alt="Ravensgate FC crest">
-
+          <img src="ravensgate-official.PNG"
+               alt="Ravensgate FC official crest"
+               loading="lazy">
         </div>
-
         <div class="club-info">
-
-          <small>
-            Est. 2026
-          </small>
-
-          <strong>
-            Ravensgate FC
-          </strong>
-
-          <span class="club-link">
-            Enter Club →
-          </span>
-
+          <small>Est. 2026</small>
+          <strong>Ravensgate FC</strong>
+          <span class="club-link">Enter Club →</span>
         </div>
-
       </a>
-
 
     </div>
 
-
-    <div class="build-club">
-
-      <div>
-
-        <small>
-          Managers // Build Your Club
-        </small>
-
-        <h3>
-          Your Club Should Have An Identity.
-        </h3>
-
-        <p>
-          Make a crest. Pick your colors. Create something that's
-          yours. A huge upset, a blockbuster trade, a cup victory,
-          a bitter rivalry — eventually that crest becomes attached
-          to moments.
-        </p>
-
-      </div>
-
-
-      <a
-        class="button"
-        href="new-era.html">
-        Read A New Era →
-      </a>
-
+    <div class="club-message">
+      <h3>Build Your Club's Identity.</h3>
+      <p>
+        Make a crest. Pick your colors. Create something that's
+        yours. Every club deserves an identity that grows alongside
+        its history in the Lonestar Premier League.
+      </p>
     </div>
 
   </div>
-
 </section>
 
-
-<!-- =====================================================
-     H-E-B
-===================================================== -->
-
+<!-- H-E-B SPONSOR -->
 <section class="sponsor">
-
   <div class="sponsor-inner">
 
-
     <div class="sponsor-logo">
-
-      <img
-        src="heb-league-sponsor2.png"
-        alt="H-E-B league sponsor">
-
+      <img src="heb-league-sponsor2.png"
+           alt="H-E-B official league sponsor"
+           loading="lazy">
     </div>
-
 
     <div class="sponsor-copy">
-
-      <div class="section-label">
-        Official League Partner
-      </div>
-
-      <h2>
-        Lonestar Premier League × H-E-B
-      </h2>
-
+      <div class="eyebrow">Official League Partner</div>
+      <h2>Lonestar Premier League × H-E-B</h2>
       <p>
         H-E-B joins the Lonestar Premier League as an official
-        league sponsor — a nod to where much of this started
-        without defining where it can go.
+        league sponsor, celebrating the competition's Texas roots
+        while supporting its growing American identity.
       </p>
-
     </div>
 
   </div>
-
 </section>
 
+</main>
 
-<!-- =====================================================
-     CUP TEASER
-===================================================== -->
-
-<a
-  class="future-cup"
-  href="cup-hub.html">
-
-
-  <div class="future-cup-bg">
-
-    <img
-      src="ghost-cup.png"
-      alt="Lonestar Premier League silverware">
-
-  </div>
-
-
-  <div class="future-cup-copy">
-
-    <div class="section-label">
-      Cup Hub
-    </div>
-
-    <h2>
-      Silverware Awaits.
-    </h2>
-
-    <p>
-      The Cup Hub is the home of Lonestar Premier League
-      competitions, trophies, announcements and outcomes.
-    </p>
-
-    <div class="actions">
-
-      <span class="button gold">
-        Visit Cup Hub →
-      </span>
-
-    </div>
-
-  </div>
-
-
-</a>
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
+<!-- FOOTER -->
 <footer>
-
   <div class="footer-inner">
 
-
-    <a
-      class="footer-brand"
-      href="league.html">
-
-      <img
-        src="league logo.jpeg"
-        alt="Lonestar Premier League">
-
-      <div>
-
-        <strong>
-          Lonestar Premier League
-        </strong>
-
-        <span>
-          Est. 2026
-        </span>
-
-      </div>
-
+    <a class="footer-brand" href="league.html">
+      <img src="league logo.jpeg"
+           alt="Lonestar Premier League crest">
+      <strong>Lonestar Premier League</strong>
     </a>
 
-
     <div class="footer-right">
-
-      Clubs // Cups // Rivalries // History<br>
-      Lonestar Premier League
-
+      Established 2026<br>
+      Clubs • Cups • Rivalries • History
     </div>
 
-
   </div>
-
 </footer>
-
 
 </body>
 </html>
