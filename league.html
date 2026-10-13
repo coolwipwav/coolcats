@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#080b0d">
-<meta name="description" content="The official Lonestar Premier League website. League news, top scorers, standings, clubs and the Five Star Shootout Cup.">
+<meta name="description" content="The official Lonestar Premier League website. News, top scorers, standings, clubs and the Five Star Shootout Cup.">
 
 <title>Lonestar Premier League | Official Home</title>
 
@@ -25,13 +25,9 @@
   --max:1180px;
 }
 
-* {
-  box-sizing:border-box;
-}
+* { box-sizing:border-box; }
 
-html {
-  scroll-behavior:smooth;
-}
+html { scroll-behavior:smooth; }
 
 body {
   margin:0;
@@ -99,9 +95,7 @@ a {
   white-space:nowrap;
 }
 
-.section-link:hover {
-  color:var(--teal);
-}
+.section-link:hover { color:var(--teal); }
 
 .btn {
   display:inline-flex;
@@ -120,17 +114,6 @@ a {
   background:var(--teal);
   border-color:var(--teal);
   color:#080b0d;
-}
-
-.btn-primary {
-  background:var(--teal);
-  border-color:var(--teal);
-  color:#061012;
-}
-
-.btn-primary:hover {
-  background:#fff;
-  border-color:#fff;
 }
 
 .btn-gold {
@@ -206,9 +189,7 @@ nav a {
   text-transform:uppercase;
 }
 
-nav a:hover {
-  color:#008e99;
-}
+nav a:hover { color:#008e99; }
 
 nav .nav-cup {
   background:#111;
@@ -244,9 +225,7 @@ nav .nav-cup:hover {
   letter-spacing:-1.5px;
 }
 
-.masthead-title span {
-  color:var(--teal);
-}
+.masthead-title span { color:var(--teal); }
 
 .masthead-right {
   color:#91989a;
@@ -459,8 +438,8 @@ nav .nav-cup:hover {
 }
 
 @keyframes scorers-scroll {
-  from {transform:translateX(0);}
-  to {transform:translateX(-50%);}
+  from { transform:translateX(0); }
+  to { transform:translateX(-50%); }
 }
 
 /* CHAMPIONSHIP FEATURE */
@@ -529,9 +508,7 @@ nav .nav-cup:hover {
   transform:scale(1.025);
 }
 
-.championship-copy .eyebrow {
-  color:var(--gold);
-}
+.championship-copy .eyebrow { color:var(--gold); }
 
 .championship-copy h1 {
   margin:16px 0 24px;
@@ -541,9 +518,7 @@ nav .nav-cup:hover {
   text-transform:uppercase;
 }
 
-.championship-copy h1 span {
-  color:var(--gold);
-}
+.championship-copy h1 span { color:var(--gold); }
 
 .championship-copy .summary {
   color:#c0c5c6;
@@ -598,13 +573,9 @@ nav .nav-cup:hover {
   color:#101314;
 }
 
-.news-section .eyebrow {
-  color:#008e99;
-}
+.news-section .eyebrow { color:#008e99; }
 
-.news-section .section-link {
-  color:#666;
-}
+.news-section .section-link { color:#666; }
 
 .news-grid {
   display:grid;
@@ -639,9 +610,7 @@ nav .nav-cup:hover {
   object-fit:contain;
 }
 
-.news-copy {
-  padding:25px;
-}
+.news-copy { padding:25px; }
 
 .news-category {
   color:#008e99;
@@ -815,9 +784,7 @@ nav .nav-cup:hover {
   border-bottom:1px solid #252b2d;
 }
 
-.cup-table-row:last-child {
-  border-bottom:0;
-}
+.cup-table-row:last-child { border-bottom:0; }
 
 .cup-table-row.first {
   background:#292218;
@@ -825,13 +792,9 @@ nav .nav-cup:hover {
   padding-left:10px;
 }
 
-.cup-table-row.second {
-  background:#1b2023;
-}
+.cup-table-row.second { background:#1b2023; }
 
-.cup-table-row.third {
-  background:#201b19;
-}
+.cup-table-row.third { background:#201b19; }
 
 .cup-rank {
   color:#b4b7b8;
@@ -891,9 +854,7 @@ nav .nav-cup:hover {
   line-height:1.7;
 }
 
-.cup-table-footer strong {
-  color:var(--gold);
-}
+.cup-table-footer strong { color:var(--gold); }
 
 .cup-actions {
   display:flex;
@@ -902,7 +863,7 @@ nav .nav-cup:hover {
   margin-top:28px;
 }
 
-/* CLUBS */
+/* CLUB DIRECTORY */
 
 .clubs {
   padding:95px 0;
@@ -990,6 +951,51 @@ a.club-card:hover {
   font-weight:900;
   letter-spacing:1px;
   text-transform:uppercase;
+}
+
+/* CHAMPIONSHIP REVOLVER BADGE */
+
+.club-card.is-champion {
+  border-color:#8b713b;
+  background:linear-gradient(
+    180deg,
+    #11110d 0%,
+    #050708 70%
+  );
+}
+
+.club-card.is-champion .club-crest {
+  height:200px;
+}
+
+.club-champion-award {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:0 15px 17px;
+  gap:5px;
+}
+
+.club-champion-award img {
+  width:150px;
+  max-width:85%;
+  height:auto;
+  object-fit:contain;
+  filter:drop-shadow(0 2px 9px rgba(216,174,85,.22));
+}
+
+.club-champion-award span {
+  color:var(--gold);
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:1.3px;
+  text-transform:uppercase;
+  text-align:center;
+}
+
+.club-card.is-champion .club-info {
+  border-top:1px solid #64512c;
 }
 
 .club-message {
@@ -1110,15 +1116,11 @@ footer {
     grid-template-columns:repeat(3,minmax(0,1fr));
   }
 
-  .sponsor-logo img {
-    max-width:280px;
-  }
+  .sponsor-logo img { max-width:280px; }
 }
 
 @media(max-width:700px) {
-  .container {
-    padding:0 19px;
-  }
+  .container { padding:0 19px; }
 
   .header-inner {
     flex-direction:column;
@@ -1131,9 +1133,7 @@ footer {
     height:52px;
   }
 
-  nav {
-    gap:2px;
-  }
+  nav { gap:2px; }
 
   nav a {
     padding:9px;
@@ -1147,61 +1147,43 @@ footer {
     gap:8px;
   }
 
-  .masthead-right {
-    text-align:left;
-  }
+  .masthead-right { text-align:left; }
 
   .scorers-heading {
     align-items:flex-start;
     flex-direction:column;
   }
 
-  .scorers-heading p {
-    text-align:left;
-  }
+  .scorers-heading p { text-align:left; }
 
   .scorer {
     width:235px;
     min-height:310px;
   }
 
-  .scorer-photo {
-    height:180px;
-  }
+  .scorer-photo { height:180px; }
 
-  .scorer-details {
-    padding:13px;
-  }
+  .scorer-details { padding:13px; }
 
-  .championship {
-    padding:55px 0 65px;
-  }
+  .championship { padding:55px 0 65px; }
 
   .championship-copy h1 {
     font-size:clamp(43px,10vw,68px);
     letter-spacing:-2px;
   }
 
-  .championship-copy .summary {
-    font-size:17px;
-  }
+  .championship-copy .summary { font-size:17px; }
 
   .championship-banner {
     align-items:flex-start;
     flex-direction:column;
   }
 
-  .championship-statline {
-    gap:6px;
-  }
+  .championship-statline { gap:6px; }
 
-  .championship-stat {
-    padding:12px 5px;
-  }
+  .championship-stat { padding:12px 5px; }
 
-  .championship-stat strong {
-    font-size:21px;
-  }
+  .championship-stat strong { font-size:21px; }
 
   .news-section,
   .standings,
@@ -1215,9 +1197,7 @@ footer {
     flex-direction:column;
   }
 
-  .news-grid {
-    grid-template-columns:1fr;
-  }
+  .news-grid { grid-template-columns:1fr; }
 
   .news-image {
     height:auto;
@@ -1245,14 +1225,18 @@ footer {
     padding:12px;
   }
 
+  .club-card.is-champion .club-crest {
+    height:175px;
+  }
+
+  .club-champion-award img { width:120px; }
+
   .club-info {
     min-height:110px;
     padding:13px;
   }
 
-  .club-info strong {
-    font-size:14px;
-  }
+  .club-info strong { font-size:14px; }
 
   .sponsor-inner {
     padding:60px 20px;
@@ -1271,19 +1255,19 @@ footer {
     padding:35px 20px;
   }
 
-  .footer-right {
-    text-align:left;
-  }
+  .footer-right { text-align:left; }
 }
 
 @media(max-width:420px) {
-  .club-grid {
-    grid-template-columns:1fr;
+  .club-grid { grid-template-columns:1fr; }
+
+  .club-crest { height:270px; }
+
+  .club-card.is-champion .club-crest {
+    height:230px;
   }
 
-  .club-crest {
-    height:270px;
-  }
+  .club-champion-award img { width:160px; }
 
   .cup-table-row {
     grid-template-columns:28px 35px minmax(0,1fr) 40px;
@@ -1291,32 +1275,22 @@ footer {
     padding:8px;
   }
 
-  .cup-table-row.first {
-    padding-left:4px;
-  }
+  .cup-table-row.first { padding-left:4px; }
 
   .cup-crest {
     width:34px;
     height:34px;
   }
 
-  .cup-team {
-    font-size:10px;
-  }
+  .cup-team { font-size:10px; }
 
-  .cup-points {
-    font-size:16px;
-  }
+  .cup-points { font-size:16px; }
 }
 
 @media(prefers-reduced-motion:reduce) {
-  html {
-    scroll-behavior:auto;
-  }
+  html { scroll-behavior:auto; }
 
-  .scorers-track {
-    animation:none;
-  }
+  .scorers-track { animation:none; }
 
   .scorers-track-window {
     overflow-x:auto;
@@ -1386,7 +1360,6 @@ footer {
         <div class="eyebrow">
           2026 Season • Fantrax Fantasy Points
         </div>
-
         <h2>League Top Scorers</h2>
       </div>
 
@@ -1516,7 +1489,6 @@ footer {
 
         <div class="news-copy">
           <div class="news-category">League Leadership</div>
-
           <h3>Jack Black Takes Charge</h3>
 
           <p>
@@ -1540,7 +1512,6 @@ footer {
 
         <div class="news-copy">
           <div class="news-category">League Controversy</div>
-
           <h3>Space Cadets In Revolt</h3>
 
           <p>
@@ -1563,7 +1534,6 @@ footer {
 
         <div class="news-copy">
           <div class="news-category">Matchweek 5</div>
-
           <h3>“I Stand By It”</h3>
 
           <p>
@@ -1630,7 +1600,6 @@ footer {
         <div class="eyebrow" style="color:var(--gold)">
           The Inaugural Champions
         </div>
-
         <h2>Five Star Shootout Cup</h2>
       </div>
 
@@ -1828,7 +1797,6 @@ footer {
         <div class="eyebrow" style="color:var(--orange)">
           Our Clubs
         </div>
-
         <h2>The Clubs Make The League.</h2>
       </div>
     </div>
@@ -1872,18 +1840,29 @@ footer {
         </div>
       </a>
 
-      <!-- ROCKY MOUNTAIN VILLANS -->
+      <!-- ROCKY MOUNTAIN VILLANS: CUP CHAMPIONS -->
 
-      <div class="club-card">
+      <div class="club-card is-champion">
+
         <div class="club-crest">
           <img src="villans-crest.PNG"
-               alt="Rocky Mountain Villans crest"
+               alt="Rocky Mountain Villans official crest"
                loading="lazy">
         </div>
+
+        <div class="club-champion-award">
+          <img src="cup-champ1.png"
+               alt="Gold Five Star Shootout Cup revolver, awarded to the 2026 champions"
+               loading="lazy">
+
+          <span>2026 Five Star Shootout Cup Champions</span>
+        </div>
+
         <div class="club-info">
           <small>EST. 2026</small>
           <strong>Rocky Mountain Villans</strong>
         </div>
+
       </div>
 
       <!-- LEON VALLEY -->
@@ -1934,16 +1913,19 @@ footer {
          href="https://www.youtube.com/watch?v=ZyhrYis509A&amp;list=RDZyhrYis509A&amp;start_radio=1"
          target="_blank"
          rel="noopener noreferrer">
+
         <div class="club-crest">
           <img src="ravensgate-official.PNG"
                alt="Ravensgate FC crest"
                loading="lazy">
         </div>
+
         <div class="club-info">
           <small>EST. 2026</small>
           <strong>Ravensgate FC</strong>
           <span class="club-link">Enter Club →</span>
         </div>
+
       </a>
 
       <!-- WOBBLE UNITED -->
@@ -2025,7 +2007,7 @@ footer {
   </div>
 </footer>
 
-<!-- UPDATED TOP SCORERS DATA -->
+<!-- UPDATED TOP SCORERS -->
 
 <script>
 const topScorers = [
