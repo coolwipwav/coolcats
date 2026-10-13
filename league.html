@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#080b0d">
-<meta name="description" content="Official home of the Lonestar Premier League. News, top scorers, standings, clubs and cup competitions.">
+<meta name="description" content="The official Lonestar Premier League website. League news, top scorers, standings, clubs and the Five Star Shootout Cup.">
 
 <title>Lonestar Premier League | Official Home</title>
 
@@ -134,8 +134,14 @@ a {
 }
 
 .btn-gold {
+  background:var(--gold);
   border-color:var(--gold);
-  color:var(--gold);
+  color:#101010;
+}
+
+.btn-gold:hover {
+  background:#fff;
+  border-color:#fff;
 }
 
 /* HEADER */
@@ -362,7 +368,6 @@ nav .nav-cup:hover {
 }
 
 .scorer-photo img {
-  display:block;
   width:100%;
   height:100%;
   object-fit:contain;
@@ -454,47 +459,43 @@ nav .nav-cup:hover {
 }
 
 @keyframes scorers-scroll {
-  from {
-    transform:translateX(0);
-  }
-  to {
-    transform:translateX(-50%);
-  }
+  from {transform:translateX(0);}
+  to {transform:translateX(-50%);}
 }
 
-/* BREAKING NEWS */
+/* CHAMPIONSHIP FEATURE */
 
-.breaking {
-  padding:70px 0 85px;
+.championship {
+  padding:75px 0 90px;
   background:
     radial-gradient(
       circle at 85% 25%,
-      rgba(8,185,196,.10),
+      rgba(216,174,85,.10),
       transparent 38%
     ),
     #080b0d;
 }
 
-.breaking-banner {
+.championship-banner {
   display:flex;
   align-items:center;
   gap:15px;
-  margin-bottom:25px;
-  padding-bottom:16px;
+  margin-bottom:27px;
+  padding-bottom:17px;
   border-bottom:1px solid var(--line);
 }
 
-.breaking-tag {
-  background:var(--pink);
-  padding:9px 13px;
-  color:#fff;
+.championship-tag {
+  background:var(--gold);
+  padding:10px 15px;
+  color:#111;
   font-size:10px;
   font-weight:900;
   letter-spacing:1.5px;
   text-transform:uppercase;
 }
 
-.breaking-banner p {
+.championship-banner p {
   margin:0;
   color:#b7bcbe;
   font-size:11px;
@@ -503,74 +504,93 @@ nav .nav-cup:hover {
   text-transform:uppercase;
 }
 
-.breaking-layout {
+.championship-layout {
   display:grid;
-  grid-template-columns:1.15fr .85fr;
+  grid-template-columns:1.2fr .8fr;
   gap:38px;
   align-items:center;
 }
 
-.breaking-image {
+.championship-image {
   display:block;
-  background:#101416;
-  border:1px solid var(--line);
   overflow:hidden;
+  background:#101416;
+  border:1px solid #5c4c2e;
 }
 
-.breaking-image img {
+.championship-image img {
   width:100%;
-  max-height:680px;
   height:auto;
   object-fit:contain;
   transition:transform .3s;
 }
 
-.breaking-image:hover img {
-  transform:scale(1.02);
+.championship-image:hover img {
+  transform:scale(1.025);
 }
 
-.breaking-copy .eyebrow {
-  color:var(--orange);
+.championship-copy .eyebrow {
+  color:var(--gold);
 }
 
-.breaking-copy h1 {
-  margin:15px 0 23px;
-  font-size:clamp(45px,5.8vw,83px);
-  line-height:.89;
-  letter-spacing:-3.5px;
+.championship-copy h1 {
+  margin:16px 0 24px;
+  font-size:clamp(42px,5.4vw,78px);
+  line-height:.91;
+  letter-spacing:-3px;
   text-transform:uppercase;
 }
 
-.breaking-copy h1 span {
-  color:var(--teal);
+.championship-copy h1 span {
+  color:var(--gold);
 }
 
-.breaking-copy .summary {
+.championship-copy .summary {
   color:#c0c5c6;
   font-family:Georgia,"Times New Roman",serif;
-  font-size:19px;
+  font-size:18px;
   line-height:1.65;
 }
 
-.breaking-copy .quote {
+.championship-statline {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
   margin:25px 0;
-  padding-left:18px;
-  border-left:3px solid var(--orange);
-  color:#fff;
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:19px;
-  font-style:italic;
-  line-height:1.5;
 }
 
-.breaking-actions {
+.championship-stat {
+  padding:16px 10px;
+  background:#171b1c;
+  border-top:2px solid var(--gold);
+  text-align:center;
+}
+
+.championship-stat strong {
+  display:block;
+  color:var(--gold);
+  font-size:25px;
+  font-weight:900;
+}
+
+.championship-stat small {
+  display:block;
+  margin-top:7px;
+  color:#aeb4b5;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.championship-actions {
   display:flex;
   flex-wrap:wrap;
   gap:12px;
-  margin-top:30px;
+  margin-top:28px;
 }
 
-/* LATEST NEWS */
+/* NEWS */
 
 .news-section {
   padding:90px 0 100px;
@@ -656,7 +676,7 @@ nav .nav-cup:hover {
   text-transform:uppercase;
 }
 
-/* STANDINGS */
+/* LEAGUE STANDINGS */
 
 .standings {
   padding:95px 0;
@@ -706,48 +726,16 @@ nav .nav-cup:hover {
 
 .cup-layout {
   display:grid;
-  grid-template-columns:1.08fr .92fr;
-  gap:45px;
-  align-items:center;
-}
-
-.cup-image {
-  display:block;
-  border:1px solid var(--line);
-  background:#050708;
-}
-
-.cup-image img {
-  width:100%;
-  height:auto;
-  object-fit:contain;
-}
-
-.live-indicator {
-  display:inline-flex;
-  align-items:center;
-  gap:9px;
-  color:#fff;
-  font-size:10px;
-  font-weight:900;
-  letter-spacing:2px;
-  text-transform:uppercase;
-}
-
-.live-indicator::before {
-  content:"";
-  width:9px;
-  height:9px;
-  background:#ff454d;
-  border-radius:50%;
-  box-shadow:0 0 12px #ff454d;
+  grid-template-columns:.85fr 1.15fr;
+  gap:40px;
+  align-items:start;
 }
 
 .cup-copy h2 {
-  margin:16px 0 20px;
-  font-size:clamp(43px,5.5vw,72px);
-  line-height:.9;
-  letter-spacing:-3px;
+  margin:14px 0 18px;
+  font-size:clamp(40px,5vw,66px);
+  line-height:.91;
+  letter-spacing:-2.5px;
   text-transform:uppercase;
 }
 
@@ -758,60 +746,160 @@ nav .nav-cup:hover {
   line-height:1.7;
 }
 
+.cup-champion {
+  margin:26px 0;
+  padding:23px;
+  background:#201b12;
+  border:1px solid #725c30;
+}
+
+.cup-champion small {
+  display:block;
+  color:var(--gold);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+.cup-champion strong {
+  display:block;
+  margin-top:10px;
+  font-size:27px;
+  line-height:1.1;
+  text-transform:uppercase;
+}
+
+.cup-champion span {
+  display:block;
+  margin-top:10px;
+  color:#c9b587;
+  font-size:13px;
+}
+
+.cup-table {
+  background:#080b0d;
+  border:1px solid #51462f;
+  overflow:hidden;
+}
+
+.cup-table-header {
+  padding:22px;
+  background:linear-gradient(120deg,#322817,#151514);
+  border-bottom:1px solid #64512c;
+}
+
+.cup-table-header small {
+  display:block;
+  color:var(--gold);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.cup-table-header strong {
+  display:block;
+  margin-top:9px;
+  font-size:23px;
+  text-transform:uppercase;
+}
+
+.cup-table-row {
+  display:grid;
+  grid-template-columns:42px 45px minmax(0,1fr) 55px;
+  align-items:center;
+  gap:10px;
+  min-height:64px;
+  padding:8px 14px;
+  border-bottom:1px solid #252b2d;
+}
+
+.cup-table-row:last-child {
+  border-bottom:0;
+}
+
+.cup-table-row.first {
+  background:#292218;
+  border-left:4px solid var(--gold);
+  padding-left:10px;
+}
+
+.cup-table-row.second {
+  background:#1b2023;
+}
+
+.cup-table-row.third {
+  background:#201b19;
+}
+
+.cup-rank {
+  color:#b4b7b8;
+  font-size:15px;
+  font-weight:900;
+  text-align:center;
+}
+
+.cup-table-row.first .cup-rank,
+.cup-table-row.first .cup-points {
+  color:var(--gold);
+}
+
+.cup-crest {
+  width:43px;
+  height:43px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.cup-crest img {
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+}
+
+.cup-team {
+  min-width:0;
+  font-size:12px;
+  font-weight:900;
+  line-height:1.3;
+  text-transform:uppercase;
+}
+
+.cup-team small {
+  display:block;
+  margin-top:3px;
+  color:var(--gold);
+  font-size:9px;
+  letter-spacing:1px;
+}
+
+.cup-points {
+  font-size:19px;
+  font-weight:900;
+  text-align:right;
+  font-variant-numeric:tabular-nums;
+}
+
+.cup-table-footer {
+  padding:17px 20px;
+  background:#14191b;
+  border-top:1px solid #51462f;
+  color:#b9c0c2;
+  font-size:11px;
+  line-height:1.7;
+}
+
+.cup-table-footer strong {
+  color:var(--gold);
+}
+
 .cup-actions {
   display:flex;
   flex-wrap:wrap;
   gap:12px;
-  margin-top:27px;
-}
-
-.cup-teaser {
-  position:relative;
-  display:block;
-  margin-top:38px;
-  min-height:270px;
-  overflow:hidden;
-  background:#050708;
-  border:1px solid var(--line);
-}
-
-.cup-teaser img {
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.cup-teaser::after {
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(
-    90deg,
-    rgba(0,0,0,.93),
-    rgba(0,0,0,.15)
-  );
-}
-
-.cup-teaser-copy {
-  position:relative;
-  z-index:1;
-  max-width:460px;
-  padding:50px 35px;
-}
-
-.cup-teaser-copy h3 {
-  margin:10px 0;
-  font-size:clamp(33px,5vw,54px);
-  line-height:.95;
-  text-transform:uppercase;
-}
-
-.cup-teaser-copy p {
-  color:#d0d3d4;
-  font-family:Georgia,"Times New Roman",serif;
-  line-height:1.6;
+  margin-top:28px;
 }
 
 /* CLUBS */
@@ -1007,7 +1095,7 @@ footer {
 /* RESPONSIVE */
 
 @media(max-width:1000px) {
-  .breaking-layout,
+  .championship-layout,
   .standings-layout,
   .cup-layout,
   .sponsor-inner {
@@ -1085,17 +1173,34 @@ footer {
     padding:13px;
   }
 
-  .breaking {
+  .championship {
     padding:55px 0 65px;
   }
 
-  .breaking-copy h1 {
+  .championship-copy h1 {
     font-size:clamp(43px,10vw,68px);
     letter-spacing:-2px;
   }
 
-  .breaking-copy .summary {
+  .championship-copy .summary {
     font-size:17px;
+  }
+
+  .championship-banner {
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .championship-statline {
+    gap:6px;
+  }
+
+  .championship-stat {
+    padding:12px 5px;
+  }
+
+  .championship-stat strong {
+    font-size:21px;
   }
 
   .news-section,
@@ -1129,14 +1234,6 @@ footer {
   .cup-copy h2 {
     font-size:49px;
     letter-spacing:-2px;
-  }
-
-  .cup-teaser {
-    min-height:330px;
-  }
-
-  .cup-teaser-copy {
-    padding:40px 25px;
   }
 
   .club-grid {
@@ -1186,6 +1283,29 @@ footer {
 
   .club-crest {
     height:270px;
+  }
+
+  .cup-table-row {
+    grid-template-columns:28px 35px minmax(0,1fr) 40px;
+    gap:6px;
+    padding:8px;
+  }
+
+  .cup-table-row.first {
+    padding-left:4px;
+  }
+
+  .cup-crest {
+    width:34px;
+    height:34px;
+  }
+
+  .cup-team {
+    font-size:10px;
+  }
+
+  .cup-points {
+    font-size:16px;
   }
 }
 
@@ -1255,7 +1375,7 @@ footer {
 
 <main>
 
-<!-- TOP SCORERS -->
+<!-- UPDATED TOP SCORERS -->
 
 <section class="scorers-section" id="top-scorers">
 
@@ -1291,58 +1411,73 @@ footer {
 
 </section>
 
-<!-- JACK BLACK -->
+<!-- FEATURED CHAMPIONSHIP ARTICLE -->
 
-<section class="breaking">
+<section class="championship">
   <div class="container">
 
-    <div class="breaking-banner">
-      <span class="breaking-tag">Breaking</span>
-      <p>League Leadership / A New Commissioner Takes Charge</p>
+    <div class="championship-banner">
+      <span class="championship-tag">🏆 Champions Crowned</span>
+      <p>Five Star Shootout Cup • Inaugural Final • 2026</p>
     </div>
 
-    <div class="breaking-layout">
+    <div class="championship-layout">
 
-      <a class="breaking-image" href="jack-black.html">
-        <img src="jack-black-1.png"
-             alt="Jack Black named Lonestar Premier League Commissioner">
+      <a class="championship-image" href="shootout-champions.html">
+        <img src="shootout-cup-finale.png"
+             alt="Rocky Mountain Villans receive the Five Star Shootout Cup trophy">
       </a>
 
-      <div class="breaking-copy">
+      <div class="championship-copy">
 
         <div class="eyebrow">
-          Commissioner's Office • 2026
+          The First Trophy In League History
         </div>
 
         <h1>
-          Diego Steps Down.
-          <span>Jack Black Takes Charge.</span>
+          Rocky Mountain Villans
+          <span>Are Champions.</span>
         </h1>
 
         <p class="summary">
-          The Leon Valley chief leaves the Commissioner's
-          office to focus on his club as Jack Black is named
-          the new independent Commissioner of the
-          Lonestar Premier League.
-        </p>
-
-        <p class="quote">
-          “This was always the plan.”
+          An extraordinary final week performance sees
+          Nolan's Rocky Mountain Villans snatch the
+          inaugural Five Star Shootout Cup from
+          Mauled By The Tigers.
         </p>
 
         <p class="summary">
-          Amid scrutiny from Space Cadets, Diego insists
-          the transition was planned and that the league
-          is in the best of hands.
+          A record-breaking 244.80 Fantrax points,
+          a decisive five-point bonus and one of
+          the most dramatic finishes imaginable.
         </p>
 
-        <div class="breaking-actions">
-          <a class="btn btn-primary" href="jack-black.html">
-            Read Full Story →
+        <div class="championship-statline">
+
+          <div class="championship-stat">
+            <strong>74</strong>
+            <small>Champions' Points</small>
+          </div>
+
+          <div class="championship-stat">
+            <strong>244.80</strong>
+            <small>Record Score</small>
+          </div>
+
+          <div class="championship-stat">
+            <strong>+3</strong>
+            <small>Winning Margin</small>
+          </div>
+
+        </div>
+
+        <div class="championship-actions">
+          <a class="btn btn-gold" href="shootout-champions.html">
+            Read Championship Story →
           </a>
 
-          <a class="btn" href="news.html">
-            More League News
+          <a class="btn" href="#cup-results">
+            Final Cup Results
           </a>
         </div>
 
@@ -1352,7 +1487,7 @@ footer {
   </div>
 </section>
 
-<!-- NEWS -->
+<!-- LATEST NEWS -->
 
 <section class="news-section" id="news">
   <div class="container">
@@ -1370,6 +1505,32 @@ footer {
 
     <div class="news-grid">
 
+      <!-- JACK BLACK -->
+
+      <a class="news-card" href="jack-black.html">
+        <div class="news-image">
+          <img src="jack-black-1.png"
+               alt="Jack Black becomes Lonestar Premier League Commissioner"
+               loading="lazy">
+        </div>
+
+        <div class="news-copy">
+          <div class="news-category">League Leadership</div>
+
+          <h3>Jack Black Takes Charge</h3>
+
+          <p>
+            Diego steps down as Commissioner to focus on
+            Leon Valley as Jack Black takes charge
+            of the Lonestar Premier League.
+          </p>
+
+          <span class="read-more">Read Story →</span>
+        </div>
+      </a>
+
+      <!-- SPACE CADETS -->
+
       <a class="news-card" href="space-cadets.html">
         <div class="news-image">
           <img src="dowman.JPG"
@@ -1379,6 +1540,7 @@ footer {
 
         <div class="news-copy">
           <div class="news-category">League Controversy</div>
+
           <h3>Space Cadets In Revolt</h3>
 
           <p>
@@ -1390,6 +1552,8 @@ footer {
         </div>
       </a>
 
+      <!-- CHILDREN OF EMENIKE -->
+
       <a class="news-card" href="pathetic.html">
         <div class="news-image">
           <img src="brobbey.PNG"
@@ -1399,6 +1563,7 @@ footer {
 
         <div class="news-copy">
           <div class="news-category">Matchweek 5</div>
+
           <h3>“I Stand By It”</h3>
 
           <p>
@@ -1411,31 +1576,11 @@ footer {
         </div>
       </a>
 
-      <a class="news-card" href="shootout.html">
-        <div class="news-image">
-          <img src="shootout.jpg"
-               alt="Five Star Shootout Cup"
-               loading="lazy">
-        </div>
-
-        <div class="news-copy">
-          <div class="news-category">League Cup</div>
-          <h3>The Five Star Shootout Cup</h3>
-
-          <p>
-            Five gameweeks. One winner. The first piece
-            of silverware in league history.
-          </p>
-
-          <span class="read-more">Read Story →</span>
-        </div>
-      </a>
-
     </div>
   </div>
 </section>
 
-<!-- UPDATED MATCHWEEK 6 STANDINGS -->
+<!-- UPDATED LEAGUE STANDINGS -->
 
 <section class="standings" id="standings">
   <div class="container">
@@ -1444,27 +1589,30 @@ footer {
 
       <div class="standings-copy">
 
-        <div class="eyebrow">Matchweek 6</div>
+        <div class="eyebrow">
+          2026 Season • Updated Standings
+        </div>
 
         <h2>The Race Is On.</h2>
 
         <p>
-          Mauled By A Tiger leads the Lonestar Premier League
-          on 27 points, with Wooburt City Cool Cats three
-          points behind.
+          Mauled By The Tigers lead the Lonestar Premier
+          League on 33 points, with newly crowned
+          cup champions Rocky Mountain Villans
+          three points behind.
         </p>
 
         <p>
-          Rocky Mountain Villans and Tzolid follow on
-          21 points, while the battle in the middle
-          of the table continues.
+          Wooburt City Cool Cats and Tzolid follow
+          on 27 points, keeping the battle near
+          the top fiercely competitive.
         </p>
 
       </div>
 
       <div class="standings-image">
-        <img src="matchweek6-league-table.png"
-             alt="Lonestar Premier League Matchweek 6 standings"
+        <img src="week6-league-table.png"
+             alt="Updated Lonestar Premier League standings"
              loading="lazy">
       </div>
 
@@ -1472,86 +1620,205 @@ footer {
   </div>
 </section>
 
-<!-- CUP HUB -->
+<!-- FIVE STAR SHOOTOUT CUP RESULTS -->
 
-<section class="cup-section" id="cups">
+<section class="cup-section" id="cup-results">
   <div class="container">
 
     <div class="section-heading">
       <div>
         <div class="eyebrow" style="color:var(--gold)">
-          Silverware
+          The Inaugural Champions
         </div>
-        <h2>The Cup Hub</h2>
+
+        <h2>Five Star Shootout Cup</h2>
       </div>
 
       <a class="section-link" href="cup-hub.html">
-        Enter Hub →
+        Enter Cup Hub →
       </a>
     </div>
 
     <div class="cup-layout">
 
-      <a class="cup-image" href="cup-hub.html">
-        <img src="shootout.jpg"
-             alt="Five Star Shootout Cup"
-             loading="lazy">
-      </a>
-
       <div class="cup-copy">
 
-        <div class="live-indicator">Live Cup</div>
+        <div class="eyebrow" style="color:var(--gold)">
+          Competition Complete • 2026
+        </div>
 
-        <h2>Five Star Shootout Cup</h2>
+        <h2>One Cup. One Champion.</h2>
 
         <p>
-          The inaugural competition spans Gameweeks 2–6,
-          rewarding consistent weekly performances with
-          points toward the trophy.
+          Five weeks of competition ended in extraordinary
+          fashion as Rocky Mountain Villans overturned
+          the standings with a record-breaking
+          final performance.
+        </p>
+
+        <div class="cup-champion">
+          <small>🏆 2026 Champions</small>
+          <strong>Rocky Mountain Villans</strong>
+          <span>74 Cup Points • Nolan</span>
+        </div>
+
+        <p>
+          The Villans' 244.80 Fantrax point performance
+          earned them first place in the final week
+          and the tournament's five-point record bonus.
         </p>
 
         <p>
-          The winner earns the first cup title in league
-          history and a $25 digital Best Buy gift card.
+          Without that bonus, Mauled By The Tigers
+          would have won the competition. Instead,
+          Nolan's side claimed the first trophy
+          in Lonestar Premier League history.
         </p>
 
         <div class="cup-actions">
-          <a class="btn btn-gold" href="cup-hub.html">
-            Explore Cup Hub →
+          <a class="btn btn-gold" href="shootout-champions.html">
+            Championship Article →
           </a>
 
-          <a class="btn" href="shootout.html">
-            Official Article
+          <a class="btn" href="cup-hub.html">
+            Cup Hub
           </a>
+        </div>
+
+      </div>
+
+      <!-- OFFICIAL FINAL CUP TABLE -->
+
+      <div class="cup-table">
+
+        <div class="cup-table-header">
+          <small>Official Final Classification • 2026</small>
+          <strong>Five Star Shootout Cup</strong>
+        </div>
+
+        <div class="cup-table-row first">
+          <span class="cup-rank">🏆</span>
+          <div class="cup-crest">
+            <img src="villans-crest.PNG"
+                 alt="Rocky Mountain Villans crest"
+                 loading="lazy">
+          </div>
+          <div class="cup-team">
+            Rocky Mountain Villans
+            <small>Champions</small>
+          </div>
+          <span class="cup-points">74</span>
+        </div>
+
+        <div class="cup-table-row second">
+          <span class="cup-rank">2</span>
+          <div class="cup-crest">
+            <img src="mauled-by-tiger-crest.PNG"
+                 alt="Mauled By The Tigers crest"
+                 loading="lazy">
+          </div>
+          <div class="cup-team">Mauled By The Tigers</div>
+          <span class="cup-points">71</span>
+        </div>
+
+        <div class="cup-table-row third">
+          <span class="cup-rank">3</span>
+          <div class="cup-crest">
+            <img src="coolcats-nobackground.PNG"
+                 alt="Wooburt City Cool Cats crest"
+                 loading="lazy">
+          </div>
+          <div class="cup-team">Wooburt City Cool Cats</div>
+          <span class="cup-points">65</span>
+        </div>
+
+        <div class="cup-table-row">
+          <span class="cup-rank">4</span>
+          <div class="cup-crest">
+            <span aria-hidden="true">✋</span>
+          </div>
+          <div class="cup-team">Tzolid</div>
+          <span class="cup-points">57</span>
+        </div>
+
+        <div class="cup-table-row">
+          <span class="cup-rank">5</span>
+          <div class="cup-crest">
+            <span aria-hidden="true">⚡</span>
+          </div>
+          <div class="cup-team">BUSTAiNBOLT</div>
+          <span class="cup-points">50</span>
+        </div>
+
+        <div class="cup-table-row">
+          <span class="cup-rank">6</span>
+          <div class="cup-crest">
+            <img src="leon-valley-nobackground.PNG"
+                 alt="Leon Valley crest"
+                 loading="lazy">
+          </div>
+          <div class="cup-team">Leon Valley</div>
+          <span class="cup-points">48</span>
+        </div>
+
+        <div class="cup-table-row">
+          <span class="cup-rank">7</span>
+          <div class="cup-crest">
+            <img src="ravensgate-official.PNG"
+                 alt="Ravensgate FC crest"
+                 loading="lazy">
+          </div>
+          <div class="cup-team">Ravensgate FC</div>
+          <span class="cup-points">47</span>
+        </div>
+
+        <div class="cup-table-row">
+          <span class="cup-rank">8</span>
+          <div class="cup-crest">
+            <img src="children.PNG"
+                 alt="Children of Emenike crest"
+                 loading="lazy">
+          </div>
+          <div class="cup-team">Children of Emenike</div>
+          <span class="cup-points">37</span>
+        </div>
+
+        <div class="cup-table-row">
+          <span class="cup-rank">9</span>
+          <div class="cup-crest">
+            <img src="spacecadet-crest-nobackground.PNG"
+                 alt="Space Cadets crest"
+                 loading="lazy">
+          </div>
+          <div class="cup-team">Space Cadets</div>
+          <span class="cup-points">36</span>
+        </div>
+
+        <div class="cup-table-row">
+          <span class="cup-rank">10</span>
+          <div class="cup-crest">
+            <img src="wobble-united-crest.PNG"
+                 alt="Wobble United crest"
+                 loading="lazy">
+          </div>
+          <div class="cup-team">Wobble United</div>
+          <span class="cup-points">20</span>
+        </div>
+
+        <div class="cup-table-footer">
+          <strong>Record weekly score:</strong>
+          Rocky Mountain Villans, 244.80 Fantrax points.<br>
+          <strong>Championship margin:</strong>
+          3 cup points.
         </div>
 
       </div>
 
     </div>
-
-    <a class="cup-teaser" href="cup-hub.html">
-      <img src="ghost-cup.png"
-           alt="Upcoming league trophy"
-           loading="lazy">
-
-      <div class="cup-teaser-copy">
-        <div class="eyebrow" style="color:var(--gold)">
-          The Next Chapter
-        </div>
-
-        <h3>More Silverware Awaits.</h3>
-
-        <p>
-          Every trophy has a story. Follow the competitions
-          and champions inside the Cup Hub.
-        </p>
-      </div>
-    </a>
-
   </div>
 </section>
 
-<!-- UPDATED CLUB DIRECTORY -->
+<!-- CLUB DIRECTORY -->
 
 <section class="clubs" id="clubs">
   <div class="container">
@@ -1576,18 +1843,17 @@ footer {
 
     <div class="club-grid">
 
-      <!-- MAULED BY A TIGER -->
+      <!-- MAULED BY THE TIGERS -->
 
       <div class="club-card">
         <div class="club-crest">
           <img src="mauled-by-tiger-crest.PNG"
-               alt="Mauled By A Tiger official crest"
+               alt="Mauled By The Tigers crest"
                loading="lazy">
         </div>
-
         <div class="club-info">
           <small>EST. 2026</small>
-          <strong>Mauled By A Tiger</strong>
+          <strong>Mauled By The Tigers</strong>
         </div>
       </div>
 
@@ -1596,10 +1862,9 @@ footer {
       <a class="club-card" href="index.html">
         <div class="club-crest">
           <img src="coolcats-nobackground.PNG"
-               alt="Wooburt City Cool Cats official crest"
+               alt="Wooburt City Cool Cats crest"
                loading="lazy">
         </div>
-
         <div class="club-info">
           <small>EST. 2026</small>
           <strong>Wooburt City Cool Cats</strong>
@@ -1612,10 +1877,9 @@ footer {
       <div class="club-card">
         <div class="club-crest">
           <img src="villans-crest.PNG"
-               alt="Rocky Mountain Villans official crest"
+               alt="Rocky Mountain Villans crest"
                loading="lazy">
         </div>
-
         <div class="club-info">
           <small>EST. 2026</small>
           <strong>Rocky Mountain Villans</strong>
@@ -1627,10 +1891,9 @@ footer {
       <div class="club-card">
         <div class="club-crest">
           <img src="leon-valley-nobackground.PNG"
-               alt="Leon Valley official crest"
+               alt="Leon Valley crest"
                loading="lazy">
         </div>
-
         <div class="club-info">
           <small>EST. 2026</small>
           <strong>Leon Valley</strong>
@@ -1645,7 +1908,6 @@ footer {
                alt="Children of Emenike crest"
                loading="lazy">
         </div>
-
         <div class="club-info">
           <small>EST. 2026</small>
           <strong>Children of Emenike</strong>
@@ -1657,10 +1919,9 @@ footer {
       <div class="club-card">
         <div class="club-crest">
           <img src="spacecadet-crest-nobackground.PNG"
-               alt="Space Cadets official crest"
+               alt="Space Cadets crest"
                loading="lazy">
         </div>
-
         <div class="club-info">
           <small>EST. 2026</small>
           <strong>Space Cadets</strong>
@@ -1673,13 +1934,11 @@ footer {
          href="https://www.youtube.com/watch?v=ZyhrYis509A&amp;list=RDZyhrYis509A&amp;start_radio=1"
          target="_blank"
          rel="noopener noreferrer">
-
         <div class="club-crest">
           <img src="ravensgate-official.PNG"
-               alt="Ravensgate FC official crest"
+               alt="Ravensgate FC crest"
                loading="lazy">
         </div>
-
         <div class="club-info">
           <small>EST. 2026</small>
           <strong>Ravensgate FC</strong>
@@ -1692,10 +1951,9 @@ footer {
       <div class="club-card">
         <div class="club-crest">
           <img src="wobble-united-crest.PNG"
-               alt="Wobble United official crest"
+               alt="Wobble United crest"
                loading="lazy">
         </div>
-
         <div class="club-info">
           <small>EST. 2026</small>
           <strong>Wobble United</strong>
@@ -1767,7 +2025,7 @@ footer {
   </div>
 </footer>
 
-<!-- TOP SCORERS DATA -->
+<!-- UPDATED TOP SCORERS DATA -->
 
 <script>
 const topScorers = [
@@ -1777,7 +2035,7 @@ const topScorers = [
     owner:"BUSTAINB",
     club:"BHA",
     position:"MID",
-    points:"106.58",
+    points:"122.84",
     image:"LTS-gross.png"
   },
   {
@@ -1786,80 +2044,80 @@ const topScorers = [
     owner:"jakphong",
     club:"MCI",
     position:"FWD",
-    points:"97.51",
+    points:"114.66",
     image:"LTS-haaland.png"
   },
   {
     rank:3,
-    name:"James Tarkowski",
-    owner:"Children",
-    club:"EVE",
-    position:"DEF",
-    points:"94.78",
-    image:"LTS-tarkowski.png"
-  },
-  {
-    rank:4,
-    name:"Bukayo Saka",
-    owner:"BUSTAINB",
-    club:"ARS",
-    position:"MID",
-    points:"93.16",
-    image:"LTS-saka.png"
-  },
-  {
-    rank:5,
-    name:"Mohamed Belloumi",
-    owner:"RGFC",
-    club:"HUL",
-    position:"MID",
-    points:"91.02",
-    image:"LTS-belloumi.png"
-  },
-  {
-    rank:6,
-    name:"Bruno Fernandes",
-    owner:"jakphong",
-    club:"MUN",
-    position:"MID",
-    points:"89.56",
-    image:"LTS-bruno-fern.png"
-  },
-  {
-    rank:7,
-    name:"Kevin Schade",
-    owner:"WCCCFC",
-    club:"BRF",
-    position:"FWD",
-    points:"87.69",
-    image:"LTS-schade.PNG"
-  },
-  {
-    rank:8,
-    name:"Morgan Rogers",
-    owner:"Nolancoo",
-    club:"CHE",
-    position:"MID",
-    points:"85.44",
-    image:"LTS-rogers.PNG"
-  },
-  {
-    rank:9,
     name:"João Pedro",
     owner:"RAWR",
     club:"CHE",
     position:"FWD",
-    points:"84.79",
+    points:"111.49",
     image:"LTS-joao-pedro.PNG"
   },
   {
-    rank:10,
+    rank:4,
     name:"Rayan Cherki",
     owner:"RAWR",
     club:"MCI",
     position:"MID",
-    points:"84.61",
+    points:"110.80",
     image:"LTS-cherki.PNG"
+  },
+  {
+    rank:5,
+    name:"James Tarkowski",
+    owner:"Children",
+    club:"EVE",
+    position:"DEF",
+    points:"108.45",
+    image:"LTS-tarkowski.png"
+  },
+  {
+    rank:6,
+    name:"Kiernan Dewsbury-Hall",
+    owner:"RMVillan",
+    club:"EVE",
+    position:"MID",
+    points:"108.40",
+    image:"LTS-dewsberry.png"
+  },
+  {
+    rank:7,
+    name:"Mohamed Belloumi",
+    owner:"RGFC",
+    club:"HUL",
+    position:"MID",
+    points:"106.18",
+    image:"LTS-belloumi.png"
+  },
+  {
+    rank:8,
+    name:"Morgan Rogers",
+    owner:"RMVillan",
+    club:"CHE",
+    position:"MID",
+    points:"105.06",
+    image:"LTS-rogers.PNG"
+  },
+  {
+    rank:9,
+    name:"Bukayo Saka",
+    owner:"BUSTAINB",
+    club:"ARS",
+    position:"MID",
+    points:"102.59",
+    image:"LTS-saka.png"
+  },
+  {
+    rank:10,
+    name:"Cole Palmer",
+    owner:"WB",
+    club:"CHE",
+    position:"MID",
+    points:"101.68",
+    image:"LTS-palmer.png"
   }
 ];
 
