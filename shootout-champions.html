@@ -19,20 +19,15 @@
   --gold:#d8ae55;
   --line:#343638;
 }
-
 * { box-sizing:border-box; }
-
 html { scroll-behavior:smooth; }
-
 body {
   margin:0;
   background:var(--black);
   color:var(--white);
   font-family:Arial,Helvetica,sans-serif;
 }
-
 img { display:block; max-width:100%; }
-
 a { color:inherit; text-decoration:none; }
 
 .fiesta-line {
@@ -51,7 +46,6 @@ header {
   background:#fff;
   color:#111;
 }
-
 .header-inner {
   max-width:1180px;
   margin:auto;
@@ -61,37 +55,31 @@ header {
   justify-content:space-between;
   gap:20px;
 }
-
 .brand {
   display:flex;
   align-items:center;
   gap:13px;
 }
-
 .brand img {
   width:58px;
   height:58px;
   object-fit:contain;
 }
-
 .brand strong {
   font-size:17px;
   line-height:1.05;
   text-transform:uppercase;
 }
-
 nav {
   display:flex;
   flex-wrap:wrap;
   gap:18px;
 }
-
 nav a {
   font-size:11px;
   font-weight:900;
   text-transform:uppercase;
 }
-
 nav a:hover { color:#008e99; }
 
 /* ARTICLE HERO */
@@ -101,7 +89,6 @@ nav a:hover { color:#008e99; }
   margin:auto;
   padding:65px 25px 35px;
 }
-
 .kicker {
   color:var(--gold);
   font-size:11px;
@@ -109,7 +96,6 @@ nav a:hover { color:#008e99; }
   letter-spacing:2px;
   text-transform:uppercase;
 }
-
 .article-hero h1 {
   max-width:1050px;
   margin:20px 0;
@@ -118,9 +104,7 @@ nav a:hover { color:#008e99; }
   letter-spacing:-3px;
   text-transform:uppercase;
 }
-
 .article-hero h1 span { color:var(--gold); }
-
 .subtitle {
   max-width:850px;
   color:#b7bdbe;
@@ -128,7 +112,6 @@ nav a:hover { color:#008e99; }
   font-size:clamp(18px,2.3vw,24px);
   line-height:1.6;
 }
-
 .article-meta {
   margin-top:25px;
   padding-top:20px;
@@ -140,20 +123,18 @@ nav a:hover { color:#008e99; }
   text-transform:uppercase;
 }
 
-/* COVER IMAGE */
+/* COVER */
 
 .cover {
   max-width:1180px;
   margin:0 auto;
   padding:0 25px;
 }
-
 .cover img {
   width:100%;
   height:auto;
   border:1px solid #65502c;
 }
-
 .cover-caption {
   margin-top:12px;
   color:#8c9496;
@@ -168,7 +149,6 @@ nav a:hover { color:#008e99; }
   margin:65px auto;
   padding:0 25px;
 }
-
 .article-body p {
   margin:0 0 24px;
   color:#d1d3d2;
@@ -176,7 +156,6 @@ nav a:hover { color:#008e99; }
   font-size:19px;
   line-height:1.85;
 }
-
 .article-body h2 {
   margin:65px 0 25px;
   padding-top:20px;
@@ -186,13 +165,11 @@ nav a:hover { color:#008e99; }
   letter-spacing:-1px;
   text-transform:uppercase;
 }
-
 .article-body .lead {
   color:#fff;
   font-size:23px;
   line-height:1.65;
 }
-
 .article-body strong { color:#fff; }
 
 .highlight {
@@ -201,7 +178,6 @@ nav a:hover { color:#008e99; }
   background:#1e1b14;
   border-left:5px solid var(--gold);
 }
-
 .highlight strong {
   display:block;
   color:var(--gold);
@@ -210,7 +186,6 @@ nav a:hover { color:#008e99; }
   line-height:1.15;
   text-transform:uppercase;
 }
-
 .highlight span {
   display:block;
   margin-top:10px;
@@ -220,7 +195,58 @@ nav a:hover { color:#008e99; }
   text-transform:uppercase;
 }
 
-/* FINAL TABLE */
+/* CLUB CREST FEATURES */
+
+.club-feature {
+  display:flex;
+  align-items:center;
+  gap:30px;
+  margin:35px 0 45px;
+  padding:25px;
+  background:linear-gradient(125deg,#1b2225,#101415);
+  border:1px solid #394144;
+}
+.club-feature.tigers {
+  border-left:5px solid #d8ae55;
+}
+.club-feature.wooburt {
+  border-left:5px solid var(--teal);
+}
+.club-feature img {
+  width:185px;
+  height:185px;
+  flex-shrink:0;
+  object-fit:contain;
+  filter:drop-shadow(0 8px 16px rgba(0,0,0,.4));
+}
+.club-feature-copy small {
+  display:block;
+  margin-bottom:10px;
+  color:var(--gold);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+.club-feature.wooburt .club-feature-copy small {
+  color:var(--teal);
+}
+.club-feature-copy strong {
+  display:block;
+  font-size:clamp(22px,3vw,35px);
+  line-height:1.05;
+  text-transform:uppercase;
+}
+.club-feature-copy span {
+  display:block;
+  margin-top:12px;
+  color:#aab1b3;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:15px;
+  line-height:1.6;
+}
+
+/* FINAL STANDINGS */
 
 .results-section {
   padding:85px 25px;
@@ -228,17 +254,14 @@ nav a:hover { color:#008e99; }
   border-top:1px solid #574b30;
   border-bottom:1px solid #574b30;
 }
-
 .results-inner {
   max-width:1000px;
   margin:auto;
 }
-
 .results-heading {
   text-align:center;
   margin-bottom:35px;
 }
-
 .results-heading small {
   color:var(--gold);
   font-size:11px;
@@ -246,7 +269,6 @@ nav a:hover { color:#008e99; }
   letter-spacing:2px;
   text-transform:uppercase;
 }
-
 .results-heading h2 {
   margin:15px 0;
   font-size:clamp(37px,6vw,70px);
@@ -254,18 +276,15 @@ nav a:hover { color:#008e99; }
   letter-spacing:-2px;
   text-transform:uppercase;
 }
-
 .results-heading p {
   color:#a6abad;
   font-family:Georgia,"Times New Roman",serif;
   font-size:16px;
 }
-
 .results-table {
   border:1px solid #685631;
   background:#080b0d;
 }
-
 .results-table-head,
 .result-row {
   display:grid;
@@ -273,7 +292,6 @@ nav a:hover { color:#008e99; }
   align-items:center;
   gap:14px;
 }
-
 .results-table-head {
   padding:18px 20px;
   background:#302716;
@@ -283,32 +301,25 @@ nav a:hover { color:#008e99; }
   letter-spacing:1.5px;
   text-transform:uppercase;
 }
-
 .result-row {
   min-height:84px;
   padding:10px 20px;
   border-top:1px solid #303638;
 }
-
 .result-row.champion {
   background:linear-gradient(90deg,#3c3019,#1c1b17);
   border-left:5px solid var(--gold);
   padding-left:15px;
 }
-
 .result-row.runner-up { background:#1c2225; }
-
 .result-row.third { background:#211c19; }
-
 .position {
   color:#c4c6c6;
   font-size:24px;
   font-weight:900;
   text-align:center;
 }
-
 .result-row.champion .position { color:var(--gold); }
-
 .crest {
   display:flex;
   align-items:center;
@@ -316,20 +327,17 @@ nav a:hover { color:#008e99; }
   width:70px;
   height:65px;
 }
-
 .crest img {
   max-width:100%;
   max-height:100%;
   object-fit:contain;
 }
-
 .team-name {
   font-size:clamp(13px,2vw,19px);
   font-weight:900;
   line-height:1.2;
   text-transform:uppercase;
 }
-
 .team-name small {
   display:block;
   margin-top:7px;
@@ -337,7 +345,6 @@ nav a:hover { color:#008e99; }
   font-size:10px;
   letter-spacing:1.2px;
 }
-
 .points {
   color:#fff;
   font-size:26px;
@@ -345,9 +352,7 @@ nav a:hover { color:#008e99; }
   text-align:right;
   font-variant-numeric:tabular-nums;
 }
-
 .result-row.champion .points { color:var(--gold); }
-
 .results-footer {
   padding:25px;
   background:#1c1b17;
@@ -357,24 +362,21 @@ nav a:hover { color:#008e99; }
   line-height:1.8;
   text-align:center;
 }
-
 .results-footer strong { color:var(--gold); }
 
 /* CLOSING */
 
 .closing {
   max-width:790px;
-  margin:70px auto 90px;
+  margin:70px auto 75px;
   padding:0 25px;
 }
-
 .closing h2 {
   margin:0 0 25px;
   font-size:clamp(32px,5vw,52px);
   line-height:1;
   text-transform:uppercase;
 }
-
 .closing p {
   color:#d1d3d2;
   font-family:Georgia,"Times New Roman",serif;
@@ -382,27 +384,78 @@ nav a:hover { color:#008e99; }
   line-height:1.85;
 }
 
-.final-message {
-  margin-top:40px;
-  padding:30px;
-  border:1px solid var(--gold);
-  background:#201c13;
-  color:var(--gold);
-  font-size:clamp(20px,3vw,30px);
-  font-weight:900;
-  line-height:1.3;
+/* GIANT CHAMPIONSHIP CREST */
+
+.champion-finale {
+  position:relative;
+  overflow:hidden;
+  padding:95px 25px 100px;
+  background:
+    radial-gradient(circle at 50% 40%,rgba(216,174,85,.16),transparent 45%),
+    linear-gradient(180deg,#0b0e10,#1c1710 60%,#080b0d);
+  border-top:1px solid #69542c;
   text-align:center;
+}
+.champion-finale::before {
+  content:"★★★★★";
+  display:block;
+  margin-bottom:25px;
+  color:var(--gold);
+  font-size:30px;
+  letter-spacing:12px;
+}
+.champion-finale small {
+  display:block;
+  color:var(--gold);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:3px;
   text-transform:uppercase;
 }
-
+.champion-finale h2 {
+  margin:18px auto 35px;
+  max-width:900px;
+  font-size:clamp(40px,7vw,86px);
+  line-height:.95;
+  letter-spacing:-3px;
+  text-transform:uppercase;
+}
+.champion-finale h2 span { color:var(--gold); }
+.champion-finale .giant-crest {
+  width:min(560px,85vw);
+  height:auto;
+  max-height:600px;
+  object-fit:contain;
+  margin:0 auto 30px;
+  filter:drop-shadow(0 20px 45px rgba(216,174,85,.2));
+}
+.champion-finale .trophy-icon {
+  width:min(340px,75vw);
+  height:auto;
+  margin:15px auto 25px;
+  object-fit:contain;
+}
+.champion-finale .champion-name {
+  font-size:clamp(24px,4vw,48px);
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:-1px;
+}
+.champion-finale .champion-caption {
+  margin:15px auto 0;
+  max-width:600px;
+  color:#c9b990;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:19px;
+  line-height:1.6;
+}
 .article-links {
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
   gap:12px;
-  margin-top:40px;
+  margin-top:45px;
 }
-
 .article-links a {
   display:inline-block;
   padding:16px 22px;
@@ -413,7 +466,6 @@ nav a:hover { color:#008e99; }
   letter-spacing:1px;
   text-transform:uppercase;
 }
-
 .article-links a:hover {
   background:var(--gold);
   color:#111;
@@ -427,14 +479,12 @@ footer {
   border-top:1px solid var(--line);
   text-align:center;
 }
-
 footer img {
   width:80px;
   height:80px;
   object-fit:contain;
   margin:0 auto 20px;
 }
-
 footer p {
   color:#8f9698;
   font-size:11px;
@@ -449,57 +499,55 @@ footer p {
     flex-direction:column;
     align-items:flex-start;
   }
-
   .article-hero {
     padding:45px 20px 25px;
   }
-
   .article-hero h1 { letter-spacing:-2px; }
-
   .cover { padding:0 12px; }
-
   .article-body {
     margin:45px auto;
     padding:0 20px;
   }
-
   .article-body p,
-  .closing p {
-    font-size:17px;
+  .closing p { font-size:17px; }
+  .club-feature {
+    flex-direction:column;
+    text-align:center;
+    gap:15px;
   }
-
+  .club-feature img {
+    width:155px;
+    height:155px;
+  }
   .results-section { padding:55px 10px; }
-
   .results-table-head,
   .result-row {
     grid-template-columns:35px 45px minmax(0,1fr) 55px;
     gap:7px;
   }
-
   .results-table-head {
     padding:12px 8px;
     font-size:9px;
   }
-
   .result-row {
     min-height:65px;
     padding:8px;
   }
-
   .result-row.champion { padding-left:3px; }
-
   .position { font-size:17px; }
-
   .crest {
     width:43px;
     height:45px;
   }
-
   .team-name { font-size:12px; }
-
   .points { font-size:19px; }
-
   .closing { margin:55px auto; }
+  .champion-finale { padding:65px 20px; }
+  .champion-finale::before {
+    font-size:22px;
+    letter-spacing:6px;
+  }
+  .champion-finale h2 { letter-spacing:-2px; }
 }
 </style>
 </head>
@@ -508,28 +556,27 @@ footer p {
 
 <div class="fiesta-line"></div>
 
+<!-- HEADER -->
+
 <header>
   <div class="header-inner">
-
     <a class="brand" href="league.html">
-      <img src="league logo.jpeg"
-           alt="Lonestar Premier League logo">
+      <img src="league logo.jpeg" alt="Lonestar Premier League logo">
       <strong>Lonestar<br>Premier League</strong>
     </a>
-
     <nav>
       <a href="league.html">Home</a>
       <a href="news.html">News</a>
       <a href="cup-hub.html">Cup Hub</a>
     </nav>
-
   </div>
 </header>
 
 <main>
 
-<section class="article-hero">
+<!-- ARTICLE HERO -->
 
+<section class="article-hero">
   <div class="kicker">
     🏆 Five Star Shootout Cup • 2026 Champions
   </div>
@@ -550,7 +597,6 @@ footer p {
   <div class="article-meta">
     The Lonestar Times • Cup Final Report • 2026
   </div>
-
 </section>
 
 <!-- COVER PHOTO -->
@@ -558,10 +604,8 @@ footer p {
 <div class="cover">
   <img src="shootout-cup-finale.png"
        alt="Rocky Mountain Villans celebrate winning the Five Star Shootout Cup">
-
   <div class="cover-caption">
-    Rocky Mountain Villans receive the inaugural
-    Five Star Shootout Cup.
+    Rocky Mountain Villans receive the inaugural Five Star Shootout Cup.
   </div>
 </div>
 
@@ -570,8 +614,7 @@ footer p {
 <article class="article-body">
 
   <p class="lead">
-    The first trophy in Lonestar Premier League
-    history has found its home.
+    The first trophy in Lonestar Premier League history has found its home.
   </p>
 
   <p class="lead">
@@ -579,36 +622,30 @@ footer p {
   </p>
 
   <p>
-    After five weeks of competition, shifting standings,
-    and a championship battle that came down to the
-    smallest of margins, Rocky Mountain Villans have
-    officially been crowned champions of the
-    Five Star Shootout Cup.
+    After five weeks of competition, shifting standings, and a championship
+    battle that came down to the smallest of margins, Rocky Mountain Villans
+    have officially been crowned champions of the Five Star Shootout Cup.
   </p>
 
   <p>But this was no ordinary cup victory.</p>
 
   <p>
-    Nolan's Villans entered the final week trailing
-    the competition's leading clubs, with
-    Mauled By The Tigers seemingly positioned to
-    claim the league's inaugural silverware.
+    Nolan's Villans entered the final week trailing the competition's leading
+    clubs, with Mauled By The Tigers seemingly positioned to claim the
+    league's inaugural silverware.
   </p>
 
-  <p>
-    What followed was nothing short of extraordinary.
-  </p>
+  <p>What followed was nothing short of extraordinary.</p>
 
   <p>
     A stunning <strong>244.80 Fantrax point performance</strong>,
-    the highest single week score recorded throughout
-    the entire tournament, propelled Rocky Mountain
-    Villans to the top of the standings.
+    the highest single week score recorded throughout the entire tournament,
+    propelled Rocky Mountain Villans to the top of the standings.
   </p>
 
   <p>
-    And when the final calculations were completed,
-    the championship belonged to Nolan.
+    And when the final calculations were completed, the championship
+    belonged to Nolan.
   </p>
 
   <div class="highlight">
@@ -619,42 +656,32 @@ footer p {
   <h2>A Final Week For The History Books</h2>
 
   <p>
-    Entering the final week, Mauled By The Tigers held
-    a commanding position with 61 cup points.
+    Entering the final week, Mauled By The Tigers held a commanding
+    position with 61 cup points.
   </p>
 
   <p>
-    Wooburt City Cool Cats followed closely behind
-    on 57, while Rocky Mountain Villans sat further
-    back with 44.
+    Wooburt City Cool Cats followed closely behind on 57, while
+    Rocky Mountain Villans sat further back with 44.
   </p>
 
   <p>For Nolan, the situation was clear.</p>
-
   <p>A respectable performance would not be enough.</p>
-
   <p>The Villans needed something special.</p>
-
   <p>And special is exactly what they delivered.</p>
 
   <p>
     Rocky Mountain Villans produced a remarkable
-    <strong>244.80 Fantrax points</strong>, finishing
-    first in the final week's scoring and securing
-    the maximum 25 cup points available.
+    <strong>244.80 Fantrax points</strong>, finishing first in the
+    final week's scoring and securing the maximum 25 cup points available.
   </p>
 
-  <p>
-    Their nearest challenger on the week, Tzolid,
-    managed 182.53.
-  </p>
-
+  <p>Their nearest challenger on the week, Tzolid, managed 182.53.</p>
   <p>The difference was staggering.</p>
 
   <p>
-    More importantly, Rocky Mountain Villans had
-    just produced the single highest score of the
-    entire Five Star Shootout Cup.
+    More importantly, Rocky Mountain Villans had just produced the single
+    highest score of the entire Five Star Shootout Cup.
   </p>
 
   <p>And that achievement would change everything.</p>
@@ -662,66 +689,68 @@ footer p {
   <h2>The Five Point Bonus That Decided A Championship</h2>
 
   <p>
-    One of the defining features of the
-    Five Star Shootout Cup was its tournament
-    scoring bonus.
+    One of the defining features of the Five Star Shootout Cup was its
+    tournament scoring bonus.
   </p>
 
   <p>
-    An additional five cup points would be awarded
-    to the club responsible for the highest individual
-    gameweek score across the entire competition.
+    An additional five cup points would be awarded to the club responsible
+    for the highest individual gameweek score across the entire competition.
   </p>
 
   <p>
-    For much of the tournament, that distinction
-    belonged to Ravensgate FC, whose impressive
-    238.25 point performance had established
-    the benchmark.
+    For much of the tournament, that distinction belonged to Ravensgate FC,
+    whose impressive 238.25 point performance had established the benchmark.
   </p>
 
   <p>Until Nolan arrived.</p>
 
   <p>
-    With 244.80 points in the final week,
-    Rocky Mountain Villans surpassed Ravensgate's
-    record and claimed the tournament's
-    five point bonus.
+    With 244.80 points in the final week, Rocky Mountain Villans surpassed
+    Ravensgate's record and claimed the tournament's five point bonus.
   </p>
 
   <p>Those five points proved decisive.</p>
 
   <p>
-    Without the bonus, Rocky Mountain Villans
-    would have finished the tournament on
-    69 points.
+    Without the bonus, Rocky Mountain Villans would have finished the
+    tournament on 69 points.
+  </p>
+
+  <p>Mauled By The Tigers would have been champions with 71.</p>
+  <p>Instead, the bonus lifted Nolan's side to 74.</p>
+
+  <p>
+    One extraordinary performance had completely reversed the championship
+    outcome.
   </p>
 
   <p>
-    Mauled By The Tigers would have been
-    champions with 71.
-  </p>
-
-  <p>
-    Instead, the bonus lifted Nolan's side to 74.
-  </p>
-
-  <p>
-    One extraordinary performance had completely
-    reversed the championship outcome.
-  </p>
-
-  <p>
-    A competition that appeared destined for
-    one club had been claimed by another in
-    its final moments.
+    A competition that appeared destined for one club had been claimed by
+    another in its final moments.
   </p>
 
   <h2>Heartbreak For Mauled By The Tigers</h2>
 
+  <!-- MAULED CREST FEATURE -->
+
+  <div class="club-feature tigers">
+    <img src="mauled-by-tiger-crest.PNG"
+         alt="Official Mauled By The Tigers crest">
+
+    <div class="club-feature-copy">
+      <small>2026 Cup Runners Up</small>
+      <strong>Mauled By The Tigers</strong>
+      <span>
+        71 cup points. A remarkable campaign that ended just
+        three points short of the inaugural title.
+      </span>
+    </div>
+  </div>
+
   <p>
-    For Mauled By The Tigers, the conclusion will
-    be particularly difficult to accept.
+    For Mauled By The Tigers, the conclusion will be particularly
+    difficult to accept.
   </p>
 
   <p>
@@ -730,76 +759,79 @@ footer p {
   </p>
 
   <p>
-    Their final week performance of 167.49 Fantrax
-    points earned another 10 cup points, bringing
-    their tournament total to 71.
+    Their final week performance of 167.49 Fantrax points
+    earned another 10 cup points, bringing their tournament total to 71.
   </p>
 
-  <p>
-    In almost any other scenario, that would
-    have been enough.
-  </p>
-
+  <p>In almost any other scenario, that would have been enough.</p>
   <p>But the Villans had other ideas.</p>
 
   <p>
-    Mauled finished just three points behind
-    the eventual champions, becoming the
-    inaugural competition's runners up despite
-    leading the race heading into the final week.
+    Mauled finished just three points behind the eventual champions,
+    becoming the inaugural competition's runners up despite leading
+    the race heading into the final week.
   </p>
 
   <p>
-    The result serves as a reminder of the
-    unforgiving nature of cup football.
+    The result serves as a reminder of the unforgiving nature
+    of cup football.
   </p>
 
-  <p>
-    Sometimes, even an excellent tournament
-    is not enough.
-  </p>
+  <p>Sometimes, even an excellent tournament is not enough.</p>
 
   <h2>Wooburt City Claim Third</h2>
 
+  <!-- WOOBURT CREST FEATURE -->
+
+  <div class="club-feature wooburt">
+    <img src="coolcats-nobackground.PNG"
+         alt="Official Wooburt City Cool Cats crest">
+
+    <div class="club-feature-copy">
+      <small>2026 Cup Third Place</small>
+      <strong>Wooburt City Cool Cats</strong>
+      <span>
+        65 cup points. The Cool Cats secure a place on the
+        inaugural Five Star Shootout Cup podium.
+      </span>
+    </div>
+  </div>
+
   <p>
-    Wooburt City Cool Cats also entered the final
-    week with genuine hopes of lifting the trophy.
+    Wooburt City Cool Cats also entered the final week
+    with genuine hopes of lifting the trophy.
   </p>
 
   <p>
-    Sitting second on 57 cup points,
-    WCCC remained firmly in contention.
+    Sitting second on 57 cup points, WCCC remained firmly in contention.
   </p>
 
   <p>
-    However, a final week score of 164.64 Fantrax
-    points was only enough for sixth place on
-    the week, earning eight additional cup points.
+    However, a final week score of 164.64 Fantrax points was only
+    enough for sixth place on the week, earning eight additional cup points.
   </p>
 
   <p>
-    The Cool Cats finished the tournament with
-    65 points, securing third place overall.
+    The Cool Cats finished the tournament with 65 points,
+    securing third place overall.
   </p>
 
   <p>
-    For a club with ambitions of becoming one
-    of the league's dominant forces, the result
-    represents another podium finish, but also
-    another reminder of the fine margins
-    separating contenders from champions.
+    For a club with ambitions of becoming one of the league's
+    dominant forces, the result represents another podium finish,
+    but also another reminder of the fine margins separating
+    contenders from champions.
   </p>
 
   <p>
-    With the inaugural cup now decided,
-    attention will inevitably turn toward
-    the league campaign and the remaining
+    With the inaugural cup now decided, attention will inevitably
+    turn toward the league campaign and the remaining
     opportunities for silverware.
   </p>
 
 </article>
 
-<!-- FINAL STANDINGS -->
+<!-- OFFICIAL FINAL CUP TABLE -->
 
 <section class="results-section" id="final-standings">
   <div class="results-inner">
@@ -808,8 +840,7 @@ footer p {
       <small>🏆 Inaugural Tournament • 2026</small>
       <h2>Official Final Standings</h2>
       <p>
-        Five Star Shootout Cup.
-        The final classification after five weeks.
+        Five Star Shootout Cup. The final classification after five weeks.
       </p>
     </div>
 
@@ -922,7 +953,6 @@ footer p {
       <div class="results-footer">
         <strong>Highest Single Week Score:</strong>
         Rocky Mountain Villans, 244.80 Fantrax points.<br>
-
         <strong>Winning Margin:</strong>
         Three cup points.
       </div>
@@ -939,34 +969,26 @@ footer p {
   <h2>A New Name In Lonestar History</h2>
 
   <p>
-    When the Five Star Shootout Cup was first
-    announced, it represented something more
-    than another competition.
+    When the Five Star Shootout Cup was first announced,
+    it represented something more than another competition.
   </p>
 
   <p>
-    It was an opportunity for the Lonestar
-    Premier League to establish its first
-    piece of silverware, create new rivalries,
-    and begin building a history that future
-    clubs would attempt to match.
+    It was an opportunity for the Lonestar Premier League to establish
+    its first piece of silverware, create new rivalries, and begin
+    building a history that future clubs would attempt to match.
   </p>
 
   <p>Now, that history has its first champion.</p>
 
-  <p>
-    Rocky Mountain Villans did not simply
-    win the competition.
-  </p>
+  <p>Rocky Mountain Villans did not simply win the competition.</p>
 
   <p>They produced its defining moment.</p>
 
   <p>
-    A final week performance that broke
-    the tournament scoring record,
-    overturned the championship standings,
-    and denied Mauled By The Tigers what
-    had appeared to be a deserved triumph.
+    A final week performance that broke the tournament scoring record,
+    overturned the championship standings, and denied Mauled By The Tigers
+    what had appeared to be a deserved triumph.
   </p>
 
   <p>For Nolan, it is a remarkable achievement.</p>
@@ -974,26 +996,47 @@ footer p {
   <p>For the rest of the league, it is a warning.</p>
 
   <p>
-    The Rocky Mountain Villans have announced
-    themselves as a serious force in the
-    Lonestar Premier League.
+    The Rocky Mountain Villans have announced themselves as a serious
+    force in the Lonestar Premier League.
   </p>
 
   <p>
-    And as the inaugural champions celebrate,
-    one fact will remain permanently etched
-    into the competition's history.
+    And as the inaugural champions celebrate, one fact will remain
+    permanently etched into the competition's history.
   </p>
 
   <p>
-    The first Five Star Shootout Cup belongs
-    to Rocky Mountain Villans.
+    The first Five Star Shootout Cup belongs to Rocky Mountain Villans.
   </p>
 
-  <div class="final-message">
-    Congratulations to Nolan and Rocky Mountain Villans<br>
-    2026 Five Star Shootout Cup Champions
-  </div>
+</section>
+
+<!-- GIANT CHAMPIONSHIP CREST FINALE -->
+
+<section class="champion-finale">
+
+  <small>Lonestar Premier League • Inaugural Cup Winners</small>
+
+  <h2>
+    Your 2026<br>
+    <span>Five Star Champions</span>
+  </h2>
+
+  <img class="giant-crest"
+       src="villans-crest.PNG"
+       alt="Rocky Mountain Villans official crest, 2026 Five Star Shootout Cup Champions">
+
+  <img class="trophy-icon"
+       src="cup-champ1.png"
+       alt="Gold Five Star Shootout Cup revolver trophy">
+
+  <div class="champion-name">Rocky Mountain Villans</div>
+
+  <p class="champion-caption">
+    Congratulations to Nolan and Rocky Mountain Villans,
+    the first Five Star Shootout Cup champions in
+    Lonestar Premier League history.
+  </p>
 
   <div class="article-links">
     <a href="league.html">← League Homepage</a>
@@ -1004,15 +1047,14 @@ footer p {
 
 </main>
 
+<!-- FOOTER -->
+
 <footer>
   <a href="league.html">
     <img src="league logo.jpeg"
          alt="Lonestar Premier League logo">
   </a>
-
-  <p>
-    The Lonestar Times • Lonestar Premier League • EST. 2026
-  </p>
+  <p>The Lonestar Times • Lonestar Premier League • EST. 2026</p>
 </footer>
 
 </body>
