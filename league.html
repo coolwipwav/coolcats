@@ -1298,6 +1298,17 @@ footer {
     -webkit-mask-image:none;
   }
 }
+
+/* Interactive crest, scoped to the league homepage */
+.lpl-dither-section{padding:55px 0 35px;background:#080b0d}
+.lpl-dither-title{font-size:clamp(32px,5vw,60px);line-height:1;text-transform:uppercase;letter-spacing:-.045em;margin:12px 0}
+.lpl-dither-subtitle{color:#aeb7b9;max-width:720px;line-height:1.6;font-size:14px}
+.lpl-dither-stage{position:relative;margin-top:28px;height:min(64vw,590px);min-height:340px;border:1px solid #394245;border-radius:12px;overflow:hidden;background:radial-gradient(ellipse at center,#162023 0%,#080b0d 65%);touch-action:pan-y}.lpl-dither-stage canvas{width:100%;height:100%;display:block;touch-action:none}.hint{position:absolute;bottom:18px;left:18px;color:#aeb7b9;font-size:12px;pointer-events:none}.caption{margin-top:22px;font-size:12px;color:#899497}.fallback{display:none;position:absolute;inset:0;align-items:center;justify-content:center}.fallback img{max-height:75%;max-width:75%;object-fit:contain}
+.lpl-dither-stage{height:clamp(330px,52vw,550px);margin-top:24px}
+.lpl-dither-stage .fallback{display:none;position:absolute;inset:0;align-items:center;justify-content:center}
+.lpl-dither-stage .fallback img{max-height:75%;max-width:75%;object-fit:contain}
+.lpl-dither-stage .hint{position:absolute;bottom:18px;left:18px;color:#aeb7b9;font-size:12px;pointer-events:none}
+@media(prefers-reduced-motion:reduce){.lpl-dither-stage .hint{display:none}}
 </style>
 </head>
 
@@ -1348,6 +1359,17 @@ footer {
 </div>
 
 <main>
+
+
+<!-- INTERACTIVE LEAGUE CREST -->
+<section class="lpl-dither-section" aria-label="Interactive Lonestar Premier League crest">
+  <div class="container">
+    <div class="eyebrow">The League • Established 2026</div>
+    <h2 class="lpl-dither-title">One League. Ten Clubs.</h2>
+    <p class="lpl-dither-subtitle">An identity built for the Lonestar Premier League. Move your cursor across the crest or tap to send a ripple through it.</p>
+    <div class="lpl-dither-stage" id="stage"><canvas id="particles" role="img" aria-label="Interactive particle rendering of the Lonestar Premier League logo"></canvas><div class="fallback" id="fallback"><img src="league logo.jpeg" alt="Lonestar Premier League logo"></div><div class="hint">MOVE CURSOR · CLICK OR TAP TO RIPPLE</div></div>
+  </div>
+</section>
 
 <!-- UPDATED TOP SCORERS -->
 
@@ -2165,5 +2187,61 @@ if (track) {
 }
 </script>
 
+<script>
+
+(()=>{
+const canvas=document.getElementById('particles'),stage=document.getElementById('stage'),fallback=document.getElementById('fallback'),ctx=canvas.getContext('2d');
+if(!ctx){fallback.style.display='flex';return}
+const img=new Image();img.src='league logo.jpeg';
+let particles=[],w=0,h=0,dpr=1,mouse={x:-9999,y:-9999,active:false},ripples=[],running=false,last=0;
+const reduce=window.matchMedia('(prefers-reduced-motion: reduce)');
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+function rebuild(){
+const rect=stage.getBoundingClientRect();w=rect.width;h=rect.height;dpr=Math.min(devicePixelRatio||1,2);
+canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);
+if(!img.complete||!img.naturalWidth)return;
+const sample=document.createElement('canvas'),s=sample.getContext('2d',{willReadFrequently:true});
+const n=Math.min(140,Math.max(75,Math.round(w/6)));const ratio=img.naturalHeight/img.naturalWidth;
+sample.width=n;sample.height=Math.max(1,Math.round(n*ratio));s.drawImage(img,0,0,sample.width,sample.height);
+let pixels;try{pixels=s.getImageData(0,0,sample.width,sample.height).data}catch(e){fallback.style.display='flex';return}
+const sw=sample.width,sh=sample.height,lum=new Float32Array(sw*sh),alpha=new Float32Array(sw*sh);
+for(let i=0;i<lum.length;i++){let k=i*4;lum[i]=.2126*pixels[k]+.7152*pixels[k+1]+.0722*pixels[k+2];alpha[i]=pixels[k+3]/255}
+const availableW=w*.77,availableH=h*.78,step=Math.min(availableW/sw,availableH/sh),startX=(w-sw*step)/2,startY=(h-sh*step)/2;
+particles=[];
+for(let y=0;y<sh;y++)for(let x=0;x<sw;x++){
+let i=y*sw+x,old=lum[i],dark=alpha[i]>.18&&old<160;
+if(dark){const px=startX+(x+.5)*step,py=startY+(y+.5)*step;particles.push({x:px,y:py,homeX:px,homeY:py,vx:0,vy:0,r:Math.max(.75,step*.28),light:old})}
+let error=old-(old<160?0:255);
+for(const [dx,dy,k] of [[1,0,7/16],[-1,1,3/16],[0,1,5/16],[1,1,1/16]]){let xx=x+dx,yy=y+dy;if(xx>=0&&xx<sw&&yy<sh)lum[yy*sw+xx]+=error*k}
+}
+if(!particles.length){fallback.style.display='flex';return}
+draw(0);if(!reduce.matches)start();
+}
+function draw(time){
+ctx.clearRect(0,0,w,h);ctx.fillStyle='#e6c77f';
+const dt=last?Math.min(2,(time-last)/16.67):1;last=time;
+ripples=ripples.filter(r=>time-r.t<1150);
+for(const p of particles){
+if(!reduce.matches){
+let ax=(p.homeX-p.x)*.035,ay=(p.homeY-p.y)*.035;
+if(mouse.active){let dx=p.x-mouse.x,dy=p.y-mouse.y,dist=Math.hypot(dx,dy)||1;if(dist<105){let force=(1-dist/105)*2.9;ax+=dx/dist*force;ay+=dy/dist*force}}
+for(const r of ripples){let dx=p.x-r.x,dy=p.y-r.y,dist=Math.hypot(dx,dy)||1,ring=(time-r.t)*.35;let force=Math.max(0,1-Math.abs(dist-ring)/65)*1.6;ax+=dx/dist*force;ay+=dy/dist*force}
+p.vx=(p.vx+ax*dt)*Math.pow(.84,dt);p.vy=(p.vy+ay*dt)*Math.pow(.84,dt);p.x+=p.vx*dt;p.y+=p.vy*dt
+}
+ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill()
+}
+}
+function loop(t){if(!running)return;draw(t);requestAnimationFrame(loop)}
+function start(){if(running)return;running=true;last=0;requestAnimationFrame(loop)}
+function stop(){running=false;last=0;draw(0)}
+stage.addEventListener('pointermove',e=>{const r=stage.getBoundingClientRect();mouse={x:e.clientX-r.left,y:e.clientY-r.top,active:true}});
+stage.addEventListener('pointerleave',()=>{mouse.active=false});
+stage.addEventListener('pointerdown',e=>{const r=stage.getBoundingClientRect();ripples.push({x:e.clientX-r.left,y:e.clientY-r.top,t:performance.now()})});
+reduce.addEventListener('change',()=>{if(reduce.matches)stop();else start()});
+window.addEventListener('resize',rebuild);img.onload=rebuild;img.onerror=()=>{fallback.style.display='flex'};
+if(img.complete&&img.naturalWidth)rebuild();
+})();
+
+</script>
 </body>
 </html>
