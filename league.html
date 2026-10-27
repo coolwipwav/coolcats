@@ -1309,6 +1309,26 @@ footer {
 .lpl-dither-stage .fallback img{max-height:75%;max-width:75%;object-fit:contain}
 .lpl-dither-stage .hint{position:absolute;bottom:18px;left:18px;color:#aeb7b9;font-size:12px;pointer-events:none}
 @media(prefers-reduced-motion:reduce){.lpl-dither-stage .hint{display:none}}
+
+/* MATCHWEEK 8 FEATURE */
+.mw8-feature{padding:76px 0;background:#10191c;border-bottom:1px solid #344044}
+.mw8-head{display:flex;align-items:center;gap:17px;margin-bottom:25px}
+.mw8-head img{width:76px;height:76px;object-fit:contain}
+.mw8-head h2{font-size:clamp(32px,5vw,62px);line-height:1;margin:7px 0;text-transform:uppercase;letter-spacing:-2px}
+.mw8-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:stretch}
+.mw8-copy{padding:26px;background:#182326;border-top:4px solid var(--teal)}
+.mw8-copy h3{font-size:clamp(28px,3vw,42px);line-height:1.04;margin:0 0 15px;text-transform:uppercase}
+.mw8-copy p{font:16px/1.65 Georgia,serif;color:#c4cdcf}
+.mw8-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:22px 0}
+.mw8-stats div{padding:15px 8px;border:1px solid #3b4b4e;text-align:center}
+.mw8-stats strong{display:block;color:var(--orange);font-size:clamp(20px,2.6vw,33px)}
+.mw8-stats small{display:block;margin-top:5px;color:#b4c0c2;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:1px}
+.mw8-player{position:relative;display:flex;flex-direction:column;justify-content:end;min-height:450px;overflow:hidden;background:radial-gradient(circle at 50% 45%,#29464b,#101719 70%);border:1px solid #344044}
+.mw8-player img{width:100%;height:365px;object-fit:contain;object-position:center bottom}
+.mw8-player-caption{padding:18px 22px;background:#101719;border-top:1px solid #344044}
+.mw8-player-caption strong{font-size:24px;text-transform:uppercase}
+.mw8-player-caption span{display:block;color:var(--teal);margin-top:6px;font-size:12px;font-weight:bold}
+@media(max-width:760px){.mw8-layout{grid-template-columns:1fr}.mw8-feature{padding:48px 0}.mw8-stats{grid-template-columns:repeat(3,minmax(0,1fr))}.mw8-head img{width:60px;height:60px}}
 </style>
 </head>
 
@@ -1411,6 +1431,35 @@ footer {
 
 
 <!-- FEATURED CHAMPIONSHIP ARTICLE -->
+
+
+<!-- MATCHWEEK 8 MANAGER OF THE WEEK -->
+<section class="mw8-feature" id="manager-of-the-week">
+  <div class="container">
+    <div class="mw8-head">
+      <img src="villans-crest.PNG" alt="Rocky Mountain Villans crest">
+      <div><div class="eyebrow">Matchweek 8 • Manager of the Week</div><h2>Nolan's Villans Set the Pace</h2></div>
+    </div>
+    <div class="mw8-layout">
+      <div class="mw8-copy">
+        <h3>Rocky Mountain Villans tighten their grip on first.</h3>
+        <p>Eight matchweeks into the Lonestar Premier League, the contenders are beginning to separate themselves from the pack. Nolan's Rocky Mountain Villans lead the way after a perfect three win matchweek, spearheaded by Nicolas Jackson's outstanding two goal performance.</p>
+        <div class="mw8-stats">
+          <div><strong>196.79</strong><small>Team fantasy points</small></div>
+          <div><strong>3–0</strong><small>Matchweek record</small></div>
+          <div><strong>48</strong><small>League points</small></div>
+        </div>
+        <p>BUSTAiNBOLT leapfrog Wooburt City into third, while Tzolid and Leon Valley remain within striking distance. Further down the table, difficult questions are emerging about draft selections, waiver decisions, and the future of struggling squads.</p>
+        <p>The contenders are emerging, the pressure is mounting, and Matchweek 8 may have given us our clearest picture yet of who's ready to compete.</p>
+        <a class="btn" href="matchweek-8-review.html">Read Full Story →</a>
+      </div>
+      <div class="mw8-player">
+        <img src="jackson-villan.PNG" alt="Nicolas Jackson wearing Rocky Mountain Villans kit">
+        <div class="mw8-player-caption"><strong>Nicolas Jackson</strong><span>Player of the Week • 31.08 fantasy points • 2 goals</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="championship">
   <div class="container">
@@ -1593,11 +1642,11 @@ footer {
         <h2>The Race Is On.</h2>
 
         <p>
-          Rocky Mountain Villans lead the Lonestar Premier League with 39 points after 18 matches, three points clear of Mauled By The Tigers.
+          Rocky Mountain Villans lead the Lonestar Premier League with 48 points after 21 matches, six points clear of Mauled By The Tigers.
         </p>
 
         <p>
-          Wooburt City Cool Cats occupy third place on 33 points. Wobble United rise to ninth following a perfect three-win matchweek.
+          BUSTAiNBOLT climb to third on 39 points, with Wooburt City Cool Cats fourth on 36. Tzolid and Leon Valley follow on 33 points each.
         </p>
 
       </div>
