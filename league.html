@@ -2074,16 +2074,16 @@ footer {
 
 <script>
 const topScorers = [
-  {rank:1,name:"Erling Haaland",owner:"jakphong",club:"MCI",position:"FWD",points:"146.39",image:"LTS-haaland.png"},
-  {rank:2,name:"Pascal Groß",owner:"BUSTAINB",club:"BHA",position:"MID",points:"136.51",image:"LTS-gross.png"},
-  {rank:3,name:"João Pedro",owner:"RAWR",club:"CHE",position:"FWD",points:"120.24",image:"LTS-joao-pedro.PNG"},
-  {rank:4,name:"James Tarkowski",owner:"Children",club:"EVE",position:"DEF",points:"119.57",image:"LTS-tarkowski.png"},
-  {rank:5,name:"Morgan Rogers",owner:"RMVillan",club:"CHE",position:"MID",points:"118.81",image:"LTS-rogers.PNG"},
-  {rank:6,name:"Cole Palmer",owner:"WB",club:"CHE",position:"MID",points:"118.05",image:"LTS-palmer.png"},
-  {rank:7,name:"Mohamed Belloumi",owner:"RGFC",club:"HUL",position:"MID",points:"117.25",image:"LTS-belloumi.png"},
-  {rank:8,name:"Bryan Mbeumo",owner:"RMVillan",club:"MUN",position:"FWD",points:"115.88",image:"LTS-mbeumo.PNG"},
-  {rank:9,name:"Kiernan Dewsbury-Hall",owner:"RMVillan",club:"EVE",position:"MID",points:"115.35",image:"LTS-dewsberry.png"},
-  {rank:10,name:"Bukayo Saka",owner:"BUSTAINB",club:"ARS",position:"MID",points:"113.87",image:"LTS-saka.png"}
+  {rank:1,name:"Erling Haaland",owner:"jakphong",club:"MCI",position:"FWD",points:"164.16",image:"LTS-haaland.png"},
+  {rank:2,name:"Pascal Groß",owner:"BUSTAINB",club:"BHA",position:"MID",points:"144.96",image:"LTS-gross.png"},
+  {rank:3,name:"Mohamed Belloumi",owner:"RGFC",club:"HUL",position:"MID",points:"133.04",image:"LTS-belloumi.png"},
+  {rank:4,name:"Evanilson",owner:"",club:"BOU",position:"FWD",points:"130.43",image:"LTS-evaninson.PNG"},
+  {rank:5,name:"James Tarkowski",owner:"Children",club:"EVE",position:"DEF",points:"130.28",image:"LTS-tarkowski.png"},
+  {rank:6,name:"Marcus Tavernier",owner:"",club:"BOU",position:"MID",points:"127.85",image:"LTS-tavernier.PNG"},
+  {rank:7,name:"Morgan Rogers",owner:"RMVillan",club:"AVL",position:"MID",points:"124.10",image:"LTS-rogers.PNG"},
+  {rank:8,name:"Bryan Mbeumo",owner:"RMVillan",club:"MUN",position:"FWD",points:"122.99",image:"LTS-mbeumo.PNG"},
+  {rank:9,name:"Cole Palmer",owner:"WB",club:"CHE",position:"MID",points:"121.70",image:"LTS-palmer.png"},
+  {rank:10,name:"Maxim De Cuyper",owner:"",club:"BHA",position:"DEF",points:"121.30",image:"LTS-decuyper.PNG"}
 ];
 
 function scorerCard(player) {
@@ -2113,7 +2113,7 @@ function scorerCard(player) {
         </div>
 
         <div class="scorer-owner">
-          Owner: ${player.owner}
+          ${player.owner ? `Owner: ${player.owner}` : `Premier League • ${player.club}`}
         </div>
 
         <div class="scorer-bottom">
