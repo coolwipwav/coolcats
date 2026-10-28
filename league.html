@@ -1329,6 +1329,18 @@ footer {
 .mw8-player-caption strong{font-size:24px;text-transform:uppercase}
 .mw8-player-caption span{display:block;color:var(--teal);margin-top:6px;font-size:12px;font-weight:bold}
 @media(max-width:760px){.mw8-layout{grid-template-columns:1fr}.mw8-feature{padding:48px 0}.mw8-stats{grid-template-columns:repeat(3,minmax(0,1fr))}.mw8-head img{width:60px;height:60px}}
+
+/* Lead Wissa story, immediately after the interactive league crest */
+.wissa-lead{background:#11191b;padding:52px 0 62px;border-top:1px solid #344145;border-bottom:1px solid #344145}
+.wissa-lead-grid{display:grid;grid-template-columns:1.08fr .92fr;align-items:stretch;gap:0;background:#182326;border:1px solid #39484a;overflow:hidden}
+.wissa-lead-photo{display:block;min-height:380px;overflow:hidden;background:#0c1416}
+.wissa-lead-photo img{width:100%;height:100%;min-height:380px;object-fit:cover;object-position:center 25%;transition:transform .3s ease}
+.wissa-lead-photo:hover img{transform:scale(1.025)}
+.wissa-lead-copy{padding:clamp(24px,4vw,54px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.wissa-lead-copy h2{font-size:clamp(34px,4vw,57px);line-height:1.01;letter-spacing:-1.5px;text-transform:uppercase;margin:12px 0 18px}
+.wissa-lead-copy p{color:#c0cbce;font:17px/1.6 Georgia,serif;margin:0 0 25px}
+.wissa-lead-copy a{color:#fff;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:1px;text-decoration:none;border-bottom:2px solid var(--teal);padding-bottom:8px}
+@media(max-width:760px){.wissa-lead{padding:32px 0 40px}.wissa-lead-grid{grid-template-columns:1fr}.wissa-lead-photo,.wissa-lead-photo img{min-height:270px;max-height:390px}.wissa-lead-copy{padding:25px}}
 </style>
 </head>
 
@@ -1388,6 +1400,21 @@ footer {
     <h2 class="lpl-dither-title">One League. Ten Clubs.</h2>
     <p class="lpl-dither-subtitle">An identity built for the Lonestar Premier League. Move your cursor across the crest or tap to send a ripple through it.</p>
     <div class="lpl-dither-stage" id="stage"><canvas id="particles" role="img" aria-label="Interactive particle rendering of the Lonestar Premier League logo"></canvas><div class="fallback" id="fallback"><img src="league logo.jpeg" alt="Lonestar Premier League logo"></div><div class="hint">MOVE CURSOR · CLICK OR TAP TO RIPPLE</div></div>
+  </div>
+</section>
+
+<!-- WISSA LEAD STORY -->
+<section class="wissa-lead" aria-label="Featured Lonestar Times story">
+  <div class="container">
+    <div class="wissa-lead-grid">
+      <a class="wissa-lead-photo" href="wissa-eight-minutes.html" aria-label="Read Wissa traded for eight minutes"><img src="wissa-in-trouble.png" alt="Yoane Wissa wearing Wobble United kit" loading="eager"></a>
+      <div class="wissa-lead-copy">
+        <div class="eyebrow">The Lonestar Times • Breaking League News • October 28, 2026</div>
+        <h2>Wissa Traded for Eight Minutes</h2>
+        <p>An overnight trade, a brutal warning from the Wobble United manager, and a controversial Denver sponsorship. Wissa's latest saga has the entire league talking.</p>
+        <a href="wissa-eight-minutes.html">Read the Full Story →</a>
+      </div>
+    </div>
   </div>
 </section>
 
