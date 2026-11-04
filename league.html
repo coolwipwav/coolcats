@@ -1341,6 +1341,19 @@ footer {
 .wissa-lead-copy p{color:#c0cbce;font:17px/1.6 Georgia,serif;margin:0 0 25px}
 .wissa-lead-copy a{color:#fff;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:1px;text-decoration:none;border-bottom:2px solid var(--teal);padding-bottom:8px}
 @media(max-width:760px){.wissa-lead{padding:32px 0 40px}.wissa-lead-grid{grid-template-columns:1fr}.wissa-lead-photo,.wissa-lead-photo img{min-height:270px;max-height:390px}.wissa-lead-copy{padding:25px}}
+
+/* Matchweek 9 homepage editorial photography */
+.mw9-home-visual{min-height:485px;background:#122e22;display:block;isolation:isolate}
+.mw9-home-visual .mw9-rudoni{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;z-index:-2}
+.mw9-home-visual:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 42%,#07130d55 70%,#07130d 100%);z-index:-1}
+.mw9-home-visual .mw8-player-caption{position:absolute;bottom:0;left:0;right:0;background:#101719ed;z-index:2}
+.mw9-vanhecke{position:absolute;top:20px;right:18px;z-index:3;display:flex;align-items:end;gap:7px;padding:8px 9px 0;background:#13233bdc;border:1px solid #e4b75b;box-shadow:0 6px 20px #0007;max-width:47%}
+.mw9-vanhecke img{width:86px;height:123px;object-fit:contain;object-position:bottom;flex-shrink:0}
+.mw9-vanhecke div{padding-bottom:12px;color:#fff;font-family:Arial,sans-serif;text-transform:uppercase}
+.mw9-vanhecke small{display:block;font-size:8px;letter-spacing:1px;color:#e6c471;font-weight:900}
+.mw9-vanhecke strong{display:block;font-size:14px;margin-top:6px}
+.mw9-vanhecke span{display:block;font-size:11px;color:#e6c471;font-weight:900;margin-top:4px}
+@media(max-width:560px){.mw9-home-visual{min-height:400px}.mw9-vanhecke{top:12px;right:12px;padding:6px 6px 0}.mw9-vanhecke img{width:58px;height:91px}.mw9-vanhecke strong{font-size:11px}.mw9-vanhecke small{font-size:7px}.mw9-vanhecke span{font-size:9px}}
 </style>
 </head>
 
@@ -1423,8 +1436,12 @@ footer {
         <p>Meanwhile, Jan Paul van Hecke of MAULED BY THE TIGERS earned Player of the Week with 32.83 points as the Tigers closed within three points of first.</p>
         <a class="btn" href="matchweek-9-manager-of-the-week.html">Read Full Story →</a>
       </div>
-      <div class="mw8-player" style="background:radial-gradient(circle at 50% 40%,#25734d,#0c261c 72%)">
-        <img src="rusdoni-week9.PNG" alt="Leon Valley's Jack Rudoni celebrates" style="object-fit:contain;height:390px">
+      <div class="mw8-player mw9-home-visual">
+        <img class="mw9-rudoni" src="rusdoni-week9.PNG" alt="Jack Rudoni celebrating in Leon Valley colors">
+        <div class="mw9-vanhecke">
+          <img src="VH-week9.PNG" alt="Jan Paul van Hecke in MAULED BY THE TIGERS kit">
+          <div><small>PLAYER OF THE WEEK</small><strong>VAN HECKE</strong><span>32.83 PTS</span></div>
+        </div>
         <div class="mw8-player-caption"><strong>Leon Valley</strong><span>Diego • Matchweek 9 Manager of the Week • 244.15 points</span></div>
       </div>
     </div>
