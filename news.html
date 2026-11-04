@@ -45,6 +45,53 @@ header{background:#faf7ef;border-bottom:1px solid #cfc6b8}.header-inner{max-widt
 .issue .cover-bottom,.issue.dark .cover-bottom{border-top:1px solid #fff9;color:#fff;padding-top:10px;margin:0}
 .issue .cover:after{content:"";position:absolute;inset:0;z-index:4;pointer-events:none;background:linear-gradient(110deg,#fff2 0%,transparent 18%,transparent 80%,#fff1 100%);mix-blend-mode:screen}
 @media(max-width:580px){.issue .cover{height:340px;min-height:0}.issue.feature .cover{height:365px;min-height:0}.issue .cover-top{padding:9px}.issue .cover-top .paper-name{font-size:clamp(17px,4.7vw,27px);letter-spacing:-1px}.issue .cover-body{padding:10px}.issue .cover-body .cover-tag{font-size:7px;padding:4px}.issue .cover-body h3,.issue.feature .cover-body h3{font-size:clamp(20px,5.4vw,29px);letter-spacing:-1px}.issue .cover-body p{font-size:10px;margin-bottom:8px}.issue .cover-bottom{font-size:7px}.issue .cover-top .mini{font-size:6px}}
+
+/* The Lonestar Times interactive newsstand */
+.issue{cursor:pointer;transform-origin:bottom center}
+.issue:hover,.issue:focus-visible{transform:translateY(-23px) rotate(-2deg) scale(1.025)}
+.issue .cover{transition:box-shadow .28s ease}
+.issue:hover .cover{box-shadow:inset -5px 0 0 #ffffff24,7px 8px 0 #d4c6b0,12px 13px 0 #89745e,0 24px 24px #2e1a1650}
+.stand-toolbar{max-width:1240px;margin:0 auto;padding:0 25px 26px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.stand-toolbar label{display:flex;align-items:center;gap:10px;font:900 10px Arial,sans-serif;letter-spacing:1px;text-transform:uppercase}
+.stand-toolbar select,.stand-toolbar button{border:1px solid #a99c8b;background:#f9f4e7;padding:10px 12px;color:#172224;font:900 10px Arial,sans-serif;letter-spacing:1px;text-transform:uppercase;cursor:pointer}
+.stand-toolbar .count{font:900 10px Arial,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#6c5847}
+.reader-overlay[hidden]{display:none!important}
+.reader-overlay{position:fixed;inset:0;z-index:9999;background:#080d0de8;display:flex;align-items:center;justify-content:center;padding:18px;backdrop-filter:blur(7px)}
+.reader-shell{position:relative;width:min(1120px,100%);max-height:96vh;display:flex;flex-direction:column;color:#f7f3e9}
+.reader-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:9px 2px 15px;font:900 11px Arial,sans-serif;letter-spacing:1px;text-transform:uppercase}
+.reader-bar .actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.reader-bar button,.reader-bar a,.reader-nav button{cursor:pointer;border:1px solid #aeb6b2;background:#152527;color:white;padding:10px 13px;font:900 10px Arial,sans-serif;text-transform:uppercase;letter-spacing:1px;text-decoration:none}
+.reader-bar button:hover,.reader-bar a:hover,.reader-nav button:hover{background:#245c52}
+.reader-bar button:focus-visible,.reader-nav button:focus-visible{outline:3px solid #ff9418;outline-offset:2px}
+.reader-stage{display:flex;align-items:stretch;justify-content:center;min-height:0;flex:1;perspective:1800px}
+.reader-cover{width:min(420px,100%);height:min(660px,74vh);position:relative;overflow:hidden;background:#182626;border:1px solid #9a907e;box-shadow:10px 12px 0 #b9aa90,22px 25px 45px #0009;display:flex;flex-direction:column;justify-content:space-between;padding:22px;text-shadow:0 2px 10px #000a}
+.reader-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.reader-cover:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#000b,transparent 35%,#000b 76%,#000e);pointer-events:none}
+.reader-cover .reader-cover-top,.reader-cover .reader-cover-bottom{position:relative;z-index:1}
+.reader-cover-top{font:900 12px Arial,sans-serif;letter-spacing:2px;text-transform:uppercase}
+.reader-cover-top strong{display:block;font:900 clamp(36px,5vw,60px)/.9 Georgia,serif;letter-spacing:-2px;margin-top:15px}
+.reader-cover-bottom h2{font:900 clamp(34px,5vw,58px)/.93 Arial,sans-serif;letter-spacing:-2px;text-transform:uppercase;margin:12px 0}
+.reader-cover-bottom p{font:15px/1.5 Georgia,serif;max-width:330px}
+.reader-spread{width:100%;height:min(680px,74vh);display:grid;grid-template-columns:1fr 1fr;background:#f7f0df;color:#1c1a18;box-shadow:0 18px 45px #000a;transform-origin:center;overflow:hidden}
+.reader-spread.turning{animation:pageTurn .35s ease}
+@keyframes pageTurn{0%{transform:rotateY(-7deg);opacity:.55}100%{transform:rotateY(0);opacity:1}}
+.reader-page{padding:clamp(20px,3vw,43px);overflow-y:auto;scrollbar-color:#b7a58b transparent;min-width:0;background:repeating-linear-gradient(0deg,#faf6eb,#faf6eb 4px,#f9f4e9 5px);position:relative}
+.reader-page:first-child{border-right:1px solid #b8aa94;box-shadow:inset -14px 0 17px -16px #0005}
+.reader-page:last-child{box-shadow:inset 15px 0 18px -17px #0005}
+.reader-page .page-label{font:900 9px Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;color:#9b385b;border-bottom:2px solid #242320;padding-bottom:12px;margin-bottom:18px}
+.reader-page h2{font:900 clamp(23px,3vw,39px)/1.04 Georgia,serif;text-transform:uppercase;letter-spacing:-1px;margin:0 0 17px}
+.reader-page h3{font:900 21px/1.12 Arial,sans-serif;text-transform:uppercase;margin:20px 0 12px}
+.reader-page p{font:clamp(14px,1.4vw,17px)/1.65 Georgia,serif;margin:0 0 17px}
+.reader-page blockquote{font:italic 900 22px/1.35 Georgia,serif;border-left:5px solid #d43b77;padding:12px 15px;background:#eae2d4;margin:20px 0}
+.reader-page img{display:block;width:100%;max-height:290px;object-fit:contain;margin:10px auto 20px}
+.reader-page figure{margin:15px 0}.reader-page figcaption{font:10px Arial,sans-serif;color:#666}
+.reader-page .page-number{font:900 9px Arial,sans-serif;color:#807466;letter-spacing:2px;margin-top:22px;text-align:center}
+.reader-nav{display:flex;align-items:center;justify-content:center;gap:14px;padding:16px 0 0}
+.reader-nav button:disabled{opacity:.3;cursor:not-allowed}
+.reader-nav span{font:900 11px Arial,sans-serif;letter-spacing:1px;min-width:90px;text-align:center}
+body.reader-open{overflow:hidden}
+@media(max-width:650px){.reader-overlay{padding:8px}.reader-shell{max-height:99vh}.reader-bar{font-size:9px}.reader-bar button,.reader-bar a{padding:8px}.reader-spread{grid-template-columns:1fr;height:72vh}.reader-page{padding:24px}.reader-page:nth-child(2){display:none}.reader-page:first-child{border:0;box-shadow:none}.reader-cover{height:72vh}.reader-nav{padding:10px 0}}
+@media(prefers-reduced-motion:reduce){.reader-spread.turning{animation:none}.issue{transition:none}}
 </style>
 <style>
 .mw9-cover .cover{background:radial-gradient(circle at 60% 28%,#35865d,#0b271d 80%);overflow:hidden}
@@ -61,7 +108,7 @@ header{background:#faf7ef;border-bottom:1px solid #cfc6b8}.header-inner{max-widt
 <div class="ticker"><div class="ticker-inner"><span><b>On the stand</b> / October 28, 2026</span><span>Transfers · Matchweeks · Cups · League History</span></div></div>
 <section class="intro"><div><div class="overline" style="color:#9b3560">Browse the editions</div><h2>The Newsstand.</h2><p>Pick up an issue. Explore the stories that made the league. New headlines up front, old favorites on the lower shelf.</p></div><div class="edition">2026 Season<br>Issue Archive / Vol. 01</div></section>
 <div class="controls" role="group" aria-label="Filter newsstand issues"><button class="filter" data-filter="all" aria-pressed="true">All Issues</button><button class="filter" data-filter="controversy" aria-pressed="false">Controversy</button><button class="filter" data-filter="matchweek" aria-pressed="false">Matchweeks</button><button class="filter" data-filter="cup" aria-pressed="false">Cup History</button><button class="filter" data-filter="league" aria-pressed="false">League News</button></div>
-<main class="newsstand"><div class="stand-inner">
+<div class="stand-toolbar"><label for="issue-sort">Arrange issues <select id="issue-sort"><option value="latest">Latest first</option><option value="oldest">Oldest first</option><option value="title">Title A to Z</option></select></label><div class="count" id="issue-count" aria-live="polite">Browse the collection</div><button type="button" id="sound-toggle" aria-pressed="false">Sound Off ♫</button></div><main class="newsstand"><div class="stand-inner">
 <div class="shelf-heading" data-label="latest"><span>Top Shelf / Current Headlines</span></div>
 <div class="shelf" data-shelf="latest">
 <a class="issue feature mw9-cover" data-category="matchweek" href="matchweek-9-manager-of-the-week.html" aria-label="Read From Eighth to Fourth, Diego's Leon Valley Storm Back Into Contention"><div class="cover"><div class="cover-top"><div class="mini"><span>Matchweek 09 / 2026</span><span>Manager of the Week</span></div><span class="paper-name">THE LONESTAR <em>TIMES</em></span><div class="rule"></div></div><div class="cover-photo"><img src="rusdoni-week9.PNG" alt="Jack Rudoni celebrates for Leon Valley" loading="eager"></div><div class="cover-body"><div class="cover-tag">Diego / 244.15 Points</div><h3>From Eighth to Fourth</h3><p>Leon Valley storm back into contention. Three victories. Just 0.43 points from history.</p><div class="cover-bottom"><span>Matchweek 09</span><span>Open Issue ↗</span></div></div></div></a>
@@ -80,25 +127,41 @@ header{background:#faf7ef;border-bottom:1px solid #cfc6b8}.header-inner{max-widt
 <div class="shelf" data-shelf="origins">
 <a class="issue" data-category="league" href="new-era.html" aria-label="Read A New Era"><div class="cover"><div class="cover-top"><div class="mini"><span>2026 Season</span><span>Founding Issue</span></div><span class="paper-name">THE LONESTAR <em>TIMES</em></span><div class="rule"></div></div><div class="cover-photo"><img src="league-logo-color-pallet.png" alt="Lonestar Premier League original identity artwork" loading="lazy"></div><div class="cover-body"><div class="cover-tag">League Identity</div><h3>A New Era</h3><p>The new look, website, and H-E-B partnership that helped define the league.</p><div class="cover-bottom"><span>Founding Edition</span><span>Open Issue ↗</span></div></div></div></a>
 </div>
-<p class="archive-note">Every cover opens its original article. The collection grows as new stories are published.</p>
+<p class="archive-note">Pull a magazine off the shelf to inspect the cover, then open it and turn the pages. Use Original Article for the classic full-page view.</p>
 </div></main>
 <footer class="footer"><div class="footer-inner"><div><strong>The Lonestar Times.</strong><p>Clubs. Cups. Rivalries. History.<br>Lonestar Premier League · Established 2026</p></div><div><a href="league.html">Return to the League</a> &nbsp; · &nbsp; <a href="cup-hub.html">Cup Hub</a></div></div></footer>
 <script>
 (function(){
 const buttons=[...document.querySelectorAll('.filter')];
 const issues=[...document.querySelectorAll('.issue')];
-buttons.forEach(button=>button.addEventListener('click',()=>{
-const filter=button.dataset.filter;
-buttons.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
-issues.forEach(issue=>{issue.hidden=filter!=='all'&&issue.dataset.category!==filter;});
-document.querySelectorAll('[data-shelf]').forEach(shelf=>{
-const empty=![...shelf.querySelectorAll('.issue')].some(issue=>!issue.hidden);
-shelf.hidden=empty;
-const heading=document.querySelector('[data-label="'+shelf.dataset.shelf+'"]');
-if(heading)heading.hidden=empty;
-});
-}));
+const overlay=document.getElementById('reader-overlay'),stage=document.getElementById('reader-stage');
+const next=document.getElementById('reader-next'),prev=document.getElementById('reader-prev'),counter=document.getElementById('reader-counter');
+const original=document.getElementById('reader-original'),close=document.getElementById('reader-close'),title=document.getElementById('reader-title');
+const sort=document.getElementById('issue-sort'),count=document.getElementById('issue-count'),sound=document.getElementById('sound-toggle');
+let selected=null,pages=[],pageIndex=0,lastFocus=null,audio=null,soundOn=false;
+const mobile=()=>window.matchMedia('(max-width:650px)').matches;
+function visibleIssues(){return issues.filter(i=>!i.hidden)}
+function refreshShelves(){document.querySelectorAll('[data-shelf]').forEach(shelf=>{const empty=![...shelf.querySelectorAll('.issue')].some(i=>!i.hidden);shelf.hidden=empty;const heading=document.querySelector('[data-label="'+shelf.dataset.shelf+'"]');if(heading)heading.hidden=empty;});count.textContent=visibleIssues().length+' ISSUES ON DISPLAY';}
+buttons.forEach(b=>b.addEventListener('click',()=>{const filter=b.dataset.filter;buttons.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));issues.forEach(i=>i.hidden=filter!=='all'&&i.dataset.category!==filter);refreshShelves();}));
+sort.addEventListener('change',()=>{document.querySelectorAll('[data-shelf]').forEach(shelf=>{const cards=[...shelf.querySelectorAll('.issue')];cards.sort((a,b)=>{if(sort.value==='title')return a.querySelector('h3').textContent.localeCompare(b.querySelector('h3').textContent);return sort.value==='oldest'?issues.indexOf(b)-issues.indexOf(a):issues.indexOf(a)-issues.indexOf(b)});cards.forEach(i=>shelf.appendChild(i));});});
+sound.addEventListener('click',()=>{soundOn=!soundOn;sound.setAttribute('aria-pressed',String(soundOn));sound.textContent=soundOn?'Sound On ♫':'Sound Off ♫';});
+function rustle(){if(!soundOn)return;try{audio=audio||new(window.AudioContext||window.webkitAudioContext)();const len=Math.floor(audio.sampleRate*.11),buffer=audio.createBuffer(1,len,audio.sampleRate),data=buffer.getChannelData(0);for(let i=0;i<len;i++)data[i]=(Math.random()*2-1)*(1-i/len)*.16;const src=audio.createBufferSource(),filter=audio.createBiquadFilter(),gain=audio.createGain();filter.type='highpass';filter.frequency.value=600;gain.gain.value=.3;src.buffer=buffer;src.connect(filter);filter.connect(gain);gain.connect(audio.destination);src.start();}catch(e){}}
+function safeText(node){return node?.textContent?.trim()||''}
+function cover(){const img=selected.querySelector('.cover-photo img');stage.innerHTML='';const panel=document.createElement('div');panel.className='reader-cover';const photo=document.createElement('img');photo.src=img.getAttribute('src');photo.alt=img.alt;panel.appendChild(photo);const top=document.createElement('div');top.className='reader-cover-top';top.textContent=safeText(selected.querySelector('.cover-top .mini'));const mast=document.createElement('strong');mast.textContent='THE LONESTAR TIMES';top.appendChild(mast);const bottom=document.createElement('div');bottom.className='reader-cover-bottom';const headline=document.createElement('h2');headline.textContent=safeText(selected.querySelector('.cover-body h3'));const description=document.createElement('p');description.textContent=safeText(selected.querySelector('.cover-body p'));bottom.append(headline,description);panel.append(top,bottom);stage.appendChild(panel);}
+function extractPages(doc){const root=doc.querySelector('article')||doc.querySelector('main')||doc.querySelector('.article-body')||doc.body;const nodes=[...root.children];const chunks=[];let chunk=[],size=0;const add=()=>{if(chunk.length){chunks.push(chunk);chunk=[];size=0;}};for(const node of nodes){if(['SCRIPT','STYLE','NAV','FOOTER'].includes(node.tagName))continue;const txt=node.textContent.trim();const images=node.querySelectorAll('img').length+(node.tagName==='IMG'?1:0);const cost=txt.length+images*430+(node.tagName==='FIGURE'?100:0);if(size+cost>750&&chunk.length)add();chunk.push(node.outerHTML);size+=cost;if(images>0||node.tagName==='BLOCKQUOTE')add();}add();if(!chunks.length)chunks.push(['<p>Read this story in its original article.</p>']);return chunks.map(ch=>ch.join(''));}
+function cleanHtml(html){const doc=new DOMParser().parseFromString(html,'text/html');doc.querySelectorAll('script,style,iframe,object,embed,form,button,input,video,audio').forEach(n=>n.remove());doc.querySelectorAll('*').forEach(el=>{[...el.attributes].forEach(attr=>{if(attr.name.startsWith('on')||attr.name==='srcdoc'||attr.name==='style')el.removeAttribute(attr.name);if((attr.name==='href'||attr.name==='src')&&/^javascript:/i.test(attr.value))el.removeAttribute(attr.name);});});return doc.body.innerHTML;}
+function spread(){stage.innerHTML='';const spread=document.createElement('div');spread.className='reader-spread turning';const amount=mobile()?1:2;for(let i=0;i<amount;i++){const index=pageIndex+i;const page=document.createElement('div');page.className='reader-page';const label=document.createElement('div');label.className='page-label';label.textContent='THE LONESTAR TIMES / '+safeText(selected.querySelector('.cover-tag'));page.appendChild(label);if(index<pages.length){const contents=document.createElement('div');contents.innerHTML=cleanHtml(pages[index]);page.appendChild(contents);}const number=document.createElement('div');number.className='page-number';number.textContent=String(index+1).padStart(2,'0');page.appendChild(number);spread.appendChild(page);}stage.appendChild(spread);}
+function render(){if(pageIndex<0)cover();else spread();counter.textContent=pageIndex<0?'Cover':'Page '+(pageIndex+1)+' / '+pages.length;prev.disabled=pageIndex<0;next.disabled=pageIndex>=pages.length-(mobile()?1:2)&&pageIndex>=0;next.textContent=pageIndex<0?'Open Issue →':'Turn Page →';}
+async function openIssue(issue){selected=issue;lastFocus=document.activeElement;pageIndex=-1;pages=[];original.href=issue.getAttribute('href');title.textContent='THE LONESTAR TIMES / '+safeText(issue.querySelector('h3'));overlay.hidden=false;document.body.classList.add('reader-open');close.focus();render();rustle();try{const response=await fetch(original.href,{cache:'default'});if(!response.ok)throw Error('Article unavailable');const html=await response.text();if(selected!==issue)return;const doc=new DOMParser().parseFromString(html,'text/html');pages=extractPages(doc);}catch(err){pages=['<h2>Issue unavailable in the reader</h2><p>Use Original Article to read the complete story.</p>'];}}
+function dismiss(){overlay.hidden=true;document.body.classList.remove('reader-open');selected=null;if(lastFocus&&lastFocus.focus)lastFocus.focus();}
+issues.forEach(issue=>issue.addEventListener('click',e=>{if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;e.preventDefault();openIssue(issue);}));
+close.addEventListener('click',dismiss);overlay.addEventListener('click',e=>{if(e.target===overlay)dismiss();});
+next.addEventListener('click',()=>{if(!selected)return;const step=mobile()?1:2;if(pageIndex<0)pageIndex=0;else pageIndex=Math.min(pageIndex+step,pages.length-1);render();rustle();});
+prev.addEventListener('click',()=>{if(!selected)return;const step=mobile()?1:2;pageIndex=Math.max(-1,pageIndex-step);render();rustle();});
+document.addEventListener('keydown',e=>{if(overlay.hidden)return;if(e.key==='Escape')dismiss();else if(e.key==='ArrowRight'){e.preventDefault();next.click();}else if(e.key==='ArrowLeft'){e.preventDefault();prev.click();}else if(e.key==='Tab'){const focusable=[...overlay.querySelectorAll('button:not([disabled]),a[href]')];const first=focusable[0],last=focusable[focusable.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}});
+window.addEventListener('resize',()=>{if(selected)render();});
+refreshShelves();
 })();
 </script>
-</body>
+<div class="reader-overlay" id="reader-overlay" hidden role="dialog" aria-modal="true" aria-label="Magazine reader"><div class="reader-shell"><div class="reader-bar"><span id="reader-title">The Lonestar Times / Issue</span><div class="actions"><a id="reader-original" href="news.html">Original article ↗</a><button type="button" id="reader-close" aria-label="Close magazine">Close ✕</button></div></div><div class="reader-stage" id="reader-stage"></div><div class="reader-nav"><button type="button" id="reader-prev">← Previous</button><span id="reader-counter">Cover</span><button type="button" id="reader-next">Open Issue →</button></div></div></div></body>
 </html>
