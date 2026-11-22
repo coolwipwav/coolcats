@@ -146,6 +146,7 @@ body.reader-open{overflow:hidden}
 </div></main>
 <footer class="footer"><div class="footer-inner"><div><strong>The Lonestar Times.</strong><p>Clubs. Cups. Rivalries. History.<br>Lonestar Premier League · Established 2026</p></div><div><a href="league.html">Return to the League</a> &nbsp; · &nbsp; <a href="cup-hub.html">Cup Hub</a></div></div></footer>
 <script>
+document.addEventListener('DOMContentLoaded',()=>{
 (function(){
 const buttons=[...document.querySelectorAll('.filter')];
 const issues=[...document.querySelectorAll('.issue')];
@@ -177,6 +178,7 @@ document.addEventListener('keydown',e=>{if(overlay.hidden)return;if(e.key==='Esc
 window.addEventListener('resize',()=>{if(selected)render();});
 refreshShelves();
 })();
+});
 </script>
 <div class="reader-overlay" id="reader-overlay" hidden role="dialog" aria-modal="true" aria-label="Magazine reader"><div class="reader-shell"><div class="reader-bar"><span id="reader-title">The Lonestar Times / Issue</span><div class="actions"><a id="reader-original" href="news.html">Original article ↗</a><button type="button" id="reader-close" aria-label="Close magazine">Close ✕</button></div></div><div class="reader-stage" id="reader-stage"></div><div class="reader-nav"><button type="button" id="reader-prev">← Previous</button><span id="reader-counter">Cover</span><button type="button" id="reader-next">Open Issue →</button></div></div></div></body>
 </html>
